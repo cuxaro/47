@@ -15,8 +15,8 @@ import pathlib
 import sys
 import time
 
-from . import corts
-from .construir import construir
+from . import corts, locales
+from .construir import construir, personas_corts
 from .md3 import aplicar_correccion, leer_declaracion, trocear
 from .md4 import leer_renta
 from .paginas import leer_pdf
@@ -50,6 +50,8 @@ def main(argv=None) -> int:
     ap.add_argument("--sin-red", action="store_true", help="no descargar nada, usar solo .cache/")
     ap.add_argument("--refrescar", action="store_true", help="volver a pedir las listas")
     ap.add_argument("--hilos", type=int, default=None, help="procesos de OCR en paralelo")
+    ap.add_argument("--sin-locales", action="store_true", help="solo Les Corts (sin diputaciones ni ayuntamientos)")
+    ap.add_argument("--limite-bop", type=int, default=None, help="máximo de anuncios nuevos del BOP por ejecución")
     ap.add_argument("--solo", default="", help="leer solo estos boletines (números separados por comas); para pruebas")
     args = ap.parse_args(argv)
 
@@ -112,13 +114,46 @@ def main(argv=None) -> int:
         rentas[dip["id"]] = r
     _log(f"Declaraciones de rentas leídas: {len(rentas)}")
 
-    # 4. Tablas -----------------------------------------------------------------
-    boletines = [{k: i[k] for k in ("id_bocv", "numero", "fecha", "titulo", "tipo", "url_pdf")} for i in inserciones]
-    meta = construir(diputados, declaraciones, rentas, boletines, LEGISLATURA, RAIZ)
-    _log(f"Hecho en {time.time() - t0:.0f}s: {meta['n_personas']} personas, "
-         f"{meta['n_con_declaracion']} con declaración de bienes, {meta['n_por_ocr']} leídas por OCR, "
-         f"{meta['n_comprobadas']} con las sumas comprobadas, {meta['n_revisar']} para revisar, "
-         f"{meta['n_ilegibles']} ilegibles, {meta['n_con_renta']} con rentas")
+    personas = personas_corts(diputados, declaraciones, rentas, LEGISLATURA)
+    vistos, boletines = set(), []
+    for i in inserciones:
+        if i["id_bocv"] not in vistos:
+            vistos.add(i["id_bocv"])
+            boletines.append({"nombre": f"BOCV nº {i['numero']}", "fecha": i["fecha"], "url": i["url_pdf"]})
+    fuentes = [{"nombre": "Les Corts Valencianes", "url": "https://www.cortsvalencianes.es/es/composicion/diputados",
+                "nota": "Declaración completa de cada diputado/a, publicada en el Boletín de Les Corts",
+                "documentos": boletines}]
+
+    # 4. Diputaciones y ayuntamientos (solo publican totales) ---------------------
+    if not args.sin_locales:
+        fichas = []
+        for nombre, funcion, kw in (
+                ("Diputació de València", locales.dival, {}),
+                ("Diputación de Alicante", locales.dipalicante, {}),
+                ("Ayuntamientos de València (BOP)", locales.ayuntamientos_valencia, {"limite": args.limite_bop}),
+                ("Ayuntamientos con web propia", locales.ayuntamientos_web, {})):
+            try:
+                f, fuente = funcion(CACHE / funcion.__name__, sin_red=args.sin_red, **kw)
+            except Exception as e:   # una fuente caída no debe tumbar las demás: se usa lo ya descargado
+                _log(f"  {nombre}: fallo ({e!r}); se usa lo guardado de otras veces")
+                try:
+                    f, fuente = funcion(CACHE / funcion.__name__, sin_red=True)
+                except Exception as e2:
+                    _log(f"  {nombre}: tampoco se puede leer la caché ({e2!r}); se omite")
+                    continue
+            _log(f"{nombre}: {len(f)} declaraciones leídas")
+            fichas += f
+            if fuente:
+                fuentes.append(fuente)
+        personas += locales.personas(fichas)
+
+    # 5. Tablas -----------------------------------------------------------------
+    meta = construir(personas, declaraciones, fuentes, LEGISLATURA, RAIZ)
+    resumen_tipos = ", ".join(f"{k}: {v['personas']}" for k, v in meta["por_tipo"].items())
+    _log(f"Hecho en {time.time() - t0:.0f}s: {meta['n_personas']} personas "
+         f"({resumen_tipos}), "
+         f"{meta['n_por_ocr']} leídas por OCR, {meta['n_comprobadas']} con las sumas comprobadas, "
+         f"{meta['n_revisar']} para revisar, {meta['n_con_renta']} con rentas")
     return 0
 
 

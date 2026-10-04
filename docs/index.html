@@ -69,6 +69,8 @@ td.quien small{display:block;color:var(--suave)}
 .marca.ok{background:var(--acento-suave);color:var(--acento)}
 .marca.ex{border:1px solid var(--raya);color:var(--suave)}
 .vacio{padding:28px 16px;text-align:center;color:var(--suave)}
+.aviso-detalle{background:var(--aviso-suave);color:var(--aviso);border-radius:8px;padding:9px 12px;font-size:.9rem;margin:0 0 14px}
+.mas{display:block;margin:14px auto;}
 dialog{border:1px solid var(--raya);border-radius:14px;padding:0;background:var(--papel);color:var(--tinta);
   width:min(760px,calc(100vw - 24px));max-height:calc(100vh - 24px)}
 dialog::backdrop{background:rgba(0,0,0,.45)}
@@ -98,11 +100,15 @@ footer li{margin:3px 0}
 <section class="cifras" id="cifras" aria-live="polite"></section>
 
 <div class="rapidos" id="rapidos" aria-label="Filtros rápidos"></div>
+<p class="aviso-detalle" id="aviso-detalle" hidden></p>
 
 <details class="panel filtros" open>
   <summary>Filtros</summary>
   <form class="rejilla" id="f" onsubmit="return false">
     <div class="campo"><label for="q">Nombre</label><input id="q" type="search" placeholder="Buscar…"></div>
+    <div class="campo"><label for="tipo">Tipo de institución</label><select id="tipo"><option value="">Todas</option></select></div>
+    <div class="campo"><label for="inst">Institución</label><input id="inst" type="search" list="lista-inst" placeholder="Ayuntamiento de…"><datalist id="lista-inst"></datalist></div>
+    <div class="campo"><label for="clase">Clase de cargo</label><select id="clase"><option value="">Todos</option><option value="electo">Cargo electo</option><option value="directivo">Directivo</option></select></div>
     <div class="campo"><label for="grupo">Grupo</label><select id="grupo"><option value="">Todos</option></select></div>
     <div class="campo"><label for="circ">Circunscripción</label><select id="circ"><option value="">Todas</option></select></div>
     <div class="campo"><label for="activo">Situación</label><select id="activo"><option value="">Todos</option><option value="1" selected>En activo</option><option value="0">Ya no están</option></select></div>
@@ -133,7 +139,7 @@ footer li{margin:3px 0}
   <table id="t">
     <thead><tr>
       <th data-k="apellidos">Persona</th>
-      <th data-k="grupo">Grupo</th>
+      <th data-k="institucion">Institución</th>
       <th data-k="n_viviendas" class="n">Viviendas</th>
       <th data-k="n_inmuebles" class="n">Inmuebles</th>
       <th data-k="n_provincias" class="n" title="Provincias distintas en las que declara inmuebles">Provincias</th>
@@ -146,13 +152,15 @@ footer li{margin:3px 0}
     <tbody></tbody>
   </table>
   <div class="vacio" id="vacio" hidden>Nadie cumple esos filtros.</div>
+  <button class="btn mas" id="mas" type="button" hidden>Ver más</button>
 </div>
 
 <footer>
   <h2>Qué hay que saber antes de sacar conclusiones</h2>
   <ul>
     <li>Son datos <strong>declarados por cada persona</strong>. Nadie los verifica públicamente.</li>
-    <li>La declaración solo indica la <strong>provincia</strong> de cada inmueble. No hay municipio, dirección ni metros.</li>
+    <li>En Les Corts, la declaración solo indica la <strong>provincia</strong> de cada inmueble. No hay municipio, dirección ni metros.</li>
+    <li><strong>Diputaciones y ayuntamientos solo publican totales</strong> por persona (inmuebles, otros bienes, deudas). No se puede saber cuántas viviendas tienen ni dónde.</li>
     <li>El <strong>valor catastral</strong> no es el valor de mercado; suele ser bastante más bajo.</li>
     <li>La descripción de cuentas, vehículos y deudas es voluntaria: hay quien detalla y quien solo da el total.</li>
     <li>Parte de los formularios están escaneados y se leen por <strong>OCR</strong>. Van marcados y enlazan al original para comprobarlos.</li>
@@ -177,7 +185,7 @@ const CLAVES = {P:"Pleno dominio",N:"Nuda propiedad",M:"Multipropiedad",U:"Usufr
 const fecha = f => f ? f.split('-').reverse().join('/') : '—';
 const TIPO_DECL = {inicial:"Declaración inicial",modificacion:"Modificación",final:"Declaración final"};
 
-let DATOS = [], META = {}, orden = {k:"apellidos", dir:1}, vista = [];
+let DATOS = [], META = {}, orden = {k:"apellidos", dir:1}, vista = [], tope = 200;
 
 const RAPIDOS = [
   ["Con vivienda", {viv:1}],
@@ -192,12 +200,15 @@ let sinInmuebles = false;
 
 function leerFiltros(){
   const v = id => $("#"+id).value.trim(), n = id => v(id) === "" ? null : Number(v(id));
-  return {q:llano(v("q")), grupo:v("grupo"), circ:v("circ"), activo:v("activo"), viv:n("viv"), vivc:n("vivc"),
+  return {q:llano(v("q")), tipo:v("tipo"), inst:llano(v("inst")), clase:v("clase"), grupo:v("grupo"), circ:v("circ"), activo:v("activo"), viv:n("viv"), vivc:n("vivc"),
           inm:n("inm"), prov:v("prov"), nprov:n("nprov"), cat:n("cat"), cue:n("cue"), otr:n("otr"),
           pas:n("pas"), ren:n("ren"), hip:$("#hip").checked, rev:$("#rev").checked};
 }
 function cumple(p,f){
   if (f.q && !llano(p.nombre+" "+p.apellidos).includes(f.q)) return false;
+  if (f.tipo && p.tipo_institucion !== f.tipo) return false;
+  if (f.inst && !llano(p.institucion).includes(f.inst)) return false;
+  if (f.clase && (p.clase_cargo || "electo") !== f.clase) return false;
   if (f.grupo && p.grupo !== f.grupo) return false;
   if (f.circ && p.circunscripcion !== f.circ) return false;
   if (f.activo !== "" && p.en_activo !== (f.activo === "1")) return false;
@@ -213,11 +224,13 @@ function cumple(p,f){
   if (f.ren != null && !(p.rentas >= f.ren)) return false;
   if (f.hip && !p.tiene_hipoteca) return false;
   if (f.rev && !p.calidad.revisar) return false;
-  if (sinInmuebles && p.n_inmuebles !== 0) return false;
+  if (sinInmuebles && !(p.n_inmuebles === 0 || (p.detalle === "totales" && p.valor_catastral === 0))) return false;
   return true;
 }
 function marca(p){
   const c = p.calidad;
+  if (p.detalle === "totales") return c.ilegible ? '<span class="marca ocr" title="No se han podido leer los importes: consulta el original">sin leer</span>'
+    : (c.metodo === "ocr" ? '<span class="marca ocr" title="Leído por OCR de un documento escaneado">OCR</span>' : "");
   if (!p.declaracion || c.ilegible) return '<span class="marca ocr" title="No se ha podido leer su declaración: consulta el original">sin leer</span>';
   if (c.metodo === "manual") return '<span class="marca ok" title="Formulario manuscrito, transcrito a mano del original">a mano</span>';
   if (c.metodo === "ocr") return c.comprobado
@@ -236,19 +249,27 @@ function pintar(){
     if (typeof x === "string" || typeof y === "string") return orden.dir * llano(x).localeCompare(llano(y),"es");
     return orden.dir * ((x ?? -Infinity) - (y ?? -Infinity));
   });
-  $("#t tbody").innerHTML = vista.map((p,i) => `<tr data-i="${i}" tabindex="0">
+  const sinDetalle = v => v == null ? '<span class="cero" title="Esta institución solo publica totales">—</span>' : celda(v,num);
+  $("#t tbody").innerHTML = vista.slice(0, tope).map((p,i) => `<tr data-i="${i}" tabindex="0">
     <td class="quien">${esc(p.apellidos)}, ${esc(p.nombre)}${p.en_activo ? "" : '<span class="marca ex">ya no está</span>'}${marca(p)}
-      <small>${esc(p.circunscripcion)}</small></td>
-    <td>${esc(p.grupo) || "—"}</td>
-    <td class="n">${celda(p.n_viviendas,num)}</td>
-    <td class="n">${celda(p.n_inmuebles,num)}</td>
-    <td class="n" title="${esc(p.provincias_inmuebles.join(", "))}">${celda(p.n_provincias,num)}</td>
+      <small>${esc(p.cargo.length > 60 ? p.cargo.slice(0,58) + "…" : p.cargo)}${p.grupo ? " · " + esc(p.grupo) : ""}</small></td>
+    <td>${esc(p.institucion)}</td>
+    <td class="n">${sinDetalle(p.n_viviendas)}</td>
+    <td class="n">${sinDetalle(p.n_inmuebles)}</td>
+    <td class="n" title="${esc(p.provincias_inmuebles.join(", "))}">${sinDetalle(p.n_provincias)}</td>
     <td class="n">${celda(p.valor_catastral,eur)}</td>
     <td class="n">${celda(p.cuentas,eur)}</td>
     <td class="n">${celda(p.otros_bienes,eur)}</td>
     <td class="n">${celda(p.pasivo,eur)}</td>
     <td class="n">${celda(p.rentas,eur)}</td></tr>`).join("");
   $("#vacio").hidden = vista.length > 0;
+  $("#mas").hidden = vista.length <= tope;
+  $("#mas").textContent = `Ver más (${num(vista.length - tope)} restantes)`;
+  const nTot = vista.filter(p => p.detalle === "totales").length;
+  $("#aviso-detalle").hidden = nTot === 0;
+  $("#aviso-detalle").textContent = nTot === vista.length
+    ? "Diputaciones y ayuntamientos solo publican totales (valor de inmuebles, otros bienes y deudas). No hay detalle de viviendas ni provincias."
+    : `${num(nTot)} de estas personas son de diputaciones o ayuntamientos, que solo publican totales: no cuentan en los filtros de viviendas ni provincias.`;
   const base = DATOS.filter(p => f.activo === "" || p.en_activo === (f.activo === "1")).length;
   $("#cuenta").innerHTML = `${num(vista.length)} de ${num(base)} <small>${vista.length === 1 ? "persona cumple" : "personas cumplen"} los filtros</small>`;
   const con = fn => vista.filter(fn).length;
@@ -258,7 +279,7 @@ function pintar(){
     [con(p => p.n_viviendas >= 3), "con 3 viviendas o más"],
     [con(p => p.n_inmuebles === 0), "sin ningún inmueble"],
     [con(p => p.tiene_hipoteca), "con hipoteca"],
-    [con(p => p.n_inmuebles == null), "sin poder leer"],
+    [con(p => p.detalle === "totales"), "solo con totales"],
   ].map(([n,t]) => `<div class="cifra"><strong>${num(n)}</strong><span>${t}</span></div>`).join("");
   document.querySelectorAll("#t th").forEach(th => th.setAttribute("aria-sort", th.dataset.k === k ? (orden.dir > 0 ? "ascending" : "descending") : "none"));
 }
@@ -266,7 +287,27 @@ function pintar(){
 function tabla(cab, filas){ return filas.length ? `<div class="tabla-caja"><table><thead><tr>${cab.map(c => `<th${c[1] ? ' class="n"' : ""}>${c[0]}</th>`).join("")}</tr></thead><tbody>${filas.join("")}</tbody></table></div>` : `<p class="cero">Nada declarado.</p>`; }
 const dud = (i, html) => i.dudoso ? `<span class="dudoso" title="Lectura dudosa del OCR: compruébalo en el original">${html}</span>` : html;
 
+function fichaTotales(p){
+  const d = p.declaracion;
+  let h = `<button class="btn cerrar" onclick="dlg.close()">Cerrar</button>
+    <h2>${esc(p.nombre)} ${esc(p.apellidos)}</h2>
+    <p class="cero" style="margin:0">${esc(p.cargo)} · ${esc(p.institucion)}${p.grupo ? " · " + esc(p.grupo) : ""}${p.en_activo ? "" : " · ya no está"}</p>
+    <div class="nota">Esta institución solo publica <strong>totales</strong> (Decreto 191/2010): no se sabe cuántos inmuebles son ni dónde están.${p.calidad.motivos.length ? "<ul>" + p.calidad.motivos.map(m => `<li>${esc(m)}</li>`).join("") + "</ul>" : ""}</div>`;
+  if (d){
+    const fila = (t,v) => `<tr><td>${t}</td><td class="n">${v == null ? "—" : eur2(v)}</td></tr>`;
+    h += `<h3>${TIPO_DECL[d.tipo] || d.tipo} · publicada el ${fecha(d.fecha)}</h3>` + tabla([["Concepto"],["Importe",1]], [
+      fila("Bienes inmuebles (valor catastral, según % de titularidad)", d.inmuebles_total),
+      fila("Otros bienes", d.otros_total), fila("<strong>Total activo</strong>", d.total_activo),
+      fila("Deudas (pasivo)", d.pasivo_total)]);
+    if (d.actividades) h += `<h3>Actividades declaradas</h3><p>${esc(d.actividades)}</p>`;
+  }
+  h += `<h3>Documentos originales</h3><ul>` + p.historico.map(x => `<li>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">${TIPO_DECL[x.tipo] || x.tipo}</a>` : (TIPO_DECL[x.tipo] || x.tipo)} · ${esc(x.fuente || "")} · ${fecha(x.fecha)}${x.metodo === "ocr" ? " · escaneada" : ""}</li>`).join("") + `</ul>`;
+  $("#ficha").innerHTML = h;
+  $("#dlg").showModal();
+}
+
 function ficha(p){
+  if (p.detalle === "totales") return fichaTotales(p);
   const d = p.declaracion, r = p.renta;
   let h = `<button class="btn cerrar" onclick="dlg.close()">Cerrar</button>
     <h2>${esc(p.nombre)} ${esc(p.apellidos)}</h2>
@@ -298,7 +339,7 @@ function ficha(p){
 }
 
 function aCSV(){
-  const cols = ["apellidos","nombre","cargo","grupo","circunscripcion","n_viviendas","n_viviendas_compartidas","n_inmuebles","n_locales","n_rusticos","n_provincias","provincias_inmuebles","valor_catastral","cuentas","vehiculos","inversiones","otros_bienes","pasivo","tiene_hipoteca","rentas","cuota_irpf"];
+  const cols = ["apellidos","nombre","tipo_institucion","institucion","cargo","clase_cargo","grupo","circunscripcion","detalle","n_viviendas","n_viviendas_compartidas","n_inmuebles","n_locales","n_rusticos","n_provincias","provincias_inmuebles","valor_catastral","cuentas","vehiculos","inversiones","otros_bienes","pasivo","tiene_hipoteca","rentas","cuota_irpf"];
   const q = v => { v = Array.isArray(v) ? v.join("; ") : (v ?? ""); v = String(v); return /[",\n;]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v; };
   const txt = "﻿" + [cols.join(";")].concat(vista.map(p => cols.map(c => q(typeof p[c] === "number" ? String(p[c]).replace(".",",") : p[c])).join(";"))).join("\n");
   const a = document.createElement("a");
@@ -317,15 +358,17 @@ fetch("datos.json").then(r => r.json()).then(j => {
   const unicos = fn => [...new Set(DATOS.flatMap(fn).filter(Boolean))].sort((a,b) => a.localeCompare(b,"es"));
   const opciones = (id, vals) => $("#"+id).insertAdjacentHTML("beforeend", vals.map(v => `<option>${esc(v)}</option>`).join(""));
   opciones("grupo", unicos(p => [p.grupo])); opciones("circ", unicos(p => [p.circunscripcion])); opciones("prov", unicos(p => p.provincias_inmuebles));
-  $("#sub").textContent = `${META.ambito}, ${META.legislatura} legislatura: ${META.n_en_activo} diputados y diputadas en activo. Son los bienes que cada persona ha declarado, tabulados para poder filtrar y contar. Actualizado el ${META.generado.split("-").reverse().join("/")}.`;
+  opciones("tipo", Object.keys(META.por_tipo));
+  $("#lista-inst").innerHTML = unicos(p => [p.institucion]).map(v => `<option value="${esc(v)}">`).join("");
+  const partes = Object.entries(META.por_tipo).map(([k,v]) => k === "Corts" ? `Les Corts (${v.en_activo} en activo)` : `${v.instituciones} ${k === "Diputación" ? (v.instituciones === 1 ? "diputación" : "diputaciones") : (v.instituciones === 1 ? "ayuntamiento" : "ayuntamientos")} (${v.en_activo} cargos)`);
+  $("#sub").textContent = `Comunitat Valenciana: ${partes.join(", ")}. Son los bienes que cada persona ha declarado, tabulados para poder filtrar y contar. Actualizado el ${META.generado.split("-").reverse().join("/")}.`;
   $("#rapidos").innerHTML = RAPIDOS.map((r,i) => `<button class="chip" type="button" data-i="${i}" aria-pressed="false">${r[0]}</button>`).join("");
-  const vistos = new Set();
-  $("#fuentes").innerHTML = META.boletines.filter(b => !vistos.has(b.id_bocv) && vistos.add(b.id_bocv)).map(b => `<li><a href="${esc(b.url_pdf)}" target="_blank" rel="noopener">BOCV nº ${b.numero}</a> (${b.fecha.split("-").reverse().join("/")})</li>`).join("") +
-    `<li>Declaración anual de rentas: un PDF por persona, en su ficha de Les Corts.</li>`;
+  $("#fuentes").innerHTML = META.fuentes.map(f => `<li>${f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.nombre)}</a>` : esc(f.nombre)}${f.nota ? ": " + esc(f.nota) : ""}${f.documentos ? " (" + f.documentos.map(b => `<a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.nombre.replace("BOCV nº ","nº "))}</a>`).join(", ") + ")" : ""}</li>`).join("");
   pintar();
 }).catch(e => { $("#vacio").hidden = false; $("#vacio").textContent = "No se han podido cargar los datos (" + e + ")."; });
 
-$("#f").addEventListener("input", () => { pintar(); });
+$("#f").addEventListener("input", () => { tope = 200; pintar(); });
+$("#mas").addEventListener("click", () => { tope += 400; pintar(); });
 $("#limpiar").addEventListener("click", limpiar);
 $("#csv").addEventListener("click", aCSV);
 $("#rapidos").addEventListener("click", e => {

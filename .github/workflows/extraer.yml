@@ -11,6 +11,7 @@ on:
     paths:
       - "extractor/**"
       - "correcciones/**"
+      - "fuentes/**"
       - "requirements.txt"
       - ".github/workflows/extraer.yml"
 

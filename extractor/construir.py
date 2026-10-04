@@ -190,8 +190,9 @@ def _tiene_bienes(d: dict) -> bool:
 # --------------------------------------------------------------------------- #
 # Montaje
 # --------------------------------------------------------------------------- #
-def construir(diputados: list[dict], declaraciones: list[dict], rentas: dict[str, dict],
-              boletines: list[dict], legislatura: str, raiz: pathlib.Path) -> dict:
+def personas_corts(diputados: list[dict], declaraciones: list[dict], rentas: dict[str, dict],
+                   legislatura: str) -> list[dict]:
+    """Personas de Les Corts: declaración completa (inmueble a inmueble)."""
     personas = [dict(d, en_activo=True, declaraciones=[]) for d in diputados]
     sueltas: list[dict] = []
     for decl in sorted(declaraciones, key=lambda d: (d.get("fecha_registro") or "", d["boletin"]["numero"])):
@@ -219,7 +220,9 @@ def construir(diputados: list[dict], declaraciones: list[dict], rentas: dict[str
             cal["revisar"] = True
         fila = {
             "id": per["id"], "nombre": per["nombre"], "apellidos": per["apellidos"],
-            "ambito": AMBITO, "cargo": "Diputado/a" if per["en_activo"] else "Exdiputado/a",
+            "ambito": AMBITO, "institucion": AMBITO, "tipo_institucion": "Corts", "provincia": "", "clase_cargo": "electo",
+            "detalle": "completo",
+            "cargo": "Diputado/a" if per["en_activo"] else "Exdiputado/a",
             "en_activo": per["en_activo"], "grupo": per.get("grupo", ""),
             "circunscripcion": per.get("circunscripcion", ""), "legislatura": legislatura,
             "url_ficha": per.get("url_ficha"),
@@ -230,21 +233,38 @@ def construir(diputados: list[dict], declaraciones: list[dict], rentas: dict[str
             "renta": renta,
         }
         salida.append(fila)
-    salida.sort(key=lambda p: (not p["en_activo"], norm(p["apellidos"]), norm(p["nombre"])))
+    return salida
 
-    hoy = dt.date.today().isoformat()
+
+ORDEN_TIPO = {"Corts": 0, "Diputación": 1, "Ayuntamiento": 2}
+
+
+def construir(personas: list[dict], declaraciones_corts: list[dict], fuentes: list[dict],
+              legislatura: str, raiz: pathlib.Path) -> dict:
+    """Ordena todas las personas, calcula el resumen y escribe las tablas."""
+    personas.sort(key=lambda p: (ORDEN_TIPO.get(p["tipo_institucion"], 9), norm(p["institucion"]),
+                                 not p["en_activo"], norm(p["apellidos"]), norm(p["nombre"])))
+    por_tipo: dict[str, dict] = {}
+    for p in personas:
+        t = por_tipo.setdefault(p["tipo_institucion"], {"personas": 0, "en_activo": 0, "instituciones": set()})
+        t["personas"] += 1
+        t["en_activo"] += bool(p["en_activo"])
+        if p["en_activo"]:
+            t["instituciones"].add(p["institucion"])
+    for t in por_tipo.values():
+        t["instituciones"] = len(t["instituciones"])
     meta = {
-        "generado": hoy, "ambito": AMBITO, "legislatura": legislatura,
-        "boletines": boletines,
-        "n_personas": len(salida), "n_en_activo": sum(p["en_activo"] for p in salida),
-        "n_con_declaracion": sum(1 for p in salida if p["declaracion"]),
-        "n_por_ocr": sum(1 for p in salida if p["calidad"]["metodo"] == "ocr"),
-        "n_comprobadas": sum(1 for p in salida if p["calidad"]["comprobado"]),
-        "n_ilegibles": sum(1 for p in salida if p["calidad"]["ilegible"]),
-        "n_revisar": sum(1 for p in salida if p["calidad"]["revisar"]),
-        "n_con_renta": sum(1 for p in salida if p["renta"]),
+        "generado": dt.date.today().isoformat(), "legislatura": legislatura,
+        "fuentes": fuentes, "por_tipo": por_tipo,
+        "n_personas": len(personas), "n_en_activo": sum(bool(p["en_activo"]) for p in personas),
+        "n_con_declaracion": sum(1 for p in personas if p["declaracion"]),
+        "n_por_ocr": sum(1 for p in personas if p["calidad"]["metodo"] == "ocr"),
+        "n_comprobadas": sum(1 for p in personas if p["calidad"]["comprobado"]),
+        "n_ilegibles": sum(1 for p in personas if p["calidad"].get("ilegible")),
+        "n_revisar": sum(1 for p in personas if p["calidad"]["revisar"]),
+        "n_con_renta": sum(1 for p in personas if p.get("renta")),
     }
-    _escribir(salida, meta, declaraciones, raiz)
+    _escribir(personas, meta, declaraciones_corts, raiz)
     return meta
 
 
@@ -284,27 +304,30 @@ def _csv(ruta: pathlib.Path, filas: list[dict], campos: list[str]) -> None:
 
 def _escribir(personas: list[dict], meta: dict, declaraciones: list[dict], raiz: pathlib.Path) -> None:
     datos, docs = raiz / "datos", raiz / "docs"
-    campos_p = ["id", "apellidos", "nombre", "ambito", "cargo", "en_activo", "grupo", "circunscripcion",
+    campos_p = ["id", "apellidos", "nombre", "tipo_institucion", "institucion", "provincia", "cargo", "clase_cargo", "en_activo",
+                "grupo", "circunscripcion", "detalle",
                 "n_inmuebles", "n_viviendas", "n_viviendas_compartidas", "n_locales", "n_rusticos",
                 "n_otros_urbanos", "n_provincias", "provincias_inmuebles", "provincias_viviendas",
                 "valor_catastral", "cuentas", "vehiculos", "n_vehiculos", "inversiones", "otros_bienes",
                 "pasivo", "tiene_hipoteca", "patrimonio_declarado", "rentas", "salarios", "otras_rentas",
-                "cuota_irpf", "metodo_lectura", "revisar", "motivos_revision", "fecha_declaracion",
-                "bocv", "url_declaracion", "url_ficha"]
+                "cuota_irpf", "actividades", "metodo_lectura", "revisar", "motivos_revision", "fecha_declaracion",
+                "fuente_declaracion", "url_declaracion", "url_ficha"]
     filas_p, inm, otros, pas, ren = [], [], [], [], []
     for p in personas:
         d = p["declaracion"]
         quien = {"id": p["id"], "apellidos": p["apellidos"], "nombre": p["nombre"], "grupo": p["grupo"]}
         filas_p.append({**p, "metodo_lectura": p["calidad"]["metodo"], "revisar": p["calidad"]["revisar"],
                         "motivos_revision": p["calidad"]["motivos"],
-                        "fecha_declaracion": d and d["fecha_registro"], "bocv": d and d["bocv"],
+                        "actividades": (d or {}).get("actividades", ""),
+                        "fecha_declaracion": d and (d.get("fecha_registro") or d.get("fecha")),
+                        "fuente_declaracion": d and (d.get("fuente") or f"BOCV {d.get('bocv')}"),
                         "url_declaracion": d and d["url"]})
-        if d:
+        if d and p["detalle"] == "completo":
             fuente = {"bocv": d["bocv"], "metodo_lectura": d["metodo"]}
             inm += [{**quien, **i, **fuente} for i in d["inmuebles"]]
             otros += [{**quien, **i, **fuente} for i in d["otros_bienes"]]
             pas += [{**quien, **i, **fuente} for i in d["pasivo"]]
-        if p["renta"]:
+        if p.get("renta"):
             ren += [{**quien, "fecha_registro": p["renta"]["fecha_registro"], **x} for x in p["renta"]["partidas"]]
             if p["renta"].get("cuota_irpf") is not None:
                 ren.append({**quien, "fecha_registro": p["renta"]["fecha_registro"], "apartado": "irpf",

@@ -3,17 +3,31 @@
 Rastrea las **declaraciones de bienes** que los cargos públicos están obligados a presentar,
 las pasa a tablas y las publica en una web con filtros.
 
-Los datos salen de los boletines oficiales. El programa que los extrae está en este mismo
+Empieza por la **Comunitat Valenciana**. Los datos salen de boletines oficiales y portales de transparencia. El programa que los extrae está en este mismo
 repositorio, para que cualquiera pueda repetir el proceso y comprobarlo.
 
 ## Qué hay ahora
 
 | Ámbito | Estado |
 | --- | --- |
-| Les Corts Valencianes (99 diputados y diputadas, XI legislatura) | ✅ hecho |
+| Les Corts Valencianes (99 diputados y diputadas, XI legislatura) | ✅ declaración completa |
+| Diputació de València | ✅ solo totales |
+| Diputación de Alicante | ✅ solo totales |
+| Ayuntamientos de la provincia de València que publican en el BOP | ✅ solo totales |
+| Ayuntamientos con las declaraciones en su web (lista en [`fuentes/`](fuentes/)) | 🟡 empezado |
+| Diputación de Castellón, resto de ayuntamientos | ⏳ sin fuente automática (ver «Lo que falta») |
 | Consell y altos cargos de la Generalitat | ⏳ pendiente (ver «Lo que falta») |
-| Diputaciones y ayuntamientos | ⏳ pendiente |
 | Estado (Congreso, Senado, Gobierno) | ⏳ pendiente |
+
+### Ojo: dos niveles de detalle
+
+- **Les Corts** publican la declaración entera: cada inmueble, cada cuenta, cada deuda.
+- **Diputaciones y ayuntamientos** solo publican **tres cifras por persona**: valor de los inmuebles,
+  valor de los demás bienes y deudas. Lo fija la norma (Decreto 191/2010 del Consell y art. 131 de la
+  Ley 8/2010). **No se puede saber cuántas viviendas tienen ni dónde.**
+
+En la web, los filtros de viviendas y provincias solo cuentan a quienes tienen declaración completa.
+Los de importes (catastral, otros bienes, deudas) valen para todos.
 
 ## Cómo se usa
 
@@ -23,7 +37,7 @@ repositorio, para que cualquiera pueda repetir el proceso y comprobarlo.
 
 | Fichero | Una fila por… |
 | --- | --- |
-| `personas.csv` | persona, con sus totales (viviendas, provincias, cuentas, deudas, rentas…) |
+| `personas.csv` | persona, con sus totales (viviendas, provincias, cuentas, deudas, rentas…). La columna `detalle` dice si la declaración es `completo` o solo `totales` |
 | `inmuebles.csv` | inmueble declarado |
 | `otros_bienes.csv` | bien no inmobiliario (cuenta, vehículo, acciones, plan de pensiones…) |
 | `pasivo.csv` | deuda (hipoteca, préstamo…) |
@@ -48,10 +62,34 @@ Además:
 
 ## De dónde salen los datos
 
+### Les Corts
+
 1. **Quién**: lista de diputados en la web de Les Corts.
 2. **Dónde**: el Butlletí Oficial de les Corts Valencianes (BOCV) publica la declaración inicial,
    las modificaciones de cada año y la declaración final. El programa busca esos boletines solo.
 3. **Rentas**: un PDF de «declaración anual de rentas» por persona, en su ficha.
+
+### Diputaciones y ayuntamientos
+
+| Fuente | Cómo se obtiene |
+| --- | --- |
+| Diputació de València | datos abiertos de su portal de altos cargos (un PDF por declaración) |
+| Diputación de Alicante | anuncios del BOP colgados en su portal de transparencia |
+| Ayuntamientos de València | buscador del BOP de València: anuncios «declaraciones de bienes» desde junio de 2023 |
+| Ayuntamientos con web propia | la página que se indique en `fuentes/ayuntamientos_web.json` |
+
+Aquí no hay una lista previa de personas: salen de los propios anuncios. Por eso:
+
+- **Solo aparece quien ha publicado.** La mayoría de ayuntamientos no publica sus declaraciones en el
+  BOP aunque la norma lo pide; esos no salen.
+- **«En activo» es aproximado**: quien tiene una declaración de este mandato y ningún cese posterior.
+  Un cese sin anuncio no se detecta.
+- Además de concejales, algunos ayuntamientos (València, Gandia) publican las de su **personal directivo**.
+  La columna `clase_cargo` los distingue.
+
+Para añadir un ayuntamiento que tenga los PDF en su web, pon su página en
+[`fuentes/ayuntamientos_web.json`](fuentes/ayuntamientos_web.json) y ejecuta. Antes de leer nada, el programa
+comprueba el `robots.txt` de cada web y, si no lo permite, no entra.
 
 ## Cómo se leen
 
@@ -104,13 +142,17 @@ va en `.env` (que no se sube) o en los *Secrets* de GitHub, nunca en el código:
 
 ```
 extractor/
-  corts.py      de dónde se descarga (lista de diputados, boletines, rentas)
+  corts.py      Les Corts: lista de diputados, boletines, rentas
+  locales.py    diputaciones y ayuntamientos
+  bopv.py       buscador del BOP de València
+  modelo191.py  lector del resumen de totales (fichas y tablas)
   red.py        descargas educadas, con pausa y caché
   paginas.py    PDF → palabras y casillas (texto u OCR)
   md3.py        formulario de actividades y bienes
   md4.py        formulario de rentas
   construir.py  une todo y escribe las tablas
 correcciones/   transcripciones a mano de lo que el OCR no puede leer
+fuentes/        lista de ayuntamientos con las declaraciones en su web
 docs/           la web
 datos/          los CSV
 tests/          pruebas
@@ -121,11 +163,17 @@ tests/          pruebas
 - **Altos cargos de la Generalitat.** Se publican en el portal GVA Oberta, que no permite el acceso
   automático (`robots.txt`). Opciones: pedir los datos por derecho de acceso, o usar su publicación en el DOGV.
 - **Actividades** (cargos, empresas) de cada declaración: el formulario las trae, aún no se tabulan.
-- Diputaciones, ayuntamientos y ámbito estatal.
+- **Provincia de Alicante (ayuntamientos).** El BOP de Alicante no permite el acceso automático
+  (`robots.txt`). Solo entran los ayuntamientos que cuelgan los PDF en su propia web.
+- **Provincia de Castellón.** No se ha encontrado fuente automática: el BOP de Castellón rechaza las
+  peticiones del programa y el portal de la Diputación no publica las declaraciones.
+- **Ayuntamientos que no publican.** Se podría pedir por derecho de acceso.
+- Ámbito estatal.
 
 ## Aviso legal
 
 Los datos proceden de publicaciones oficiales que la ley obliga a hacer públicas
-(Reglamento de Les Corts, art. 21; Ley 8/2016 de la Generalitat). Su reutilización está amparada por la
+(Reglamento de Les Corts, art. 21; Ley 8/2016 de la Generalitat; Ley 7/1985, art. 75.7;
+Ley 8/2010 de la Generalitat, art. 131; Decreto 191/2010 del Consell). Su reutilización está amparada por la
 Ley 37/2007. Se reproduce lo publicado, citando la fuente, sin añadir datos personales de otro origen.
 Si encuentras un error, abre una incidencia.
