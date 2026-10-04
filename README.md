@@ -13,7 +13,7 @@ repositorio, para que cualquiera pueda repetir el proceso y comprobarlo.
 | Les Corts Valencianes (99 diputados y diputadas, XI legislatura) | ✅ declaración completa |
 | Diputació de València | ✅ solo totales |
 | Diputación de Alicante | ✅ solo totales |
-| Ayuntamientos de la provincia de València que publican en el BOP | ✅ solo totales |
+| Ayuntamientos de la provincia de València que publican en el BOP (unos 160 de 266) | ✅ solo totales |
 | Ayuntamientos con las declaraciones en su web (lista en [`fuentes/`](fuentes/)) | 🟡 empezado |
 | Diputación de Castellón, resto de ayuntamientos | ⏳ sin fuente automática (ver «Lo que falta») |
 | Consell y altos cargos de la Generalitat | ⏳ pendiente (ver «Lo que falta») |
@@ -80,10 +80,17 @@ Además:
 
 Aquí no hay una lista previa de personas: salen de los propios anuncios. Por eso:
 
-- **Solo aparece quien ha publicado.** La mayoría de ayuntamientos no publica sus declaraciones en el
-  BOP aunque la norma lo pide; esos no salen.
+- **Solo aparece quien ha publicado.** De los 266 municipios de la provincia de València, unos 160 tienen
+  anuncios legibles en el BOP desde junio de 2023. El resto no ha publicado, o lo ha hecho con un título
+  que el buscador no encuentra.
+- **Cada ayuntamiento lo maqueta a su manera** (fichas, tablas, PDF escaneados…). El programa reconoce los
+  formatos más comunes. Los anuncios que no consigue leer no se inventan: quedan listados en
+  `docs/datos.json` (`meta.fuentes[].anuncios_sin_leer`). Un nombre o un importe que no parece creíble se descarta.
 - **«En activo» es aproximado**: quien tiene una declaración de este mandato y ningún cese posterior.
-  Un cese sin anuncio no se detecta.
+  Un cese sin anuncio no se detecta. Muchos anuncios de 2023 mezclan los ceses de la corporación saliente con
+  las tomas de posesión de la nueva; cuando no se puede distinguir, la persona se da por activa y se avisa en su ficha.
+- La comprobación de sumas aquí es más simple: inmuebles + otros bienes = total. Hay ayuntamientos que meten
+  los ingresos en el total, y ahí no cuadra sin que sea un error de lectura.
 - Además de concejales, algunos ayuntamientos (València, Gandia) publican las de su **personal directivo**.
   La columna `clase_cargo` los distingue.
 

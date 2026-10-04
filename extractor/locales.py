@@ -85,12 +85,25 @@ def texto_pdf(pdf: pathlib.Path, cache_ocr: pathlib.Path | None = None) -> tuple
 
 
 def _tipo(titulo: str) -> str:
+    """Tipo de declaración según el título del anuncio. «mixta»: el mismo anuncio
+    trae tomas de posesión y ceses."""
     n = norm(titulo)
-    if re.search(r"\bCES|CESSAMENT|FINALI|RENUNCI|\bBAIXA\b|\bBAJA\b", n):
+    cese = bool(re.search(r"\bCES|CESSAMENT|FINALI|RENUNCI|\bBAIXA\b|\bBAJA\b|SORTINT|SALIENTE", n))
+    toma = bool(re.search(r"PRESA DE POS|TOMA DE POS|POSSESSIO|POSESION|ENTRANT|NOMENAMENT|NOMBRAMIENTO", n))
+    if cese and toma:
+        return "mixta"
+    if cese:
         return "final"
     if re.search(r"MODIFICACI|ANUAL|VARIACI", n):
         return "modificacion"
     return "inicial"
+
+
+def _tipo_ficha(l: dict, titulo: str) -> str:
+    tipo = _tipo(titulo)
+    if l.get("tipo_marcado"):
+        return l["tipo_marcado"]
+    return (l.get("tipo_seccion") or "mixta") if tipo == "mixta" else tipo
 
 
 _RE_ELECTO = re.compile(r"ALCALD|BATLE|CONCEJAL|REGIDOR|TENIENTE|TINENT|DIPUTAD|PRESIDENT|PORTAVOZ|PORTAVEU", re.I)
@@ -224,10 +237,14 @@ def _entidad(nombre: str) -> tuple[str, str] | None:
     base = nombre.split("/")[0].strip()
     m = re.match(r"Ajuntament\s+(?:de\s+l['’]|de\s+la\s+|de\s+les\s+|dels?\s+|d['’]|de\s+)(.+)", base, re.I)
     if m:
-        resto = base[len("Ajuntament "):]
-        # el artículo forma parte del nombre («l'Eliana», «la Pobla…»)
+        resto = base[len("Ajuntament "):].strip()
+        if re.match(r"dels?\s", resto, re.I):          # «del Genovés», «del Palomar»
+            return f"Ayuntamiento {resto[0].lower() + resto[1:]}", "Ayuntamiento"
+        # el artículo forma parte del nombre («l'Eliana», «la Pobla…») y va en minúscula
         resto = re.sub(r"^(de\s+|d['’])", "", resto, flags=re.I)
-        return f"Ayuntamiento de {resto[0].upper() + resto[1:]}", "Ayuntamiento"
+        if not re.match(r"(?:l['’]|la\s|les\s|el\s|els\s)", resto):
+            resto = resto[0].upper() + resto[1:]
+        return f"Ayuntamiento de {resto}", "Ayuntamiento"
     if re.match(r"Ayuntamiento", base, re.I):
         return base, "Ayuntamiento"
     return None   # diputación, mancomunidades, consorcios… (la diputación entra por sus datos abiertos)
@@ -266,7 +283,7 @@ def ayuntamientos_valencia(cache: pathlib.Path, sin_red: bool = False,
             if re.search(r"x{3,}|\*{3,}", l["nombre_completo"], re.I):
                 continue        # apellidos tachados en el anuncio: no se sabe quién es
             fichas.append(_ficha(l, institucion=ent[0], tipo_institucion=ent[1], provincia="Valencia", grupo="",
-                                 tipo=l.get("tipo_marcado") or _tipo(a["sumario"]), fecha=a["fecha"], metodo=metodo,
+                                 tipo=_tipo_ficha(l, a["sumario"]), fecha=a["fecha"], metodo=metodo,
                                  fuente=f"BOP de València, anuncio {a['registro']}", url=bopv.PORTADA,
                                  registro=a["registro"]))
     con_datos = {f["institucion"] for f in fichas}
@@ -350,7 +367,7 @@ def ayuntamientos_web(cache: pathlib.Path, sin_red: bool = False,
                 n += 1
                 fichas.append(_ficha(l, institucion=ent["institucion"], tipo_institucion="Ayuntamiento",
                                      provincia=ent["provincia"], grupo="",
-                                     tipo=l.get("tipo_marcado") or _tipo(titulo + " " + u.path), fecha=fecha,
+                                     tipo=_tipo_ficha(l, titulo + " " + u.path), fecha=fecha,
                                      metodo=metodo, fuente=f"Web del {ent['institucion']}: {titulo}"[:160], url=url))
         if n:
             leidos.append(ent["institucion"])
@@ -404,6 +421,8 @@ def personas(fichas: list[dict]) -> list[dict]:
                 revisar = vig["metodo"] == "ocr"
             if vig.get("metodo") == "ocr":
                 motivos.append("Leído por OCR de un documento escaneado")
+            if activo and de_mandato and de_mandato[-1]["tipo"] == "mixta":
+                motivos.append("El anuncio mezcla tomas de posesión y ceses: puede que ya no esté en el cargo")
             inm, otros = vig.get("inmuebles"), vig.get("otros_bienes")
             total = vig.get("total_activo")
             pasivo = vig.get("pasivo")

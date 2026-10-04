@@ -183,7 +183,7 @@ const llano = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g,"").toLow
 const TIPOS = {V:"Vivienda",L:"Local",O:"Otro urbano",R:"Rústico"};
 const CLAVES = {P:"Pleno dominio",N:"Nuda propiedad",M:"Multipropiedad",U:"Usufructo"};
 const fecha = f => f ? f.split('-').reverse().join('/') : '—';
-const TIPO_DECL = {inicial:"Declaración inicial",modificacion:"Modificación",final:"Declaración final"};
+const TIPO_DECL = {inicial:"Declaración inicial",modificacion:"Modificación",final:"Declaración final",mixta:"Toma de posesión o cese"};
 
 let DATOS = [], META = {}, orden = {k:"apellidos", dir:1}, vista = [], tope = 200;
 

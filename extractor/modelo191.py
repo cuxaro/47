@@ -24,6 +24,7 @@ from .util import a_numero, norm, sin_acentos
 # Líneas que son «mobiliario» de la página del boletín, no contenido
 _RE_MOBILIARIO = re.compile(
     r"butllet[ií] oficial|bolet[ií]n oficial|edita excma|^\s*p[aàá]g\.?\s*\d+|^\s*n[uú]m\.?\s*\d+\s*$"
+    r"|n\.?\s?i\.?\s?f\.?\s*:|c\.?\s?i\.?\s?f\.?\s*:|\btf\s*:|\btel[eèé]?f?\w*\.?\s*:?\s*\d|\bfax\b|www\.|@\w+\.\w|\b(?:c\.?p\.?\s*)?4[06]\d{3}\b.*\bval[eè]ncia\b"
     r"|verificable a|^\s*csv\s*:|^\s*\d{1,2}-\d{1,2}-\d{4}\s*\d*\s*$|^\s*\d+\s*/\s*20\d\d\s*$|^\s*\d{1,3}\s*$",
     re.I)
 
@@ -36,15 +37,19 @@ _RE_TITULAR = re.compile(
     r"|(?:^|\n)[ \t]*NOM(?:BRE)?\s+PRIMER\s+(?:COGNOM|APELLIDO)"
     r"|(?:^|\n)[ \t]*(?:\d+\s+)?DENOMINACI[OÓ]N?\s+DEL\s+C[AÀ]R(?:GO|REC)", re.I)
 _RE_CARGO = re.compile(r"C[AÀ]R(?:GO|REC)\s+(?:P[UÚ]BLIC[O]?\s+)?(?:D[E']?\s*)?ORIGEN[^\n:]*:?"
-                       r"|C[AÀ]R(?:GO|REC)\s+P[UÚ]BLIC[O]?\s*:", re.I)
+                       r"|C[AÀ]R(?:GO|REC)\s*P[UÚ]BLIC[O]?\s*:"
+                       r"|(?:^|\n)[ \t]*C[AÀ]R(?:GO|REC)\b(?!\s+(?:P[UÚ]BLIC|D[E']?\s*ORIGEN|ORIGEN))[ \t]*:?(?=[ \t]*\S)", re.I)
 _RE_TIPO_MARCADO = re.compile(r"\b[xX✓✔]\s+(INICIAL|FINAL|MODIFICACI)", re.I)
 _RE_ACTIVO = re.compile(r"(?:^|\n)[ \t]*(?:[I1l|]\s*[\.\-\)]*\s*)?ACTI(?:VO|U)\b[ \t]*:?", re.I)
-_RE_PASIVO = re.compile(r"(?:^|\n)[ \t]*(?:[I1l|]{2}\s*[\.\-\)]*\s*)?PASS?I(?:VO|U)\b[^\n:]*:?", re.I)
-_RE_ACTIVIDADES = re.compile(r"(?:^|\n)[ \t]*(?:[I1l|]{3}\s*[\.\-\)]*\s*)?ACTIVI(?:DADES|TATS)\b[ \t.…]*:?", re.I)
-_RE_INMUEBLES = re.compile(r"(?:1\s*[\.\-\)]*\s*)?(?:VALOR\s+(?:DE\s+)?(?:L[OE]S\s+)?)?(?:B(?:IENES|[EÉ]NS)\s+)?I[NM]M(?:UEBLES|OBLES)", re.I)
+_RE_PASIVO = re.compile(r"(?:^|\n)[ \t]*(?:[I1l|]{1,3}\s*[\.\-\):]*\s*)?PASS?I(?:VO|U)\b[^\n:]*:?", re.I)
+_RE_ACTIVIDADES = re.compile(r"(?:^|\n)[ \t]*(?:[I1l|]{1,3}\s*[\.\-\):]*\s*)?ACTIVI(?:DADES|TATS)\b[ \t.…]*:?", re.I)
+_RE_INMUEBLES = re.compile(r"(?:1\s*[\.\-\)]*\s*)?(?:VALOR\s+(?:DE\s+)?(?:L[OE]S\s+)?)?(?:B(?:IENES|[EÉ]NS)\s+)?I[NM]M(?:UEBLES|OBLES)"
+                           r"|1\s*[\.\-\)]*\s*B(?:IENES|[EÉ]NS)\s+M(?:UEBLES|OBLES)(?=[^\n]*CA[TD]ASTRAL)", re.I)
 _RE_OTROS = re.compile(r"(?:2\s*[\.\-\)]*\s*)?(?:VALOR\s+TOTAL\s+(?:DE\s+(?:LOS\s+)?|D['’]\s*)?)?(?:OTROS|ALTRES)\s+B(?:IENES|[EÉ]NS)", re.I)
-_RE_TOTAL = re.compile(r"(?:3\s*[\.\-\)]*\s*)TOTAL\b|(?:^|\n)[ \t\-\.]*(?:VALOR\s+)?TOTAL\b", re.I)
-_RE_IMPORTE = re.compile(r"-?\d{1,3}(?:[\. ]\d{3})+(?:[,'’\.]\d{1,2})?(?!\d)|-?\d+(?:[,'’\.]\d{1,2})?(?!\d)")
+_RE_TOTAL = re.compile(r"(?:3\s*[\.\-\)]*\s*)TOTAL\b|(?:^|\n)[ \t\-\.]*(?:VALOR\s+)?TOTAL(?:\b|(?=ACTI))"
+                       r"(?!\s+(?:DE\s+|D['’]\s*)?(?:L[OE]S\s+)?(?:OTROS|ALTRES))", re.I)
+# (los números pegados a letras son referencias catastrales o matrículas, no importes)
+_RE_IMPORTE = re.compile(r"(?<![A-Za-z0-9])(?:-?\d{1,3}(?:[\. ]\d{3})+(?:[,'’\.]\d{1,2})?|-?\d+(?:[,'’\.]\d{1,2})?)(?![\dA-Za-z])")
 _ETIQUETAS_NOMBRE = re.compile(
     r"\b(NOM(?:BRE)?\s+DEL?\s+(?:LA\s+)?DECLARANTE?|PRIMER\s+(?:COGNOM|APELLIDO)|SEGON\s+COGNOM|SEGUNDO\s+APELLIDO"
     r"|NOM(?:BRE)?\s+(?:DEL\s+)?TITULAR|COGNOMS?|APELLIDOS?|NOMBRE|NOM|IMPORTE?S?|DO[ÑN]A|DON|D[ÑN]A|SRA?|D)\b\.?\s*:?", re.I)
@@ -69,7 +74,8 @@ def _importes(trozo: str) -> list[float]:
     # importe queda en medio de la aclaración («(según valor catastral… 99.737,53 € …titularidad)»).
     t = re.sub(r"\.?\s*[´`]\s*(?=\d{2}(?!\d))", ",", trozo)      # «401.500.´00», «2.000´00»: decimales con tilde
     t = re.sub(r"(?m)(^|\s)[1-3]\s*[\.\)](?=\s|$)", " ", t)
-    t = re.sub(r"(?m)(^|\s)\d{1,2}\s*[\.\)\-]+\s*(?=[A-Za-zÀ-ÿ])", " ", t)       # «2-Valor…», «1.Préstecs»   # y los números de apartado («1.», «2.»)
+    t = re.sub(r"(?m)(^|\s)\d{1,2}\s*[\.\)\-]+\s*(?=[A-Za-zÀ-ÿ])", " ", t)       # «2-Valor…», «1.Préstecs»
+    t = re.sub(r"(?m)^\s*(?:\d{1,2}|[IVX]{1,3})\.\s?(?:\d{1,2}|[a-z])\.?\s+(?=[A-Za-zÀ-ÿ])", " ", t)   # «1.1 Vivienda», «II.a. …»   # y los números de apartado («1.», «2.»)
     res = []
     for m in _RE_IMPORTE.finditer(t):
         resto = t[m.end():m.end() + 3]
@@ -83,6 +89,11 @@ def _importes(trozo: str) -> list[float]:
 
 def _suma(trozo: str) -> float | None:
     vals = _importes(trozo)
+    if len(vals) >= 3:
+        # total y, además, su desglose («28.317,93» y debajo vivienda, garaje, trastero)
+        for total, resto in ((vals[0], vals[1:]), (vals[-1], vals[:-1])):
+            if total > 0 and abs(total - sum(resto)) <= 1:
+                return round(total, 2)
     if vals:
         return round(sum(vals), 2)
     if re.search(r"-{2,}|—|\bning[uú]n|\bcap\b|\bno\b|\bsin\b|\bsense\b", trozo, re.I):
@@ -94,6 +105,7 @@ def _nombre(trozo: str) -> str:
     t = _ETIQUETAS_NOMBRE.sub(" ", trozo.replace(":", " ").replace("/", " "))
     t = re.sub(r"[^\wÀ-ÿ'’\-\. ]+", " ", t.replace("\n", " "))
     t = re.sub(r"\s+", " ", t).strip(" .-")
+    t = re.sub(r"^(?:(?:PRIMER|SEGON|SEGUNDO)\s+)+", "", t)      # restos de rótulo partidos en dos líneas
     return t if 3 <= len(t) <= 80 else ""
 
 
@@ -365,15 +377,74 @@ def leer_tablas(tablas: list[list[list[str]]]) -> list[dict]:
 def leer_html(fragmento: str) -> list[dict]:
     """HTML de un anuncio → una ficha por persona (tablas con cabecera o texto)."""
     de_texto = leer(html_a_texto(fragmento))
-    de_tabla = leer_tablas(tablas_html(fragmento))
+    de_tabla = _sanear(leer_tablas(tablas_html(fragmento)))
     nombres = lambda fichas: {norm(f["nombre_completo"]) for f in fichas}
     return de_tabla if de_tabla and len(nombres(de_tabla)) >= len(nombres(de_texto)) * 0.8 else de_texto
+
+
+TOPE_IMPORTE = 30_000_000      # por encima de esto no es un patrimonio: es un número mal leído
+
+
+def _sanear(fichas: list[dict]) -> list[dict]:
+    """Control de calidad: solo pasan las fichas con un nombre de persona creíble.
+
+    Arregla lo arreglable (tratamientos, rótulos y cargos pegados al nombre) y
+    descarta lo demás: es preferible que un anuncio conste como «no leído» a
+    publicar un nombre o un importe inventado por una mala lectura."""
+    res = []
+    for f in fichas:
+        n = re.sub(r"\s+", " ", f["nombre_completo"]).strip()
+        n = re.sub(r"^(?:DENOMINACI[OÓ]N?\s+(?:DEL?\s+)?C[AÀ]R(?:GO|REC)\s*:?\s*)", "", n, flags=re.I)
+        n = re.sub(r"^(?:\d+\s*(?:er|[ºª°])\.?\s*)+", "", n)                      # «1er. 2º. »
+        n = re.sub(r"^(?:[yi]\s+)?(?:D\.?\s?ª\.?|DÑA\.?|DOÑA|DON|SRA?\.?|D\.)\s*(?=[A-ZÀ-Ý])", "", n, flags=re.I)
+        n = re.sub(r"^[yi]\s+", "", n)
+        n = re.sub(r"\bM[2a]\.?\s+(?=[A-ZÀ-Ý])", "Mª ", n)                         # «M2 Nieves» (OCR)
+        cargo_extra = ""
+        m = re.search(r"\s+(?:C[AÀ]R(?:GO|REC)\b|" + _RE_PALABRA_CARGO.pattern + r"|\d?\s?TINEN[CÇ]A).*$", n, re.I)
+        if m and len(n[:m.start()].split()) >= 2:
+            cargo_extra = re.sub(r"^C[AÀ]R(?:GO|REC)\b\s*:?\s*", "", n[m.start():].strip(), flags=re.I)
+            n = n[:m.start()]
+        n = re.sub(r"(?:\s+(?:\d+|[^\wÀ-ÿ]+|[A-Za-zÀ-ÿ]))+$", "", n).strip(" .-:")          # restos al final
+        palabras = n.split()
+        if not (2 <= len(palabras) <= 6) or re.search(r"\d", n) or _RE_PALABRA_CARGO.search(n) \
+                or _NO_NOMBRE.search(n) or not _parece_nombre(n):
+            continue
+        f = {**f, "nombre_completo": n}
+        if cargo_extra and not f.get("cargo"):
+            f["cargo"] = cargo_extra[:120]
+        if any((f.get(k) or 0) > TOPE_IMPORTE for k in ("inmuebles", "otros_bienes", "total_activo", "pasivo")):
+            f.update(inmuebles=None, otros_bienes=None, total_activo=None, pasivo=None, suma_cuadra=None, ilegible=True)
+        res.append(f)
+    return res
+
+
+_RE_SEC_CESE = re.compile(r"\b(CESES?|CESSAMENTS?|CESSE|CESAN|SALIENTES?|SORTINTS?|FIN(?:AL)? DEL? MANDATO?|2019\s*[-/–]\s*2023)\b", re.I)
+_RE_SEC_TOMA = re.compile(r"\b(TOMA DE POSESI[OÓ]N|PRESA DE POSSESSI[OÓ]|ENTRANTE?S?|ELECT[OA]S?|ELECTES?|NOMBRAMIENTO|NOMENAMENT"
+                          r"|2023\s*[-/–]\s*2027)\b", re.I)
+
+
+def _tipo_seccion(texto: str, pos: int) -> str | None:
+    """Anuncios que mezclan ceses y tomas de posesión: bajo qué epígrafe cae la ficha."""
+    for linea in reversed(texto[:pos].split("\n")):
+        if 0 < len(linea.strip()) < 100:
+            cese, toma = bool(_RE_SEC_CESE.search(linea)), bool(_RE_SEC_TOMA.search(linea))
+            if cese != toma:
+                return "final" if cese else "inicial"
+    return None
 
 
 def leer(texto: str) -> list[dict]:
     """Texto de un anuncio (o de su anexo) → una ficha por persona."""
     texto = _limpia(texto)
-    return _leer_fichas(texto) or _leer_tabla_alineada(texto) or _leer_tabla(texto) or _leer_por_activo(texto)
+    for lector in (_leer_fichas, _leer_tabla_alineada, _leer_tabla, _leer_por_activo):
+        fichas = _sanear(lector(texto))
+        if fichas:
+            for f in fichas:
+                pos = f.pop("_pos", None)
+                if pos is not None:
+                    f["tipo_seccion"] = _tipo_seccion(texto, pos)
+            return fichas
+    return []
 
 
 def _leer_fichas(texto: str) -> list[dict]:
@@ -389,8 +460,9 @@ def _leer_fichas(texto: str) -> list[dict]:
     for i, ini in enumerate(inicios):
         bloque = texto[ini:inicios[i + 1] if i + 1 < len(inicios) else len(texto)]
         cabecera = _RE_TITULAR.search(bloque)
-        m_cargo = _RE_CARGO.search(bloque)
-        m_act = _RE_ACTIVO.search(bloque, m_cargo.end() if m_cargo else 0)
+        m_act = _RE_ACTIVO.search(bloque, cabecera.end())
+        # el cargo va entre el nombre y «Activo» (más abajo ya sería el de la persona siguiente)
+        m_cargo = _RE_CARGO.search(bloque, cabecera.end(), m_act.start() if m_act else len(bloque))
         if not m_act:
             # sin rótulo «Activo»: los importes empiezan en «Inmuebles: …»
             m_act = re.compile(r"(?=(?:^|\n)[ \t]*" + _RE_INMUEBLES.pattern + ")", re.I).search(
@@ -400,7 +472,7 @@ def _leer_fichas(texto: str) -> list[dict]:
         # «Cargo: …» en la línea de encima del nombre (y no debajo)
         cargo_encima = ""
         if not m_cargo:
-            encima = texto[:ini].rstrip(" \t").rsplit("\n", 1)[-1] if texto[ini:ini + 1] == "\n" else ""
+            encima = texto[:ini].rstrip().rsplit("\n", 1)[-1]
             m_enc = re.match(r"\s*C[AÀ]R(?:GO|REC)\b\s*:?\s*(.+)", encima, re.I)
             cargo_encima = m_enc.group(1).strip() if m_enc else ""
         m_pas = _RE_PASIVO.search(bloque, m_act.end())
@@ -454,9 +526,10 @@ def _leer_fichas(texto: str) -> list[dict]:
             cargo = cargo_encima[:120]
         elif m_cargo:
             cargo = re.sub(r"\b(TIPUS DE C[AÀ]RREC|TIPO DE CARGO|TIPUS DE DECLARACI[OÓ]N?|TIPO DE DECLARACI[OÓ]N?"
-                           r"|DENOMINACI[OÓ]N?|INICIAL|FINAL|MODIFICACI[OÓ]N?)\b\s*:?", " ",
+                           r"|DENOMINACI[OÓ]N?|INICIAL|FINAL|MODIFICACI[OÓ]N?|TOTALE?S|CAUSA)\b\s*:?", " ",
                            bloque[m_cargo.end():m_act.start()].replace("/", " "), flags=re.I)
             cargo = re.sub(r"(?<!\w)[xX✓✔](?!\w)", " ", cargo)
+            cargo = re.sub(r"^\s*(?:P[UÚ]BLIC[O]?\s+)?(?:ORIGEN\s+)?DE LA DECLARACI[OÓ]N?\b[\s\.:]*", " ", cargo, flags=re.I)
             cargo = re.sub(r"\s+", " ", cargo).strip(" .:-")[:120]
         # «Con ocasión de cese / toma de posesión» pegado al nombre: es el tipo de declaración
         ocasion = re.search(r"\s*\b(?:Con ocasi[oó]n|Amb ocasi[oó]|En ocasi[oó]n?) de(?: la| el)? (cese|cessament|toma|presa)\b.*$",
@@ -469,7 +542,7 @@ def _leer_fichas(texto: str) -> list[dict]:
         if total is not None and (inmuebles is not None or otros is not None):
             cuadra = abs((inmuebles or 0) + (otros or 0) - total) <= 1
         res.append({
-            "nombre_completo": nombre, "cargo": cargo,
+            "_pos": ini, "nombre_completo": nombre, "cargo": cargo,
             "inmuebles": inmuebles, "otros_bienes": otros, "total_activo": total, "pasivo": pasivo,
             "actividades": actividades[:400], "ingresos_actividades": round(sum(imp_act), 2) if imp_act else None,
             "suma_cuadra": cuadra,
@@ -544,7 +617,7 @@ def _leer_por_activo(texto: str) -> list[dict]:
         cuadra = None
         if total is not None and (inmuebles is not None or otros is not None):
             cuadra = abs((inmuebles or 0) + (otros or 0) - total) <= 1
-        res.append({"nombre_completo": nombre, "cargo": " ".join(cargo)[:120], "inmuebles": inmuebles,
+        res.append({"_pos": a.start(), "nombre_completo": nombre, "cargo": " ".join(cargo)[:120], "inmuebles": inmuebles,
                     "otros_bienes": otros, "total_activo": total, "pasivo": pasivo,
                     "actividades": actividades[:400], "ingresos_actividades": round(sum(imp_act), 2) if imp_act else None,
                     "suma_cuadra": cuadra})
