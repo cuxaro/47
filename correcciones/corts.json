@@ -723,5 +723,29 @@
   "total_otros_bienes": 344936,
   "pasivo": [],
   "total_pasivo": null
+ },
+ "XI022859": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 87, págs. 104-109)",
+  "persona": {
+   "nombre": "Vicent",
+   "apellidos": "Granel Cabedo",
+   "circunscripcion": "Castellón",
+   "partido": "Coalició Compromís"
+  },
+  "inmuebles": [],
+  "total_catastral": null,
+  "otros_bienes": [
+   {
+    "descripcion": "Ford Focus 1.6 TCDi - 2010",
+    "valor": 3000
+   },
+   {
+    "descripcion": "Compte bancari actual",
+    "valor": 447.19
+   }
+  ],
+  "total_otros_bienes": null,
+  "pasivo": [],
+  "total_pasivo": null
  }
 }

@@ -45,6 +45,7 @@ def a_numero(txt: str | None) -> float | None:
     if not txt:
         return None
     t = txt.replace("€", " ").replace("EUR", " ").replace("euros", " ").strip()
+    t = re.sub(r"(?<=\d)[:;](?=\d{3}\b)", ".", t)      # el OCR a veces lee «4:622,51» por «4.622,51»
     if re.fullmatch(r"[\dOo\.\, ]+", t) and re.search(r"\d", t):
         t = t.replace("O", "0").replace("o", "0")
     m = _NUM.search(t)

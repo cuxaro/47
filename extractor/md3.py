@@ -504,9 +504,20 @@ def leer_declaracion(pags: list[dict]) -> dict:
         })
     if a_tot1:
         cands = [c for c in cas if a_tot1["y0"] - 8 <= (c["y0"] + c["y1"]) / 2 <= a_tot1["y1"] + 10
-                 and c["x0"] > a_tot1["x0"] + 40 and a_numero(c["t"]) is not None]
+                 and c["x0"] > a_tot1["x0"] + 40 and c["x1"] - c["x0"] > 120   # la casilla del total es ancha
+                 and a_numero(c["t"]) is not None]
         if cands:
             d["total_catastral"] = a_numero(cands[0]["t"])
+    if d["total_catastral"] is None:
+        # El OCR no siempre lee el rótulo «Valor catastral del conjunto»: el total es
+        # la casilla ancha y suelta que queda justo debajo de las filas de inmuebles.
+        ult = max((c["y1"] for c in cas if cab <= c["y0"] < y1 and c["x1"] - c["x0"] < 120), default=cab)
+        for fila in _filas(cas, ult - 2, y1):
+            c = fila[0]
+            if len(fila) == 1 and c["x1"] - c["x0"] > 120 and c["y1"] - c["y0"] < 30 \
+                    and a_numero(c["t"]) is not None and not _hay_palabra(c["t"]):
+                d["total_catastral"] = a_numero(c["t"])
+                break
 
     # ---- 2 y 3. Otros bienes y pasivo ---------------------------------------
     def tabla(y_ini, y_end, destino, clave_total, clasifica):
