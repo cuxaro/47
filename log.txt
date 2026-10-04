@@ -1,8 +1,11 @@
-base https://bop.dival.es/bop/ 231140
-j_idt131 /bop/xhtml/portal.xhtml;jsessionid=4B6CB20B472975B4D3EB4769047B1A1D.tomcat-2 {'j_idt131': 'j_idt131', 'numeroRegistro:field': '', 'filtroCalendarioIni_input': '02/10/2026', 'filtroCalendarioFin_input': '02/10/2026', 'buscador': '', 'j_idt175:field_focus': '', 'j_idt175:field_input': '', 'j_idt175:field_filter': '', 'j_idt187:field_input': '', 'j_idt187:field_hinput': '', 'javax.faces.ViewState': '-2427120819103217212:-2135576104163050914'}
-bopv_es.xml 65673
-bopv_titular.xml 14082
-bopv_html.xml 2514
-bopv_pdf.xml 2784
-https://bop.dival.es/bop/xhtml/csv.xhtml 40361
-https://bop.dival.es/bop/xhtml/csv.xhtml?csv=BOPV-2023/13505 40482
+resultados 10
+0 44408 False
+1 44409 False
+2 42840 False
+3 43005 False
+4 50265 False
+5 43483 False
+6 43534 False
+7 44438 False
+8 44440 False
+9 44774 False
