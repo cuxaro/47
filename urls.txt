@@ -1,15 +1,12 @@
-https://altoscargos.dival.es/robots.txt
-https://altoscargos.dival.es/personas.json
-https://altoscargos.dival.es/declaraciones.json
-https://altoscargos.dival.es/system/attachments/site-1/gobierto_people/person_statements/attachment-d7fd207a-6588-47e2-a4ec-5bf06e33aba3/PP - Mompo Aledo, Vicente.pdf
-https://altoscargos.dival.es/declaraciones/natalia-enguix-martinez/2024-05-03-declaracio-de-bens-i-activitats-13
-https://abierta.diputacionalicante.es/robots.txt
-https://abierta.diputacionalicante.es/informacion-institucional-y-organizativa/corporacion-provincial-2023-2027/
-https://abierta.diputacionalicante.es/wp-content/uploads/RP-320-Declaracion-de-bienes-diputados.pdf
-https://transparencia.dipcas.es/robots.txt
-https://transparencia.dipcas.es/es/seccion/informaci-sobre-la-diputaci-provincial/1-cargos-electos-y-empleados-pblicos-de-la-diputacin
-https://bop.dival.es/robots.txt
-https://bop.dival.es/
-https://bop.dipcas.es/robots.txt
+https://www.dip-alicante.es/robots.txt
+https://www.dip-alicante.es/bop2/pdftotal/2024/02/05_25/2024_000669.pdf
+https://bop.diputacionalicante.es/
+https://www.diputacionalicante.es/areas/bop-e-imprenta/
 https://bop.dipcas.es/
-https://www.dip-alicante.es/bop2/
+https://bop.dipcas.es/PortalBOP/
+https://transparencia.dipcas.es/es/indicador//1-datos-biogrficos-y-adscripcin-poltica-del-presidente-y-de-los-diputados-as
+https://transparencia.dipcas.es/es/indicador//7-rgimen-de-dedicacin-de-los-cargos-electos
+https://datosabiertos.dipcas.es/api/explore/v2.1/catalog/datasets?where=search(%22declaraciones%22)&limit=20
+https://www.valencia.es/cas/ayuntamiento/legislatura-2023-2027/-/content/2019-2023?uid=23405631
+https://www.alicante.es/es/gobierno-abierto/transparencia/declaraciones-de-bienes-y-actividades/declaraciones-anuales-de-bienes-y-actividades-de-los-representantes-locales
+https://www.elche.es/ayuntamiento-de-elche/corporacion-municipal/declaraciones-de-actividades-y-bienes/
