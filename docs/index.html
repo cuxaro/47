@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>47 · Patrimonio declarado de cargos públicos</title>
+<meta name="description" content="Declaraciones de bienes de cargos públicos valencianos, tabuladas y filtrables. Datos oficiales, leídos de los boletines.">
+<style>
+:root{
+  --fondo:#f6f5f1; --papel:#fff; --tinta:#1c1b19; --suave:#5d5a53; --raya:#dedbd2;
+  --acento:#0b5d4b; --acento-suave:#e3efe9; --aviso:#8a5200; --aviso-suave:#fbefd6;
+  --mal:#9b2c20; --sombra:0 1px 2px rgba(0,0,0,.06),0 6px 20px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme:dark){:root{
+  --fondo:#141513; --papel:#1d1f1c; --tinta:#ecebe6; --suave:#a5a39b; --raya:#33362f;
+  --acento:#6fd0b3; --acento-suave:#1e332c; --aviso:#f0bd62; --aviso-suave:#3a2e15;
+  --mal:#f08a7c; --sombra:none;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--tinta);
+  font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acento)}
+.ancho{max-width:1280px;margin:0 auto;padding:0 16px}
+header{padding:28px 0 8px}
+h1{font-size:clamp(1.5rem,3.5vw,2.1rem);line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+h1 b{color:var(--acento)}
+.sub{color:var(--suave);margin:0;max-width:68ch}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:18px 0}
+.cifra{background:var(--papel);border:1px solid var(--raya);border-radius:10px;padding:12px 14px}
+.cifra strong{display:block;font-size:1.6rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.cifra span{color:var(--suave);font-size:.86rem}
+.rapidos{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.chip{border:1px solid var(--raya);background:var(--papel);color:var(--tinta);border-radius:999px;
+  padding:7px 13px;font:inherit;font-size:.9rem;cursor:pointer}
+.chip:hover{border-color:var(--acento)}
+.chip[aria-pressed=true]{background:var(--acento);border-color:var(--acento);color:var(--papel)}
+.panel{background:var(--papel);border:1px solid var(--raya);border-radius:12px;box-shadow:var(--sombra)}
+details.filtros>summary{cursor:pointer;padding:12px 16px;font-weight:600;list-style:none;display:flex;gap:8px;align-items:center}
+details.filtros>summary::-webkit-details-marker{display:none}
+details.filtros>summary::before{content:"▸";color:var(--suave)}
+details.filtros[open]>summary::before{content:"▾"}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px 14px;padding:4px 16px 16px}
+.campo label{display:block;font-size:.8rem;color:var(--suave);margin-bottom:3px}
+.campo input,.campo select{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--raya);
+  border-radius:8px;background:var(--fondo);color:var(--tinta)}
+.campo input:focus,.campo select:focus,.chip:focus-visible,button:focus-visible{outline:2px solid var(--acento);outline-offset:1px}
+.campo.check{display:flex;align-items:center;gap:8px;padding-top:18px}
+.campo.check input{width:auto}
+.campo.check label{margin:0;font-size:.92rem;color:var(--tinta)}
+.barra{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:16px 0 8px}
+.barra p{margin:0;font-weight:600}
+.barra p small{font-weight:400;color:var(--suave)}
+.btn{border:1px solid var(--raya);background:var(--papel);color:var(--tinta);border-radius:8px;padding:7px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+.btn:hover{border-color:var(--acento)}
+.tabla-caja{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--raya);white-space:nowrap}
+th{position:sticky;top:0;background:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--suave);cursor:pointer;user-select:none}
+th[aria-sort=ascending]::after{content:" ▲"} th[aria-sort=descending]::after{content:" ▼"}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--acento-suave)}
+td.quien{white-space:normal;min-width:180px}
+td.quien small{display:block;color:var(--suave)}
+.cero{color:var(--suave)}
+.marca{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.marca.ocr{background:var(--aviso-suave);color:var(--aviso)}
+.marca.ok{background:var(--acento-suave);color:var(--acento)}
+.marca.ex{border:1px solid var(--raya);color:var(--suave)}
+.vacio{padding:28px 16px;text-align:center;color:var(--suave)}
+dialog{border:1px solid var(--raya);border-radius:14px;padding:0;background:var(--papel);color:var(--tinta);
+  width:min(760px,calc(100vw - 24px));max-height:calc(100vh - 24px)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.ficha{padding:20px 22px 24px}
+.ficha h2{margin:0 0 2px;font-size:1.35rem}
+.ficha h3{margin:22px 0 6px;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--suave)}
+.ficha table{font-size:.9rem}
+.ficha th{position:static;cursor:default}
+.ficha td{white-space:normal}
+.cerrar{float:right}
+.nota{background:var(--aviso-suave);color:var(--aviso);border-radius:8px;padding:9px 12px;font-size:.9rem;margin:12px 0 0}
+.nota ul{margin:4px 0 0;padding-left:18px}
+.dudoso{text-decoration:underline dotted var(--aviso);text-underline-offset:3px}
+footer{color:var(--suave);font-size:.9rem;padding:28px 0 48px}
+footer h2{font-size:1rem;color:var(--tinta);margin:20px 0 6px}
+footer ul{margin:0;padding-left:18px}
+footer li{margin:3px 0}
+</style>
+</head>
+<body>
+<div class="ancho">
+<header>
+  <h1><b>47</b> · Patrimonio declarado</h1>
+  <p class="sub" id="sub">Declaraciones de bienes de cargos públicos valencianos, tal como ellos mismos las han presentado. Tabuladas para poder filtrar y contar.</p>
+</header>
+
+<section class="cifras" id="cifras" aria-live="polite"></section>
+
+<div class="rapidos" id="rapidos" aria-label="Filtros rápidos"></div>
+
+<details class="panel filtros" open>
+  <summary>Filtros</summary>
+  <form class="rejilla" id="f" onsubmit="return false">
+    <div class="campo"><label for="q">Nombre</label><input id="q" type="search" placeholder="Buscar…"></div>
+    <div class="campo"><label for="grupo">Grupo</label><select id="grupo"><option value="">Todos</option></select></div>
+    <div class="campo"><label for="circ">Circunscripción</label><select id="circ"><option value="">Todas</option></select></div>
+    <div class="campo"><label for="activo">Situación</label><select id="activo"><option value="">Todos</option><option value="1" selected>En activo</option><option value="0">Ya no están</option></select></div>
+    <div class="campo"><label for="viv">Viviendas, mínimo</label><input id="viv" type="number" min="0" inputmode="numeric"></div>
+    <div class="campo"><label for="vivc">Viviendas compartidas (&lt;100 %), mínimo</label><input id="vivc" type="number" min="0" inputmode="numeric"></div>
+    <div class="campo"><label for="inm">Inmuebles de cualquier tipo, mínimo</label><input id="inm" type="number" min="0" inputmode="numeric"></div>
+    <div class="campo"><label for="prov">Con inmueble en la provincia de</label><select id="prov"><option value="">Cualquiera</option></select></div>
+    <div class="campo"><label for="nprov">Provincias distintas, mínimo</label><input id="nprov" type="number" min="0" inputmode="numeric"></div>
+    <div class="campo"><label for="cat">Valor catastral, desde (€)</label><input id="cat" type="number" min="0" step="1000" inputmode="numeric"></div>
+    <div class="campo"><label for="cue">Dinero en cuentas, desde (€)</label><input id="cue" type="number" min="0" step="1000" inputmode="numeric"></div>
+    <div class="campo"><label for="otr">Otros bienes en total, desde (€)</label><input id="otr" type="number" min="0" step="1000" inputmode="numeric"></div>
+    <div class="campo"><label for="pas">Deudas, desde (€)</label><input id="pas" type="number" min="0" step="1000" inputmode="numeric"></div>
+    <div class="campo"><label for="ren">Rentas anuales, desde (€)</label><input id="ren" type="number" min="0" step="1000" inputmode="numeric"></div>
+    <div class="campo check"><input id="hip" type="checkbox"><label for="hip">Con hipoteca</label></div>
+    <div class="campo check"><input id="rev" type="checkbox"><label for="rev">Solo datos por revisar</label></div>
+  </form>
+</details>
+
+<div class="barra">
+  <p id="cuenta"></p>
+  <div>
+    <button class="btn" id="limpiar" type="button">Quitar filtros</button>
+    <button class="btn" id="csv" type="button">Descargar esta tabla (CSV)</button>
+  </div>
+</div>
+
+<div class="panel tabla-caja">
+  <table id="t">
+    <thead><tr>
+      <th data-k="apellidos">Persona</th>
+      <th data-k="grupo">Grupo</th>
+      <th data-k="n_viviendas" class="n">Viviendas</th>
+      <th data-k="n_inmuebles" class="n">Inmuebles</th>
+      <th data-k="n_provincias" class="n" title="Provincias distintas en las que declara inmuebles">Provincias</th>
+      <th data-k="valor_catastral" class="n">Valor catastral</th>
+      <th data-k="cuentas" class="n">En cuentas</th>
+      <th data-k="otros_bienes" class="n" title="Total de bienes no inmobiliarios: cuentas, vehículos, inversiones…">Otros bienes</th>
+      <th data-k="pasivo" class="n">Deudas</th>
+      <th data-k="rentas" class="n">Rentas / año</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+  <div class="vacio" id="vacio" hidden>Nadie cumple esos filtros.</div>
+</div>
+
+<footer>
+  <h2>Qué hay que saber antes de sacar conclusiones</h2>
+  <ul>
+    <li>Son datos <strong>declarados por cada persona</strong>. Nadie los verifica públicamente.</li>
+    <li>La declaración solo indica la <strong>provincia</strong> de cada inmueble. No hay municipio, dirección ni metros.</li>
+    <li>El <strong>valor catastral</strong> no es el valor de mercado; suele ser bastante más bajo.</li>
+    <li>La descripción de cuentas, vehículos y deudas es voluntaria: hay quien detalla y quien solo da el total.</li>
+    <li>Parte de los formularios están escaneados y se leen por <strong>OCR</strong>. Van marcados y enlazan al original para comprobarlos.</li>
+  </ul>
+  <h2>De dónde sale</h2>
+  <ul id="fuentes"></ul>
+  <p>Código y datos en CSV: <a href="https://github.com/cuxaro/47">github.com/cuxaro/47</a>. Si ves un error, abre una incidencia allí.</p>
+</footer>
+</div>
+
+<dialog id="dlg"><div class="ficha" id="ficha"></div></dialog>
+
+<script>
+const $ = s => document.querySelector(s);
+const eur = v => v == null ? "—" : new Intl.NumberFormat("es-ES",{style:"currency",currency:"EUR",maximumFractionDigits:0}).format(v);
+const eur2 = v => v == null ? "—" : new Intl.NumberFormat("es-ES",{style:"currency",currency:"EUR"}).format(v);
+const num = v => new Intl.NumberFormat("es-ES").format(v);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const llano = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const TIPOS = {V:"Vivienda",L:"Local",O:"Otro urbano",R:"Rústico"};
+const CLAVES = {P:"Pleno dominio",N:"Nuda propiedad",M:"Multipropiedad",U:"Usufructo"};
+const TIPO_DECL = {inicial:"Declaración inicial",modificacion:"Modificación",final:"Declaración final"};
+
+let DATOS = [], META = {}, orden = {k:"apellidos", dir:1}, vista = [];
+
+const RAPIDOS = [
+  ["Con vivienda", {viv:1}],
+  ["Más de 2 viviendas", {viv:3}],
+  ["Vivienda compartida", {vivc:1}],
+  ["Sin ningún inmueble", null],
+  ["Inmuebles en 3 provincias", {nprov:3}],
+  ["Más de 50.000 € en cuentas", {cue:50000}],
+  ["Con hipoteca", {hip:true}],
+];
+let sinInmuebles = false;
+
+function leerFiltros(){
+  const v = id => $("#"+id).value.trim(), n = id => v(id) === "" ? null : Number(v(id));
+  return {q:llano(v("q")), grupo:v("grupo"), circ:v("circ"), activo:v("activo"), viv:n("viv"), vivc:n("vivc"),
+          inm:n("inm"), prov:v("prov"), nprov:n("nprov"), cat:n("cat"), cue:n("cue"), otr:n("otr"),
+          pas:n("pas"), ren:n("ren"), hip:$("#hip").checked, rev:$("#rev").checked};
+}
+function cumple(p,f){
+  if (f.q && !llano(p.nombre+" "+p.apellidos).includes(f.q)) return false;
+  if (f.grupo && p.grupo !== f.grupo) return false;
+  if (f.circ && p.circunscripcion !== f.circ) return false;
+  if (f.activo !== "" && p.en_activo !== (f.activo === "1")) return false;
+  if (f.viv != null && p.n_viviendas < f.viv) return false;
+  if (f.vivc != null && p.n_viviendas_compartidas < f.vivc) return false;
+  if (f.inm != null && p.n_inmuebles < f.inm) return false;
+  if (f.prov && !p.provincias_inmuebles.includes(f.prov)) return false;
+  if (f.nprov != null && p.n_provincias < f.nprov) return false;
+  if (f.cat != null && p.valor_catastral < f.cat) return false;
+  if (f.cue != null && p.cuentas < f.cue) return false;
+  if (f.otr != null && p.otros_bienes < f.otr) return false;
+  if (f.pas != null && p.pasivo < f.pas) return false;
+  if (f.ren != null && !(p.rentas >= f.ren)) return false;
+  if (f.hip && !p.tiene_hipoteca) return false;
+  if (f.rev && !p.calidad.revisar) return false;
+  if (sinInmuebles && p.n_inmuebles !== 0) return false;
+  return true;
+}
+function marca(p){
+  const c = p.calidad;
+  if (!p.declaracion || c.ilegible) return '<span class="marca ocr" title="No se ha podido leer su declaración: consulta el original">sin leer</span>';
+  if (c.metodo === "manual") return '<span class="marca ok" title="Formulario manuscrito, transcrito a mano del original">a mano</span>';
+  if (c.metodo === "ocr") return c.comprobado
+    ? '<span class="marca ok" title="Leído por OCR; las sumas coinciden con los totales declarados">OCR ✓</span>'
+    : '<span class="marca ocr" title="Leído por OCR de un formulario escaneado: puede tener erratas">OCR</span>';
+  return "";
+}
+function celda(v, fmt){ return v ? fmt(v) : `<span class="cero">${v == null ? "—" : fmt(0)}</span>`; }
+
+function pintar(){
+  const f = leerFiltros();
+  vista = DATOS.filter(p => cumple(p,f));
+  const k = orden.k;
+  vista.sort((a,b) => {
+    const x = a[k], y = b[k];
+    if (typeof x === "string" || typeof y === "string") return orden.dir * llano(x).localeCompare(llano(y),"es");
+    return orden.dir * ((x ?? -Infinity) - (y ?? -Infinity));
+  });
+  $("#t tbody").innerHTML = vista.map((p,i) => `<tr data-i="${i}" tabindex="0">
+    <td class="quien">${esc(p.apellidos)}, ${esc(p.nombre)}${p.en_activo ? "" : '<span class="marca ex">ya no está</span>'}${marca(p)}
+      <small>${esc(p.circunscripcion)}</small></td>
+    <td>${esc(p.grupo) || "—"}</td>
+    <td class="n">${celda(p.n_viviendas,num)}</td>
+    <td class="n">${celda(p.n_inmuebles,num)}</td>
+    <td class="n" title="${esc(p.provincias_inmuebles.join(", "))}">${celda(p.n_provincias,num)}</td>
+    <td class="n">${celda(p.valor_catastral,eur)}</td>
+    <td class="n">${celda(p.cuentas,eur)}</td>
+    <td class="n">${celda(p.otros_bienes,eur)}</td>
+    <td class="n">${celda(p.pasivo,eur)}</td>
+    <td class="n">${celda(p.rentas,eur)}</td></tr>`).join("");
+  $("#vacio").hidden = vista.length > 0;
+  const base = DATOS.filter(p => f.activo === "" || p.en_activo === (f.activo === "1")).length;
+  $("#cuenta").innerHTML = `${num(vista.length)} de ${num(base)} <small>${vista.length === 1 ? "persona cumple" : "personas cumplen"} los filtros</small>`;
+  const con = fn => vista.filter(fn).length;
+  $("#cifras").innerHTML = [
+    [vista.length, "personas en la tabla"],
+    [con(p => p.n_viviendas >= 1), "con al menos una vivienda"],
+    [con(p => p.n_viviendas >= 3), "con 3 viviendas o más"],
+    [con(p => p.n_inmuebles === 0), "sin ningún inmueble"],
+    [con(p => p.tiene_hipoteca), "con hipoteca"],
+    [con(p => p.n_inmuebles == null), "sin poder leer"],
+  ].map(([n,t]) => `<div class="cifra"><strong>${num(n)}</strong><span>${t}</span></div>`).join("");
+  document.querySelectorAll("#t th").forEach(th => th.setAttribute("aria-sort", th.dataset.k === k ? (orden.dir > 0 ? "ascending" : "descending") : "none"));
+}
+
+function tabla(cab, filas){ return filas.length ? `<div class="tabla-caja"><table><thead><tr>${cab.map(c => `<th${c[1] ? ' class="n"' : ""}>${c[0]}</th>`).join("")}</tr></thead><tbody>${filas.join("")}</tbody></table></div>` : `<p class="cero">Nada declarado.</p>`; }
+const dud = (i, html) => i.dudoso ? `<span class="dudoso" title="Lectura dudosa del OCR: compruébalo en el original">${html}</span>` : html;
+
+function ficha(p){
+  const d = p.declaracion, r = p.renta;
+  let h = `<button class="btn cerrar" onclick="dlg.close()">Cerrar</button>
+    <h2>${esc(p.nombre)} ${esc(p.apellidos)}</h2>
+    <p class="cero" style="margin:0">${esc(p.cargo)} · ${esc(p.ambito)}${p.grupo ? " · " + esc(p.grupo) : ""}${p.circunscripcion ? " · " + esc(p.circunscripcion) : ""}</p>`;
+  if (p.calidad.motivos.length || p.calidad.metodo === "ocr")
+    h += `<div class="nota">${p.calidad.metodo === "ocr" ? "Leído por OCR de un formulario escaneado: puede tener erratas. " : ""}${p.calidad.comprobado ? "Las sumas coinciden con los totales declarados. " : ""}${p.calidad.motivos.length ? "<ul>" + p.calidad.motivos.map(m => `<li>${esc(m)}</li>`).join("") + "</ul>" : ""}</div>`;
+  if (d && !p.calidad.ilegible){
+    h += `<h3>Inmuebles${d.total_catastral != null ? " · total declarado " + eur2(d.total_catastral) : ""}</h3>` +
+      tabla([["Tipo"],["Titularidad"],["%",1],["Provincia"],["Valor catastral",1]], d.inmuebles.map(i => `<tr>
+        <td>${dud(i, esc(TIPOS[i.tipo] || i.tipo_txt || "—"))}</td><td>${esc(CLAVES[i.clave] || i.clave_txt || "—")}</td>
+        <td class="n">${i.porcentaje == null ? esc(i.porcentaje_txt || "—") : num(i.porcentaje) + " %"}</td>
+        <td>${esc(i.provincia || i.provincia_txt || "—")}</td><td class="n">${dud(i, i.valor_catastral == null ? esc(i.valor_txt || "—") : eur2(i.valor_catastral))}</td></tr>`));
+    h += `<h3>Otros bienes${d.total_otros_bienes != null ? " · total declarado " + eur2(d.total_otros_bienes) : ""}</h3>` +
+      tabla([["Descripción"],["Clase"],["Valor",1]], d.otros_bienes.map(i => `<tr><td>${esc(i.descripcion || "—")}</td><td>${esc(i.categoria)}</td><td class="n">${dud(i, i.valor == null ? esc(i.valor_txt || "—") : eur2(i.valor))}</td></tr>`));
+    h += `<h3>Deudas${d.total_pasivo != null ? " · total declarado " + eur2(d.total_pasivo) : ""}</h3>` +
+      tabla([["Descripción"],["Clase"],["Valor",1]], d.pasivo.map(i => `<tr><td>${esc(i.descripcion || "—")}</td><td>${esc(i.categoria)}</td><td class="n">${dud(i, i.valor == null ? esc(i.valor_txt || "—") : eur2(i.valor))}</td></tr>`));
+  }
+  if (r){
+    h += `<h3>Rentas declaradas (registrada el ${esc(r.fecha_registro || "—")})</h3>` +
+      tabla([["Concepto"],["Origen"],["Importe",1]], r.partidas.map(x => `<tr><td>${esc(x.concepto || x.apartado)}</td><td>${esc(x.origen)}</td><td class="n">${eur2(x.importe)}</td></tr>`)
+        .concat(r.cuota_irpf != null ? [`<tr><td>Cuota IRPF del año anterior</td><td></td><td class="n">${eur2(r.cuota_irpf)}</td></tr>`] : []));
+  }
+  h += `<h3>Documentos originales</h3><ul>` +
+    p.historico.map(x => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${TIPO_DECL[x.tipo] || x.tipo}</a> · BOCV nº ${x.bocv}, pág. ${x.paginas[0]}–${x.paginas[1]} · registrada el ${esc(x.fecha_registro || "—")}${x.metodo === "ocr" ? " · escaneada" : ""}</li>`).join("") +
+    (r ? `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">Declaración anual de rentas</a> (PDF)</li>` : "") +
+    (p.url_ficha ? `<li><a href="${esc(p.url_ficha)}" target="_blank" rel="noopener">Ficha en Les Corts</a></li>` : "") + `</ul>`;
+  $("#ficha").innerHTML = h;
+  $("#dlg").showModal();
+}
+
+function aCSV(){
+  const cols = ["apellidos","nombre","cargo","grupo","circunscripcion","n_viviendas","n_viviendas_compartidas","n_inmuebles","n_locales","n_rusticos","n_provincias","provincias_inmuebles","valor_catastral","cuentas","vehiculos","inversiones","otros_bienes","pasivo","tiene_hipoteca","rentas","cuota_irpf"];
+  const q = v => { v = Array.isArray(v) ? v.join("; ") : (v ?? ""); v = String(v); return /[",\n;]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v; };
+  const txt = "﻿" + [cols.join(";")].concat(vista.map(p => cols.map(c => q(typeof p[c] === "number" ? String(p[c]).replace(".",",") : p[c])).join(";"))).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([txt],{type:"text/csv;charset=utf-8"}));
+  a.download = "patrimonio-filtrado.csv"; a.click(); URL.revokeObjectURL(a.href);
+}
+
+function limpiar(){
+  $("#f").reset(); sinInmuebles = false;
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed","false"));
+  pintar();
+}
+
+fetch("datos.json").then(r => r.json()).then(j => {
+  DATOS = j.personas; META = j.meta;
+  const unicos = fn => [...new Set(DATOS.flatMap(fn).filter(Boolean))].sort((a,b) => a.localeCompare(b,"es"));
+  const opciones = (id, vals) => $("#"+id).insertAdjacentHTML("beforeend", vals.map(v => `<option>${esc(v)}</option>`).join(""));
+  opciones("grupo", unicos(p => [p.grupo])); opciones("circ", unicos(p => [p.circunscripcion])); opciones("prov", unicos(p => p.provincias_inmuebles));
+  $("#sub").textContent = `${META.ambito}, ${META.legislatura} legislatura: ${META.n_en_activo} diputados y diputadas en activo. Son los bienes que cada persona ha declarado, tabulados para poder filtrar y contar. Actualizado el ${META.generado.split("-").reverse().join("/")}.`;
+  $("#rapidos").innerHTML = RAPIDOS.map((r,i) => `<button class="chip" type="button" data-i="${i}" aria-pressed="false">${r[0]}</button>`).join("");
+  const vistos = new Set();
+  $("#fuentes").innerHTML = META.boletines.filter(b => !vistos.has(b.id_bocv) && vistos.add(b.id_bocv)).map(b => `<li><a href="${esc(b.url_pdf)}" target="_blank" rel="noopener">BOCV nº ${b.numero}</a> (${b.fecha.split("-").reverse().join("/")})</li>`).join("") +
+    `<li>Declaración anual de rentas: un PDF por persona, en su ficha de Les Corts.</li>`;
+  pintar();
+}).catch(e => { $("#vacio").hidden = false; $("#vacio").textContent = "No se han podido cargar los datos (" + e + ")."; });
+
+$("#f").addEventListener("input", () => { pintar(); });
+$("#limpiar").addEventListener("click", limpiar);
+$("#csv").addEventListener("click", aCSV);
+$("#rapidos").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  const activo = b.getAttribute("aria-pressed") === "true";
+  const situacion = $("#activo").value;
+  limpiar(); $("#activo").value = situacion;
+  if (!activo){
+    b.setAttribute("aria-pressed","true");
+    const cfg = RAPIDOS[+b.dataset.i][1];
+    if (cfg === null) sinInmuebles = true;
+    else for (const [k,v] of Object.entries(cfg)) { const el = $("#"+k); if (el.type === "checkbox") el.checked = v; else el.value = v; }
+  }
+  pintar();
+});
+$("#t thead").addEventListener("click", e => {
+  const th = e.target.closest("th"); if (!th) return;
+  const k = th.dataset.k;
+  orden = {k, dir: orden.k === k ? -orden.dir : (th.classList.contains("n") ? -1 : 1)};
+  pintar();
+});
+$("#t tbody").addEventListener("click", e => { const tr = e.target.closest("tr"); if (tr) ficha(vista[+tr.dataset.i]); });
+$("#t tbody").addEventListener("keydown", e => { if (e.key === "Enter") { const tr = e.target.closest("tr"); if (tr) ficha(vista[+tr.dataset.i]); } });
+$("#dlg").addEventListener("click", e => { if (e.target === $("#dlg")) $("#dlg").close(); });
+</script>
+</body>
+</html>

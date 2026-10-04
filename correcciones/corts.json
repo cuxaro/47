@@ -1,0 +1,135 @@
+{
+  "_ayuda": "Declaraciones que el OCR no puede leer (escritas a mano) y se han transcrito mirando el original. La clave es el número del sello de registro de entrada. Cada transcripción se ha comprobado con las sumas que declara la propia persona.",
+  "XI000958": {
+    "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 19, págs. 122-127)",
+    "persona": {
+      "nombre": "Ana María",
+      "apellidos": "Bellver Alcántara",
+      "circunscripcion": "Valencia",
+      "partido": "VOX"
+    },
+    "inmuebles": [
+      {
+        "clave": "N",
+        "tipo": "V",
+        "porcentaje": 50,
+        "provincia": "Valencia",
+        "valor_catastral": 98484.02
+      },
+      {
+        "clave": "N",
+        "tipo": "V",
+        "porcentaje": 5,
+        "provincia": "Valencia",
+        "valor_catastral": 3609.59
+      },
+      {
+        "clave": "N",
+        "tipo": "V",
+        "porcentaje": 16.66,
+        "provincia": "Teruel",
+        "valor_catastral": 7423.59
+      },
+      {
+        "clave": "N",
+        "tipo": "O",
+        "porcentaje": 5,
+        "provincia": "Valencia",
+        "valor_catastral": 4000.0
+      }
+    ],
+    "total_catastral": 113517.2,
+    "otros_bienes": [
+      {
+        "descripcion": "Fondo inversión CaixaBank",
+        "valor": 31014.5
+      },
+      {
+        "descripcion": "Cta. vista CaixaBank",
+        "valor": 19860.0
+      },
+      {
+        "descripcion": "Plan pensiones VidaCaixa",
+        "valor": 825.65
+      },
+      {
+        "descripcion": "Cta. vista Bankinter",
+        "valor": 247.12
+      }
+    ],
+    "total_otros_bienes": 51947.27,
+    "pasivo": [
+      {
+        "descripcion": "Préstamos hipotecarios CaixaBank",
+        "valor": 113336
+      },
+      {
+        "descripcion": "Préstamo personal CaixaBank",
+        "valor": 1349
+      },
+      {
+        "descripcion": "Préstamo hipotecario Bankinter",
+        "valor": 11409
+      }
+    ],
+    "total_pasivo": 126094
+  },
+  "XI023618": {
+    "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 120, págs. 271-276)",
+    "persona": {
+      "nombre": "Vicent",
+      "apellidos": "Marzà i Ibáñez",
+      "circunscripcion": "Castellón",
+      "partido": "Compromís"
+    },
+    "inmuebles": [
+      {
+        "clave": "N",
+        "tipo": "V",
+        "porcentaje": 25,
+        "provincia": "Castellón",
+        "valor_catastral": 112941.57
+      },
+      {
+        "clave": "N",
+        "tipo": "V",
+        "porcentaje": 25,
+        "provincia": "Castellón",
+        "valor_catastral": 118164.64
+      },
+      {
+        "clave": "N",
+        "tipo": "V",
+        "porcentaje": 25,
+        "provincia": "Castellón",
+        "valor_catastral": 98054.82
+      },
+      {
+        "clave": "N",
+        "tipo": "V",
+        "porcentaje": 50,
+        "provincia": "Castellón",
+        "valor_catastral": 36608.86
+      }
+    ],
+    "total_catastral": 100594.69,
+    "otros_bienes": [
+      {
+        "descripcion": "Coche Tiguan e-Hybrid",
+        "valor": 34000
+      }
+    ],
+    "total_otros_bienes": 34000,
+    "pasivo": [],
+    "total_pasivo": null
+  },
+  "XI020569": {
+    "motivo": "Formulario escrito a mano: no se ha transcrito porque hay una declaración posterior de la misma persona",
+    "persona": {
+      "nombre": "Vicent",
+      "apellidos": "Marzà i Ibáñez",
+      "circunscripcion": "Castellón",
+      "partido": "Compromís"
+    }
+  }
+}
