@@ -16,4 +16,4 @@ Boletines con declaraciones: 14
   BOCV 208: 154 págs, 1 declaraciones
   [404] https://www.cortsvalencianes.es/es/external-data/pdf/XI/cb0af9470474050df2a7168ad9c9e904
 Declaraciones de rentas leídas: 98
-Hecho en 50s: 128 personas, 128 con declaración de bienes, 64 leídas por OCR, 65 con las sumas comprobadas, 38 para revisar, 0 ilegibles, 98 con rentas
+Hecho en 1414s: 128 personas, 128 con declaración de bienes, 64 leídas por OCR, 65 con las sumas comprobadas, 38 para revisar, 0 ilegibles, 98 con rentas
