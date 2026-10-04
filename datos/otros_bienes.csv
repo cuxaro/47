@@ -77,7 +77,7 @@ d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,VEHICULO,veh
 d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,VEHÍCULO 2,vehiculos,12079.0,"12.079,00",113,120,ocr,False
 d31a8c149d0919e093db4e37b21651aa,Fullana Martínez,Gerard,Compromís,Vehicle,vehiculos,30000.0,30.000,40,233,texto,False
 74e7a04464ec60753e08d00c92fd0e43,Galcerán Gadea,María del Mar,Popular,CUENTA CORRIENTE,cuentas,1400.0,1.400,19,154,ocr,False
-74e7a04464ec60753e08d00c92fd0e43,Galcerán Gadea,María del Mar,Popular,PLAZO FO +.,cuentas,100000.0,100.000,19,154,ocr,False
+74e7a04464ec60753e08d00c92fd0e43,Galcerán Gadea,María del Mar,Popular,PLAZO FO +.,cuentas,100000.0,100:000.,19,154,ocr,False
 d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,CUENTAS BANCARIAS,cuentas,22769.7,"22.769,70",3,182,ocr,False
 d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,PEUGEOT 2008 STYLE 1200,vehiculos,13609.04,"13.609,04",3,182,ocr,False
 23b3c40600cda23fb0e9bac612fb5aa8,Gascó Enríquez,Beatriz,Popular,TURISMO NISSAN QASHQAI+2,vehiculos,8000.0,8.000,3,187,texto,False
@@ -332,8 +332,6 @@ ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,"CUENTA BANCO SANTANDER
 ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,ACCIONES BANCO SANTANDER,cuentas,73.97,"73,97",40,376,ocr,False
 ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,"PARTICIPACIÓN DEL 2,46% ROJO INVERS.L",inversiones,43000.0,43.000 /,40,376,ocr,False
 ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,"PARTICIPACIÓN DEL 14,49% ROJO INVER S.L (herencia)",inversiones,253000.0,253.000,40,376,ocr,False
-ex-sal-credo-cent,Sal Credo,Cent,,FORD FOLVS A.6. TU 2010,vehiculos,,,87,106,ocr,False
-ex-sal-credo-cent,Sal Credo,Cent,,,otros,1.0,lo 1),87,107,ocr,False
 ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,VEHÍCULOS,vehiculos,44300.0,44 300,40,382,ocr,False
 ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,DEPÓSITOS BANCARIOS,cuentas,442144.0,442144,40,382,ocr,False
 ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,PLAN SEGURO VIDA AHORRO,cuentas,9178.88,"9 178,88",40,382,ocr,True

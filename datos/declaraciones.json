@@ -133,13 +133,13 @@
     "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00208000&idioma=es_ES"
    }
   ],
-  "n_personas": 129,
+  "n_personas": 128,
   "n_en_activo": 99,
-  "n_con_declaracion": 129,
-  "n_por_ocr": 65,
-  "n_comprobadas": 64,
+  "n_con_declaracion": 128,
+  "n_por_ocr": 64,
+  "n_comprobadas": 65,
   "n_ilegibles": 0,
-  "n_revisar": 39,
+  "n_revisar": 38,
   "n_con_renta": 98
  },
  "declaraciones": [
@@ -9561,7 +9561,7 @@
      "valor_catastral": 2746.92,
      "valor_txt": "2.746,92€",
      "pagina": 374,
-     "dudoso": true
+     "dudoso": false
     },
     {
      "clave": "P",
@@ -9650,12 +9650,12 @@
      "categoria": "hipoteca"
     }
    ],
-   "total_catastral": 100.0,
+   "total_catastral": 151646.08,
    "total_otros_bienes": 306094.92,
    "total_pasivo": 347.8,
    "avisos": [],
    "notas": [],
-   "suma_inmuebles_cuadra": false,
+   "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
    "ilegible": false,
@@ -11733,11 +11733,10 @@
     {
      "descripcion": "PLAZO FO +.",
      "valor": 100000.0,
-     "valor_txt": "100.000",
+     "valor_txt": "100:000.",
      "pagina": 154,
      "dudoso": false,
-     "categoria": "cuentas",
-     "corregido": true
+     "categoria": "cuentas"
     }
    ],
    "pasivo": [
@@ -18276,30 +18275,30 @@
     108,
     109
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "CENT",
-    "apellidos": "SAL CREDO",
-    "circunscripcion": null,
-    "partido": null
+    "nombre": "Vicent",
+    "apellidos": "Granel Cabedo",
+    "circunscripcion": "Castellón",
+    "partido": "Coalició Compromís"
    },
    "inmuebles": [],
    "otros_bienes": [
     {
-     "descripcion": "FORD FOLVS A.6. TU 2010",
-     "valor": null,
+     "descripcion": "Ford Focus 1.6 TCDi - 2010",
+     "valor": 3000,
      "valor_txt": "",
-     "pagina": 106,
+     "pagina": 104,
      "dudoso": false,
      "categoria": "vehiculos"
     },
     {
-     "descripcion": "",
-     "valor": 1.0,
-     "valor_txt": "lo 1)",
-     "pagina": 107,
+     "descripcion": "Compte bancari actual",
+     "valor": 447.19,
+     "valor_txt": "",
+     "pagina": 104,
      "dudoso": false,
-     "categoria": "otros"
+     "categoria": "cuentas"
     }
    ],
    "pasivo": [],
@@ -18307,7 +18306,9 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
-   "notas": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 87, págs. 104-109)"
+   ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -18420,7 +18421,7 @@
      "porcentaje_txt": "100",
      "provincia": "Castellón",
      "provincia_txt": "CASTELLO",
-     "valor_catastral": 4.0,
+     "valor_catastral": 4622.51,
      "valor_txt": "4:622,51",
      "pagina": 119,
      "dudoso": false
@@ -18540,12 +18541,12 @@
      "categoria": "prestamo"
     }
    ],
-   "total_catastral": 50.0,
+   "total_catastral": null,
    "total_otros_bienes": 95800.35,
    "total_pasivo": 181397.14,
    "avisos": [],
    "notas": [],
-   "suma_inmuebles_cuadra": false,
+   "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
    "ilegible": false,
