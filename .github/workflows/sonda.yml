@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: rm -rf out && (python3 sonda.py 2> log.txt || true) && (python3 bopv.py 2>> log.txt || true)
+      - run: rm -rf out && (python3 sonda.py 2> log.txt || true) && (python3 bopv.py 'declaraciones bienes actividades' 01/09/2023 31/10/2023 10 2>> log.txt || true)
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
