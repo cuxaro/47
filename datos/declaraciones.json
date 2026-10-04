@@ -1,145 +1,367 @@
 {
  "meta": {
   "generado": "2026-10-04",
-  "ambito": "Les Corts Valencianes",
   "legislatura": "XI",
-  "boletines": [
+  "fuentes": [
    {
-    "id_bocv": "XI00003000",
-    "numero": 3,
-    "fecha": "2023-07-21",
-    "titulo": "Resolución número 31/XI, de la Presidencia de Les Corts Valencianes, de 18 de julio de 2023, sobre relación de actividades y bienes patrimoniales de los diputados y diputadas de Les Corts Valencianes de la XI legislatura",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00003000&idioma=es_ES"
+    "nombre": "Les Corts Valencianes",
+    "url": "https://www.cortsvalencianes.es/es/composicion/diputados",
+    "nota": "Declaración completa de cada diputado/a, publicada en el Boletín de Les Corts",
+    "documentos": [
+     {
+      "nombre": "BOCV nº 3",
+      "fecha": "2023-07-21",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00003000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 19",
+      "fecha": "2023-10-26",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00019000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 22",
+      "fecha": "2023-11-06",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00022000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 34",
+      "fecha": "2023-12-21",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00034000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 37",
+      "fecha": "2024-01-19",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00037000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 40",
+      "fecha": "2024-02-07",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00040000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 51",
+      "fecha": "2024-03-22",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00051000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 55",
+      "fecha": "2024-04-19",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00055000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 87",
+      "fecha": "2024-09-13",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00087000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 113",
+      "fecha": "2024-12-30",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00113000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 120",
+      "fecha": "2025-02-05",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00120000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 133",
+      "fecha": "2025-03-21",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00133000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 197",
+      "fecha": "2026-02-04",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+     },
+     {
+      "nombre": "BOCV nº 208",
+      "fecha": "2026-03-11",
+      "url": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00208000&idioma=es_ES"
+     }
+    ]
    },
    {
-    "id_bocv": "XI00019000",
-    "numero": 19,
-    "fecha": "2023-10-26",
-    "titulo": "Resolución número 127/XI, de la Presidencia de Les Corts Valencianes, de 16 de octubre de 2023, sobre declaraciones de actividades y bienes patrimoniales de las diputadas María del Carmen Martínez Clemor, Dolores Peña Villaescusa, Candela Anglés Querol, María del Carmen Contelles Llopis, Ana María Bellver Alcántara, Sonia Borruey Montolio, María Nieves Martínez Tarazona y María del Mar Galcerán Gadea, y de los diputados Michel Montaner Berbel, José Domingo Giner Beltrán, Javier Gutiérrez Martín, José Salas Maldonado, Jesús Lecha Tena, Manuel Pérez Fenoll, José Forés Sanz, José Todolí Masquefa, Luis Martínez Fuentes y José Antonio Díaz Fernández",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00019000&idioma=es_ES"
+    "nombre": "Diputació de València",
+    "url": "https://altoscargos.dival.es/declaraciones",
+    "nota": "Datos abiertos del portal de altos cargos"
    },
    {
-    "id_bocv": "XI00022000",
-    "numero": 22,
-    "fecha": "2023-11-06",
-    "titulo": "Declaración de actividades y bienes patrimoniales de la diputada de Les Corts Valencianes Andrea Gigante Melego",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00022000&idioma=es_ES"
+    "nombre": "Diputación de Alicante",
+    "url": "https://abierta.diputacionalicante.es/informacion-institucional-y-organizativa/corporacion-provincial-2023-2027/",
+    "nota": "Anuncios del BOP colgados en su portal de transparencia"
    },
    {
-    "id_bocv": "XI00034000",
-    "numero": 34,
-    "fecha": "2023-12-21",
-    "titulo": "Declaración de actividades y bienes patrimoniales de la diputada de Les Corts Valencianes Sofía Fernández Aparicio",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00034000&idioma=es_ES"
+    "nombre": "Ayuntamientos de la provincia de València",
+    "url": "https://bop.dival.es/bop/",
+    "nota": "487 anuncios del BOP; 165 ayuntamientos con declaraciones leídas",
+    "anuncios_sin_leer": [
+     {
+      "registro": "2023/08858",
+      "entidad": "Ajuntament de l'Eliana",
+      "fecha": "2023-07-07"
+     },
+     {
+      "registro": "2023/09668",
+      "entidad": "Ajuntament d'Estubeny",
+      "fecha": "2023-07-20"
+     },
+     {
+      "registro": "2023/09787",
+      "entidad": "Ajuntament de Torrella",
+      "fecha": "2023-07-21"
+     },
+     {
+      "registro": "2023/10194",
+      "entidad": "Ajuntament de Benissuera",
+      "fecha": "2023-07-28"
+     },
+     {
+      "registro": "2023/09868",
+      "entidad": "Ajuntament de Bonrepòs i Mirambell",
+      "fecha": "2023-07-24"
+     },
+     {
+      "registro": "2023/10188",
+      "entidad": "Ajuntament de Salem",
+      "fecha": "2023-07-28"
+     },
+     {
+      "registro": "2023/09948",
+      "entidad": "Ajuntament de Sot de Chera",
+      "fecha": "2023-07-25"
+     },
+     {
+      "registro": "2023/10688",
+      "entidad": "Ajuntament de Llombai",
+      "fecha": "2023-08-08"
+     },
+     {
+      "registro": "2023/11116",
+      "entidad": "Ajuntament de Foios",
+      "fecha": "2023-08-17"
+     },
+     {
+      "registro": "2023/10903",
+      "entidad": "Ajuntament de Pinet",
+      "fecha": "2023-08-10"
+     },
+     {
+      "registro": "2023/11286",
+      "entidad": "Ajuntament de Serra",
+      "fecha": "2023-08-22"
+     },
+     {
+      "registro": "2023/11880",
+      "entidad": "Ajuntament d'Alaquàs",
+      "fecha": "2023-09-12"
+     },
+     {
+      "registro": "2023/11661",
+      "entidad": "Ajuntament de Benifairó de la Valldigna",
+      "fecha": "2023-09-04"
+     },
+     {
+      "registro": "2023/11853",
+      "entidad": "Ajuntament de Cerdà",
+      "fecha": "2023-09-11"
+     },
+     {
+      "registro": "2023/11654",
+      "entidad": "Ajuntament de Venta del Moro",
+      "fecha": "2023-09-04"
+     },
+     {
+      "registro": "2023/12550",
+      "entidad": "Ajuntament de Cortes de Pallás",
+      "fecha": "2023-09-29"
+     },
+     {
+      "registro": "2023/13047",
+      "entidad": "Ajuntament de Rotglà i Corberà",
+      "fecha": "2023-10-13"
+     },
+     {
+      "registro": "2023/13561",
+      "entidad": "Ajuntament d'Almussafes",
+      "fecha": "2023-10-23"
+     },
+     {
+      "registro": "2023/13563",
+      "entidad": "Ajuntament d'Almussafes",
+      "fecha": "2023-10-23"
+     },
+     {
+      "registro": "2023/13224",
+      "entidad": "Ajuntament de Beniatjar",
+      "fecha": "2023-10-17"
+     },
+     {
+      "registro": "2023/13268",
+      "entidad": "Ajuntament de Carcaixent",
+      "fecha": "2023-10-17"
+     },
+     {
+      "registro": "2023/13605",
+      "entidad": "Ajuntament de Sedaví",
+      "fecha": "2023-10-24"
+     },
+     {
+      "registro": "2023/13606",
+      "entidad": "Ajuntament de Sedaví",
+      "fecha": "2023-10-24"
+     },
+     {
+      "registro": "2023/14267",
+      "entidad": "Ajuntament d'Almussafes",
+      "fecha": "2023-11-08"
+     },
+     {
+      "registro": "2023/14139",
+      "entidad": "Ajuntament d'Almussafes",
+      "fecha": "2023-11-06"
+     },
+     {
+      "registro": "2023/13984",
+      "entidad": "Ajuntament de Tavernes Blanques",
+      "fecha": "2023-10-19"
+     },
+     {
+      "registro": "2023/15936",
+      "entidad": "Ajuntament d'Alberic",
+      "fecha": "2023-12-13"
+     },
+     {
+      "registro": "2024/02871",
+      "entidad": "Ajuntament d'Alcàsser",
+      "fecha": "2024-03-12"
+     },
+     {
+      "registro": "2024/03842",
+      "entidad": "Ajuntament de Llombai",
+      "fecha": "2024-04-05"
+     },
+     {
+      "registro": "2024/06709",
+      "entidad": "Ajuntament de Serra",
+      "fecha": "2024-05-23"
+     },
+     {
+      "registro": "2024/11090",
+      "entidad": "Ajuntament d'Andilla",
+      "fecha": "2024-08-08"
+     },
+     {
+      "registro": "2024/08716",
+      "entidad": "Ajuntament de Sagunt",
+      "fecha": "2024-06-28"
+     },
+     {
+      "registro": "2024/15463",
+      "entidad": "Ajuntament d'Alberic",
+      "fecha": "2024-11-19"
+     },
+     {
+      "registro": "2024/15699",
+      "entidad": "Ajuntament d'Almussafes",
+      "fecha": "2024-11-22"
+     },
+     {
+      "registro": "2024/14313",
+      "entidad": "Ajuntament d'Almussafes",
+      "fecha": "2024-10-22"
+     },
+     {
+      "registro": "2024/13223",
+      "entidad": "Ajuntament de Montserrat",
+      "fecha": "2024-10-03"
+     },
+     {
+      "registro": "2024/16300",
+      "entidad": "Ajuntament d'Alginet",
+      "fecha": "2024-12-05"
+     },
+     {
+      "registro": "2025/03743",
+      "entidad": "Ajuntament de Llombai",
+      "fecha": "2025-04-10"
+     },
+     {
+      "registro": "2025/04607",
+      "entidad": "Ajuntament d'Ador",
+      "fecha": "2025-04-30"
+     },
+     {
+      "registro": "2025/05709",
+      "entidad": "Ajuntament de Benaguasil",
+      "fecha": "2025-05-26"
+     },
+     {
+      "registro": "2025/07969",
+      "entidad": "Ajuntament de Sot de Chera",
+      "fecha": "2025-07-10"
+     },
+     {
+      "registro": "2025/12900",
+      "entidad": "Ajuntament de Foios",
+      "fecha": "2025-11-06"
+     },
+     {
+      "registro": "2025/13727",
+      "entidad": "Ajuntament de la Pobla del Duc",
+      "fecha": "2025-11-20"
+     },
+     {
+      "registro": "2025/12605",
+      "entidad": "Ajuntament de Serra",
+      "fecha": "2025-10-29"
+     },
+     {
+      "registro": "2025/15447",
+      "entidad": "Ajuntament d'Almussafes",
+      "fecha": "2025-12-26"
+     },
+     {
+      "registro": "2026/02417",
+      "entidad": "Ajuntament d'Almàssera",
+      "fecha": "2026-03-10"
+     },
+     {
+      "registro": "2026/03763",
+      "entidad": "Ajuntament de Bonrepòs i Mirambell",
+      "fecha": "2026-04-10"
+     }
+    ]
    },
    {
-    "id_bocv": "XI00037000",
-    "numero": 37,
-    "fecha": "2024-01-19",
-    "titulo": "Declaraciones de actividades y bienes patrimoniales de la diputada Xelo Angulo Luna y de los diputados Pedro Ruiz Castell y Benjamín Mompó Peruga",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00037000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00040000",
-    "numero": 40,
-    "fecha": "2024-02-07",
-    "titulo": "Declaraciones finales de actividades y de bienes patrimoniales de las diputadas Eva Ortiz Vilella, María del Rosario Escrig Llinares, Carmen Martínez Ramírez, Julia Parra Aparicio, Susana Fabregat Carrasquer, Marta Barrachina Mateu, Ruth Merino Peña, Josefina Antonia Bueno Alonso, Salomé Pradas Ten y Rebeca Torró Soler y de los diputados Alberto Fabra Part, Miguel Mínguez Pérez, José Luis Aguirre Larrauri, Rubén Ibáñez Bordonau, José Antonio Rovira Jover, Felipe Carrasco Torres, Francisco Javier Sendra Mengual, José Todolí Masquefa, Vicente José Mompó Aledo, Carlos Laguna Asensi, Ximo Puig i Ferrer, Pablo Gustavo Broseta Dupré y Arcadi España García",
-    "tipo": "final",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00040000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00040000",
-    "numero": 40,
-    "fecha": "2024-02-07",
-    "titulo": "Modificaciones de las declaraciones de actividades y de bienes patrimoniales de diputados y diputadas de Les Corts",
-    "tipo": "modificacion",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00040000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00051000",
-    "numero": 51,
-    "fecha": "2024-03-22",
-    "titulo": "Declaración de actividades y bienes patrimoniales del diputado de Les Corts Valencianes Ignacio José Aleixandre Aleixandre",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00051000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00055000",
-    "numero": 55,
-    "fecha": "2024-04-19",
-    "titulo": "Declaración de actividades y bienes patrimoniales de la diputada de Les Corts Valencianes Ana Belén Juárez Pastor",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00055000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00087000",
-    "numero": 87,
-    "fecha": "2024-09-13",
-    "titulo": "Declaración de actividades y bienes patrimoniales del diputado de Les Corts Valencianes Vicent Granel Cabedo",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00087000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00113000",
-    "numero": 113,
-    "fecha": "2024-12-30",
-    "titulo": "Declaración de actividades y bienes patrimoniales del diputado de Les Corts Valencianes Alejo Font de Mora Rullán",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00113000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00120000",
-    "numero": 120,
-    "fecha": "2025-02-05",
-    "titulo": "Declaraciones finales de actividades y de bienes patrimoniales de la diputada María Gabriela Bravo San Estanislao y de los diputados Ernesto Sumar ández Pardo, Vicent Marzà Ibáñez, Miguel Barrachina Ros y David López Lluch. [RP-A 232/XI . 31.01.2025]",
-    "tipo": "final",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00120000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00120000",
-    "numero": 120,
-    "fecha": "2025-02-05",
-    "titulo": "Modificaciones de las declaraciones de actividades y de bienes patrimoniales de diputados y diputadas de Les Corts. [RP-A 231/XI . 31.01.2025]",
-    "tipo": "modificacion",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00120000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00133000",
-    "numero": 133,
-    "fecha": "2025-03-21",
-    "titulo": "Declaración de actividades y bienes patrimoniales de la diputada de Les Corts Valencianes Romina del Rey Tormos [RP-A 257XI . 13.03.2025]",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00133000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00197000",
-    "numero": 197,
-    "fecha": "2026-02-04",
-    "titulo": "Modificaciones de las declaraciones de actividades y de bienes patrimoniales de diputados y diputadas de Les Corts Valencianes [RP-A-322/XI . 30.01.2026]",
-    "tipo": "modificacion",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
-   },
-   {
-    "id_bocv": "XI00208000",
-    "numero": 208,
-    "fecha": "2026-03-11",
-    "titulo": "Declaración de actividades y bienes patrimoniales de la diputada de Les Corts Valencianes, Raquel Cámara Landete. [RP A-334/XI . 05.03.2026]",
-    "tipo": "inicial",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00208000&idioma=es_ES"
+    "nombre": "Ayuntamientos con las declaraciones en su web",
+    "url": null,
+    "nota": "Ayuntamiento de Elche"
    }
   ],
-  "n_personas": 128,
-  "n_en_activo": 99,
-  "n_con_declaracion": 128,
-  "n_por_ocr": 64,
-  "n_comprobadas": 65,
-  "n_ilegibles": 0,
-  "n_revisar": 38,
+  "por_tipo": {
+   "Corts": {
+    "personas": 128,
+    "en_activo": 99,
+    "instituciones": 1
+   },
+   "Diputación": {
+    "personas": 65,
+    "en_activo": 63,
+    "instituciones": 2
+   },
+   "Ayuntamiento": {
+    "personas": 2588,
+    "en_activo": 1468,
+    "instituciones": 119
+   }
+  },
+  "n_personas": 2781,
+  "n_en_activo": 1630,
+  "n_con_declaracion": 2781,
+  "n_por_ocr": 88,
+  "n_comprobadas": 2163,
+  "n_ilegibles": 18,
+  "n_revisar": 62,
   "n_con_renta": 98
  },
  "declaraciones": [
