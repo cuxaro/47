@@ -1,0 +1,15 @@
+https://altoscargos.dival.es/robots.txt
+https://altoscargos.dival.es/personas.json
+https://altoscargos.dival.es/declaraciones.json
+https://altoscargos.dival.es/system/attachments/site-1/gobierto_people/person_statements/attachment-d7fd207a-6588-47e2-a4ec-5bf06e33aba3/PP - Mompo Aledo, Vicente.pdf
+https://altoscargos.dival.es/declaraciones/natalia-enguix-martinez/2024-05-03-declaracio-de-bens-i-activitats-13
+https://abierta.diputacionalicante.es/robots.txt
+https://abierta.diputacionalicante.es/informacion-institucional-y-organizativa/corporacion-provincial-2023-2027/
+https://abierta.diputacionalicante.es/wp-content/uploads/RP-320-Declaracion-de-bienes-diputados.pdf
+https://transparencia.dipcas.es/robots.txt
+https://transparencia.dipcas.es/es/seccion/informaci-sobre-la-diputaci-provincial/1-cargos-electos-y-empleados-pblicos-de-la-diputacin
+https://bop.dival.es/robots.txt
+https://bop.dival.es/
+https://bop.dipcas.es/robots.txt
+https://bop.dipcas.es/
+https://www.dip-alicante.es/bop2/

@@ -1,0 +1,17 @@
+name: sonda
+on:
+  push:
+    branches: ["claude/tmp-sonda"]
+    paths: ["urls.txt", "sonda.py"]
+permissions:
+  contents: write
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: rm -rf out && python3 sonda.py 2> log.txt || true
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out log.txt && git commit -q -m "sonda: resultados" && git push
