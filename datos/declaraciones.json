@@ -133,13 +133,13 @@
     "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00208000&idioma=es_ES"
    }
   ],
-  "n_personas": 142,
+  "n_personas": 129,
   "n_en_activo": 99,
-  "n_con_declaracion": 133,
-  "n_por_ocr": 75,
-  "n_comprobadas": 57,
-  "n_ilegibles": 9,
-  "n_revisar": 78,
+  "n_con_declaracion": 129,
+  "n_por_ocr": 65,
+  "n_comprobadas": 64,
+  "n_ilegibles": 0,
+  "n_revisar": 39,
   "n_con_renta": 98
  },
  "declaraciones": [
@@ -182,6 +182,7 @@
    "total_otros_bienes": 13247.0,
    "total_pasivo": 4500.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -297,6 +298,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -392,6 +394,7 @@
    "total_otros_bienes": 2659975.0,
    "total_pasivo": 120000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -445,6 +448,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -498,9 +502,223 @@
    "total_otros_bienes": null,
    "total_pasivo": 100000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
+   "ilegible": false,
+   "totales_repetidos": [],
+   "tipo": "inicial",
+   "boletin": {
+    "id_bocv": "XI00003000",
+    "numero": 3,
+    "fecha": "2023-07-21",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00003000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI000157",
+   "fecha_registro": "2023-07-07",
+   "paginas": [
+    28,
+    29,
+    30
+   ],
+   "metodo": "manual",
+   "persona": {
+    "nombre": "Wenceslao",
+    "apellidos": "Alós Valls",
+    "circunscripcion": "Castellón",
+    "partido": "Partido Popular"
+   },
+   "inmuebles": [
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 195253.68,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "O",
+     "tipo_txt": "O",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 155977.13,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "O",
+     "tipo_txt": "O",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 137808.02,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 20,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 19029.61,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "L",
+     "tipo_txt": "L",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 68264.82,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "O",
+     "tipo_txt": "O",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 67154.28,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 20,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 9353.23,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "O",
+     "tipo_txt": "O",
+     "porcentaje": 20,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 5159.58,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "L",
+     "tipo_txt": "L",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 10354.36,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "R",
+     "tipo_txt": "R",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 75000,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false
+    }
+   ],
+   "otros_bienes": [
+    {
+     "descripcion": "Saldos cuentas bancarias",
+     "valor": 12000,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false,
+     "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Acciones",
+     "valor": 3000,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false,
+     "categoria": "inversiones"
+    },
+    {
+     "descripcion": "Kia Sportage",
+     "valor": 6000,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false,
+     "categoria": "vehiculos"
+    }
+   ],
+   "pasivo": [
+    {
+     "descripcion": "Préstamo hipotecario",
+     "valor": 153000,
+     "valor_txt": "",
+     "pagina": 28,
+     "dudoso": false,
+     "categoria": "hipoteca"
+    }
+   ],
+   "total_catastral": 743354.71,
+   "total_otros_bienes": 21000,
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [
+    "Formulario digital publicado como imagen y sin recuadros: transcrito a la vista del original (BOCV 3, págs. 28-30)"
+   ],
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": true,
+   "suma_pasivo_cuadra": null,
    "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
@@ -640,15 +858,14 @@
      "valor_txt": "8.208,96",
      "pagina": 34,
      "dudoso": false,
-     "categoria": "posible_bien"
+     "categoria": "prestamo"
     }
    ],
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": 81808.96,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
-   ],
+   "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -794,6 +1011,7 @@
    "avisos": [
     "Formulario escrito a mano o muy borroso: el OCR no es fiable"
    ],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -902,6 +1120,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 24461.5,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": false,
@@ -926,138 +1145,131 @@
     50,
     51
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "NODN",
-    "apellidos": "ESOO A LobÁA",
-    "circunscripcion": "URMLEN UD",
-    "partido": "COMPROMÍS"
+    "nombre": "Joan",
+    "apellidos": "Baldoví Roda",
+    "circunscripcion": "Valencia",
+    "partido": "Compromís"
    },
    "inmuebles": [
     {
      "clave": "P",
-     "clave_txt": "AP PLE",
-     "tipo": null,
-     "tipo_txt": "NAVENDA",
-     "porcentaje": 50.0,
-     "porcentaje_txt": "50",
-     "provincia": null,
-     "provincia_txt": "UDIP",
-     "valor_catastral": 84.0,
-     "valor_txt": "84-135",
-     "pagina": 48,
-     "dudoso": true
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 87135,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false
     },
     {
      "clave": "P",
-     "clave_txt": "DOMN PLE",
-     "tipo": null,
-     "tipo_txt": "ANUEVDA",
-     "porcentaje": null,
-     "porcentaje_txt": "SO Z",
-     "provincia": null,
-     "provincia_txt": "NSLENAN",
-     "valor_catastral": null,
-     "valor_txt": "Su BG",
-     "pagina": 48,
-     "dudoso": true
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 84569,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false
     },
     {
      "clave": "P",
-     "clave_txt": "PORN PLE",
-     "tipo": null,
-     "tipo_txt": "Rec",
-     "porcentaje": null,
-     "porcentaje_txt": "Lloc",
-     "provincia": null,
-     "provincia_txt": "UISUEPCIA",
-     "valor_catastral": 6.0,
-     "valor_txt": "6-4.",
-     "pagina": 48,
-     "dudoso": true
+     "clave_txt": "P",
+     "tipo": "R",
+     "tipo_txt": "R",
+     "porcentaje": 41.66,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 6749,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false
     },
     {
-     "clave": null,
-     "clave_txt": "Dona DE",
-     "tipo": null,
-     "tipo_txt": "VENDA",
-     "porcentaje": null,
-     "porcentaje_txt": "RO DL",
-     "provincia": null,
-     "provincia_txt": "UDLEPUA",
-     "valor_catastral": 2020.0,
-     "valor_txt": "2.020",
-     "pagina": 48,
-     "dudoso": true
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 62020,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false
     },
     {
-     "clave": null,
-     "clave_txt": "dor Pue",
-     "tipo": null,
-     "tipo_txt": "Loca",
-     "porcentaje": null,
-     "porcentaje_txt": "SO Y",
-     "provincia": null,
-     "provincia_txt": "OLE PAD",
-     "valor_catastral": null,
-     "valor_txt": "RNR",
-     "pagina": 48,
-     "dudoso": true
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "L",
+     "tipo_txt": "L",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 5243,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false
     }
    ],
    "otros_bienes": [
     {
-     "descripcion": "CAMPS Roig",
-     "valor": 0.0,
-     "valor_txt": "k0-000",
-     "pagina": 48,
-     "dudoso": false,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "CORPTES SENncaRrÍe",
-     "valor": 265000.0,
-     "valor_txt": "265.000",
-     "pagina": 48,
-     "dudoso": false,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "UCMAR TREOR",
-     "valor": 0.0,
-     "valor_txt": "0-900",
-     "pagina": 48,
-     "dudoso": true,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "De Den DORFER",
-     "valor": 0.0,
-     "valor_txt": "S-D000",
-     "pagina": 48,
-     "dudoso": true,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "oral contando DR 2, 0OQ",
-     "valor": null,
+     "descripcion": "Camps rústics",
+     "valor": 40000,
      "valor_txt": "",
-     "pagina": 49,
+     "pagina": 46,
      "dudoso": false,
      "categoria": "otros"
+    },
+    {
+     "descripcion": "Comptes bancaris",
+     "valor": 265000,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false,
+     "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Lletres tresor",
+     "valor": 80000,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false,
+     "categoria": "inversiones"
+    },
+    {
+     "descripcion": "Cotxe Dacia Dokker",
+     "valor": 8000,
+     "valor_txt": "",
+     "pagina": 46,
+     "dudoso": false,
+     "categoria": "vehiculos"
     }
    ],
    "pasivo": [],
-   "total_catastral": null,
-   "total_otros_bienes": null,
+   "total_catastral": 245716,
+   "total_otros_bienes": 393000,
    "total_pasivo": null,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 46-51)"
    ],
-   "suma_inmuebles_cuadra": null,
-   "suma_otros_cuadra": null,
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
-   "ilegible": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -1140,6 +1352,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -1323,6 +1536,7 @@
    "total_otros_bienes": 202733.0,
    "total_pasivo": 448485.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -1430,6 +1644,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -1555,6 +1770,7 @@
    "total_otros_bienes": 245000.0,
    "total_pasivo": 8000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -1579,12 +1795,12 @@
     74,
     75
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "AvÁ",
-    "apellidos": "PRESA A BESÁLPUCHK",
+    "nombre": "Ana",
+    "apellidos": "Besalduch Besalduch",
     "circunscripcion": "Castellón",
-    "partido": "PKOE6"
+    "partido": "PSOE"
    },
    "inmuebles": [
     {
@@ -1592,54 +1808,46 @@
      "clave_txt": "P",
      "tipo": "V",
      "tipo_txt": "V",
-     "porcentaje": null,
-     "porcentaje_txt": "joc Í-",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
      "provincia": "Castellón",
-     "provincia_txt": "CÁSTELCO",
-     "valor_catastral": 3615.0,
-     "valor_txt": "3615 7'350",
-     "pagina": 72,
-     "dudoso": true
+     "provincia_txt": "Castellón",
+     "valor_catastral": 36157.5,
+     "valor_txt": "",
+     "pagina": 70,
+     "dudoso": false
     }
    ],
    "otros_bienes": [
     {
-     "descripcion": "VOL XCLVUN6GCN YIGUAN",
-     "valor": 30004.0,
-     "valor_txt": "o [30004",
-     "pagina": 72,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Volkswagen Tiguan",
+     "valor": 13000,
+     "valor_txt": "",
+     "pagina": 70,
+     "dudoso": false,
+     "categoria": "vehiculos"
     },
     {
-     "descripcion": "CONTER RUC ART CAJAHAR",
-     "valor": 603.0,
-     "valor_txt": "SO. 0603",
-     "pagina": 72,
-     "dudoso": true,
+     "descripcion": "Compte bancari Cajamar",
+     "valor": 80000,
+     "valor_txt": "",
+     "pagina": 70,
+     "dudoso": false,
      "categoria": "cuentas"
     }
    ],
-   "pasivo": [
-    {
-     "descripcion": "Pos",
-     "valor": null,
-     "valor_txt": "",
-     "pagina": 73,
-     "dudoso": false,
-     "categoria": "otros"
-    }
-   ],
+   "pasivo": [],
    "total_catastral": null,
-   "total_otros_bienes": 13000.0,
+   "total_otros_bienes": 93000,
    "total_pasivo": null,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 70-75)"
    ],
    "suma_inmuebles_cuadra": null,
-   "suma_otros_cuadra": false,
+   "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
-   "ilegible": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -1759,6 +1967,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -1851,6 +2060,7 @@
    "total_otros_bienes": 18848.54,
    "total_pasivo": 86000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -1909,8 +2119,9 @@
    "total_catastral": 5562.47,
    "total_otros_bienes": null,
    "total_pasivo": 10536.08,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
@@ -2016,6 +2227,7 @@
    "total_otros_bienes": 3.0,
    "total_pasivo": 4.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -2092,6 +2304,7 @@
    "total_otros_bienes": 252592.9,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -2222,6 +2435,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -2360,8 +2574,9 @@
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": null,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
@@ -2444,6 +2659,7 @@
    "total_otros_bienes": 22353.1,
    "total_pasivo": 9533.86,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -2563,6 +2779,7 @@
    "total_otros_bienes": 141000.0,
    "total_pasivo": 48755.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -2675,6 +2892,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -2756,6 +2974,7 @@
    "total_otros_bienes": 42078.26,
    "total_pasivo": 159899.78,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -2886,6 +3105,7 @@
    "total_otros_bienes": 2258.47,
    "total_pasivo": 98967.26,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -3004,7 +3224,7 @@
      "valor_txt": "14.585,35€",
      "pagina": 127,
      "dudoso": false,
-     "categoria": "posible_bien"
+     "categoria": "prestamo"
     },
     {
      "descripcion": "HIPOTECA BANCO SANTANDER",
@@ -3018,9 +3238,8 @@
    "total_catastral": 43134.27,
    "total_otros_bienes": 103606.68,
    "total_pasivo": 109600.06,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
-   ],
+   "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -3127,6 +3346,7 @@
    "total_otros_bienes": 17900.0,
    "total_pasivo": 1320.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -3314,6 +3534,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -3415,6 +3636,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 543.72,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -3512,6 +3734,7 @@
    "total_otros_bienes": 39000.0,
    "total_pasivo": 24000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -3531,14 +3754,16 @@
    "paginas": [
     148,
     149,
-    150
+    150,
+    151,
+    152
    ],
    "metodo": "ocr",
    "persona": {
-    "nombre": "ARCADI",
-    "apellidos": "ESPAÑA GARCÍA",
+    "nombre": "Arcadi",
+    "apellidos": "España García",
     "circunscripcion": "Valencia",
-    "partido": "PARTIDO SOCIALISTA OBRERO ESPAÑOL"
+    "partido": "Partido Socialista Obrero Español"
    },
    "inmuebles": [
     {
@@ -3644,17 +3869,26 @@
      "pagina": 150,
      "dudoso": false,
      "categoria": "cuentas"
+    },
+    {
+     "descripcion": "VEHÍCULO A",
+     "valor": 100.0,
+     "valor_txt": "A. 100",
+     "pagina": 151,
+     "dudoso": true,
+     "categoria": "vehiculos"
     }
    ],
    "pasivo": [],
    "total_catastral": 115138.88,
-   "total_otros_bienes": null,
+   "total_otros_bienes": 134848.0,
    "total_pasivo": null,
-   "avisos": [
-    "No se ha encontrado el apartado de pasivo"
+   "avisos": [],
+   "notas": [
+    "Nombre corregido a la vista del original"
    ],
    "suma_inmuebles_cuadra": true,
-   "suma_otros_cuadra": null,
+   "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
    "ilegible": false,
    "totales_repetidos": [],
@@ -3785,6 +4019,7 @@
    "total_otros_bienes": 17300.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -3861,8 +4096,9 @@
    "total_catastral": null,
    "total_otros_bienes": 519942.98,
    "total_pasivo": 98946.81,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
@@ -4011,6 +4247,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -4035,12 +4272,12 @@
     172,
     173
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "SuSALA",
-    "apellidos": "Tala Ent CALAS LEN ?",
-    "circunscripcion": "ACTELCON",
-    "partido": "ArriDo lorocAR,"
+    "nombre": "Susana",
+    "apellidos": "Fabregat Carrasquer",
+    "circunscripcion": "Castellón",
+    "partido": "Partido Popular"
    },
    "inmuebles": [
     {
@@ -4048,53 +4285,54 @@
      "clave_txt": "P",
      "tipo": "V",
      "tipo_txt": "V",
-     "porcentaje": null,
-     "porcentaje_txt": "¡Co \"He",
-     "provincia": null,
-     "provincia_txt": "ArFELLÓN",
-     "valor_catastral": 54239.4,
-     "valor_txt": "54.239,40",
-     "pagina": 170,
-     "dudoso": true
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 134284.6,
+     "valor_txt": "",
+     "pagina": 168,
+     "dudoso": false
     }
    ],
    "otros_bienes": [
     {
-     "descripcion": "Call CUENTAS (SALCAMAS",
-     "valor": 30567.0,
-     "valor_txt": "30567, [+",
-     "pagina": 170,
-     "dudoso": true,
+     "descripcion": "Saldo cuentas bancarias",
+     "valor": 30568.17,
+     "valor_txt": "",
+     "pagina": 168,
+     "dudoso": false,
      "categoria": "cuentas"
     },
     {
-     "descripcion": "Ton dos GR VENY ÓN",
-     "valor": 2.0,
-     "valor_txt": "IS2. SAS ¡RS",
-     "pagina": 170,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Fondos inversión",
+     "valor": 152545.88,
+     "valor_txt": "",
+     "pagina": 168,
+     "dudoso": false,
+     "categoria": "inversiones"
     },
     {
-     "descripcion": "Venicoco — Ávdi Q2",
-     "valor": 21440.0,
-     "valor_txt": "21.440",
-     "pagina": 170,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Vehículo - Audi Q2",
+     "valor": 21990,
+     "valor_txt": "",
+     "pagina": 168,
+     "dudoso": false,
+     "categoria": "vehiculos"
     }
    ],
    "pasivo": [],
-   "total_catastral": 24.04,
-   "total_otros_bienes": 20.0,
+   "total_catastral": 134284.6,
+   "total_otros_bienes": 205104.05,
    "total_pasivo": null,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 168-173)"
    ],
-   "suma_inmuebles_cuadra": false,
-   "suma_otros_cuadra": false,
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
-   "ilegible": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -4218,6 +4456,7 @@
    "avisos": [
     "No se ha encontrado el apartado de pasivo"
    ],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -4294,6 +4533,7 @@
    "total_otros_bienes": 30000.0,
    "total_pasivo": 87000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -4439,6 +4679,7 @@
    "total_otros_bienes": 36378.74,
    "total_pasivo": 64303.99,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -4537,6 +4778,7 @@
    "total_otros_bienes": 15000.0,
    "total_pasivo": 164446.48,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -4646,6 +4888,7 @@
    "total_otros_bienes": 255069.0,
    "total_pasivo": 38768.12,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -4663,7 +4906,9 @@
    "sello": "X071543",
    "fecha_registro": "2023-06-20",
    "paginas": [
-    192
+    192,
+    193,
+    194
    ],
    "metodo": "texto",
    "persona": {
@@ -4671,37 +4916,6 @@
     "apellidos": "GAYO MADERA",
     "circunscripcion": "Alicante",
     "partido": "Partido Popular"
-   },
-   "inmuebles": [],
-   "otros_bienes": [],
-   "pasivo": [],
-   "total_catastral": null,
-   "total_otros_bienes": null,
-   "total_pasivo": null,
-   "avisos": [
-    "No se ha encontrado el apartado de bienes inmuebles"
-   ],
-   "tipo": "inicial",
-   "boletin": {
-    "id_bocv": "XI00003000",
-    "numero": 3,
-    "fecha": "2023-07-21",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00003000&idioma=es_ES"
-   }
-  },
-  {
-   "sello": "X071543",
-   "fecha_registro": "2023-06-20",
-   "paginas": [
-    193,
-    194
-   ],
-   "metodo": "texto",
-   "persona": {
-    "nombre": null,
-    "apellidos": null,
-    "circunscripcion": null,
-    "partido": null
    },
    "inmuebles": [
     {
@@ -4734,6 +4948,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -4918,7 +5133,7 @@
      "valor_txt": "3341,73",
      "pagina": 197,
      "dudoso": false,
-     "categoria": "posible_bien"
+     "categoria": "prestamo"
     },
     {
      "descripcion": "POLIZA DE CREDITO LA CAIXA",
@@ -4934,9 +5149,9 @@
    "total_pasivo": 13340.73,
    "avisos": [
     "Fila de inmuebles con un número raro de casillas",
-    "Fila de inmuebles con un número raro de casillas",
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+    "Fila de inmuebles con un número raro de casillas"
    ],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -5043,6 +5258,7 @@
    "total_otros_bienes": 17840.0,
    "total_pasivo": 63338.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
@@ -5067,97 +5283,27 @@
     206,
     207
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "JOSÉRAMÓN",
-    "apellidos": "GONZALEZ DE ZARATE UNAMUNS “0777777",
+    "nombre": "José Ramón",
+    "apellidos": "González de Zárate Unamuno",
     "circunscripcion": "Alicante",
-    "partido": "PARTIDO POPULAR” TT TT"
+    "partido": "Partido Popular"
    },
    "inmuebles": [
     {
      "clave": "P",
      "clave_txt": "P",
-     "tipo": null,
-     "tipo_txt": "Y a es",
-     "porcentaje": 100.0,
-     "porcentaje_txt": "100% 7“ 7",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
      "provincia": "Alicante",
-     "provincia_txt": "ALICANTE - 777",
-     "valor_catastral": 82478.0,
-     "valor_txt": "82.478;30.- Em",
-     "pagina": 204,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "a - an",
-     "valor_catastral": 0.0,
-     "valor_txt": "0% na ES e",
-     "pagina": 204,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "seu: a was mn ON",
-     "valor_catastral": null,
-     "valor_txt": "eo dera La ma o — naps",
-     "pagina": 204,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "",
-     "tipo": "O",
-     "tipo_txt": "cos",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "A —— Je ar a a",
-     "valor_catastral": 4.0,
-     "valor_txt": "A 4 4 ue a Y ne x- ds",
-     "pagina": 204,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "",
-     "tipo": null,
-     "tipo_txt": "ma day ma",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "e Pomo",
-     "valor_catastral": null,
-     "valor_txt": "moni et man a quan",
-     "pagina": 204,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "IA",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "A",
-     "provincia": null,
-     "provincia_txt": "” -n hi co coma",
-     "valor_catastral": null,
-     "valor_txt": "a. a P Re mem",
-     "pagina": 204,
-     "dudoso": true
+     "provincia_txt": "Alicante",
+     "valor_catastral": 82478.3,
+     "valor_txt": "",
+     "pagina": 202,
+     "dudoso": false
     }
    ],
    "otros_bienes": [],
@@ -5165,13 +5311,14 @@
    "total_catastral": 82478.3,
    "total_otros_bienes": null,
    "total_pasivo": null,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "avisos": [],
+   "notas": [
+    "Formulario escaneado con mucho ruido: transcrito a la vista del original (BOCV 3, págs. 202-207)"
    ],
-   "suma_inmuebles_cuadra": null,
+   "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
-   "ilegible": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -5322,6 +5469,7 @@
    "total_otros_bienes": 105811.54,
    "total_pasivo": 494389.25,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": false,
@@ -5480,6 +5628,7 @@
    "total_otros_bienes": 62600.0,
    "total_pasivo": 220000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -5550,8 +5699,9 @@
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": 371.99,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
@@ -5578,10 +5728,10 @@
    ],
    "metodo": "ocr",
    "persona": {
-    "nombre": null,
-    "apellidos": null,
+    "nombre": "Carlos",
+    "apellidos": "Laguna Asensi",
     "circunscripcion": "Castellón",
-    "partido": null
+    "partido": "PSPV-PSOE"
    },
    "inmuebles": [
     {
@@ -5684,6 +5834,9 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [
+    "Nombre corregido a la vista del original"
+   ],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -5779,6 +5932,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 180000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -5894,6 +6048,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -6060,7 +6215,8 @@
    "total_catastral": 285129.51,
    "total_otros_bienes": 658724.03,
    "total_pasivo": 658724.03,
-   "avisos": [
+   "avisos": [],
+   "notas": [
     "El total de deudas repite el de otro apartado y no tiene detalle: no se cuenta"
    ],
    "suma_inmuebles_cuadra": true,
@@ -6234,6 +6390,7 @@
    "total_otros_bienes": 95034.41,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -6257,73 +6414,82 @@
     244,
     245
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "dos Mis",
-    "apellidos": "LORENTE puppE?",
-    "circunscripcion": "PSPV - Po",
-    "partido": "CONSELLERIA ErdNCA CIO"
+    "nombre": "José Luis",
+    "apellidos": "Lorenz Andrés",
+    "circunscripcion": "Castellón",
+    "partido": ""
    },
    "inmuebles": [
     {
      "clave": "P",
-     "clave_txt": "Pp",
+     "clave_txt": "P",
      "tipo": "V",
      "tipo_txt": "V",
-     "porcentaje": 100.0,
-     "porcentaje_txt": "100 Z",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
      "provincia": "Castellón",
-     "provincia_txt": "cAsTEuO",
-     "valor_catastral": 65334.0,
-     "valor_txt": "65334 23€",
-     "pagina": 243,
-     "dudoso": true
+     "provincia_txt": "Castellón",
+     "valor_catastral": 65331.23,
+     "valor_txt": "",
+     "pagina": 241,
+     "dudoso": false
     },
     {
      "clave": "P",
      "clave_txt": "P",
      "tipo": "V",
      "tipo_txt": "V",
-     "porcentaje": null,
-     "porcentaje_txt": "TO Zo",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
      "provincia": "Castellón",
-     "provincia_txt": "CASTELLÓ",
-     "valor_catastral": 410746.0,
-     "valor_txt": "410746",
-     "pagina": 243,
-     "dudoso": true
+     "provincia_txt": "Castellón",
+     "valor_catastral": 21807.46,
+     "valor_txt": "",
+     "pagina": 241,
+     "dudoso": false
     }
    ],
    "otros_bienes": [
     {
-     "descripcion": "COMPTE BNCARL IBERCAJA",
-     "valor": 26983.0,
-     "valor_txt": "26.983 26 G",
-     "pagina": 243,
-     "dudoso": true,
+     "descripcion": "Compte bancari Ibercaja",
+     "valor": 26983.76,
+     "valor_txt": "",
+     "pagina": 241,
+     "dudoso": false,
      "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Inversió",
+     "valor": 10000,
+     "valor_txt": "",
+     "pagina": 241,
+     "dudoso": false,
+     "categoria": "inversiones"
     }
    ],
    "pasivo": [
     {
-     "descripcion": "PresTec HidoTecaRií IBERCAJA",
-     "valor": 24662.0,
-     "valor_txt": "24662 '+66",
-     "pagina": 244,
+     "descripcion": "Préstec hipotecari Ibercaja",
+     "valor": 24662.76,
+     "valor_txt": "",
+     "pagina": 241,
      "dudoso": false,
-     "categoria": "prestamo"
+     "categoria": "hipoteca"
     }
    ],
-   "total_catastral": null,
-   "total_otros_bienes": 20483.0,
-   "total_pasivo": 24661.0,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "total_catastral": 87138.69,
+   "total_otros_bienes": 36983.76,
+   "total_pasivo": 24662.76,
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 241-245)"
    ],
-   "suma_inmuebles_cuadra": null,
-   "suma_otros_cuadra": false,
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
-   "ilegible": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -6451,6 +6617,7 @@
    "total_otros_bienes": 68690.0,
    "total_pasivo": 205345.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -6468,7 +6635,9 @@
    "sello": "X071684",
    "fecha_registro": "2023-06-21",
    "paginas": [
-    249
+    249,
+    250,
+    251
    ],
    "metodo": "texto",
    "persona": {
@@ -6483,38 +6652,8 @@
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": null,
-   "avisos": [
-    "No se ha encontrado el apartado de bienes inmuebles"
-   ],
-   "tipo": "inicial",
-   "boletin": {
-    "id_bocv": "XI00003000",
-    "numero": 3,
-    "fecha": "2023-07-21",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00003000&idioma=es_ES"
-   }
-  },
-  {
-   "sello": "X071684",
-   "fecha_registro": "2023-06-21",
-   "paginas": [
-    250,
-    251
-   ],
-   "metodo": "texto",
-   "persona": {
-    "nombre": null,
-    "apellidos": null,
-    "circunscripcion": null,
-    "partido": null
-   },
-   "inmuebles": [],
-   "otros_bienes": [],
-   "pasivo": [],
-   "total_catastral": null,
-   "total_otros_bienes": null,
-   "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -6671,6 +6810,7 @@
    "total_otros_bienes": 3.0,
    "total_pasivo": 4.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -6775,6 +6915,7 @@
    "total_otros_bienes": 3000.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -6858,6 +6999,7 @@
    "total_otros_bienes": 87689.06,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -7011,8 +7153,9 @@
    "total_catastral": 410577.23,
    "total_otros_bienes": 7000.0,
    "total_pasivo": 57560.74,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
@@ -7135,6 +7278,7 @@
    "total_otros_bienes": 95975.0,
    "total_pasivo": 94683.69,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -7267,6 +7411,7 @@
    "total_otros_bienes": 16315.0,
    "total_pasivo": 170250.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -7387,6 +7532,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -7507,6 +7653,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 2.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": false,
@@ -7531,12 +7678,12 @@
     290,
     291
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "Sot TU",
-    "apellidos": "MVON- tuBOnS",
-    "circunscripcion": "A IS",
-    "partido": "PSev - LSO"
+    "nombre": "José Enrique",
+    "apellidos": "Muñoz Lladró",
+    "circunscripcion": "Valencia",
+    "partido": "PSPV-PSOE"
    },
    "inmuebles": [
     {
@@ -7544,54 +7691,55 @@
      "clave_txt": "P",
      "tipo": "V",
      "tipo_txt": "V",
-     "porcentaje": null,
-     "porcentaje_txt": "loo”/",
-     "provincia": null,
-     "provincia_txt": "VALZDLUA",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
      "valor_catastral": 48423.53,
-     "valor_txt": "48.423,53",
-     "pagina": 288,
-     "dudoso": true
+     "valor_txt": "",
+     "pagina": 286,
+     "dudoso": false
     }
    ],
    "otros_bienes": [
     {
-     "descripcion": "CERT: Coni ENT",
-     "valor": 0.0,
-     "valor_txt": "A. Ao0v E",
-     "pagina": 288,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Cuenta corriente",
+     "valor": 21200,
+     "valor_txt": "",
+     "pagina": 286,
+     "dudoso": false,
+     "categoria": "cuentas"
     },
     {
-     "descripcion": "CREMP PDE",
-     "valor": 90009.0,
-     "valor_txt": "90.009 €",
-     "pagina": 288,
-     "dudoso": true,
+     "descripcion": "Crédito PSOE",
+     "valor": 10000,
+     "valor_txt": "",
+     "pagina": 286,
+     "dudoso": false,
      "categoria": "otros"
     }
    ],
    "pasivo": [
     {
-     "descripcion": "PNE HO — IOTEU VO",
-     "valor": 324.0,
-     "valor_txt": "lun. 324 \"He",
-     "pagina": 289,
+     "descripcion": "Préstamo hipotecario",
+     "valor": 105829.71,
+     "valor_txt": "",
+     "pagina": 286,
      "dudoso": false,
-     "categoria": "otros"
+     "categoria": "hipoteca"
     }
    ],
    "total_catastral": null,
    "total_otros_bienes": null,
-   "total_pasivo": 26206.0,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 286-291). En la casilla del total de deudas anota el saldo neto (-26.206,18 €), que cuadra con los importes transcritos"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
-   "suma_pasivo_cuadra": false,
-   "ilegible": true,
+   "suma_pasivo_cuadra": null,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -7685,6 +7833,7 @@
    "total_otros_bienes": 46304.06,
    "total_pasivo": 3721.96,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -7702,7 +7851,9 @@
    "sello": "X071750",
    "fecha_registro": "2023-06-22",
    "paginas": [
-    298
+    298,
+    299,
+    300
    ],
    "metodo": "texto",
    "persona": {
@@ -7717,38 +7868,8 @@
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": null,
-   "avisos": [
-    "No se ha encontrado el apartado de bienes inmuebles"
-   ],
-   "tipo": "inicial",
-   "boletin": {
-    "id_bocv": "XI00003000",
-    "numero": 3,
-    "fecha": "2023-07-21",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00003000&idioma=es_ES"
-   }
-  },
-  {
-   "sello": "X071750",
-   "fecha_registro": "2023-06-22",
-   "paginas": [
-    299,
-    300
-   ],
-   "metodo": "texto",
-   "persona": {
-    "nombre": null,
-    "apellidos": null,
-    "circunscripcion": null,
-    "partido": null
-   },
-   "inmuebles": [],
-   "otros_bienes": [],
-   "pasivo": [],
-   "total_catastral": null,
-   "total_otros_bienes": null,
-   "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -7869,6 +7990,7 @@
    "total_otros_bienes": 41584.0,
    "total_pasivo": 10000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -7947,6 +8069,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -8120,6 +8243,7 @@
    "total_otros_bienes": 39000.0,
    "total_pasivo": 160656.64,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -8206,6 +8330,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -8250,6 +8375,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -8339,6 +8465,7 @@
    "total_otros_bienes": 110000.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -8416,6 +8543,7 @@
    "total_otros_bienes": 152000.0,
    "total_pasivo": 7793.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -8433,7 +8561,9 @@
    "sello": "X071335",
    "fecha_registro": "2023-06-15",
    "paginas": [
-    330
+    330,
+    331,
+    332
    ],
    "metodo": "texto",
    "persona": {
@@ -8448,38 +8578,8 @@
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": null,
-   "avisos": [
-    "No se ha encontrado el apartado de bienes inmuebles"
-   ],
-   "tipo": "inicial",
-   "boletin": {
-    "id_bocv": "XI00003000",
-    "numero": 3,
-    "fecha": "2023-07-21",
-    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00003000&idioma=es_ES"
-   }
-  },
-  {
-   "sello": "X071335",
-   "fecha_registro": "2023-06-15",
-   "paginas": [
-    331,
-    332
-   ],
-   "metodo": "texto",
-   "persona": {
-    "nombre": null,
-    "apellidos": null,
-    "circunscripcion": null,
-    "partido": null
-   },
-   "inmuebles": [],
-   "otros_bienes": [],
-   "pasivo": [],
-   "total_catastral": null,
-   "total_otros_bienes": null,
-   "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -8556,6 +8656,7 @@
    "total_otros_bienes": 113442.5,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -8580,75 +8681,76 @@
     340,
     341
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "ULACEMCIA",
-    "apellidos": "DERE ERA",
-    "circunscripcion": "PALTIAO SOCIACENA +",
-    "partido": "CORTS VACENCIAME S"
+    "nombre": "Rosa",
+    "apellidos": "Peris Cervera",
+    "circunscripcion": "Valencia",
+    "partido": "Partido Socialista"
    },
    "inmuebles": [
     {
      "clave": "P",
-     "clave_txt": "FP,",
+     "clave_txt": "P",
      "tipo": "V",
      "tipo_txt": "V",
-     "porcentaje": null,
-     "porcentaje_txt": "IDO",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
      "provincia": "Madrid",
-     "provincia_txt": "RADRID",
-     "valor_catastral": null,
+     "provincia_txt": "Madrid",
+     "valor_catastral": 25941,
      "valor_txt": "",
-     "pagina": 338,
-     "dudoso": true
+     "pagina": 336,
+     "dudoso": false
     }
    ],
    "otros_bienes": [
     {
-     "descripcion": "DEMICOGO SEAT Expo 7] = UCUGO SE] a LEX ms O",
-     "valor": 200.0,
-     "valor_txt": "200€.",
-     "pagina": 338,
-     "dudoso": true,
+     "descripcion": "Vehículo Seat Exeo",
+     "valor": 5000,
+     "valor_txt": "",
+     "pagina": 336,
+     "dudoso": false,
      "categoria": "vehiculos"
     },
     {
-     "descripcion": "Ga Cre CAIXA",
-     "valor": null,
-     "valor_txt": "BR)",
-     "pagina": 338,
-     "dudoso": true,
+     "descripcion": "Cta. cte. B. Santander",
+     "valor": 2853,
+     "valor_txt": "",
+     "pagina": 336,
+     "dudoso": false,
+     "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Cta. cte. CaixaBank",
+     "valor": 887,
+     "valor_txt": "",
+     "pagina": 336,
+     "dudoso": false,
      "categoria": "cuentas"
     }
    ],
    "pasivo": [
     {
-     "descripcion": "a 3 bi DENT Ar",
-     "valor": 3851.0,
-     "valor_txt": "e3.851€ J",
-     "pagina": 339,
-     "dudoso": false,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "OSOS L",
-     "valor": null,
+     "descripcion": "Préstamo hipotecario",
+     "valor": 73851,
      "valor_txt": "",
-     "pagina": 339,
+     "pagina": 336,
      "dudoso": false,
-     "categoria": "otros"
+     "categoria": "hipoteca"
     }
    ],
-   "total_catastral": null,
+   "total_catastral": 25941,
    "total_otros_bienes": null,
    "total_pasivo": null,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 336-341)"
    ],
-   "suma_inmuebles_cuadra": null,
+   "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
-   "ilegible": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -8695,6 +8797,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -8832,6 +8935,7 @@
    "total_otros_bienes": 3.0,
    "total_pasivo": 4.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": false,
@@ -9027,6 +9131,7 @@
    "total_otros_bienes": 162643.99,
    "total_pasivo": 111059.75,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -9122,6 +9227,7 @@
    "total_otros_bienes": 224900.96,
    "total_pasivo": 39400.62,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -9225,8 +9331,9 @@
    "total_catastral": 171618.97,
    "total_otros_bienes": 20000.0,
    "total_pasivo": 277418.97,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
@@ -9305,6 +9412,7 @@
    "avisos": [
     "No se ha encontrado el apartado de pasivo"
    ],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -9366,6 +9474,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -9545,6 +9654,7 @@
    "total_otros_bienes": 306094.92,
    "total_pasivo": 347.8,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
@@ -9569,12 +9679,12 @@
     382,
     383
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": null,
-    "apellidos": "RUIZ Escara",
-    "circunscripcion": "CASTLE",
-    "partido": "ComPuomís"
+    "nombre": "Verònica",
+    "apellidos": "Ruiz Escrig",
+    "circunscripcion": "Castellón",
+    "partido": "Compromís"
    },
    "inmuebles": [
     {
@@ -9582,66 +9692,89 @@
      "clave_txt": "P",
      "tipo": "V",
      "tipo_txt": "V",
-     "porcentaje": 100.0,
-     "porcentaje_txt": "100 Y,",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
      "provincia": "Castellón",
-     "provincia_txt": "CASTEL",
-     "valor_catastral": null,
+     "provincia_txt": "Castellón",
+     "valor_catastral": 65938.5,
      "valor_txt": "",
-     "pagina": 380,
-     "dudoso": true
+     "pagina": 378,
+     "dudoso": false
     },
     {
      "clave": "P",
      "clave_txt": "P",
      "tipo": "O",
      "tipo_txt": "O",
-     "porcentaje": 100.0,
-     "porcentaje_txt": "100 7,",
-     "provincia": null,
-     "provincia_txt": "cus",
-     "valor_catastral": 5.0,
-     "valor_txt": "AIAS5!35",
-     "pagina": 380,
-     "dudoso": true
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 1145.33,
+     "valor_txt": "",
+     "pagina": 378,
+     "dudoso": false
     },
     {
      "clave": "P",
      "clave_txt": "P",
      "tipo": "O",
-     "tipo_txt": "A",
-     "porcentaje": null,
-     "porcentaje_txt": "o dl",
-     "provincia": null,
-     "provincia_txt": "CÁJITILA",
-     "valor_catastral": 122.05,
-     "valor_txt": "DL. 122,05",
-     "pagina": 380,
-     "dudoso": true
+     "tipo_txt": "O",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 5722.05,
+     "valor_txt": "",
+     "pagina": 378,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
+     "provincia": "Castellón",
+     "provincia_txt": "Castellón",
+     "valor_catastral": 6610,
+     "valor_txt": "",
+     "pagina": 378,
+     "dudoso": false
     }
    ],
-   "otros_bienes": [],
+   "otros_bienes": [
+    {
+     "descripcion": "Nissan Juke (preu compra)",
+     "valor": 20000,
+     "valor_txt": "",
+     "pagina": 378,
+     "dudoso": false,
+     "categoria": "vehiculos"
+    }
+   ],
    "pasivo": [
     {
-     "descripcion": "llanarca viuda 3.309 UE",
-     "valor": null,
-     "valor_txt": "AN Ge",
-     "pagina": 381,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Hipoteca vivenda",
+     "valor": 2908.64,
+     "valor_txt": "",
+     "pagina": 378,
+     "dudoso": false,
+     "categoria": "hipoteca"
     }
    ],
-   "total_catastral": 4.0,
-   "total_otros_bienes": null,
-   "total_pasivo": 0.0,
-   "avisos": [
-    "Fila de inmuebles con un número raro de casillas",
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "total_catastral": 79415.88,
+   "total_otros_bienes": 20000,
+   "total_pasivo": 2908.64,
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 378-383)"
    ],
-   "suma_inmuebles_cuadra": null,
-   "suma_otros_cuadra": null,
-   "suma_pasivo_cuadra": null,
-   "ilegible": true,
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": true,
+   "suma_pasivo_cuadra": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -9740,6 +9873,7 @@
    "total_otros_bienes": 180000.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -9799,8 +9933,9 @@
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": 55234.04,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
@@ -9983,6 +10118,7 @@
    "total_otros_bienes": 53900.32,
    "total_pasivo": 30262.13,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -10094,8 +10230,9 @@
    "total_catastral": 53407.02,
    "total_otros_bienes": 31500.0,
    "total_pasivo": 68620.18,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
@@ -10121,163 +10258,164 @@
     407,
     408
    ],
-   "metodo": "ocr",
+   "metodo": "manual",
    "persona": {
-    "nombre": "CALA",
-    "apellidos": "SUER AN",
-    "circunscripcion": "AUICANC",
-    "partido": "PSPU— PSOE"
+    "nombre": "Laura",
+    "apellidos": "Soler Azorín",
+    "circunscripcion": "Alicante",
+    "partido": "PSPV-PSOE"
    },
    "inmuebles": [
     {
      "clave": "P",
-     "clave_txt": "Y",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "Joc ze",
-     "provincia": null,
-     "provincia_txt": "NUACANT",
-     "valor_catastral": 33.68,
-     "valor_txt": "33.68gg'açe",
-     "pagina": 405,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "4",
-     "tipo": null,
-     "tipo_txt": "WDENDA",
-     "porcentaje": null,
-     "porcentaje_txt": "AO",
-     "provincia": null,
-     "provincia_txt": "ALAOCAV?",
-     "valor_catastral": 282.0,
-     "valor_txt": "$0.282'238",
-     "pagina": 405,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "",
-     "tipo": null,
-     "tipo_txt": "VIVIEVON",
-     "porcentaje": 0.0,
-     "porcentaje_txt": "A00%",
-     "provincia": null,
-     "provincia_txt": "SulcenT R.",
-     "valor_catastral": 9.0,
-     "valor_txt": "UR. Eca'g9e",
-     "pagina": 405,
-     "dudoso": true
-    },
-    {
-     "clave": null,
-     "clave_txt": "Y",
+     "clave_txt": "P",
      "tipo": "V",
-     "tipo_txt": "VIVIENDA",
-     "porcentaje": null,
-     "porcentaje_txt": "AO",
-     "provincia": null,
-     "provincia_txt": "SUA",
-     "valor_catastral": 22.0,
-     "valor_txt": "22. 142 Ub E",
-     "pagina": 405,
-     "dudoso": true
+     "tipo_txt": "V",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Alicante",
+     "provincia_txt": "Alicante",
+     "valor_catastral": 93688.35,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false
     },
     {
      "clave": "P",
-     "clave_txt": "e",
+     "clave_txt": "P",
      "tipo": "V",
-     "tipo_txt": "VWWENDA",
-     "porcentaje": 0.0,
-     "porcentaje_txt": "Á 00%",
-     "provincia": null,
-     "provincia_txt": "",
-     "valor_catastral": null,
+     "tipo_txt": "V",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Alicante",
+     "provincia_txt": "Alicante",
+     "valor_catastral": 60282.83,
      "valor_txt": "",
-     "pagina": 405,
-     "dudoso": true
+     "pagina": 403,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Alicante",
+     "provincia_txt": "Alicante",
+     "valor_catastral": 42866.82,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Alicante",
+     "provincia_txt": "Alicante",
+     "valor_catastral": 23938.46,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 100,
+     "porcentaje_txt": "",
+     "provincia": "Alicante",
+     "provincia_txt": "Alicante",
+     "valor_catastral": 19491.84,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false
     }
    ],
    "otros_bienes": [
     {
-     "descripcion": "PAnTE PROFONCIONAL ZONA Común",
-     "valor": 204.0,
-     "valor_txt": "A204'Ul €",
-     "pagina": 405,
-     "dudoso": true,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "Fom» Focus Brea:",
-     "valor": null,
-     "valor_txt": "a AX . UADODE",
-     "pagina": 405,
-     "dudoso": true,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "FONDO FUBRSIN MAA",
-     "valor": 3.0,
-     "valor_txt": "3_ 220139",
-     "pagina": 405,
-     "dudoso": true,
-     "categoria": "inversiones"
-    },
-    {
-     "descripcion": "CUBNTS Connie TE Sor",
-     "valor": 3.0,
-     "valor_txt": "y 3d! 46 €",
-     "pagina": 405,
+     "descripcion": "Parte proporcional zona común",
+     "valor": 1205.41,
+     "valor_txt": "",
+     "pagina": 403,
      "dudoso": false,
      "categoria": "otros"
     },
     {
-     "descripcion": "CUBA CON Q UNE LACAN",
-     "valor": null,
-     "valor_txt": "l A. ORAUQ",
-     "pagina": 406,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Ford Focus Break",
+     "valor": 18400,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false,
+     "categoria": "vehiculos"
     },
     {
-     "descripcion": "ADA ALMORNO ENBOCPU",
-     "valor": null,
-     "valor_txt": "Al. ut (pe",
-     "pagina": 406,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Fondo inversión Sabadell",
+     "valor": 3270.37,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false,
+     "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Cuenta corriente Sabadell",
+     "valor": 310.76,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false,
+     "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Cuenta corriente CaixaBank",
+     "valor": 3071.19,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false,
+     "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Cuenta ahorro Sabadell",
+     "valor": 11424,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false,
+     "categoria": "cuentas"
     }
    ],
    "pasivo": [
     {
-     "descripcion": "LLOEZA Ci N AE",
-     "valor": 27.0,
-     "valor_txt": "27 £iu%0e",
-     "pagina": 406,
-     "dudoso": true,
-     "categoria": "otros"
+     "descripcion": "Hipoteca CaixaBank",
+     "valor": 27884.2,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false,
+     "categoria": "hipoteca"
     },
     {
-     "descripcion": "PRESTAMO PERSONA UNO BIE.",
-     "valor": null,
-     "valor_txt": "RJ. NAU",
-     "pagina": 406,
-     "dudoso": true,
+     "descripcion": "Préstamo personal CaixaBank",
+     "valor": 37416.16,
+     "valor_txt": "",
+     "pagina": 403,
+     "dudoso": false,
      "categoria": "prestamo"
     }
    ],
-   "total_catastral": null,
-   "total_otros_bienes": null,
-   "total_pasivo": null,
-   "avisos": [
-    "Formulario escrito a mano o muy borroso: el OCR no es fiable"
+   "total_catastral": 240268.3,
+   "total_otros_bienes": 46988.14,
+   "total_pasivo": 65300.36,
+   "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 403-408)"
    ],
-   "suma_inmuebles_cuadra": null,
-   "suma_otros_cuadra": null,
-   "suma_pasivo_cuadra": null,
-   "ilegible": true,
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": false,
+   "suma_pasivo_cuadra": true,
+   "ilegible": false,
    "totales_repetidos": [],
    "tipo": "inicial",
    "boletin": {
@@ -10358,6 +10496,7 @@
    "total_otros_bienes": 71509.41,
    "total_pasivo": 105173.13,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -10434,6 +10573,7 @@
    "total_otros_bienes": 48747.02,
    "total_pasivo": 4775.25,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -10537,15 +10677,14 @@
      "valor_txt": "CAP.PEND 17.000€",
      "pagina": 418,
      "dudoso": false,
-     "categoria": "posible_bien"
+     "categoria": "prestamo"
     }
    ],
    "total_catastral": null,
    "total_otros_bienes": 47141.0,
    "total_pasivo": 65332625.0,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
-   ],
+   "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
@@ -10631,6 +10770,7 @@
    "total_otros_bienes": 4800.0,
    "total_pasivo": 9330.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -10731,6 +10871,7 @@
    "total_otros_bienes": 41709.57,
    "total_pasivo": 42750.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -10837,6 +10978,7 @@
    "total_otros_bienes": 39000.0,
    "total_pasivo": 129920.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -10935,6 +11077,7 @@
    "total_otros_bienes": 19400.0,
    "total_pasivo": 59317.74,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -10973,6 +11116,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -11125,7 +11269,8 @@
    "total_catastral": 113517.2,
    "total_otros_bienes": 51947.27,
    "total_pasivo": 126094,
-   "avisos": [
+   "avisos": [],
+   "notas": [
     "Formulario escrito a mano: transcrito a la vista del original (BOCV 19, págs. 122-127)"
    ],
    "suma_inmuebles_cuadra": true,
@@ -11223,6 +11368,7 @@
    "total_otros_bienes": 67911.0,
    "total_pasivo": 106877.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -11331,6 +11477,7 @@
    "total_otros_bienes": 35430.79,
    "total_pasivo": 7057.56,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -11432,6 +11579,7 @@
    "total_otros_bienes": 41000.0,
    "total_pasivo": 141496.66,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -11525,6 +11673,7 @@
    "total_otros_bienes": 4307.0,
    "total_pasivo": 144000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -11605,6 +11754,7 @@
    "total_otros_bienes": 101400.0,
    "total_pasivo": 86000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -11714,6 +11864,7 @@
    "total_otros_bienes": 13000.0,
    "total_pasivo": 45798.5,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -11926,6 +12077,7 @@
    "total_otros_bienes": 382395.86,
    "total_pasivo": 174359.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -12072,6 +12224,7 @@
    "total_otros_bienes": 111970.93,
    "total_pasivo": 28576.61,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -12209,6 +12362,7 @@
    "total_otros_bienes": 58000.0,
    "total_pasivo": 60613.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -12360,6 +12514,7 @@
    "total_otros_bienes": 92082.0,
    "total_pasivo": 359603.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
@@ -12452,6 +12607,7 @@
    "total_otros_bienes": 75711.93,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -12583,6 +12739,7 @@
    "total_otros_bienes": 4953.0,
    "total_pasivo": 64946.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -12690,6 +12847,7 @@
    "total_otros_bienes": 80200.0,
    "total_pasivo": 250000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -12935,6 +13093,7 @@
    "total_otros_bienes": 595862.9,
    "total_pasivo": 39734.84,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -12998,8 +13157,9 @@
    "total_catastral": null,
    "total_otros_bienes": 500.0,
    "total_pasivo": 51176.0,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
@@ -13168,6 +13328,7 @@
    "total_otros_bienes": 101772.0,
    "total_pasivo": 31500.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -13272,6 +13433,7 @@
    "total_otros_bienes": 16000.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -13327,6 +13489,7 @@
    "total_otros_bienes": 22600.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -13425,7 +13588,8 @@
    "total_catastral": 74016.51,
    "total_otros_bienes": 74016.51,
    "total_pasivo": 41197.74,
-   "avisos": [
+   "avisos": [],
+   "notas": [
     "El total de otros bienes repite el valor catastral y no tiene detalle: no se cuenta"
    ],
    "suma_inmuebles_cuadra": true,
@@ -13539,6 +13703,7 @@
    "total_otros_bienes": 29270.16,
    "total_pasivo": 126849.45,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -13641,6 +13806,7 @@
    "total_otros_bienes": 16059.24,
    "total_pasivo": 11507.83,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -13701,8 +13867,9 @@
    "total_catastral": null,
    "total_otros_bienes": 9447.0,
    "total_pasivo": 4636.25,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
@@ -13847,6 +14014,7 @@
    "total_otros_bienes": 73978.15,
    "total_pasivo": 147008.79,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -14030,14 +14198,6 @@
    ],
    "pasivo": [
     {
-     "descripcion": "Ebo 2)",
-     "valor": null,
-     "valor_txt": "",
-     "pagina": 214,
-     "dudoso": true,
-     "categoria": "otros"
-    },
-    {
      "descripcion": "temes,",
      "valor": null,
      "valor_txt": "",
@@ -14050,6 +14210,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -14162,6 +14323,7 @@
    "total_otros_bienes": 9000.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -14231,6 +14393,7 @@
    "total_otros_bienes": 31614.61,
    "total_pasivo": 12805.17,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -14346,6 +14509,7 @@
    "total_otros_bienes": 39930.79,
    "total_pasivo": 7057.56,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -14422,6 +14586,7 @@
    "total_otros_bienes": 30000.0,
    "total_pasivo": 88500.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -14481,6 +14646,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 121600.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -14602,6 +14768,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 94683.69,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -14733,6 +14900,7 @@
    "total_otros_bienes": 4953.0,
    "total_pasivo": 64946.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -14796,6 +14964,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -14867,6 +15036,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -14984,6 +15154,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 129920.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -15079,6 +15250,7 @@
    "total_otros_bienes": 265975.0,
    "total_pasivo": 12000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
@@ -15165,6 +15337,7 @@
    "total_otros_bienes": 26700.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -15244,6 +15417,7 @@
    "total_otros_bienes": 252592.9,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -15374,6 +15548,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -15496,6 +15671,7 @@
    "total_otros_bienes": 140000.0,
    "total_pasivo": 48755.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -15596,6 +15772,7 @@
    "total_otros_bienes": 24000.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -15745,6 +15922,7 @@
    "total_otros_bienes": 140751.9,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -15900,6 +16078,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -15978,6 +16157,7 @@
    "total_otros_bienes": 205104.05,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -16139,6 +16319,7 @@
    "total_otros_bienes": 62600.0,
    "total_pasivo": 220000.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -16271,6 +16452,7 @@
    "total_otros_bienes": null,
    "total_pasivo": 187152.81,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -16459,6 +16641,7 @@
    "total_otros_bienes": 152332.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -16587,6 +16770,7 @@
    "total_otros_bienes": 16950.0,
    "total_pasivo": 170600.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -16710,6 +16894,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -16819,6 +17004,7 @@
    "total_otros_bienes": 87051.53,
    "total_pasivo": 197114.65,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -16850,22 +17036,7 @@
     "circunscripcion": null,
     "partido": null
    },
-   "inmuebles": [
-    {
-     "clave": null,
-     "clave_txt": "",
-     "tipo": "L",
-     "tipo_txt": "Ll",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "y",
-     "valor_catastral": null,
-     "valor_txt": "P)",
-     "pagina": 352,
-     "dudoso": true
-    }
-   ],
+   "inmuebles": [],
    "otros_bienes": [
     {
      "descripcion": "VEHÍCULO MERCEDES BENZ C-220",
@@ -16913,6 +17084,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -16944,36 +17116,7 @@
     "circunscripcion": "Alicante",
     "partido": "PARTIDO POPULAR"
    },
-   "inmuebles": [
-    {
-     "clave": "P",
-     "clave_txt": "a",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "",
-     "valor_catastral": null,
-     "valor_txt": "",
-     "pagina": 358,
-     "dudoso": false
-    },
-    {
-     "clave": "P",
-     "clave_txt": "po",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "",
-     "valor_catastral": null,
-     "valor_txt": ")",
-     "pagina": 358,
-     "dudoso": false
-    }
-   ],
+   "inmuebles": [],
    "otros_bienes": [
     {
      "descripcion": "CUENTA CORRIENTE",
@@ -16989,6 +17132,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -17184,6 +17328,7 @@
    "total_otros_bienes": 163860.0,
    "total_pasivo": 110097.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -17272,15 +17417,14 @@
      "valor_txt": "38.200,62",
      "pagina": 371,
      "dudoso": false,
-     "categoria": "posible_bien"
+     "categoria": "prestamo"
     }
    ],
    "total_catastral": null,
    "total_otros_bienes": 224900.96,
    "total_pasivo": 38200.62,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
-   ],
+   "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": true,
@@ -17460,6 +17604,7 @@
    "total_otros_bienes": 306094.92,
    "total_pasivo": 7347.8,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -17657,6 +17802,7 @@
    "total_otros_bienes": 53900.32,
    "total_pasivo": 29501.13,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -17824,6 +17970,7 @@
    "total_otros_bienes": 101772.0,
    "total_pasivo": 30800.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -17928,15 +18075,14 @@
      "valor_txt": "CAP.PEND: 15.630€",
      "pagina": 397,
      "dudoso": false,
-     "categoria": "posible_bien"
+     "categoria": "prestamo"
     }
    ],
    "total_catastral": 34482.53,
    "total_otros_bienes": 55134.63,
    "total_pasivo": 62642.0,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
-   ],
+   "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": false,
@@ -18000,6 +18146,7 @@
    "total_otros_bienes": 112036.24,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -18104,6 +18251,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -18135,50 +18283,7 @@
     "circunscripcion": null,
     "partido": null
    },
-   "inmuebles": [
-    {
-     "clave": null,
-     "clave_txt": "I)",
-     "tipo": "L",
-     "tipo_txt": "lo",
-     "porcentaje": null,
-     "porcentaje_txt": "Ll",
-     "provincia": null,
-     "provincia_txt": "7",
-     "valor_catastral": null,
-     "valor_txt": "IO",
-     "pagina": 106,
-     "dudoso": true
-    },
-    {
-     "clave": "N",
-     "clave_txt": "NS",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "Ll",
-     "provincia": null,
-     "provincia_txt": "IO",
-     "valor_catastral": null,
-     "valor_txt": "o)",
-     "pagina": 106,
-     "dudoso": true
-    },
-    {
-     "clave": "P",
-     "clave_txt": "P)",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "",
-     "valor_catastral": null,
-     "valor_txt": "E”)",
-     "pagina": 106,
-     "dudoso": false
-    }
-   ],
+   "inmuebles": [],
    "otros_bienes": [
     {
      "descripcion": "FORD FOLVS A.6. TU 2010",
@@ -18195,54 +18300,14 @@
      "pagina": 107,
      "dudoso": false,
      "categoria": "otros"
-    },
-    {
-     "descripcion": "INS",
-     "valor": null,
-     "valor_txt": ")",
-     "pagina": 107,
-     "dudoso": true,
-     "categoria": "otros"
     }
    ],
-   "pasivo": [
-    {
-     "descripcion": "¡INN",
-     "valor": null,
-     "valor_txt": "",
-     "pagina": 107,
-     "dudoso": false,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "INN",
-     "valor": null,
-     "valor_txt": "",
-     "pagina": 107,
-     "dudoso": false,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "INN",
-     "valor": null,
-     "valor_txt": "AS",
-     "pagina": 108,
-     "dudoso": false,
-     "categoria": "otros"
-    },
-    {
-     "descripcion": "irc",
-     "valor": null,
-     "valor_txt": "lo",
-     "pagina": 108,
-     "dudoso": false,
-     "categoria": "otros"
-    }
-   ],
+   "pasivo": [],
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -18479,6 +18544,7 @@
    "total_otros_bienes": 95800.35,
    "total_pasivo": 181397.14,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -18638,6 +18704,7 @@
    "total_otros_bienes": 280000.0,
    "total_pasivo": 86100.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": true,
@@ -18693,6 +18760,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -18799,6 +18867,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -18883,6 +18952,7 @@
    "total_otros_bienes": 41808.08,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -18970,6 +19040,7 @@
    "total_otros_bienes": 7220.03,
    "total_pasivo": 77304.87,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
@@ -19008,6 +19079,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19070,6 +19142,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19117,6 +19190,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19155,6 +19229,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19190,6 +19265,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19274,6 +19350,7 @@
    "total_otros_bienes": 450000.0,
    "total_pasivo": 500.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -19312,6 +19389,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19404,6 +19482,7 @@
    "total_otros_bienes": 75711.93,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": false,
    "suma_pasivo_cuadra": null,
@@ -19451,6 +19530,9 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [
+    "Formulario escrito a mano: no se ha transcrito porque hay una declaración posterior de la misma persona"
+   ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19626,6 +19708,7 @@
    "total_otros_bienes": 189162.51,
    "total_pasivo": 76743.56,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -19682,6 +19765,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19744,6 +19828,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -19929,6 +20014,7 @@
    "total_otros_bienes": 179016.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -20041,6 +20127,7 @@
    "total_otros_bienes": 9000.0,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -20194,6 +20281,7 @@
    "total_otros_bienes": 14119.05,
    "total_pasivo": 154575.97,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -20340,6 +20428,7 @@
    "total_otros_bienes": 46511.46,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
@@ -20443,7 +20532,8 @@
    "total_catastral": 100594.69,
    "total_otros_bienes": 34000,
    "total_pasivo": null,
-   "avisos": [
+   "avisos": [],
+   "notas": [
     "Formulario escrito a mano: transcrito a la vista del original (BOCV 120, págs. 271-276)"
    ],
    "suma_inmuebles_cuadra": true,
@@ -20531,6 +20621,7 @@
    "total_otros_bienes": 49500.0,
    "total_pasivo": 35864.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -20575,7 +20666,141 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
+   "suma_otros_cuadra": null,
+   "suma_pasivo_cuadra": null,
+   "ilegible": false,
+   "totales_repetidos": [],
+   "tipo": "modificacion",
+   "boletin": {
+    "id_bocv": "XI00197000",
+    "numero": 197,
+    "fecha": "2026-02-04",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI058301",
+   "fecha_registro": "2025-09-09",
+   "paginas": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "metodo": "ocr",
+   "persona": {
+    "nombre": "MONICA",
+    "apellidos": "ALVARO CEREZO",
+    "circunscripcion": "Castellón",
+    "partido": "COMPROMÍS"
+   },
+   "inmuebles": [
+    {
+     "clave": null,
+     "clave_txt": "037002YK5207S0010",
+     "tipo": "L",
+     "tipo_txt": "LOCAL",
+     "porcentaje": null,
+     "porcentaje_txt": "P",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 81065.89,
+     "valor_txt": "81065.89",
+     "pagina": 73,
+     "dudoso": false
+    },
+    {
+     "clave": null,
+     "clave_txt": "7952615YK4275S00",
+     "tipo": "V",
+     "tipo_txt": "VIVIENDA",
+     "porcentaje": null,
+     "porcentaje_txt": "P",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 84711.36,
+     "valor_txt": "84711.36",
+     "pagina": 73,
+     "dudoso": false
+    },
+    {
+     "clave": null,
+     "clave_txt": "7951304YK4275S000",
+     "tipo": "V",
+     "tipo_txt": "VIVIENDA",
+     "porcentaje": null,
+     "porcentaje_txt": "P",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 77996.78,
+     "valor_txt": "77996.78",
+     "pagina": 73,
+     "dudoso": false
+    },
+    {
+     "clave": null,
+     "clave_txt": "6643331YK4264S00",
+     "tipo": "L",
+     "tipo_txt": "LOCAL",
+     "porcentaje": null,
+     "porcentaje_txt": "P",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 45240.34,
+     "valor_txt": "45240.34",
+     "pagina": 73,
+     "dudoso": false
+    },
+    {
+     "clave": null,
+     "clave_txt": "8149503YK4284N000",
+     "tipo": "L",
+     "tipo_txt": "LOCAL",
+     "porcentaje": null,
+     "porcentaje_txt": "P",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 31297.4,
+     "valor_txt": "31297.40",
+     "pagina": 73,
+     "dudoso": false
+    },
+    {
+     "clave": null,
+     "clave_txt": "7656815YK4275N00",
+     "tipo": null,
+     "tipo_txt": "GARAIG",
+     "porcentaje": null,
+     "porcentaje_txt": "P",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 4960.17,
+     "valor_txt": "4960.17",
+     "pagina": 73,
+     "dudoso": false
+    }
+   ],
+   "otros_bienes": [
+    {
+     "descripcion": "RENDIMENTS DE VALOR NO MOBILIARI",
+     "valor": 104.34,
+     "valor_txt": "104.34",
+     "pagina": 73,
+     "dudoso": false,
+     "categoria": "otros"
+    }
+   ],
+   "pasivo": [],
+   "total_catastral": 324374.04,
+   "total_otros_bienes": null,
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [],
+   "suma_inmuebles_cuadra": false,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
    "ilegible": false,
@@ -20622,6 +20847,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -20720,6 +20946,7 @@
    "total_otros_bienes": 3630.16,
    "total_pasivo": 46062.79,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -20755,6 +20982,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -20790,6 +21018,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -20888,6 +21117,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -21008,7 +21238,132 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": null,
+   "suma_pasivo_cuadra": null,
+   "ilegible": false,
+   "totales_repetidos": [],
+   "tipo": "modificacion",
+   "boletin": {
+    "id_bocv": "XI00197000",
+    "numero": 197,
+    "fecha": "2026-02-04",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI044592",
+   "fecha_registro": "2025-03-27",
+   "paginas": [
+    98,
+    99,
+    100,
+    101,
+    102,
+    103
+   ],
+   "metodo": "ocr",
+   "persona": {
+    "nombre": "Vicente",
+    "apellidos": "Betoret Coll.",
+    "circunscripcion": "Valencia",
+    "partido": "y | Y"
+   },
+   "inmuebles": [
+    {
+     "clave": "P",
+     "clave_txt": "p",
+     "tipo": "V",
+     "tipo_txt": "vivienda",
+     "porcentaje": 100.0,
+     "porcentaje_txt": "100%",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 76358.0,
+     "valor_txt": "76.358",
+     "pagina": 100,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "CO",
+     "tipo": "V",
+     "tipo_txt": "vivienda",
+     "porcentaje": 100.0,
+     "porcentaje_txt": "100%",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 92000.0,
+     "valor_txt": "92.000",
+     "pagina": 100,
+     "dudoso": false
+    },
+    {
+     "clave": "P",
+     "clave_txt": "Po",
+     "tipo": "V",
+     "tipo_txt": "¡Vivienda",
+     "porcentaje": 50.0,
+     "porcentaje_txt": "50%",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 32000.0,
+     "valor_txt": "32.000",
+     "pagina": 100,
+     "dudoso": true
+    }
+   ],
+   "otros_bienes": [
+    {
+     "descripcion": "vehiculo",
+     "valor": 33000.0,
+     "valor_txt": "33.000",
+     "pagina": 100,
+     "dudoso": false,
+     "categoria": "vehiculos"
+    },
+    {
+     "descripcion": "cuenta corriente",
+     "valor": 3000.0,
+     "valor_txt": "3000",
+     "pagina": 100,
+     "dudoso": false,
+     "categoria": "cuentas"
+    }
+   ],
+   "pasivo": [
+    {
+     "descripcion": "préstamo Hipotecario",
+     "valor": 27000.0,
+     "valor_txt": "27000",
+     "pagina": 101,
+     "dudoso": false,
+     "categoria": "hipoteca"
+    },
+    {
+     "descripcion": "prestamo vehiculo",
+     "valor": 3000.0,
+     "valor_txt": "3000",
+     "pagina": 101,
+     "dudoso": false,
+     "categoria": "prestamo"
+    },
+    {
+     "descripcion": "Vin lame A",
+     "valor": null,
+     "valor_txt": "",
+     "pagina": 102,
+     "dudoso": false,
+     "categoria": "otros"
+    }
+   ],
+   "total_catastral": null,
+   "total_otros_bienes": null,
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [],
+   "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
    "ilegible": false,
@@ -21129,11 +21484,121 @@
    "total_catastral": null,
    "total_otros_bienes": null,
    "total_pasivo": null,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
+   "suma_pasivo_cuadra": null,
+   "ilegible": false,
+   "totales_repetidos": [],
+   "tipo": "modificacion",
+   "boletin": {
+    "id_bocv": "XI00197000",
+    "numero": 197,
+    "fecha": "2026-02-04",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI056336",
+   "fecha_registro": "2025-07-03",
+   "paginas": [
+    107,
+    108,
+    109,
+    110,
+    111,
+    112
+   ],
+   "metodo": "manual",
+   "persona": {
+    "nombre": "Alfredo",
+    "apellidos": "Castelló Sáez",
+    "circunscripcion": "Valencia",
+    "partido": "Partido Popular"
+   },
+   "inmuebles": [
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "O",
+     "tipo_txt": "O",
+     "porcentaje": 50,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 3000,
+     "valor_txt": "",
+     "pagina": 107,
+     "dudoso": false
+    },
+    {
+     "clave": "N",
+     "clave_txt": "N",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 16.6,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 8954,
+     "valor_txt": "",
+     "pagina": 107,
+     "dudoso": false
+    },
+    {
+     "clave": "N",
+     "clave_txt": "N",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 16.6,
+     "porcentaje_txt": "",
+     "provincia": "Valencia",
+     "provincia_txt": "Valencia",
+     "valor_catastral": 23583,
+     "valor_txt": "",
+     "pagina": 107,
+     "dudoso": false
+    }
+   ],
+   "otros_bienes": [
+    {
+     "descripcion": "Cuentas corrientes",
+     "valor": 54936,
+     "valor_txt": "",
+     "pagina": 107,
+     "dudoso": false,
+     "categoria": "cuentas"
+    },
+    {
+     "descripcion": "Planes de pensiones y otros",
+     "valor": 270000,
+     "valor_txt": "",
+     "pagina": 107,
+     "dudoso": false,
+     "categoria": "pensiones"
+    },
+    {
+     "descripcion": "Automóvil",
+     "valor": 20000,
+     "valor_txt": "",
+     "pagina": 107,
+     "dudoso": false,
+     "categoria": "vehiculos"
+    }
+   ],
+   "pasivo": [],
+   "total_catastral": 35537,
+   "total_otros_bienes": 344936,
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [
+    "Formulario escaneado a baja resolución: transcrito a la vista del original (BOCV 197, págs. 107-112)"
+   ],
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": null,
    "ilegible": false,
    "totales_repetidos": [],
@@ -21167,6 +21632,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -21217,6 +21683,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -21308,7 +21775,8 @@
    "total_catastral": null,
    "total_otros_bienes": 531330.64,
    "total_pasivo": 531330.64,
-   "avisos": [
+   "avisos": [],
+   "notas": [
     "El total de deudas repite el de otro apartado y no tiene detalle: no se cuenta"
    ],
    "suma_inmuebles_cuadra": null,
@@ -21318,6 +21786,141 @@
    "totales_repetidos": [
     "total_pasivo"
    ],
+   "tipo": "modificacion",
+   "boletin": {
+    "id_bocv": "XI00197000",
+    "numero": 197,
+    "fecha": "2026-02-04",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI064799",
+   "fecha_registro": "2026-01-28",
+   "paginas": [
+    122,
+    123,
+    124,
+    125,
+    126,
+    127
+   ],
+   "metodo": "ocr",
+   "persona": {
+    "nombre": "VICENT +",
+    "apellidos": "GRANEL CABEDO",
+    "circunscripcion": "Castellón",
+    "partido": "COALICIÓ COMPROMÍS"
+   },
+   "inmuebles": [
+    {
+     "clave": "P",
+     "clave_txt": "P.",
+     "tipo": "V",
+     "tipo_txt": "V",
+     "porcentaje": 50.0,
+     "porcentaje_txt": "50",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 54275.6,
+     "valor_txt": "54275,60",
+     "pagina": 124,
+     "dudoso": false,
+     "corregido": true
+    },
+    {
+     "clave": "P",
+     "clave_txt": "P",
+     "tipo": "O",
+     "tipo_txt": "O",
+     "porcentaje": 50.0,
+     "porcentaje_txt": "50",
+     "provincia": "Castellón",
+     "provincia_txt": "CASTELLÓ",
+     "valor_catastral": 7449.48,
+     "valor_txt": "7449,48",
+     "pagina": 124,
+     "dudoso": false
+    }
+   ],
+   "otros_bienes": [],
+   "pasivo": [
+    {
+     "descripcion": "HIPOTECA VIVENDA | PLACA DE GARAIG",
+     "valor": 117076.24,
+     "valor_txt": "117.076,24",
+     "pagina": 125,
+     "dudoso": false,
+     "categoria": "hipoteca"
+    }
+   ],
+   "total_catastral": 61725.08,
+   "total_otros_bienes": null,
+   "total_pasivo": 117076.24,
+   "avisos": [],
+   "notas": [],
+   "suma_inmuebles_cuadra": true,
+   "suma_otros_cuadra": null,
+   "suma_pasivo_cuadra": true,
+   "ilegible": false,
+   "totales_repetidos": [],
+   "tipo": "modificacion",
+   "boletin": {
+    "id_bocv": "XI00197000",
+    "numero": 197,
+    "fecha": "2026-02-04",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI042358",
+   "fecha_registro": "2025-02-27",
+   "paginas": [
+    128,
+    129,
+    130,
+    131,
+    132,
+    133
+   ],
+   "metodo": "ocr",
+   "persona": {
+    "nombre": "JAVIER",
+    "apellidos": "GUTIERREZ MARTÍN",
+    "circunscripcion": "PARTIDO POPULAR",
+    "partido": null
+   },
+   "inmuebles": [],
+   "otros_bienes": [
+    {
+     "descripcion": "Igual RE XI000518",
+     "valor": 1000518.0,
+     "valor_txt": "Igual RE X1000518",
+     "pagina": 130,
+     "dudoso": false,
+     "categoria": "otros"
+    }
+   ],
+   "pasivo": [
+    {
+     "descripcion": "Valor sol cuac [Igual RE XI000518",
+     "valor": 518.0,
+     "valor_txt": "I gual RE XI000518",
+     "pagina": 132,
+     "dudoso": false,
+     "categoria": "otros"
+    }
+   ],
+   "total_catastral": null,
+   "total_otros_bienes": null,
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [],
+   "suma_inmuebles_cuadra": null,
+   "suma_otros_cuadra": null,
+   "suma_pasivo_cuadra": null,
+   "ilegible": false,
+   "totales_repetidos": [],
    "tipo": "modificacion",
    "boletin": {
     "id_bocv": "XI00197000",
@@ -21391,6 +21994,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -21497,6 +22101,7 @@
    "total_otros_bienes": 2871.18,
    "total_pasivo": 130696.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
@@ -21617,6 +22222,7 @@
    "total_otros_bienes": 187714.85,
    "total_pasivo": 82638.9,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -21739,6 +22345,7 @@
    "total_otros_bienes": 45000.0,
    "total_pasivo": 80388.0,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": true,
@@ -21783,6 +22390,87 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
+   "suma_inmuebles_cuadra": null,
+   "suma_otros_cuadra": null,
+   "suma_pasivo_cuadra": null,
+   "ilegible": false,
+   "totales_repetidos": [],
+   "tipo": "modificacion",
+   "boletin": {
+    "id_bocv": "XI00197000",
+    "numero": 197,
+    "fecha": "2026-02-04",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI042320",
+   "fecha_registro": "2025-02-27",
+   "paginas": [
+    149,
+    150,
+    151,
+    152,
+    153,
+    154
+   ],
+   "metodo": "ocr",
+   "persona": {
+    "nombre": "FERNANDO",
+    "apellidos": "PASTOR LLORENS",
+    "circunscripcion": null,
+    "partido": null
+   },
+   "inmuebles": [
+    {
+     "clave": "P",
+     "clave_txt": "Ll",
+     "tipo": "L",
+     "tipo_txt": "ll",
+     "porcentaje": null,
+     "porcentaje_txt": "ll",
+     "provincia": null,
+     "provincia_txt": "",
+     "valor_catastral": null,
+     "valor_txt": "",
+     "pagina": 151,
+     "dudoso": true
+    }
+   ],
+   "otros_bienes": [
+    {
+     "descripcion": "IGUAL RE 71293",
+     "valor": 71293.0,
+     "valor_txt": "IGUAL RE 71293",
+     "pagina": 151,
+     "dudoso": false,
+     "categoria": "otros"
+    },
+    {
+     "descripcion": "Wiese, Pou",
+     "valor": null,
+     "valor_txt": "",
+     "pagina": 152,
+     "dudoso": false,
+     "categoria": "otros"
+    }
+   ],
+   "pasivo": [
+    {
+     "descripcion": "IGUAL RE 71293",
+     "valor": 71293.0,
+     "valor_txt": "IGUAL RE 71293",
+     "pagina": 152,
+     "dudoso": false,
+     "categoria": "otros"
+    }
+   ],
+   "total_catastral": 71293.0,
+   "total_otros_bienes": null,
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -21860,6 +22548,7 @@
    "total_otros_bienes": 193523.5,
    "total_pasivo": 28648.29,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -21968,6 +22657,7 @@
    "total_otros_bienes": 190827.69,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
@@ -22051,8 +22741,9 @@
    "total_catastral": 117036.45,
    "total_otros_bienes": 31500.0,
    "total_pasivo": 125112.22,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": true,
    "suma_otros_cuadra": true,
@@ -22187,12 +22878,61 @@
    "total_catastral": null,
    "total_otros_bienes": 31500.0,
    "total_pasivo": 146112.93,
-   "avisos": [
-    "Hay cuentas u otros bienes anotados en el apartado de deudas"
+   "avisos": [],
+   "notas": [
+    "Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)"
    ],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": true,
    "suma_pasivo_cuadra": false,
+   "ilegible": false,
+   "totales_repetidos": [],
+   "tipo": "modificacion",
+   "boletin": {
+    "id_bocv": "XI00197000",
+    "numero": 197,
+    "fecha": "2026-02-04",
+    "url_pdf": "https://www.cortsvalencianes.es/publicaciones-CV/obtenerPdfBO?f_id_bocv=XI00197000&idioma=es_ES"
+   }
+  },
+  {
+   "sello": "XI052059",
+   "fecha_registro": "2025-05-14",
+   "paginas": [
+    171,
+    172,
+    173,
+    174,
+    175,
+    176
+   ],
+   "metodo": "ocr",
+   "persona": {
+    "nombre": "MARIO",
+    "apellidos": "VILLAR GARCIA",
+    "circunscripcion": "Alicante",
+    "partido": "PARTIDO SOCIALISTA OBRERO ESPAÑOL"
+   },
+   "inmuebles": [],
+   "otros_bienes": [
+    {
+     "descripcion": "33,3% EMPRESA INDIVERSAL EVENTS, SL",
+     "valor": null,
+     "valor_txt": "",
+     "pagina": 173,
+     "dudoso": false,
+     "categoria": "inversiones"
+    }
+   ],
+   "pasivo": [],
+   "total_catastral": null,
+   "total_otros_bienes": null,
+   "total_pasivo": null,
+   "avisos": [],
+   "notas": [],
+   "suma_inmuebles_cuadra": null,
+   "suma_otros_cuadra": null,
+   "suma_pasivo_cuadra": null,
    "ilegible": false,
    "totales_repetidos": [],
    "tipo": "modificacion",
@@ -22234,20 +22974,6 @@
      "valor_txt": "12.330,18 o,",
      "pagina": 124,
      "dudoso": false
-    },
-    {
-     "clave": "M",
-     "clave_txt": "A",
-     "tipo": null,
-     "tipo_txt": "",
-     "porcentaje": null,
-     "porcentaje_txt": "",
-     "provincia": null,
-     "provincia_txt": "4",
-     "valor_catastral": null,
-     "valor_txt": "",
-     "pagina": 124,
-     "dudoso": true
     }
    ],
    "otros_bienes": [],
@@ -22256,6 +22982,7 @@
    "total_otros_bienes": null,
    "total_pasivo": null,
    "avisos": [],
+   "notas": [],
    "suma_inmuebles_cuadra": null,
    "suma_otros_cuadra": null,
    "suma_pasivo_cuadra": null,
