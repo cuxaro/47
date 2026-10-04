@@ -2,16 +2,18 @@ name: sonda
 on:
   push:
     branches: ["claude/tmp-sonda"]
-    paths: ["urls.txt", "sonda.py", "bopv.py"]
+    paths: ["urls.txt", "sonda.py", "correr.py", "extractor/**"]
 permissions:
   contents: write
 jobs:
   sonda:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
-      - run: rm -rf out && (python3 sonda.py 2> log.txt || true) && (python3 bopv.py 'declaraciones bienes actividades' 01/09/2023 31/10/2023 10 2>> log.txt || true)
-      - run: |
+      - run: rm -rf out && (python3 sonda.py 2> log.txt || true) && (python3 correr.py 2>> log.txt || true)
+      - if: always()
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add out log.txt && git commit -q -m "sonda: resultados" && git push
+          git add out log.txt bopv && git commit -q -m "sonda: resultados" && git push
