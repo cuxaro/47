@@ -1,0 +1,143 @@
+[
+ {
+  "url": "https://altoscargos.dival.es/robots.txt",
+  "id": "8338868b61",
+  "post": "",
+  "status": 200,
+  "ctype": "text/plain; charset=UTF-8",
+  "bytes": 202,
+  "final": "https://altoscargos.dival.es/robots.txt",
+  "file": "8338868b61.html"
+ },
+ {
+  "url": "https://altoscargos.dival.es/personas.json",
+  "id": "d1382a50e6",
+  "post": "",
+  "status": 200,
+  "ctype": "application/json; charset=utf-8",
+  "bytes": 94026,
+  "final": "https://altoscargos.dival.es/personas.json",
+  "file": "d1382a50e6.json"
+ },
+ {
+  "url": "https://altoscargos.dival.es/declaraciones.json",
+  "id": "c2a1818f51",
+  "post": "",
+  "status": 200,
+  "ctype": "application/json; charset=utf-8",
+  "bytes": 46398,
+  "final": "https://altoscargos.dival.es/declaraciones.json",
+  "file": "c2a1818f51.json"
+ },
+ {
+  "url": "https://altoscargos.dival.es/system/attachments/site-1/gobierto_people/person_statements/attachment-d7fd207a-6588-47e2-a4ec-5bf06e33aba3/PP - Mompo Aledo, Vicente.pdf",
+  "id": "95f47f2f52",
+  "post": "",
+  "status": 200,
+  "ctype": "application/pdf",
+  "bytes": 88346,
+  "final": "https://altoscargos.dival.es/system/attachments/site-1/gobierto_people/person_statements/attachment-d7fd207a-6588-47e2-a4ec-5bf06e33aba3/PP%20-%20Mompo%20Aledo%2C%20Vicente.pdf",
+  "file": "95f47f2f52.pdf"
+ },
+ {
+  "url": "https://altoscargos.dival.es/declaraciones/natalia-enguix-martinez/2024-05-03-declaracio-de-bens-i-activitats-13",
+  "id": "208c8a5a29",
+  "post": "",
+  "status": 200,
+  "ctype": "text/html; charset=utf-8",
+  "bytes": 22087,
+  "final": "https://altoscargos.dival.es/declaraciones/natalia-enguix-martinez/2024-05-03-declaracio-de-bens-i-activitats-13",
+  "file": "208c8a5a29.html"
+ },
+ {
+  "url": "https://abierta.diputacionalicante.es/robots.txt",
+  "id": "25f7d51801",
+  "post": "",
+  "status": 200,
+  "ctype": "text/plain; charset=utf-8",
+  "bytes": 187,
+  "final": "https://abierta.diputacionalicante.es/robots.txt",
+  "file": "25f7d51801.html"
+ },
+ {
+  "url": "https://abierta.diputacionalicante.es/informacion-institucional-y-organizativa/corporacion-provincial-2023-2027/",
+  "id": "5ac60a331b",
+  "post": "",
+  "status": 200,
+  "ctype": "text/html; charset=UTF-8",
+  "bytes": 293990,
+  "final": "https://abierta.diputacionalicante.es/informacion-institucional-y-organizativa/corporacion-provincial-2023-2027/",
+  "file": "5ac60a331b.html"
+ },
+ {
+  "url": "https://abierta.diputacionalicante.es/wp-content/uploads/RP-320-Declaracion-de-bienes-diputados.pdf",
+  "id": "3a51cd1ba3",
+  "post": "",
+  "status": 200,
+  "ctype": "application/pdf",
+  "bytes": 889629,
+  "final": "https://abierta.diputacionalicante.es/wp-content/uploads/RP-320-Declaracion-de-bienes-diputados.pdf",
+  "file": "3a51cd1ba3.pdf"
+ },
+ {
+  "url": "https://transparencia.dipcas.es/robots.txt",
+  "id": "3a87de1d84",
+  "post": "",
+  "status": 200,
+  "ctype": "text/plain; charset=UTF-8",
+  "bytes": 184,
+  "final": "https://transparencia.dipcas.es/robots.txt",
+  "file": "3a87de1d84.html"
+ },
+ {
+  "url": "https://transparencia.dipcas.es/es/seccion/informaci-sobre-la-diputaci-provincial/1-cargos-electos-y-empleados-pblicos-de-la-diputacin",
+  "id": "39d4d4d17d",
+  "post": "",
+  "status": 200,
+  "ctype": "text/html; charset=UTF-8",
+  "bytes": 29813,
+  "final": "https://transparencia.dipcas.es/es/seccion/informaci-sobre-la-diputaci-provincial/1-cargos-electos-y-empleados-pblicos-de-la-diputacin",
+  "file": "39d4d4d17d.html"
+ },
+ {
+  "url": "https://bop.dival.es/robots.txt",
+  "id": "45099c4386",
+  "post": "",
+  "status": 200,
+  "ctype": "text/html;charset=UTF-8",
+  "bytes": 231835,
+  "final": "https://bop.dival.es/bop/",
+  "file": "45099c4386.html"
+ },
+ {
+  "url": "https://bop.dival.es/",
+  "id": "b0c55980a0",
+  "post": "",
+  "status": 200,
+  "ctype": "text/html;charset=UTF-8",
+  "bytes": 231824,
+  "final": "https://bop.dival.es/bop/",
+  "file": "b0c55980a0.html"
+ },
+ {
+  "url": "https://bop.dipcas.es/robots.txt",
+  "id": "0f1a07a95f",
+  "post": "",
+  "status": 503,
+  "error": "HTTP Error 503: Service Unavailable"
+ },
+ {
+  "url": "https://bop.dipcas.es/",
+  "id": "1c4c7f4284",
+  "post": "",
+  "status": 503,
+  "error": "HTTP Error 503: Service Unavailable"
+ },
+ {
+  "url": "https://www.dip-alicante.es/bop2/",
+  "id": "950524ae95",
+  "post": "",
+  "status": 403,
+  "error": "HTTP Error 403: Forbidden"
+ }
+]
