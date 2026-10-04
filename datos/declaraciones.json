@@ -93,8 +93,13 @@
    {
     "nombre": "Ayuntamientos de la provincia de València",
     "url": "https://bop.dival.es/bop/",
-    "nota": "487 anuncios del BOP; 165 ayuntamientos con declaraciones leídas",
+    "nota": "488 anuncios del BOP; 163 ayuntamientos con declaraciones leídas",
     "anuncios_sin_leer": [
+     {
+      "registro": "2023/08494",
+      "entidad": "Ajuntament de Llocnou de la Corona",
+      "fecha": "2023-06-29"
+     },
      {
       "registro": "2023/08858",
       "entidad": "Ajuntament de l'Eliana",
@@ -174,6 +179,11 @@
       "registro": "2023/12550",
       "entidad": "Ajuntament de Cortes de Pallás",
       "fecha": "2023-09-29"
+     },
+     {
+      "registro": "2023/12678",
+      "entidad": "Ajuntament de Gavarda",
+      "fecha": "2023-10-03"
      },
      {
       "registro": "2023/13047",
@@ -296,6 +306,11 @@
       "fecha": "2025-05-26"
      },
      {
+      "registro": "2025/08635",
+      "entidad": "Ajuntament de Riba-roja de Túria",
+      "fecha": "2025-07-23"
+     },
+     {
       "registro": "2025/07969",
       "entidad": "Ajuntament de Sot de Chera",
       "fecha": "2025-07-10"
@@ -350,18 +365,18 @@
     "instituciones": 2
    },
    "Ayuntamiento": {
-    "personas": 2588,
-    "en_activo": 1468,
-    "instituciones": 119
+    "personas": 2614,
+    "en_activo": 1943,
+    "instituciones": 158
    }
   },
-  "n_personas": 2781,
-  "n_en_activo": 1630,
-  "n_con_declaracion": 2781,
-  "n_por_ocr": 88,
-  "n_comprobadas": 2163,
-  "n_ilegibles": 18,
-  "n_revisar": 62,
+  "n_personas": 2807,
+  "n_en_activo": 2105,
+  "n_con_declaracion": 2807,
+  "n_por_ocr": 77,
+  "n_comprobadas": 2277,
+  "n_ilegibles": 19,
+  "n_revisar": 58,
   "n_con_renta": 98
  },
  "declaraciones": [
