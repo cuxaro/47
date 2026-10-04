@@ -18,11 +18,11 @@ import pathlib
 import re
 import subprocess
 import sys
+import tempfile
 import urllib.parse
 import urllib.robotparser
 
 from . import bopv, modelo191
-from .paginas import leer_pdf, lineas
 from .red import AGENTE, descargar
 from .util import norm, parecido
 
@@ -37,24 +37,51 @@ def _log(*a):
 # --------------------------------------------------------------------------- #
 # Texto de un PDF (con OCR si hace falta)
 # --------------------------------------------------------------------------- #
+def _legible(t: str) -> bool:
+    """¿El texto que trae el PDF sirve? Hay PDF sin texto (escaneados) y otros cuya
+    fuente está mal codificada y dan símbolos sin sentido."""
+    compacto = re.sub(r"\s+", "", t)
+    if len(compacto) <= 200:
+        return False
+    raros = sum(compacto.count(c) for c in '!"#$&*+<=>?@_{|}~^[]\\\ufffd')
+    return raros / len(compacto) < 0.05
+
+
+def _ocr_simple(pdf: pathlib.Path, cache_ocr: pathlib.Path | None, max_paginas: int = 40) -> str:
+    """OCR de página completa (los resúmenes de totales no necesitan leer casilla a casilla)."""
+    f_cache = (cache_ocr / f"{pdf.stem}.ocr.txt") if cache_ocr else None
+    if f_cache and f_cache.exists():
+        return f_cache.read_text(encoding="utf-8")
+    trozos = []
+    with tempfile.TemporaryDirectory() as tmp:
+        subprocess.run(["pdftoppm", "-r", "200", "-png", "-l", str(max_paginas), str(pdf), f"{tmp}/p"],
+                       capture_output=True, timeout=600)
+        for img in sorted(pathlib.Path(tmp).glob("p*.png")):
+            r = subprocess.run(["tesseract", str(img), "-", "-l", "spa+cat", "--psm", "6"],
+                               capture_output=True, timeout=300)
+            trozos.append(r.stdout.decode("utf-8", "replace"))
+    texto = "\n".join(trozos)
+    if f_cache and texto.strip():
+        f_cache.parent.mkdir(parents=True, exist_ok=True)
+        f_cache.write_text(texto, encoding="utf-8")
+    return texto
+
+
 def texto_pdf(pdf: pathlib.Path, cache_ocr: pathlib.Path | None = None) -> tuple[str, str]:
-    """Devuelve (texto, método). Si el PDF no trae texto, se pasa OCR."""
+    """Devuelve (texto, método). Si el PDF no trae texto que sirva, se pasa OCR."""
     try:
         t = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, timeout=120).stdout.decode(
             "utf-8", "replace")
     except Exception:
         t = ""
-    if len(re.sub(r"\s+", "", t)) > 200:
+    if _legible(t):
         return t, "texto"
     try:
-        paginas = leer_pdf(pdf, cache_dir=cache_ocr)
+        ocr = _ocr_simple(pdf, cache_ocr)
     except Exception as e:
         _log(f"    OCR fallido en {pdf.name}: {e!r}")
         return t, "texto"
-    trozos = []
-    for p in paginas:
-        trozos.append("\n".join(" ".join(w["t"] for w in l) for l in lineas(p.get("palabras", []))))
-    return "\n".join(trozos), ("ocr" if any(p["metodo"] == "ocr" for p in paginas) else "texto")
+    return (ocr, "ocr") if len(ocr.strip()) > len(t.strip()) or not _legible(t) else (t, "texto")
 
 
 def _tipo(titulo: str) -> str:
@@ -216,13 +243,13 @@ def ayuntamientos_valencia(cache: pathlib.Path, sin_red: bool = False,
     fichas, sin_leer = [], []
     for a in indice:
         ent = _entidad(a["entidad"])
-        if not ent:
+        if not ent or bopv.RE_NO_SUMARIO.search(a["sumario"]):
             continue
         nombre = a["registro"].replace("/", "-")
         f_html = cache / f"{nombre}.html"
         if not f_html.exists():
             continue
-        leidas = modelo191.leer(modelo191.html_a_texto(f_html.read_text(encoding="utf-8")))
+        leidas = modelo191.leer_html(f_html.read_text(encoding="utf-8"))
         metodo = "texto"
         for anexo in a.get("anexos", []):
             pdf = cache / anexo["fichero"]
@@ -236,6 +263,8 @@ def ayuntamientos_valencia(cache: pathlib.Path, sin_red: bool = False,
             sin_leer.append(a)
             continue
         for l in leidas:
+            if re.search(r"x{3,}|\*{3,}", l["nombre_completo"], re.I):
+                continue        # apellidos tachados en el anuncio: no se sabe quién es
             fichas.append(_ficha(l, institucion=ent[0], tipo_institucion=ent[1], provincia="Valencia", grupo="",
                                  tipo=l.get("tipo_marcado") or _tipo(a["sumario"]), fecha=a["fecha"], metodo=metodo,
                                  fuente=f"BOP de València, anuncio {a['registro']}", url=bopv.PORTADA,

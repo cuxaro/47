@@ -38,7 +38,8 @@ RE_SUMARIO = re.compile(r"declaraci\w+.{0,80}?\b(bienes|b[eé]ns)\b|\b(bienes|b[
                         r"|regist\w+ d['e ]*\s*interes", re.I | re.S)
 # …y no de otra cosa que use las mismas palabras
 RE_NO_SUMARIO = re.compile(r"inter[eé]s cultural|rellev[aà]ncia local|relevancia local|bienes inmuebles municipales|"
-                           r"inventari|subhasta|subasta|alienaci|enajenaci|expropia|utilitat p[uú]blica|utilidad p[uú]blica", re.I)
+                           r"inventari|subhasta|subasta|alienaci|enajenaci|expropia|utilitat p[uú]blica|utilidad p[uú]blica|"
+                           r"\bimpost\b|\bimpuesto\b|exempci|exenci|bonificaci|devoluci", re.I)
 
 
 def _log(*a):
@@ -185,7 +186,9 @@ def recoger(cache: pathlib.Path, desde: dt.date, hasta: dt.date | None = None,
     t0 = time.time()
     cache.mkdir(parents=True, exist_ok=True)
     f_indice = cache / "indice.json"
-    estado = json.loads(f_indice.read_text(encoding="utf-8")) if f_indice.exists() else {"anuncios": {}, "ventanas": []}
+    estado = json.loads(f_indice.read_text(encoding="utf-8")) if f_indice.exists() else {}
+    for k, vacio in (("anuncios", {}), ("ventanas", []), ("partidas", [])):
+        estado.setdefault(k, vacio)
     hasta = hasta or dt.date.today()
     sesion, nuevos = None, 0
 
@@ -201,13 +204,20 @@ def recoger(cache: pathlib.Path, desde: dt.date, hasta: dt.date | None = None,
         if time.time() - t0 > minutos * 60:
             _log(f"  BOP València: tiempo agotado, quedan {len(pendientes) + 1} búsquedas para la próxima ejecución")
             break
+        medio = ini + (fin - ini) // 2
+        mitades = [(consulta, ini, medio), (consulta, medio + dt.timedelta(days=1), fin)]
+        if clave in estado["partidas"]:
+            # ya se sabe que este periodo no cabe en una página: ir directamente a sus mitades
+            pendientes[:0] = mitades
+            continue
         if sesion is None:
             sesion = Sesion()
         filas, total = sesion.buscar(consulta, ini, fin)
         if total > POR_PAGINA and fin > ini:
             # demasiados resultados para una página: partir el periodo en dos
-            medio = ini + (fin - ini) // 2
-            pendientes[:0] = [(consulta, ini, medio), (consulta, medio + dt.timedelta(days=1), fin)]
+            pendientes[:0] = mitades
+            if (dt.date.today() - fin).days > 45:
+                estado["partidas"].append(clave)
             continue
         if total:
             _log(f"  BOP València «{consulta}» {ini} → {fin}: {total} anuncios")
