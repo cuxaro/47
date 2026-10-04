@@ -1,0 +1,975 @@
+<div id="dlgHTML" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="dlgHTML_title" class="ui-dialog-title">Anunci 2023/17082</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="dlgHTML_content">
+
+			<style>
+				@media (max-width: 640px) {
+					#dlgHTML .ui-scrollpanel {
+						height: calc(100vh - 236px) !important;
+					}
+				}
+			</style>
+<form id="j_idt477" name="j_idt477" method="post" action="/bop/xhtml/portal.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt477" value="j_idt477" />
+<div class="center orange"><span class="fa fa-warning" style="font-size: 13px; margin-right: 5px;"></span><span class="negrita" style="font-size: 11px;">No s'ha trobat el document en valencià, es mostra el document en castellà</span></div><div class="right" style="margin-right: 20px;"><a id="j_idt482" href="#" class="ui-commandlink ui-widget print-button enlace" onclick="PrimeFaces.ab({s:&quot;j_idt482&quot;,f:&quot;j_idt477&quot;,onst:function(cfg){printDiv('htmlPanel');;}});return false;" style="font-size: 11px;"><span class="fa fa-print" style="margin-right: 5px;" title="Imprimir"></span><span title="Imprimir">Imprimir</span></a></div><div id="j_idt485" class="ui-scrollpanel ui-scrollpanel-native ui-widget ui-widget-content ui-corner-all" style="max-height: 635px; height: calc(100vh - 215px); margin: 5px 20px; padding: 1cm 2cm 1cm 2cm !important; box-shadow: 0 0 5px rgb(0 0 0 / 10%); border-radius: 5px;"><span id="htmlPanel"><!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv='Content-Type' content='text/html; charset=windows-1252'>
+  <meta name='date' content='2026-10-04T18:53:33.769'>
+  <meta name='description' content=''>
+  <meta name='subject' content='--'>
+  <meta name='generator' content='SForms XmlConv v.03.53.00-SNAPSHOT (19-05-2023 11:10:40)'>
+  <script type='text/javascript'>
+
+  // LISTAS DINAMICAS -------------------
+  // URL Servidor listas dinámicas.
+  var UrlServLisDim ='';
+  // Nombres de campos de listas, maestras no esclavas.
+  var objListaMaestraNoEsc = [];
+  // Nombres de listas dinámicas, maestras no esclavas, (si es cadena vacía, la lista es estática).
+  var listaMaestraNoEsc    = [];
+  // Valores predeterminados de las listas dinámicas
+  var listaValDef = {};
+  // FIN LISTAS DINAMICAS ---------------
+
+  var autoimpresion = false;
+
+
+// API HTML XMLConv ************************************************************
+/** Obtiene la versión actual del API JS. */
+function JSF_obVersionJS() {
+  return '03.53.00-SNAPSHOT';
+}//JSF_obVersionJS
+
+/** Se ejecuta al cargar la página. */
+function load() {
+  // Si existe la función 'JSF_load' la ejecuta.
+  if (typeof(JSF_load) == "function") JSF_load();
+  
+  // Se obtienen las listas maestras.
+  obtenerListasMaestras();
+  
+  if (autoimpresion) JSF_imprimir();
+}//load 
+
+// Listas dinámicas ***********************************************************
+
+/** Recibe los datos de la petición de lista dinámica. 
+ * @param ajax Objeto 'ajax' de la petición.
+ * @param lista Objeto 'select' donde se cargarán los datos.
+ * @param func Función callback que se ejecutará cuando se reciban los datos dinámicos.
+ * @param info Información sobre la solicitud. Se muestra en caso de error 
+ *    y sirve para diferenciar entre varias solicitudes.
+ */
+function recibirLista(ajax, lista, func, info){
+  var obj=document.getElementById(lista);
+  
+  var msgInfo= '\nLista: ' + lista + '\nUrl: ' + UrlServLisDim + ((info)?'\nInformación: '+info:''); 
+
+  // Si la petición no se ha completado (estado 4)
+  if( ajax.readyState != 4 ){
+    return;
+  }//if( ajax.readyState != 4 )
+  
+  try{
+    // Si la respuesta no es correcta (resultado HTTP != 200)
+    if( ajax.status != 200 ){
+      alert('Error al cargar la lista.\n' + msgInfo)    
+      return;
+    }//if( ajax.status != 200 )
+  
+    if (!info) info='['+ lista+']';
+    console.info('recibirLista: ' + info)
+    
+    if (window.DOMParser){
+      xmlDoc=ajax.responseXML;
+    }else{
+      var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+      xmlDoc.async=false;
+      xmlDoc.loadXML(ajax.responseText);
+    }
+
+    // Comprobamos si se ha producido algún error al obtener la lista.
+    var ErrorCode= (xmlDoc.getElementsByTagName("errorCode")[0].firstChild? xmlDoc.getElementsByTagName("errorCode")[0].firstChild.nodeValue: 0);
+    var ErrorMsg = (xmlDoc.getElementsByTagName("errorMsg")[0].firstChild?  xmlDoc.getElementsByTagName("errorMsg")[0].firstChild.nodeValue:  0);
+  
+    if( ErrorCode != 0 ){
+      alert('Error al cargar la lista\n' + msgInfo +'\nError: ' + ErrorCode +': ' +ErrorMsg )
+    
+      return;
+    }//if( Error != 0 )
+  
+    // Cargamos los valores recibidos en el objeto.
+    var nombre, codigo;
+    var Respuesta = xmlDoc.getElementsByTagName("obtenerListaDinamicaResponse")[0];
+    var Opciones = Respuesta.getElementsByTagName("option");
+    obj.options.length=0;
+
+    for(var i=0; i<Opciones.length; i++) {
+      nombre = (Opciones[i].firstChild ? Opciones[i].firstChild.nodeValue : '');
+      codigo = Opciones[i].getAttribute('value');  
+      if ((Opciones.length==1) && (nombre=='') && (codigo=='')) continue;
+      obj.add( new Option(nombre, codigo));
+    }//for i
+
+    // Buscamos el valor seleccionado
+    var valdef=listaValDef[lista];
+    if ((valdef != '') && (valdef !== undefined)) {
+      listaValDef[lista]='';
+      obj=document.getElementById(lista);
+      setValueSelect(obj, valdef);
+    }//if (valdef!=null)
+      
+    if (obj.onblur!=undefined)   obj.onblur();
+    obj.onchange();
+  
+    // Ejecutamos la funcion reentrante
+    if (func!=undefined) func(info);
+
+    // Ejecutamos la función 'JSF_listaPost_...'
+    var strEval='JSF_listaPost_'+lista;
+    strEval='if (typeof('+strEval+') == "function") '+strEval+'();' ;
+    //console.debug(strEval);
+    eval(strEval);
+
+  }finally{
+    iconoCarga(false);
+  }
+}//recibirLista
+
+/** Recupera los datos de la lista dinámica y rellena un objeto 'Select'.
+ * @param objListaMaestra 
+    -Si no hay lista esclava: Objeto 'select' donde se cargarán los datos. 
+    -Si hay lista esclava: El valor selecionado, se usará para filtrar la lista esclava. 
+ * @param listaMaestra Lista dinámica de la que obtendrá los datos.
+ * @param objListaEsclava Objeto 'select' donde se cargarán los datos.
+ * @param listaEsclava Lista dinámica de la que obtendrá los datos.
+ * @param func Función callback que se ejecutará cuando se reciban los datos dinámicos.
+ * @param info Información sobre la solicitud. Se muestra en caso de error 
+ *    y sirve para diferenciar entre varias solicitudes.
+ */
+function JSF_solicitarLista(objListaMaestra, listaMaestra, objListaEsclava, listaEsclava, func, info){
+  var ajax;
+  var obj=objListaMaestra, lista=listaMaestra, peticion, codigo='';
+  ajax = (window.XMLHttpRequest)? new XMLHttpRequest() :  new ActiveXObject("Microsoft.XMLHTTP");
+  
+  if (objListaEsclava!='') {
+    lista=listaEsclava;
+    codigo=JSF_obValorCampo(objListaMaestra);
+    obj=objListaEsclava;
+  }
+    
+  ajax.onreadystatechange = function() { recibirLista(ajax, obj, func, info); }
+  peticion= UrlServLisDim + "?idLista="+encodeURI(lista)+"&filtro="+encodeURI(codigo)+"&formato=HTML";
+  ajax.open( "GET", peticion, true );
+  ajax.send( "" );
+  iconoCarga(true, obj);
+}//JSF_solicitarLista
+
+/** Obtiene los valores de las listas maestras. */
+function obtenerListasMaestras(){
+  var obj;
+  leerValores(document.forms[0]);
+  
+  //Recuperamos los valores de las listas, maestras no esclavas.
+  var n=objListaMaestraNoEsc.length;
+  for (var i=0; i<n; i++) {
+    if (listaMaestraNoEsc[i]!=''){
+      JSF_solicitarLista(objListaMaestraNoEsc[i], listaMaestraNoEsc[i] , '', '')
+      continue;
+    }
+    
+    obj=document.getElementById(objListaMaestraNoEsc[i]);
+    
+    if (obj.onblur!=undefined)   obj.onblur();
+    if (obj.onchange!=undefined) obj.onchange();
+  }//for i
+  
+}//obtenerListasMaestras
+
+/** Listas dinámicas activas */
+var lda=0;
+
+/** Muestra/Oculta el icono de carga de datos dinámicos. */  
+function iconoCarga(visible, texto){
+  lda= visible ? lda+1 : lda-1;  
+  document.getElementById("loading").style.display = lda>0 ? 'block' :'none';
+}//iconoCarga
+
+/** Muestra el icono de carga de datos dinámicos. */  
+function mostrar_loading(text){
+  iconoCarga(true, text)
+}
+        
+/** Oculta el icono de carga de datos dinámicos. */      
+function ocultar_loading(){
+  iconoCarga(false)
+}
+
+// Carga dinámica de datos ****************************************************
+
+/** Recibe los datos de la petición de datos dinámicos. 
+ * @param ajax Objeto 'ajax' de la petición.
+ * @param func Función callback que se ejecutará cuando se reciban los datos dinámicos.
+ * @param info Información sobre la solicitud. Se muestra en caso de error 
+ *    y sirve para diferenciar entre varias solicitudes.
+ */
+function recibirDatos(ajax, func, info){
+  var msgInfo= '\nUrl: ' + UrlServLisDim + ((info)?'\nInformación: '+info:'');
+  
+  // Si la petición no se ha completado (estado 4)
+  if( ajax.readyState != 4 ){
+    return;
+  }//if( ajax.readyState != 4 )
+  
+  try{
+  // Si la respuesta no es correcta (resultado HTTP != 200)
+    if( ajax.status != 200 ){
+      alert('Error al cargar los datos.' + msgInfo)
+      return;
+    }//if( ajax.status != 200 )
+
+    console.info('recibirDatos: ' + info)
+    
+    if (window.DOMParser){
+    xmlDoc=ajax.responseXML;
+    }else{
+      var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+      xmlDoc.async=false;
+      xmlDoc.loadXML(ajax.responseText);
+    }
+
+    // Comprobamos si se ha producido algún error al obtener la lista.
+    var ErrorCode= (xmlDoc.getElementsByTagName("errorCode")[0].firstChild? xmlDoc.getElementsByTagName("errorCode")[0].firstChild.nodeValue: 0);
+    var ErrorMsg = (xmlDoc.getElementsByTagName("errorMsg")[0].firstChild?  xmlDoc.getElementsByTagName("errorMsg")[0].firstChild.nodeValue:  0);
+  
+    if( ErrorCode != 0 ){
+      alert('Error al cargar los datos.\n' +msgInfo+'\nError: ' + ErrorCode +': ' +ErrorMsg );
+      return;
+    }//if( Error != 0 )
+  
+    // Cargamos los valores recibidos en el objeto.
+    var valor, codigo;
+    var respuesta = xmlDoc.getElementsByTagName("obtenerListaDinamicaResponse")[0];
+    
+  // Cargamos los valores de los nodos en un vector bidimensional.
+  var datos = [];
+  var nodosCol, nodosFila, ni, nj;
+    
+  // Recorremos los nodos "fila"
+  nodosFila = respuesta.getElementsByTagName("fila");
+  ni=nodosFila.length;
+  for (var i=0; i<ni ; i++) {
+    if(!datos[i]) datos[i] = [];
+    
+    // Recorremos los nodos "col"
+    nodosCol = nodosFila[i].getElementsByTagName("col"); 
+    nj=nodosCol.length;
+    for (var j=0; j<nj ; j++){
+      datos[i][j] = nodosCol[j].textContent;
+      }//for j
+    }//for i
+  
+  // Ejecutamos la funcion reentrante
+  if (func!=undefined) func(datos, info);
+  
+  }finally{
+    iconoCarga(false, info);
+  }
+}//recibirDatos
+
+/** Solicitud de datos dinámicos a partir de una lista dinámica.
+ * @param lista Lista dinámica de la que obtendrá los datos.
+ * @param valorFiltro Valor del filtro de la lista.
+ * @param func Función callback que se ejecutará cuando se reciban los datos dinámicos.
+ * @param info Información sobre la solicitud. Se muestra en caso de error 
+ *    y sirve para diferenciar entre varias solicitudes.
+ */
+function JSF_solicitarDatos(lista, valorFiltro, func, info){
+  var peticion= UrlServLisDim + "?idLista="+encodeURI(lista)+"&filtro="+encodeURI(valorFiltro)+"&formato=XML";
+  var ajax = (window.XMLHttpRequest)? new XMLHttpRequest() :  new ActiveXObject("Microsoft.XMLHTTP");
+  
+  console.log (peticion);
+  ajax.onreadystatechange = function() { recibirDatos(ajax, func, info); }
+  ajax.open( "GET", peticion, true );
+  ajax.send( "" );
+  iconoCarga(true, info);
+}//JSF_solicitarDatos
+
+/** Obtiene un datos de la matriz de datos.
+ * @param datos Matriz de datos.
+ * @param fila Numero de fila (Comenzando por 0).
+ * @param col Numero de columna (Comenzando por 0).
+ * @param valDef Valor por defecto.
+ */
+function JSF_valorDatos(datos, fila, col, valDef){
+  if (valDef==undefined) valDef='';
+
+  if ((datos.length<fila) || (!datos[fila]) || (datos[fila].length<col) || (datos[fila][col]==undefined)) {
+    return valDef;
+  }
+  return datos[fila][col];
+}//JSF_valorDatos
+
+// Funciones de formulario ****************************************************
+
+/** Obtiene el objeto del campo.
+ * @param nombre Nombre del campo. 
+ */
+function JSF_obCampo(nombre){
+  var obj=document.getElementById(nombre);
+  if (!obj) console.error('El campo [%s] no existe.', nombre);
+  return obj;
+}//JSF_obCampo
+
+/** Obtiene el tipo del campo. */
+function JSF_obTipoCampo(nombre){
+  var obj=document.getElementById(nombre);
+  if (!obj) {
+    throw 'El campo ['+ nombre +'] no existe.';
+    //console.error('El campo [%s] no existe', nombre);
+    //return 'undefined';
+  }
+    
+  return obj.type;
+}//JSF_obTipoCampo
+
+/** Obtiene el valor del campo. */
+function JSF_obValorCampo(nombre){
+  var obj=document.getElementById(nombre);
+  if (!obj) {
+    throw 'El campo ['+ nombre +'] no existe.';
+    //console.error('El campo [%s] no existe', nombre);
+    //return '';
+  }
+  
+  switch (obj.type){
+    case "radio":      return obtenValorRadio(nombre);
+    case "checkbox":   return (obj.checked)? obj.value : '';
+    case "select-one": return JSF_obExporLista(nombre);
+    default:           return obj.value;
+  }//switch (obj.type)
+}//JSF_obValorCampo
+
+/** Obtiene el texto de la selección de la lista. */
+function obtenValorTextoSelect(nombre){
+  var obj=JSF_obCampo(nombre);
+  if (!obj || obj.type!='select-one') return '';
+  
+  if (obj.selectedIndex == -1) return "";
+  return obj.options[obj.selectedIndex].text;
+}//obtenValorTextoSelect
+
+/** Obtiene el valor de exportación de la lista. */
+function obtenValorSelect(nombre){
+  var obj=JSF_obCampo(nombre);
+  if (!obj || obj.type!='select-one') return '';
+  
+  if (obj.selectedIndex == -1) return "";
+  return obj.options[obj.selectedIndex].value;
+}//obtenValorSelect
+
+/** Obtiene el texto de la selección de la lista. 'Publica' */
+const JSF_obValorLista=obtenValorTextoSelect;
+
+/** Obtiene el valor de exportación de la lista. 'Publica' */
+const JSF_obExporLista=obtenValorSelect;
+
+/** Filtra una lista esclava según a la selección de su lista maestra. */
+function JSF_filtraEsclava(maestra, esclava){
+  // obtenemos el elemento seleccionado de la lista maestra
+  var maes_valor = JSF_obValorLista(maestra);
+  var maes_expor = JSF_obValorCampo(maestra);
+
+  // eliminamos todos los elementos de la lista esclava, para eliminar los resultados de selecciones anteriores
+  var esc = JSF_obCampo(esclava);
+  while(esc.options.length > 0){
+    esc.remove(0);
+  }
+
+  // obtenemos el identificador de la lista oculta correspondiente a la esclava que se ha pasado, las listas ocultas ya estan creadas
+  // la nomenclatura de las listas ocultas de sus esclavas es  - nombreListaesclava_oculta
+  var ocu = JSF_obCampo(esclava+"_oculta");
+
+  var sel_valor, sel_expor;
+  // recorremos la lista oculta revisando en cada elemento si cumple la funcion de filtrado creada por el usuario
+  // y añadimos los elementos correspondientes
+  for (var x=0;x<ocu.options.length;x++) {
+    sel_valor = ocu.options[x].text;
+    sel_expor = ocu.options[x].value;
+    
+    //alert(sel_valor+"  " + sel_expor);
+    // las funciones de filtrado siguen la nomneclatura "JSF_filtrado_NombreListaEsclava"
+
+    try{
+    
+      if (eval("JSF_filtrado_" + esclava + "('" + 
+        JSF_escapeStringJS(maes_valor) + "','" + 
+        JSF_escapeStringJS(maes_expor) + "','" + 
+        JSF_escapeStringJS(sel_valor) + "','" + 
+        JSF_escapeStringJS(sel_expor) + "')")) {
+        // alert("Incluimos estos valores "+sel_valor+ " "+sel_expor);
+        JSF_addItemLista(esclava,sel_valor,sel_expor);
+      }
+    } catch(error){
+      alert(error.message + " ( JSF_filtrado_" + esclava + ")");
+    }  
+    
+  }
+  
+  // Cargamos el valor predeterminado
+  var valdef=listaValDef[esclava];
+  if ((valdef != '') && (valdef !== undefined)) {
+    listaValDef[esclava]='';
+    setValueSelect(esc, valdef); 
+  }//if (valdef!=null)  
+  
+  // Ejecutamos el evento "OnChange" de la lista esclava para forzar a que sus esclavas,
+  //    si las tiene, también se recarguen.
+  esc.onchange();
+}//JSF_filtraEsclava
+
+function JSF_escapeStringJS(cadena) {
+  var c1, ch, ret="";
+  cadena=""+cadena;   //asegura que sea cadena
+  
+  for (c1=0;c1<cadena.length;c1++) {
+    ch=cadena.charAt(c1);
+    if (ch=='\'') {
+      ret=ret+"\\\'";
+    } else if (ch=='\"') {
+      ret=ret+"\\\"";
+    } else if (ch=='\\') {
+      ret=ret+"\\\\";
+    } else if (ch=='\t') {
+      ret=ret+"\\t";
+    } else if (ch=='\n') {
+      ret=ret+"\\n";
+    } else if (ch=='\r') {
+      ret=ret+"\\r";
+    } else {
+      ret=ret+ch;
+    }
+  }
+
+  return ret;
+}//JSF_escapeStringJS
+
+/** Establece el valor de un campo. */
+function JSF_ponerValorCampo(nombre, valor){
+  var obj=JSF_obCampo(nombre);
+  if (!obj) throw 'El campo ['+ nombre +'] no existe.';
+  
+  switch (obj.type){
+    case "radio":      ponValorRadio(nombre,valor); break;
+    case "checkbox":   obj.checked = (valor=='S');  break;
+    case "select-one": setValueSelect(obj, valor); break;
+    default:           obj.value=valor; break;
+  }//switch (obj.type)
+  return true;
+}//JSF_ponerValorCampo
+
+/** Situa el foco en un campo. */
+function JSF_campoFoco(nombre){
+  var obj=JSF_obCampo(nombre);
+  if (!obj) throw 'El campo ['+ nombre +'] no existe.';
+    
+  if (obj.type == "radio"){
+    return ponFocoRadio(nombre);
+  }
+   
+  obj.focus();
+  if (obj.select!=undefined) obj.select();
+  return true;
+}//JSF_campoFoco
+
+/** Añade un elemento a la lista. */
+function JSF_addItemLista(nombre, valor, expor){
+  try {
+    var obj=JSF_obCampo(nombre);
+    if (!obj || obj.type!='select-one') 
+      throw 'El campo ['+ nombre +'] no es una lista.';    
+  
+    for(var i=0;i<obj.options.length;i++){     
+      if (obj.options[i].value == expor && obj.options[i].text == valor){
+        return true;
+      }//if ...
+    }//for i
+    
+    obj.options[obj.options.length] = new Option(valor, expor); 
+  return true;
+  } catch(error){
+    alert(error);
+  }//try ..catch  
+}//JSF_addItemLista
+
+/** Establece la visibilidad de un determinado campo.
+ * @param nombre Nombre del campo. 
+ * @param nivel Nivel al que afectará el cambio (ascendente a partir del campo).
+ * @param visible Visibilidad, [true | false]
+ */
+function JSF_campoVisible(nombre, nivel, visible){
+  var obj=JSF_obCampo(nombre);
+  if (!obj) throw 'El campo ['+ nombre +'] no existe.';
+  
+  for(var i=0; i<nivel; i++) {
+    if (!obj.parentNode) break;
+    obj=obj.parentNode;
+  }
+  
+  obj.hidden=!visible;
+  return true;
+}//JSF_campoVisible
+
+/** Muestra un mensaje. */
+function JSF_mostrarTexto(cad){
+  alert(cad);    
+}
+
+/** Valida el valor con la expresión regular. */
+function JSF_validaMascara(valor, mascara) {
+  return (valor.match(mascara)!=null);
+}
+
+/** Realiza en envio de datos (submit). */
+function JSF_enviarForm(url) {
+  //this.submitForm(url,false);
+  guadarValores(document.forms[0]);
+  document.forms[0].action = url;
+  document.forms[0].method = "POST";
+  document.forms[0].submit();
+}
+ 
+/** Imprime el documento. */
+function JSF_imprimir() {
+  window.print();
+}
+
+//Nombres de campos que no se deben borrar con el botón [RESET]
+var camposNoReset = [];
+
+/** Borrar todos los datos del formulario */
+function JSF_reset(){
+  var coll = document.forms[0].elements;
+  if (coll==null) return false;
+  var obj;
+  var n=coll.length;
+  for (var i=0; i<n; i++){
+    var obj=coll.item(i);
+    // Si el campo no debe borrarse, no lo borramos y pasamos al siguiente.
+    if (camposNoReset.indexOf(obj.name)>-1) continue;
+    
+    switch (obj.type){
+      case "button":     break;
+      case "radio":      obj.checked = false; break;
+      case "checkbox":   obj.checked = false; break;
+      case "select-one": obj.selectedIndex = -1; break;
+      default:           obj.value = "";
+    }//switch (obj.type)
+
+    if (obj.onblur!=undefined)   obj.onblur();
+    if (obj.onchange!=undefined) obj.onchange();
+  }//for i
+  return true;
+}//JSF_reset
+
+/** Valida si un campo NO es vacio */
+function JSF_vObligado(nombre){
+  return (JSF_obValorCampo(nombre)!="")
+}//JSF_vObligado
+
+//Acciones
+function JSF_accionEnviarClick_enviar() {
+  if (JSF_validaTodo()==true) {
+    alert("Todo OK. En un caso real se enviarían los datos a la URL indicada.");
+  }
+}//JSF_accionEnviarClick_enviar
+
+// función que convierte una cadena (con "," como separador de decimales y "." como separador de millares) a un numero Real
+// Devuelve 0 si el valor está vacío
+function JSF_cadenaToReal(valor){
+  if (valor=="") {
+    return (0.00);
+  }
+
+  cadena=new String(valor);
+  // quitar puntos
+  cadena=cadena.replace(/\./g,"");
+  // cambiar la coma por un punto
+  cadena=cadena.replace(",",".");
+  if (!isNaN(cadena)){
+    return parseFloat(cadena);
+  }
+   
+  return (0.00);
+}//JSF_cadenaToReal
+
+// función que convierte un numero Real a cadena. 
+// Se pasa como parámetro el numero de decimales con el que se redondeara.
+function JSF_realToCadena(valor, dec){
+  numero=parseFloat(valor);
+  if(!isNaN(numero)){
+    //fuerza el numero de decimales;
+    numero = numero.toFixed(dec);
+    //  convierte el punto en coma
+    rp=/\./g;
+    numero = numero.replace(rp,",");
+  }
+  return numero;
+}//JSF_realToCadena
+
+// valida que el campo pasado está dentro del intervalo (min-max) 
+function JSF_validaIntervalo(nombre, min, max){
+  var resultado=false;
+  var valor=JSF_obValorCampo(nombre);
+
+  if (valor=="") return true;
+  
+  // pasar a numeros. Cambiar las comas por puntos y quitar puntos
+  cadmin=new String(min);
+  cadmax=new String(max);
+  valor=new String(valor);
+
+  // comprobar que sea numérico  
+  if (isNaN(parseFloat(valor))) {
+    JSF_mostrarTexto("ValidaIntervalo: debe introducir un valor númerico ");
+    JSF_ponerValorCampo(nombre,"");
+    JSF_campoFoco(nombre);
+    return false;
+  }
+  
+  cadmin=cadmin.replace(",",".");
+  cadmax=cadmax.replace(",",".");  
+  valor=valor.replace(/\./g,"");
+  valor=valor.replace(",",".");
+  
+  vvalor=parseFloat(valor);
+  vmin=parseFloat(cadmin)
+  vmax=parseFloat(cadmax);
+  
+  //  JSF_mostrarTexto(vvalor+" "+vmin+" "+vmax);  
+  // si existe un valor mánimo y mínimo
+  if ((min!="")&&(max!="")) {
+    if ((vvalor>=vmin)&&(vvalor<=vmax)){
+      resultado=true;
+    }
+    else {
+      JSF_mostrarTexto("El valor debe estar compredido entre "+min+" y "+max);
+      resultado=false;
+    }
+  }
+  // si solo existe un valor mínimo
+  else if (min!="") {
+    if (vvalor>=vmin) resultado=true
+    else {
+      JSF_mostrarTexto("El valor debe ser mayor o igual a "+min);
+      resultado=false;
+    }
+  }
+  // si solo existe un valor máximo
+  else if (max!="") {
+    if (vvalor<=vmax) resultado=true
+    else {
+      JSF_mostrarTexto("El valor debe ser menor o igual a "+max);
+      resultado=false;
+     }
+  }
+  
+  // borrar el valor y mover el foco.
+  if (!resultado) {
+    JSF_ponerValorCampo(nombre,"");
+    JSF_campoFoco(nombre);
+  }
+  
+  return resultado;
+}//JSF_validaIntervalo
+
+/** Valida fecha con formato "dd/mm/yyyy" o "dd[separador]mm[separador]yyyy"
+ * @param {string} cadena Texto que deseamos validar como fecha.
+ * @param {string} separador Caracter de separación. Valor por defecto: "/" .
+ * @return {boolean} La fecha es valida.
+ */
+function JSF_validarFecha(cadena, separador) {
+  separador || ( separador = '/' );
+  var partes = (cadena || '').split(separador);
+  var fecha = new Date(partes[2], --partes[1], partes[0]);
+
+  return (partes.length == 3 && fecha && partes[0] == fecha.getDate() && partes[1] == fecha.getMonth() && partes[2] == fecha.getFullYear());
+}
+
+// Funciones auxiliares para HTML *********************************************
+
+/** Guarda los valores en un campo oculto. */
+function guadarValores(form){
+  var s ="";
+  var obj;
+
+  sessionStorage.clear();
+  //Guardamos los parámetros de la url y la fecha/hora de generación del fichero
+  sessionStorage.setItem('$params', window.location.search.substr(1));
+  sessionStorage.setItem('$date', document.getElementsByTagName("meta")["date"].getAttribute("content"));
+
+  for (var i=0; i<form.elements.length; i++){
+    obj=form.elements[i];
+    if ((obj.type=="text") || (obj.type=="textarea") || (obj.type=="select-one")) {
+      sessionStorage.setItem(obj.name, obj.value);
+      continue;
+    }
+        
+    if ((obj.type=="checkbox") || (obj.type=="radio") )
+      sessionStorage.setItem(obj.name, (obj.checked)? obj.value : '');
+  }
+
+}//guadarValores
+
+/** Lee los valores en un campo oculto. */
+function leerValores(form){
+  //Si los parámetros son diferentes o la fecha es diferente, no es una vuelta atrás, no hay que leer ningún valor.
+  if ((sessionStorage.getItem('$params')!=window.location.search.substr(1)) ||
+      (sessionStorage.getItem('$date')!=document.getElementsByTagName("meta")["date"].getAttribute("content")) ){
+    sessionStorage.clear();
+    return;
+  }
+
+  var obj;
+  // Actualizamos el valor de los controles
+  for (var i=0; i<form.elements.length; i++){
+    obj=form.elements[i];
+
+    if (sessionStorage.getItem(obj.name)==null)
+      continue;
+
+    listaValDef[obj.name]=sessionStorage.getItem(obj.name);
+
+    if (listaValDef[obj.name] == undefined)
+      continue;
+
+    if ((obj.type=="text") || (obj.type=="textarea"))
+      obj.value = listaValDef[obj.name];
+
+    if ( ((obj.type=="checkbox") || (obj.type=="radio") ))
+      obj.checked= (obj.value == listaValDef[obj.name])
+
+    if (obj.type=="select-one")
+      setValueSelect(obj, listaValDef[obj.name]);
+  }//for i
+}//leerValores
+
+/** Codifica una cadena HTML. */
+function HTMLencode(str){
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+
+/** Decodifica una cadena HTML. */
+function HTMLdecode(str){
+  return str.replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+}
+
+/** Establece el valor del objeto select. */
+function setValueSelect(obj, val){
+  var i;
+  var n= obj.options.length;
+  
+  val=HTMLdecode(""+val);
+  for (i=0;i<n;i++){
+    if (obj.options[i].value == val){
+      obj.selectedIndex = i;
+      return true;
+    }
+  }//for i
+
+  obj.selectedIndex = -1;
+  return true;
+}//setValueSelect
+
+/** Establece el valor de exportación del select. (obs) */
+function ponValorSelect(nombre, valor){
+  var obj=document.getElementById(nombre)
+  if (obj==null) return false;
+  return setValueSelect(obj, valor);
+}//ponValorSelect
+
+/** Establece el valor de exportación del check. (obs)*/
+function ponValorCheck(nombre, valor){
+  var obj=document.getElementById(nombre)
+  if (obj==null) return false;
+  obj.checked = (valor=='S');
+  return true;
+}//ponValorCheck
+
+/** Obtiene el valor de un input tipo Radio seleccionado. */
+function obtenValorRadio(id){
+  var coll = document.forms[0].elements;
+  if (coll==null) return '';
+  
+  for (var i=0; i<coll.length; i++){
+    if (coll.item(i).id == id && coll.item(i).checked){
+      return coll.item(i).value;      
+    }
+  }
+  
+  return "";
+}//obtenValorRadio
+
+/** Establece el valor de exportación del radio. */ 
+function ponValorRadio(nombre, valor){
+  var coll = document.forms[0].elements;
+  if (coll==null) return false;
+
+  for (var i=0; i<coll.length; i++){
+    if (coll.item(i).id == nombre){
+      coll.item(i).checked = (coll.item(i).value == valor);
+    }
+  }
+
+  return true;
+}//ponValorRadio
+
+/** Pone el foco en el primer elemento del grupo de radio que le pasamos. */
+function ponFocoRadio(nombre){
+  var coll = document.forms[0].elements;
+  if (coll==null) return false;
+  
+  for (var i=0; i<coll.length; i++){
+    if ((coll.item(i).id == nombre) ){
+      coll.item(i).focus();
+      coll.item(i).select();
+      return true;
+    }
+  }
+
+  return true;
+}//ponFocoRadio
+
+/**
+ * El Internet Explorer (versiones inferiores a la 10) no calcula los valores
+ * de inicio y de fin de selección, esta función añade esos valores al objeto.
+ */
+function getTextAreaSelection(obj) {
+  if (document.selection) { //IE
+    var bm = document.selection.createRange().getBookmark();
+    var sel = obj.createTextRange();
+    sel.moveToBookmark(bm);
+     
+    var sleft = obj.createTextRange();
+    sleft.collapse(true);
+    sleft.setEndPoint("EndToStart", sel);
+    obj.selectionStart = sleft.text.length
+    obj.selectionEnd = sleft.text.length + sel.text.length;
+    obj.selectedText = sel.text; 
+  }
+}//getTextAreaSelection
+
+/** 
+ * Comprueba la mascara y el limite de caracteres que el valor tecleado junto
+ *  con el contenido del control. 
+ */
+function keyPress(obj,evt,er){
+  var tecla=(window.event)?  event.keyCode : evt.which;
+  
+  if ((tecla==8) || (tecla==0)) return true;
+  if ((!window.event) && (evt.ctrlKey)) return true;
+  if (document.selection) getTextAreaSelection(obj);
+  var valor=''+obj.value.substr(0,obj.selectionStart) + String.fromCharCode(tecla) + obj.value.substr(obj.selectionEnd);
+  
+  var maxLen=(obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : -1)
+  
+  if ((0<maxLen) && (maxLen < valor.length)) return false;
+  
+  //alert(valor);
+  if (er==undefined) return true;
+  return JSF_validaMascara(valor,er);
+}//keyPress
+
+/** 
+ * Comprueba la mascara y el limite de caracteres que el valor pegado junto
+ *   con el contenido del control.
+ */
+function paste(obj, evt, er){
+  var cliptext=(window.clipboardData)? window.clipboardData.getData('Text'): evt.clipboardData.getData('text/plain');  
+  if (document.selection) getTextAreaSelection(obj);
+  var maxLen=(obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : -1)
+  if (0<maxLen){
+    var n=maxLen -(obj.selectionStart + obj.value.length-obj.selectionEnd);
+    if (n<0) n=0;
+    cliptext=cliptext.substr(0,n);
+  }
+  
+  var valor=''+obj.value.substr(0,obj.selectionStart) + cliptext + obj.value.substr(obj.selectionEnd);
+  var posSel=obj.selectionStart + cliptext.length;
+  if ((0<maxLen) && (obj.type=="textarea")){
+    obj.value=valor;
+    obj.selectionStart=posSel;
+    // En IE deja la selección al final. 
+    return false;
+  }
+  return JSF_validaMascara(valor,er);
+}//paste
+
+/** 
+ * Comprueba la mascara y el limite de caracteres que el valor soltado junto 
+ *   con el contenido del control. 
+ */
+function drop(obj, evt, er){
+  var valor= evt.dataTransfer.getData("Text");
+  
+  var maxLen=(obj.getAttribute? parseInt(obj.getAttribute("maxlength")) : -1)
+  if ((0<maxLen)  && (maxLen < valor.length)){
+    valor=valor.substr(0,maxLen);
+  }
+
+  //alert(valor);
+  if (!JSF_validaMascara(valor,er)) return false;
+  // Se sustituye el valor del control por el nuevo.
+  obj.value=valor;
+  return false;
+}//drop
+
+// Funciones auxiliares *******************************************************
+/** Calcula la letra del NIF. */
+function calNIF(numero) {
+  var s = "TRWAGMYFPDXBNJZSQVHLCKE";
+  return s.charAt(numero % 23);
+} 
+
+// FIN: API HTML XMLConv ******************************************************
+
+// Funciones de campos ********************************************************
+
+
+/** Función de validación del formulario */
+function validar(){
+  var error='';
+  // Comprobación de que no hay listas dinámicas activas.
+  var time = new Date().getTime()+500;
+  while (lda>0){
+    if (time < new Date().getTime()){
+      alert('Espere que se cargen todos los datos.');
+      return false;
+    }
+  }
+  // Validación campos obligatorios.
+
+  // Invocación a funciones de validación del formulario definidas por el usuario.
+
+  if (error!='') {
+    JSF_mostrarTexto(error);
+    return false;
+  }
+
+  return true;
+}//vadidar
+
+/** Alias función de validación del formulario, para mantener la compatibilidad con versiones anteriores */
+const validarObligados=validar;
+
+// Funciones de validación del formulario definidas por el usuario. ***********
+
+
+// Funciones de filtrado de listas estáticas. *********************************
+
+</script>
+</head>
+<body onLoad='load();'>
+<div id='loading' style='display:none; position:fixed; z-index:1000; left:50%; top:50%' ><img alt='Cargando...' src='https://bop.dival.es/bop/images/sforms/loading.gif'></div>
+<form  name='formulario0' action='POST'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div><div align='left' style=' line-height:1.025'><TABLE width='100%' align='left' style='border-collapse:collapse;'><TR><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='78.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div><div align='center' style=' line-height:1.2299999999999998'><B><FONT style=' font-family:"Open Sans"; font-size:10pt; color:#CF112D;'>M U N I C I P I O S</FONT></B></div><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='78.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans Condensed"; font-size:18pt; color:#000000;'>Ayuntamiento de Rocafort</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR></TABLE></div><br style='line-height:0pt; margin:0pt; padding:0pt;' clear='all'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:1pt; color:#000000;'>&nbsp;</FONT></div><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:12pt; color:#000000;'>&nbsp;</FONT></div><div align='left' style=' line-height:1.025'><TABLE width='100%' align='left' style='border-collapse:collapse;'><TR><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='13.0%'><div align='left' style=' line-height:1.025'><I><FONT style=' font-family:"Open Sans Medium"; font-size:10pt; color:#000000;'>2023/17082</FONT></I></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='65.0%'><div align='justify' style=' line-height:1.025'><I><FONT style=' font-family:"Open Sans"; font-size:10pt; color:#000000;'>Anuncio del Ayuntamiento de Rocafort sobre declaración de bienes y actividades de miembros de la corporación.</FONT></I></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' colspan='2' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='78.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div><div align='center' style=' line-height:1.025'><B><FONT style=' font-family:"Open Sans"; font-size:12pt; color:#000000;'>ANUNCIO</FONT></B></div><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:3pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' colspan='2' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='78.0%'><div align='justify' style=' line-height:1.025'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT style=' font-family:"Open Sans"; font-size:10pt; color:#000000;'>De conformidad con lo dispuesto en el artículo 2 del decreto 191/2010 de 19 de noviembre, del Consell por el que se regulan las declaraciones de bienes de los miembros de las Corporaciones locales de la Comunitat Valenciana, procede a la publicación en el Boletín Oficial de la Provincia del contenido de las declaraciones modificadas de actividades, bienes y derechos patrimoniales, efectuadas por los Concejales y Concejalas del Ayuntamiento de Rocafort</FONT></div><div align='justify' style=' line-height:0.7175'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div><div align='left' style=' line-height:1.025'><TABLE width='100%' align='left' style='border-collapse:collapse;'><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>I ACTIVO</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>II PASIVO</FONT></div></TD></TR><TR><TD valign='middle' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Denominación cargo Público</FONT></div></TD><TD valign='middle' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Nombre y Apellidos</FONT></div></TD><TD valign='middle' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>I Bienes Inmuebles (valor catastral</FONT></div></TD><TD valign='middle' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>I.2 Otros Bienes</FONT></div></TD><TD valign='middle' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>I.3 Total</FONT></div></TD><TD valign='middle' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Alcalde</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Gorka Gomez Lorenzo</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>50 % 40.366,02 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>59.696,86 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>100.062,88 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>13.666,00 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Susana Martinez Hernández</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>47.500,00 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>20.970,00 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>68.470,00 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>2.291,81 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Jorge Ortega Cotarelo</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>50 % 65.581,77 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>51.908,80 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>117.490,57 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>117.485 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Mercedes Medina Domenech</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>61.585,27 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>61.585,27 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>5.267,32 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Vicente Blanch Tormo</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>715.000,00</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>86.264,41 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>801.264,41 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>360.576,65 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Esther Carrera Bergua</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>243.479,590 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>56.839,81 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>300.319,40 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Sergio Herrero Rosario</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>50 % 255,183 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>39.265,35 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>294448.35</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>8.495,00 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>M.ª Adela Agudo Yuste</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>376.570,44 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>239.569,33 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>616.139,77 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>189.566,36 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Julia Cañizares Ivars</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>116.833,36 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>56.164,14 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>172.997,50 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Francisco Rafael Ferrando García</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>352.561,14 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>206.618,94 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>559.180,00 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>196.829,05 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Alicia Esteve Pastor</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>44.661,86 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>21.003,38 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>65.665,24 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>66.674,72 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Rosario Marco Cabello</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>50 % 16.082,97 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>18.932,60 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>35.015,57 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>32.000,00 &euro;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Concejal</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Miguel de la Cruz Parra</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>75.839,00 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>44.980,90 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>120.819,90 &euro;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='1.0%'><div align='right' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>20.706,00 &euro;</FONT></div></TD></TR></TABLE></div><br style='line-height:0pt; margin:0pt; padding:0pt;' clear='all'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div><div align='left' style=' line-height:1.025'><TABLE width='100%' align='left' style='border-collapse:collapse;'><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='33.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Nombres y Apellidos</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='39.0%'><div align='center' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>III Actividades</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:#E1E1E1; padding:0px;' width='28.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>D. Gorka Gomez Lorenzo </FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Logista Retal SLU</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>RPV</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Seguridad Gestión</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>comercial</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Aranzadi</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>comercial</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Cortix Iberica</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Comercial</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Autónomo</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Director Comercial </FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Dña. Susana Martinez Hernández </FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Tolosa y Pardo</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Administrativa </FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>D. Jorge Ortega Cotarelo</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Landewyck Tabacos España SL</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Comercial</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Dña. M.ª de las Mercedes Medina Domenech&nbsp;&nbsp;&nbsp;&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Bake It Flats SL</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Controler de Gestion</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Delibread Europe SL</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Controler de Gestion</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>SP Berber Plastic Group</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Tecnico de costes </FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Dña. Esther Carrera Bergua</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Consejo Superior de investigaciones científicas (CSIC)</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>D. Vicente Blanch Tormo</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Universidad  Viv</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Docente</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Tobalcaide</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Valius Labour Defense</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Administrador/abogado</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>D. Sergio Herrero  Rosario</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Dña. Adela Agudo Yuste </FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Dña. Julia Cañizares Ivars</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Roure Blanca Coop V</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>administradora </FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>D. Francisco Rafael Ferrando Garcia</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Instituto Valenciá de Cultura GVA </FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Cantante&nbsp;&nbsp;del coro </FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Dña. Alicia Esteve Pastor</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Roure Blanca Coop V</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Socia/ trabajadora </FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Dña. Rosario Marco Cabello</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Diputación de Valencia</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>diputada </FONT></div></TD></TR><TR><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='33.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>D. Miguel de la Cruz Parra</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='39.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>Farmacia Rocafort</FONT></div></TD><TD valign='top' style=' border:1pt #808080 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='28.0%'><div align='left' style=' line-height:1.025'><FONT style=' font-family:"Open Sans"; font-size:9pt; color:#000000;'>auxiliar tecnico</FONT></div></TD></TR></TABLE></div><br style='line-height:0pt; margin:0pt; padding:0pt;' clear='all'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR><TR><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD><TD valign='top' colspan='2' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='78.0%'><div align='justify' style=' line-height:1.025'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT style=' font-family:"Open Sans"; font-size:10pt; color:#000000;'>Rocafort, 22 de diciembre de 2023.—El alcalde, Gorka Gómez Lorenzo.</FONT></div></TD><TD valign='top' style=' border:0pt #000000 solid;  background-color:rgba(255,255,255,0.0); padding:0px;' width='11.0%'><div align='justify' style=' line-height:1.025'><FONT style=' font-family:"Arial"; font-size:10pt; color:#000000;'>&nbsp;</FONT></div></TD></TR></TABLE></div><br style='line-height:0pt; margin:0pt; padding:0pt;' clear='all'></form></body></html></span></div><div id="j_idt499" class="ui-panelgrid ui-widget ui-panelgrid-blank"><div id="j_idt499_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive"><div class="ui-g"><div class="ui-panelgrid-cell ui-g-12 ui-md-4"><img id="j_idt500" alt="" src="/bop/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=8.0" /></div><div class="ui-panelgrid-cell ui-g-12 ui-md-4"><button id="j_idt501" name="j_idt501" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.bcn(this,event,[function(event){closeDlg('dlgHTML');},function(event){PrimeFaces.ab({s:&quot;j_idt501&quot;,f:&quot;j_idt477&quot;});return false;}]);" title="Tancar" type="submit"><span class="ui-button-icon-left ui-icon ui-c fa fa-close"></span><span class="ui-button-text ui-c">Tancar</span></button><script id="j_idt501_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt501",{id:"j_idt501"});</script></div></div></div></div>
+</form></div></div><script id="dlgHTML_s" type="text/javascript">PrimeFaces.cw("Dialog","dlgHTML",{id:"dlgHTML",resizable:false,modal:true,width:"1024",showEffect:"clip",hideEffect:"clip",closeOnEscape:true,responsive:true});</script>
