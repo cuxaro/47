@@ -30,5 +30,28 @@ def buscar(texto, ini, fin, nombre):
         x = repr(e).encode()
     (OUT / nombre).write_bytes(x); print(nombre, len(x), file=sys.stderr); time.sleep(3)
 buscar("declaraciones bienes actividades", "01/09/2023", "31/10/2023", "bopv_es.xml")
-buscar("declaracions bens activitats", "01/09/2023", "31/10/2023", "bopv_va.xml")
+
 buscar('"titular del cargo"', "01/06/2023", "31/12/2023", "bopv_titular.xml")
+
+# --- segunda parte: abrir un anuncio en HTML y en PDF dentro de la misma sesión
+x = (OUT / "bopv_es.xml").read_text(encoding="utf-8", errors="replace")
+vs = re.search(r'ViewState:0"><!\[CDATA\[(.*?)\]\]>', x).group(1)
+lista_form = re.search(r'PrimeFaces\.ab\(\{s:&quot;list:1:[^&]+&quot;,f:&quot;([^&]+)&quot;', x).group(1)
+def abrir(patron, render, nombre):
+    src = re.search(r'id="(list:2:[^"]+)"[^>]*aria-label="%s"' % patron, x).group(1)
+    d = {lista_form: lista_form, "javax.faces.ViewState": vs, "javax.faces.partial.ajax": "true",
+         "javax.faces.source": src, "javax.faces.partial.execute": "@all", "javax.faces.partial.render": render, src: src}
+    req = urllib.request.Request(urllib.parse.urljoin(base, action), data=urllib.parse.urlencode(d).encode(),
+                                 headers={"Faces-Request": "partial/ajax", "X-Requested-With": "XMLHttpRequest",
+                                          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
+    try: y = op.open(req, timeout=120).read()
+    except Exception as e: y = repr(e).encode()
+    (OUT / nombre).write_bytes(y); print(nombre, len(y), file=sys.stderr); time.sleep(3); return y.decode("utf-8", "replace")
+h = abrir("Vore HTML", "dlgHTML", "bopv_html.xml")
+p = abrir("Anunci en PDF", "dlgPDF", "bopv_pdf.xml")
+for u in set(re.findall(r'(?:src|href|data)="([^"]*(?:pdf|download|csv|anuncio)[^"]*)"', p + h, re.I)):
+    print("URL", html.unescape(u), file=sys.stderr)
+for u in ["https://bop.dival.es/bop/xhtml/csv.xhtml", "https://bop.dival.es/bop/xhtml/csv.xhtml?csv=BOPV-2023/13505"]:
+    try:
+        y = op.open(u, timeout=60).read(); (OUT / ("csv_%d.html" % len(u))).write_bytes(y); print(u, len(y), file=sys.stderr)
+    except Exception as e: print(u, repr(e), file=sys.stderr)
