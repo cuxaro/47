@@ -28,10 +28,17 @@ import urllib.request
 from .red import AGENTE, PAUSA
 
 PORTADA = "https://bop.dival.es/bop/"
-CONSULTA = "declaraciones bienes"          # el buscador exige que estén todas las palabras
+# El buscador exige que estén todas las palabras de la consulta y no distingue
+# acentos; cada ayuntamiento titula el anuncio a su manera, así que se prueban varias.
+CONSULTAS = ["declaraciones bienes", "declaracion bienes", "declaracions bens", "declaracio bens",
+             "registro intereses", "registre interessos"]
 POR_PAGINA = 25                            # resultados que muestra la lista
 # El sumario tiene que hablar de declaraciones de bienes (en castellano o valenciano)
-RE_SUMARIO = re.compile(r"declaraci\w+.{0,80}?\b(bienes|b[eé]ns)\b|\b(bienes|b[eé]ns)\b.{0,80}?declaraci", re.I | re.S)
+RE_SUMARIO = re.compile(r"declaraci\w+.{0,80}?\b(bienes|b[eé]ns)\b|\b(bienes|b[eé]ns)\b.{0,80}?declaraci"
+                        r"|regist\w+ d['e ]*\s*interes", re.I | re.S)
+# …y no de otra cosa que use las mismas palabras
+RE_NO_SUMARIO = re.compile(r"inter[eé]s cultural|rellev[aà]ncia local|relevancia local|bienes inmuebles municipales|"
+                           r"inventari|subhasta|subasta|alienaci|enajenaci|expropia|utilitat p[uú]blica|utilidad p[uú]blica", re.I)
 
 
 def _log(*a):
@@ -158,7 +165,7 @@ def _resultados(x: str) -> list[dict]:
     return res
 
 
-def _ventanas(desde: dt.date, hasta: dt.date, dias: int = 31):
+def _ventanas(desde: dt.date, hasta: dt.date, dias: int = 92):
     d = desde
     while d <= hasta:
         f = min(d + dt.timedelta(days=dias - 1), hasta)
@@ -183,23 +190,24 @@ def recoger(cache: pathlib.Path, desde: dt.date, hasta: dt.date | None = None,
     def guardar():
         f_indice.write_text(json.dumps(estado, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    pendientes = list(_ventanas(desde, hasta))
+    pendientes = [(q, ini, fin) for q in CONSULTAS for ini, fin in _ventanas(desde, hasta)]
     while pendientes:
-        ini, fin = pendientes.pop(0)
-        clave = f"{ini}:{fin}"
+        consulta, ini, fin = pendientes.pop(0)
+        clave = f"{consulta}|{ini}:{fin}"
         if clave in estado["ventanas"]:
             continue
         if sesion is None:
             sesion = Sesion()
-        filas, total = sesion.buscar(CONSULTA, ini, fin)
+        filas, total = sesion.buscar(consulta, ini, fin)
         if total > POR_PAGINA and fin > ini:
             # demasiados resultados para una página: partir el periodo en dos
             medio = ini + (fin - ini) // 2
-            pendientes[:0] = [(ini, medio), (medio + dt.timedelta(days=1), fin)]
+            pendientes[:0] = [(consulta, ini, medio), (consulta, medio + dt.timedelta(days=1), fin)]
             continue
-        _log(f"  BOP València {ini} → {fin}: {total} anuncios")
+        if total:
+            _log(f"  BOP València «{consulta}» {ini} → {fin}: {total} anuncios")
         for fila in filas:
-            if not RE_SUMARIO.search(fila["sumario"]):
+            if not RE_SUMARIO.search(fila["sumario"]) or RE_NO_SUMARIO.search(fila["sumario"]):
                 continue
             reg = fila["registro"]
             if reg in estado["anuncios"]:
