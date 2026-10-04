@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<partial-response><changes><update id="dlgPDF"><![CDATA[<div id="dlgPDF" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="dlgPDF_title" class="ui-dialog-title"></span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" id="dlgPDF_content">
+
+			<style>
+				#dlgPDF iframe {
+					border: none;
+					border-bottom: 1px solid #eeeeee;
+				}
+			</style>
+<form id="j_idt443" name="j_idt443" method="post" action="/bop/xhtml/portal.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt443" value="j_idt443" />
+<div class="center" style="height: 730px; padding: 100px; box-sizing: border-box;"><span class="negrita" style="font-size: 16px;">Document no trobat</span>
+					<br /><br /><span class="fa fa-warning" style="font-size: 48px;"></span></div><div id="j_idt462" class="ui-panelgrid ui-widget ui-panelgrid-blank"><div id="j_idt462_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive"><div class="ui-g"><div class="ui-panelgrid-cell ui-g-4"><div class="left"></div></div><div class="ui-panelgrid-cell ui-g-4"><button id="j_idt467" name="j_idt467" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.bcn(this,event,[function(event){closeDlg('dlgPDF');},function(event){PrimeFaces.ab({s:&quot;j_idt467&quot;,f:&quot;j_idt443&quot;});return false;}]);" title="Tancar" type="submit"><span class="ui-button-icon-left ui-icon ui-c fa fa-close"></span><span class="ui-button-text ui-c">Tancar</span></button><script id="j_idt467_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt467",{id:"j_idt467"});</script></div><div class="ui-panelgrid-cell ui-g-4"><div class="right"></div></div></div></div></div>
+</form>
+<form id="j_idt472" name="j_idt472" method="post" action="/bop/xhtml/portal.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt472" value="j_idt472" />
+<script id="j_idt472:j_idt473" type="text/javascript">lockRelease = function() {PrimeFaces.ab({s:"j_idt472:j_idt473",f:"j_idt472",pa:arguments[0]});}</script>
+</form></div></div><script id="dlgPDF_s" type="text/javascript">PrimeFaces.cw("Dialog","dlgPDF",{id:"dlgPDF",resizable:false,modal:true,width:"1024",showEffect:"clip",hideEffect:"clip",closeOnEscape:true,responsive:true});</script>]]></update><update id="j_id1:javax.faces.ViewState:0"><![CDATA[-2427120819103217212:-2135576104163050914]]></update></changes></partial-response>

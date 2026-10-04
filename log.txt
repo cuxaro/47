@@ -1,17 +1,8 @@
-{'url': 'https://www.dip-alicante.es/robots.txt', 'id': '5db4dde1e7', 'post': '', 'status': 200, 'ctype': 'text/plain', 'bytes': 531, 'final': 'https://www.dip-alicante.es/robots.txt', 'file': '5db4dde1e7.html'}
-{'url': 'https://www.dip-alicante.es/bop2/pdftotal/2024/02/05_25/2024_000669.pdf', 'id': '047be365a4', 'post': '', 'status': 200, 'ctype': 'application/pdf', 'bytes': 1331913, 'final': 'https://www.dip-alicante.es/bop2/pdftotal/2024/02/05_25/2024_000669.pdf', 'file': '047be365a4.pdf'}
-{'url': 'https://bop.diputacionalicante.es/', 'id': 'c25d8b1790', 'post': '', 'status': None, 'error': "URLError(gaierror(-2, 'Name or service not known'))"}
-{'url': 'https://www.diputacionalicante.es/areas/bop-e-imprenta/', 'id': '2557f99018', 'post': '', 'status': 200, 'ctype': 'text/html; charset=UTF-8', 'bytes': 224028, 'final': 'https://www.diputacionalicante.es/areas/bop-e-imprenta/', 'file': '2557f99018.html'}
-{'url': 'https://bop.dipcas.es/', 'id': '1c4c7f4284', 'post': '', 'status': 503, 'error': 'HTTP Error 503: Service Unavailable'}
-{'url': 'https://bop.dipcas.es/PortalBOP/', 'id': '72704c676b', 'post': '', 'status': 503, 'error': 'HTTP Error 503: Service Unavailable'}
-{'url': 'https://transparencia.dipcas.es/es/indicador//1-datos-biogrficos-y-adscripcin-poltica-del-presidente-y-de-los-diputados-as', 'id': '68beca0d27', 'post': '', 'status': 200, 'ctype': 'text/html; charset=UTF-8', 'bytes': 39732, 'final': 'https://transparencia.dipcas.es/es/indicador//1-datos-biogrficos-y-adscripcin-poltica-del-presidente-y-de-los-diputados-as', 'file': '68beca0d27.html'}
-{'url': 'https://transparencia.dipcas.es/es/indicador//7-rgimen-de-dedicacin-de-los-cargos-electos', 'id': 'ce0ad0c331', 'post': '', 'status': 200, 'ctype': 'text/html; charset=UTF-8', 'bytes': 39697, 'final': 'https://transparencia.dipcas.es/es/indicador//7-rgimen-de-dedicacin-de-los-cargos-electos', 'file': 'ce0ad0c331.html'}
-{'url': 'https://datosabiertos.dipcas.es/api/explore/v2.1/catalog/datasets?where=search(%22declaraciones%22)&limit=20', 'id': 'bb5bf015c0', 'post': '', 'status': 200, 'ctype': 'application/json; charset=utf-8', 'bytes': 33, 'final': 'https://datosabiertos.dipcas.es/api/explore/v2.1/catalog/datasets?where=search(%22declaraciones%22)&limit=20', 'file': 'bb5bf015c0.json'}
-{'url': 'https://www.valencia.es/cas/ayuntamiento/legislatura-2023-2027/-/content/2019-2023?uid=23405631', 'id': '11f01c6870', 'post': '', 'status': 404, 'error': 'HTTP Error 404: Not Found'}
-{'url': 'https://www.alicante.es/es/gobierno-abierto/transparencia/declaraciones-de-bienes-y-actividades/declaraciones-anuales-de-bienes-y-actividades-de-los-representantes-locales', 'id': '0e5594e2d8', 'post': '', 'status': 200, 'ctype': 'text/html; charset=utf-8', 'bytes': 50012, 'final': 'https://www.alicante.es/es/gobierno-abierto/transparencia/declaraciones-de-bienes-y-actividades/declaraciones-anuales-de-bienes-y-actividades-de-los-representantes-locales', 'file': '0e5594e2d8.html'}
-{'url': 'https://www.elche.es/ayuntamiento-de-elche/corporacion-municipal/declaraciones-de-actividades-y-bienes/', 'id': '80fe9651f9', 'post': '', 'status': 200, 'ctype': 'text/html; charset=UTF-8', 'bytes': 143660, 'final': 'https://www.elche.es/ayuntamiento-de-elche/corporacion-municipal/declaraciones-de-actividades-y-bienes/', 'file': '80fe9651f9.html'}
-base https://bop.dival.es/bop/ 231118
-j_idt131 /bop/xhtml/portal.xhtml;jsessionid=2EA13EE45D0A0485CA7A1163117A379C.tomcat-2 {'j_idt131': 'j_idt131', 'numeroRegistro:field': '', 'filtroCalendarioIni_input': '02/10/2026', 'filtroCalendarioFin_input': '02/10/2026', 'buscador': '', 'j_idt175:field_focus': '', 'j_idt175:field_input': '', 'j_idt175:field_filter': '', 'j_idt187:field_input': '', 'j_idt187:field_hinput': '', 'javax.faces.ViewState': '3851448262451577488:6997274693212013482'}
-bopv_es.xml 65671
-bopv_va.xml 65671
-bopv_titular.xml 14080
+base https://bop.dival.es/bop/ 231140
+j_idt131 /bop/xhtml/portal.xhtml;jsessionid=4B6CB20B472975B4D3EB4769047B1A1D.tomcat-2 {'j_idt131': 'j_idt131', 'numeroRegistro:field': '', 'filtroCalendarioIni_input': '02/10/2026', 'filtroCalendarioFin_input': '02/10/2026', 'buscador': '', 'j_idt175:field_focus': '', 'j_idt175:field_input': '', 'j_idt175:field_filter': '', 'j_idt187:field_input': '', 'j_idt187:field_hinput': '', 'javax.faces.ViewState': '-2427120819103217212:-2135576104163050914'}
+bopv_es.xml 65673
+bopv_titular.xml 14082
+bopv_html.xml 2514
+bopv_pdf.xml 2784
+https://bop.dival.es/bop/xhtml/csv.xhtml 40361
+https://bop.dival.es/bop/xhtml/csv.xhtml?csv=BOPV-2023/13505 40482
