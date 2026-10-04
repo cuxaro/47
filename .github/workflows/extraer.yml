@@ -1,0 +1,56 @@
+name: Extraer declaraciones
+
+# Descarga los boletines oficiales, los lee y actualiza datos/ y docs/datos.json.
+# No usa ninguna clave ni secreto: todas las fuentes son públicas.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * 1"   # lunes por la mañana
+  push:                    # y cada vez que cambia el extractor
+    paths:
+      - "extractor/**"
+      - "correcciones/**"
+      - "requirements.txt"
+      - ".github/workflows/extraer.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: extraer
+  cancel-in-progress: false
+
+jobs:
+  extraer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Programas de OCR
+        run: sudo apt-get update -q && sudo apt-get install -y -q tesseract-ocr tesseract-ocr-spa tesseract-ocr-cat poppler-utils
+      - run: pip install -r requirements.txt pytest
+      - run: python -m pytest -q
+      # Los PDF y el OCR se guardan entre ejecuciones para no repetir trabajo
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: cache-${{ github.run_id }}
+          restore-keys: cache-
+      - name: Extraer
+        run: |
+          set -o pipefail
+          mkdir -p datos
+          python -m extractor --refrescar 2>&1 | tee datos/ultima_ejecucion.txt
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos docs/datos.json
+          git diff --cached --quiet || git commit -m "Datos actualizados ($(date +%F))"
+          git pull --rebase --quiet
+          git push

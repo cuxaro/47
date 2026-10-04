@@ -1,0 +1,17 @@
+# Secretos: nunca se suben
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Descargas y resultados intermedios (PDF, OCR): se regeneran solos
+.cache/

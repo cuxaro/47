@@ -1,0 +1,350 @@
+id,apellidos,nombre,grupo,descripcion,categoria,valor,valor_txt,bocv,pagina,metodo_lectura,dudoso
+14e506aa72d70d597b755db69897d454,Abad Soler,Ramón,Socialista,Vehículo Opel Zafira,vehiculos,9447.0,9447,40,203,texto,False
+7a90000d9960e85f6a30cc5266c78c84,Aguilella Ramos,Salvador,Popular,PEUGEOT 2008,vehiculos,7600.0,7.600€,3,12,ocr,False
+7a90000d9960e85f6a30cc5266c78c84,Aguilella Ramos,Salvador,Popular,PEUGEOT 308,vehiculos,7850.0,7.850€,3,12,ocr,False
+7a90000d9960e85f6a30cc5266c78c84,Aguilella Ramos,Salvador,Popular,CUENTA CORRIENTE,cuentas,11720.63,"11.720,63€",3,12,ocr,False
+630c05f386273f073d04d47bc68d6a57,Albiol Talaya,Jesús,Vox Cortes Valencianas,SSNAGYONG REXTON 200E-XDI 4X,vehiculos,12000.0,12.000€,197,69,texto,False
+7422f819592729e31e0a9a5e05434111,Aleixandre Aleixandre,Ignacio José,Popular,CUENTAS CORRIENTES,cuentas,81445.49,"81.445,49",51,493,ocr,False
+7422f819592729e31e0a9a5e05434111,Aleixandre Aleixandre,Ignacio José,Popular,FONDO DE GARANTÍA CAJA MAR,cuentas,30582.25,"30.582,25",51,493,ocr,False
+7422f819592729e31e0a9a5e05434111,Aleixandre Aleixandre,Ignacio José,Popular,MINI COUNTRYMAN,vehiculos,8500.0,8.500,51,493,ocr,False
+8d7c19fdea18bc3d312884b041e59123,Alés Estrella,Joaquín María,Vox Cortes Valencianas,VOLVO S60,vehiculos,30000.0,30000,3,26,texto,False
+a12fe3e998f2faeb61a08887c626c538,Alós Valls,Wenceslao,Popular,Saldos cuentas bancarias,cuentas,12000,,3,28,manual,False
+a12fe3e998f2faeb61a08887c626c538,Alós Valls,Wenceslao,Popular,Acciones,inversiones,3000,,3,28,manual,False
+a12fe3e998f2faeb61a08887c626c538,Alós Valls,Wenceslao,Popular,Kia Sportage,vehiculos,6000,,3,28,manual,False
+01d9f858b9b54660098060e7d6a90cb7,Álvaro Cerezo,Mónica,Compromís,RENDIMENTS DE VALOR NO MOBILIARI,otros,104.34,"104,34",197,79,texto,False
+d163bb44951c4276030339689575058b,Amigó Laguarda,María José,Compromís,VEHICLE FORD KUGA 6815KBZ,vehiculos,18000.0,18.000,40,207,ocr,False
+d163bb44951c4276030339689575058b,Amigó Laguarda,María José,Compromís,FONDO ESTALVI JUBILACIÓ,pensiones,55978.15,"55.978,15",40,207,ocr,False
+d9786f9873097c344577c4272117be04,Andújar Durá,Alicia,Socialista,CUENTA BANCARIA,cuentas,192.0,192,197,93,texto,False
+d9786f9873097c344577c4272117be04,Andújar Durá,Alicia,Socialista,CUENTA BANCARIA,cuentas,472.87,"472,87",197,93,texto,False
+a49a07f8c0a306f0be940f9473579b74,Baldoví Roda,Joan Josep,Compromís,Camps rústics,otros,40000,,3,46,manual,False
+a49a07f8c0a306f0be940f9473579b74,Baldoví Roda,Joan Josep,Compromís,Comptes bancaris,cuentas,265000,,3,46,manual,False
+a49a07f8c0a306f0be940f9473579b74,Baldoví Roda,Joan Josep,Compromís,Lletres tresor,inversiones,80000,,3,46,manual,False
+a49a07f8c0a306f0be940f9473579b74,Baldoví Roda,Joan Josep,Compromís,Cotxe Dacia Dokker,vehiculos,8000,,3,46,manual,False
+a915da294d6be24f6278e9a7cd17925a,Bartual Bermell,Francisca,Popular,MOTO.,vehiculos,6500.0,6.500€,3,63,ocr,False
+a915da294d6be24f6278e9a7cd17925a,Bartual Bermell,Francisca,Popular,CUENTA CORRIENTE,cuentas,5000.0,5.000€,3,63,ocr,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,Fondo inversión CaixaBank,cuentas,31014.5,,19,122,manual,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,Cta. vista CaixaBank,cuentas,19860.0,,19,122,manual,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,Plan pensiones VidaCaixa,pensiones,825.65,,19,122,manual,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,Cta. vista Bankinter,cuentas,247.12,,19,122,manual,False
+e56249b5beaebd961c6e21213f7ef04d,Besalduch Besalduch,Ana,Socialista,Volkswagen Tiguan,vehiculos,13000,,3,70,manual,False
+e56249b5beaebd961c6e21213f7ef04d,Besalduch Besalduch,Ana,Socialista,Compte bancari Cajamar,cuentas,80000,,3,70,manual,False
+802349dec6176f815e96ab76ac5c68c5,Betoret Coll,Vicente,Popular,vehiculo,vehiculos,33000.0,33.000,197,100,ocr,False
+802349dec6176f815e96ab76ac5c68c5,Betoret Coll,Vicente,Popular,cuenta corriente,cuentas,3000.0,3000,197,100,ocr,False
+644e683b12f8f892f11ee5e60ec73b57,Blanch Marín,Ernesto,Socialista,Compte CaixaBank I,cuentas,2396.95,"2.396,95€",3,83,texto,False
+644e683b12f8f892f11ee5e60ec73b57,Blanch Marín,Ernesto,Socialista,Compte CaixaBank II,cuentas,1446.42,"1.446,42€",3,83,texto,False
+644e683b12f8f892f11ee5e60ec73b57,Blanch Marín,Ernesto,Socialista,Compte ING,cuentas,155.71,"155,71€",3,83,texto,False
+644e683b12f8f892f11ee5e60ec73b57,Blanch Marín,Ernesto,Socialista,Compte LiberBank,cuentas,14829.45,"14.829,45€",3,83,texto,False
+0f8051d8f31f74db98792b7b28b9ec43,Caballero Hueso,Mercedes,Socialista,Automòbil Seat Ibiza,vehiculos,6500.0,6.500 €,197,105,texto,False
+0f8051d8f31f74db98792b7b28b9ec43,Caballero Hueso,Mercedes,Socialista,4 Accions Levante UD,inversiones,240.0,240 €,197,105,texto,False
+0f8051d8f31f74db98792b7b28b9ec43,Caballero Hueso,Mercedes,Socialista,CB. HERMANOS CABALLERO,inversiones,100.0,100 €,197,105,texto,False
+a8697d170151b9854a47cd0057cdb5e5,Calabuig Vanyó,María José,Compromís,Vehicle,vehiculos,16483.2,"valor compra (16.483,2)",3,107,texto,False
+a8697d170151b9854a47cd0057cdb5e5,Calabuig Vanyó,María José,Compromís,compte bancari,cuentas,5869.9,"5.869,9",3,107,texto,False
+b30f7aacc1ac2a2c82272b0d145ee2c9,Castelló Sáez,Alfredo Cesáreo,Popular,Cuentas corrientes,cuentas,54936,,197,107,manual,False
+b30f7aacc1ac2a2c82272b0d145ee2c9,Castelló Sáez,Alfredo Cesáreo,Popular,Planes de pensiones y otros,pensiones,270000,,197,107,manual,False
+b30f7aacc1ac2a2c82272b0d145ee2c9,Castelló Sáez,Alfredo Cesáreo,Popular,Automóvil,vehiculos,20000,,197,107,manual,False
+e0a762dabd3a90f9bd301b316e730340,Chuliá Serra,Laura,Popular,CUENTAS CORRIENTES *,cuentas,102.45,"102,45",120,177,ocr,False
+e0a762dabd3a90f9bd301b316e730340,Chuliá Serra,Laura,Popular,FONDOS DE INVERSIÓN,inversiones,6819.03,"6.819,03",120,177,ocr,False
+e0a762dabd3a90f9bd301b316e730340,Chuliá Serra,Laura,Popular,ACCIONES,inversiones,298.95,"298,95",120,177,ocr,False
+f5a747543aab0bb013aa7fd3ba85a50b,Chulvi Español,José,Socialista,VOLKSWAGEN T-ROC,vehiculos,14585.35,"14.585,35€",3,126,ocr,False
+f5a747543aab0bb013aa7fd3ba85a50b,Chulvi Español,José,Socialista,VESPA PRIMAVERA PR75,vehiculos,500.0,500€,3,126,ocr,False
+f5a747543aab0bb013aa7fd3ba85a50b,Chulvi Español,José,Socialista,COMPTE CORRENT BANC SANTANDER (50%),cuentas,80746.25,"80.746,25€",3,126,ocr,False
+f5a747543aab0bb013aa7fd3ba85a50b,Chulvi Español,José,Socialista,COMPTE CORRENT BBVA (50%),cuentas,7775.08,"7.775,08€",3,126,ocr,False
+0ac8666d2dcad5c62a1c1a46afff4879,Contelles Llopis,María Carmen,Popular,CUENTAS CORRIENTES,cuentas,18751.0,18.751,40,228,ocr,False
+0ac8666d2dcad5c62a1c1a46afff4879,Contelles Llopis,María Carmen,Popular,PLANES DE PENSIÓN,pensiones,16679.79,"16.679,79",40,228,ocr,False
+0ac8666d2dcad5c62a1c1a46afff4879,Contelles Llopis,María Carmen,Popular,VEHÍCULO BMV 11Gl AÑO 2007,vehiculos,4500.0,4.500,40,228,ocr,False
+1a4ed74b0988ef8a88b6bac7896db5e0,Criado Gonzálbez,María de los Ángeles,Vox Cortes Valencianas,participaciones en empresas familiares,inversiones,4651342.88,"4 651 342,88",3,135,ocr,False
+1a4ed74b0988ef8a88b6bac7896db5e0,Criado Gonzálbez,María de los Ángeles,Vox Cortes Valencianas,cuentas corriente banco,cuentas,8.0,8 84yuE,3,135,ocr,True
+1a4ed74b0988ef8a88b6bac7896db5e0,Criado Gonzálbez,María de los Ángeles,Vox Cortes Valencianas,acciones y fondo bolsa,inversiones,204488.0,204488,3,135,ocr,True
+1a4ed74b0988ef8a88b6bac7896db5e0,Criado Gonzálbez,María de los Ángeles,Vox Cortes Valencianas,credito,otros,132702.0,132702 '27.,3,135,ocr,True
+1a4ed74b0988ef8a88b6bac7896db5e0,Criado Gonzálbez,María de los Ángeles,Vox Cortes Valencianas,coche,vehiculos,1500.0,1500,3,136,ocr,False
+6a26a976a98fb83de940bcc927c75bc0,Díaz Fernández,José Antonio,Socialista,VEHÍCULO VOLVO,vehiculos,41000.0,41.000,19,142,ocr,False
+f3b3871b1265f2813c0455e6c12df7b1,Dolón Sánchez,Eduardo Jorge,Popular,VALOR SALDOS BANCARIOS,cuentas,40130.42,"40130,42",3,141,ocr,False
+f3b3871b1265f2813c0455e6c12df7b1,Dolón Sánchez,Eduardo Jorge,Popular,COCHE BMW 320 MATRICULA,vehiculos,4000.0,4000,3,141,ocr,False
+f3b3871b1265f2813c0455e6c12df7b1,Dolón Sánchez,Eduardo Jorge,Popular,COCHE PEUGEOT 5008 BLUE,vehiculos,13000.0,13000,3,141,ocr,False
+84f1bdf9e5261705ddb4f0c11ae95d8b,Espinosa Giménez,Paula Virgínia,Compromís,COMPTE BANCARI (CAIXA POPULAR),cuentas,17300.0,17.300 €,3,155,ocr,False
+0e3833abae65cabc1e04efda872089d7,Esteve Aparicio,Carlos,Compromís,FURGONETA PEUGEOT PARTNER,vehiculos,4000.0,4000€,3,160,texto,False
+0e3833abae65cabc1e04efda872089d7,Esteve Aparicio,Carlos,Compromís,PARTICIPACIÓ EN OFICINA DE FARMÀCIA (PER HERÈNCIA),inversiones,1476812.29,"1476812,29€",3,160,texto,False
+0e3833abae65cabc1e04efda872089d7,Esteve Aparicio,Carlos,Compromís,DEUTE PER COMPENSACIÓ EN HERÈNCIA,otros,-960869.31,"-960869,31€",3,160,texto,False
+71bcfcb525537ab1a3e771ef1404f14f,Fernández Aparicio,Sofía,Socialista,CUENTA CORRIENTE,cuentas,21000.0,21.000,34,102,ocr,False
+71bcfcb525537ab1a3e771ef1404f14f,Fernández Aparicio,Sofía,Socialista,CUENTA CORRIENTE,cuentas,1600.0,1.600,34,102,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,PLAN DE PENSIONES,pensiones,6926.78,"6.926,78",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,PLAN DE PENSIONES,pensiones,17524.85,"17.524,85",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,SIALP,otros,4829.54,"4.829,54",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,PARTICIPACIONES EN EMPRESAS,inversiones,5258.93,"5.258,93",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,PARTICIPACIONES EN EMPRESAS 2,inversiones,39144.71,"39144,71",113,120,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,SALDOS EN CUENTA,cuentas,7469.54,"7.469,54",113,120,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,VEHICULO,vehiculos,2567.0,"2.567,00",113,120,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,VEHÍCULO 2,vehiculos,12079.0,"12.079,00",113,120,ocr,False
+d31a8c149d0919e093db4e37b21651aa,Fullana Martínez,Gerard,Compromís,Vehicle,vehiculos,30000.0,30.000,40,233,texto,False
+74e7a04464ec60753e08d00c92fd0e43,Galcerán Gadea,María del Mar,Popular,CUENTA CORRIENTE,cuentas,1400.0,1.400,19,154,ocr,False
+74e7a04464ec60753e08d00c92fd0e43,Galcerán Gadea,María del Mar,Popular,PLAZO FO +.,cuentas,100000.0,100:000.,19,154,ocr,False
+d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,CUENTAS BANCARIAS,cuentas,22769.7,"22.769,70",3,182,ocr,False
+d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,PEUGEOT 2008 STYLE 1200,vehiculos,13609.04,"13.609,04",3,182,ocr,False
+23b3c40600cda23fb0e9bac612fb5aa8,Gascó Enríquez,Beatriz,Popular,TURISMO NISSAN QASHQAI+2,vehiculos,8000.0,8.000,3,187,texto,False
+23b3c40600cda23fb0e9bac612fb5aa8,Gascó Enríquez,Beatriz,Popular,CUENTA CORRIENTE,cuentas,6000.0,6.000,3,187,texto,False
+c854dd84c3c2e850ed4cce635e540bf5,Gaspar Ramos,Antoni Francesc,Socialista,VEHICLE,vehiculos,10000.0,10000,120,209,texto,False
+c854dd84c3c2e850ed4cce635e540bf5,Gaspar Ramos,Antoni Francesc,Socialista,COMPTES BANCARIS,cuentas,130000.0,130000,120,209,texto,False
+c854dd84c3c2e850ed4cce635e540bf5,Gaspar Ramos,Antoni Francesc,Socialista,FONS INVERSIO,inversiones,80000.0,80000,120,209,texto,False
+c854dd84c3c2e850ed4cce635e540bf5,Gaspar Ramos,Antoni Francesc,Socialista,ACCIONS,inversiones,102000.0,102000,120,209,texto,False
+c854dd84c3c2e850ed4cce635e540bf5,Gaspar Ramos,Antoni Francesc,Socialista,PLANS PENSIONS,pensiones,125000.0,125000,120,209,texto,False
+c854dd84c3c2e850ed4cce635e540bf5,Gaspar Ramos,Antoni Francesc,Socialista,ACCIONS LLEVANT,inversiones,1200.0,1200,120,209,texto,False
+b27f3627e7552a5cadf74e7d977d7737,Gayo Madera,María Luisa,Popular,Hyundai Tucson,vehiculos,20000.0,20.000,3,193,texto,False
+2c9dd0c2151fbe2f5ba4cab33f82db23,Gigante Melego,Andrea,Popular,CUENTAS BANCARIAS,cuentas,16000.0,16.000,22,125,ocr,False
+b2a830265b3f092f4d6218075b0901a1,Giner Beltrán,José Domingo,Popular,VEHICULO FORD MONDEO,vehiculos,3000.0,3000,19,159,texto,False
+b2a830265b3f092f4d6218075b0901a1,Giner Beltrán,José Domingo,Popular,DOS VEHICULOS AGRICOLAS MARCA FIAT,vehiculos,10000.0,10000,19,159,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,CUENTAS AHORRO CAIXABANK,cuentas,29138.61,"29138,61",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,CUENTA AHORRO CAJA RURAL CENTRAL,cuentas,36459.6,"36459,60",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,PLAN DE PENSIONES RGA MIXTO,pensiones,3371.46,"3371,46",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,CAPITAL SOCIAL 10% REPUESTOS ALMORADI. S.L.,inversiones,600.0,600,3,196,texto,False
+e68c18e259b70c89e2b0197df85ed387,Gómez Rey,Silvia,Socialista,"CAM, SANTANDER",cuentas,17100.0,17100,3,200,texto,False
+e68c18e259b70c89e2b0197df85ed387,Gómez Rey,Silvia,Socialista,ACCIONES SANTANDER,cuentas,740.0,740,3,200,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,Vehículos,vehiculos,30000.0,30.000,3,209,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,50% Sociedad Mercantil,inversiones,3761.5,"3.761,50",3,209,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,Valores y saldos cuentas bancarias,cuentas,72052.04,"72.052,04",3,209,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,CUENTAS BANCARIAS,cuentas,51689.79,51689.79,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,PARTICIPACIONES EN SOCIEDAD,inversiones,98613.07,98613.07,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,DEPOSITO EN EMPRESA PRIVADA,cuentas,224053.0,224053.00,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,VEHICULO,vehiculos,8040.0,8040,19,162,texto,False
+5decc3b3ced261e07bc15ae20bad3b70,Ibáñez Candelera,Rocío,Socialista,Vehículo Ford Focus año 2009,vehiculos,2000.0,2.000,3,216,ocr,False
+5decc3b3ced261e07bc15ae20bad3b70,Ibáñez Candelera,Rocío,Socialista,Vehiculo Ford C-MAX año 2017,vehiculos,7000.0,7.000,3,216,ocr,False
+539fa7dcf6011965f1d727a3bfc799aa,Juárez Pastor,Ana Belén,Socialista,NISSAN YUKE,vehiculos,,,55,120,ocr,False
+87f5c37757f4d4faec390cccb7215e59,Llop Montón,Adoración,Popular,CUENTA CORRIENTE,cuentas,2000.0,2 000€,3,229,ocr,False
+87f5c37757f4d4faec390cccb7215e59,Llop Montón,Adoración,Popular,LIBRETA DE AHORRO,cuentas,3000.0,3.000€,3,229,ocr,False
+87f5c37757f4d4faec390cccb7215e59,Llop Montón,Adoración,Popular,ACCIONES Y PARTICIPACIONES 10% TODONOVA TRADI,inversiones,4000.0,4.000€,3,229,ocr,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,MERCEDES GLC220D,vehiculos,36000.0,"36000,00",3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,CTA CORRIENTE BANCO SANTANDER,cuentas,51613.5,"51613,50",3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,CTA CORRIENTE CAIXABANK,cuentas,247330.13,"247330,13",3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,PLAN PENSIONES CAIXABANK,pensiones,38350.89,"38350,89",3,234,texto,False
+33196b0e2b986b4ef033f4d6785a70d6,Lorenz Andrés,José Luis,Socialista,Compte bancari Ibercaja,cuentas,26983.76,,3,241,manual,False
+33196b0e2b986b4ef033f4d6785a70d6,Lorenz Andrés,José Luis,Socialista,Inversió,inversiones,10000,,3,241,manual,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,TURISMO URBANO,vehiculos,42000.0,42.000,3,247,texto,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,CUENTAS CORRIENTES,cuentas,15430.0,15.430,3,247,texto,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,PLANES DE AHORRO,cuentas,11260.0,11.260,3,247,texto,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,MAZDA2 AÑO 2004',vehiculos,16000.0,16.000 (AÑO 2004),19,172,ocr,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,"AUDI A4, AÑO 2009",vehiculos,31000.0,31.000 (AÑO 2009) *,19,172,ocr,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,"MINI ONE CABRIO, AÑO 2015",vehiculos,6000.0,6.000 (AÑO 2015),19,172,ocr,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,CUENTA CORRIENTE,cuentas,5000.0,5.000,19,172,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,LIBRETAS DE AHORRO,cuentas,11455.0,11.455,19,178,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,PLAZO FIJO,cuentas,31000.0,31.000,19,178,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,VEHÍCULO,vehiculos,15000.0,15.000,19,178,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,PLAN DE PENSIONES,pensiones,34627.0,34.627,19,178,ocr,False
+9f6f0fd8fb7b8ec4b80b1c6951f78ef2,Martínez Tarazona,María Nieves,Popular,VEHÍCULOS,vehiculos,27600.0,27.600,120,219,ocr,False
+9f6f0fd8fb7b8ec4b80b1c6951f78ef2,Martínez Tarazona,María Nieves,Popular,CUENTAS BANCARIAS,cuentas,40000.0,40.000,120,219,ocr,False
+9f6f0fd8fb7b8ec4b80b1c6951f78ef2,Martínez Tarazona,María Nieves,Popular,PLAN DE PENSIONES.,pensiones,33111.93,"33.111,93",120,219,ocr,False
+95102e2466e7f2d31493a844b53087e4,Mas Mas,Aitana Joana,Compromís,COMPTE BANCARI 1,cuentas,668.75,"668,75",197,138,texto,False
+95102e2466e7f2d31493a844b53087e4,Mas Mas,Aitana Joana,Compromís,COMPTE BANCARI 2,cuentas,1703.51,"1703,51",197,138,texto,False
+95102e2466e7f2d31493a844b53087e4,Mas Mas,Aitana Joana,Compromís,COMPTE BANCARI 3 (50%),cuentas,498.92,"498,92",197,138,texto,False
+50b62395136e98bd1d3b5c191a508355,Massó Linares,María de los Llanos,Vox Cortes Valencianas,VEHÍCULO VOLVO XC90 año 2007,vehiculos,7000.0,7.000,3,268,texto,False
+1c8a8943e5d69c215a32b4e229b75ee7,Mazón Guixot,Carlos Arturo,Popular,VEHÍCULOS: MAZDA CX 30,vehiculos,,,197,141,texto,False
+1c8a8943e5d69c215a32b4e229b75ee7,Mazón Guixot,Carlos Arturo,Popular,DEPÓSITOS BANCARIOS,cuentas,,,197,141,texto,False
+1c8a8943e5d69c215a32b4e229b75ee7,Mazón Guixot,Carlos Arturo,Popular,PLANES DE PENSIONES,pensiones,,,197,141,texto,False
+2fa9a687cb008794e7d0b1457d349593,Mompó Peruga,Benjamín,Socialista,VEHICLE,vehiculos,8700.0,8.700,37,167,ocr,False
+2fa9a687cb008794e7d0b1457d349593,Mompó Peruga,Benjamín,Socialista,COMPTE BANCARI,cuentas,7359.24,"7.359,24",37,167,ocr,False
+502e5a1fac82e85f3bc1f1150aff0365,Montaner Berbel,Michel,Socialista,Vehículo (2025),vehiculos,35000.0,35000€,197,144,texto,False
+502e5a1fac82e85f3bc1f1150aff0365,Montaner Berbel,Michel,Socialista,Openbank,cuentas,1000.0,1000€,197,144,texto,False
+502e5a1fac82e85f3bc1f1150aff0365,Montaner Berbel,Michel,Socialista,Ibercaja,cuentas,9000.0,9000€,197,144,texto,False
+300120688addd8e2abfb4bfdd78a2530,Muñoz Lladró,José,Socialista,Cuenta corriente,cuentas,21200,,3,286,manual,False
+300120688addd8e2abfb4bfdd78a2530,Muñoz Lladró,José,Socialista,Crédito PSOE,otros,10000,,3,286,manual,False
+779d09ce8ff3f318677a1ba2aeafe0b8,Muñoz Pérez,David,Vox Cortes Valencianas,Skoda Elroq 60 Sportline,vehiculos,30641.0,30641,197,147,texto,False
+be1eb9a22b69481fafa518d6d9b4ee3d,Navalón García,María Rosario,Socialista,Mobiliario e instrumentos musicales,otros,29000.0,29000,3,303,ocr,False
+be1eb9a22b69481fafa518d6d9b4ee3d,Navalón García,María Rosario,Socialista,Depósitos en cuentas corrientes,cuentas,12584.0,12584,3,303,ocr,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,"TURISMO BMW X1, AÑO 2018",vehiculos,16400.0,16.400,120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,"TOYOTA AYGO X-CROSS, AÑO 2023",vehiculos,14000.0,14.000,120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,"MOTOCICLETA SUZUKI V-STROM 650 ABS, AÑO 2017",vehiculos,6000.0,6.000,120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,DEPÓSITO CAIXABANK,cuentas,52531.23,"52.531,23",120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,DEPÓSITO BANKINTER,cuentas,100231.28,"100.231,28",120,232,texto,False
+624e0654ad6b2f95f0fa639332ae3c78,Pascual Pérez,Miguel,Vox Cortes Valencianas,SEAT LEON,vehiculos,18000.0,18000,3,325,texto,False
+624e0654ad6b2f95f0fa639332ae3c78,Pascual Pérez,Miguel,Vox Cortes Valencianas,FONDO DE INVERSIÓN,inversiones,64000.0,64000,3,325,texto,False
+624e0654ad6b2f95f0fa639332ae3c78,Pascual Pérez,Miguel,Vox Cortes Valencianas,FONDO DE INVERSIÓN,inversiones,29000.0,29000,3,325,texto,False
+c7fff7b455a6d18e9ee80465c8e59218,Pastor Llorens,Fernando,Popular,IGUAL RE 71293,otros,71293.0,IGUAL RE 71293,197,151,ocr,False
+c7fff7b455a6d18e9ee80465c8e59218,Pastor Llorens,Fernando,Popular,"Wiese, Pou",otros,,,197,152,ocr,False
+e1316c8e6c793c2c42844429e308cdd3,Peña Villaescusa,Dolores,Popular,CUENTAS CORRIENTES,cuentas,75000.0,75.000,19,196,ocr,False
+e1316c8e6c793c2c42844429e308cdd3,Peña Villaescusa,Dolores,Popular,PARTICIPACIONES EN SOCIEDADES,inversiones,5200.0,5.200,19,196,ocr,False
+8a8706e9aa6bb4ead8790bf96e711189,Peral Mateos,Lucía,Popular,VEHÍCULO HYUNDAI KONA,vehiculos,31000.0,31.000,120,237,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,VALOR PARTICIPACIONES 50%,inversiones,143140.79,"143.140,79",19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,VALOR VEHÍCULOS 50%,vehiculos,14000.0,14.000,19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,VALOR EMBARCACIÓN 50%,vehiculos,5000.0,5.000,19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,OTROS BIENES 50%,otros,20000.0,20.000,19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,SALDO CUENTAS BANCARIAS 50 %,cuentas,140731.05,"140.731,05",19,203,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,PLANES DE PENSIONES,pensiones,200340.76,"200.340,76",19,203,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,SEGURO DIVIDENDO MAPFRE 50%,seguros,13000.0,13.000,19,203,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,PRÉSTAMO A SOCIEDADES 50%,inversiones,49119.98,"49.119,98",19,203,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,TÍTULOS VALORES ACERLORMITAL (10) 50%,inversiones,128.72,"128,72",19,204,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,BBVA (10) 50%,cuentas,36.62,"36,62",19,204,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,ACCIONES INDITEX 50%,inversiones,10365.0,10.365,19,204,ocr,False
+3a8c3d3be5b3d510ea39429617ede0b0,Pérez Llorca,Juan Francisco,Popular,VEHÍCULOS,vehiculos,,,197,160,texto,False
+3a8c3d3be5b3d510ea39429617ede0b0,Pérez Llorca,Juan Francisco,Popular,CUENTAS BANCARIAS,cuentas,,,197,160,texto,False
+3a8c3d3be5b3d510ea39429617ede0b0,Pérez Llorca,Juan Francisco,Popular,ALT DE PEREZ S.L. (126 ACCIONES),inversiones,,,197,160,texto,False
+3a8c3d3be5b3d510ea39429617ede0b0,Pérez Llorca,Juan Francisco,Popular,RANCALLOSA I S.L. (15 ACCIONES),inversiones,,,197,160,texto,False
+6618d2f25f5118a06fb3a18e95023bf1,Peris Cervera,Rosa,Socialista,Vehículo Seat Exeo,vehiculos,5000,,3,336,manual,False
+6618d2f25f5118a06fb3a18e95023bf1,Peris Cervera,Rosa,Socialista,Cta. cte. B. Santander,cuentas,2853,,3,336,manual,False
+6618d2f25f5118a06fb3a18e95023bf1,Peris Cervera,Rosa,Socialista,Cta. cte. CaixaBank,cuentas,887,,3,336,manual,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,COMPTE BANCARI,cuentas,110313.61,110.313'61,3,347,texto,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,COMPTE BANCARI,cuentas,26437.65,26.437'65,3,347,texto,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,COMPTE BANCARI,cuentas,52081.51,52.081'51,3,347,texto,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,50% ADVOCATS ASSOCIATS CB,inversiones,,,3,347,texto,False
+cf05c4919e5d310ac916026435e30350,Ramírez Jurado,María Teresa,Vox Cortes Valencianas,TOYOTA RAV 4,vehiculos,20000.0,20000,3,364,texto,False
+848fe2ff0d4f2b465aef9ca7ca0a0061,Rey Tormos,Romina María del,Socialista,Comptes Bancaris,cuentas,49500.0,49.500€,133,38,ocr,False
+a0644da1b302c0950410822c72a867f8,Roch Cazorla,Dolores,Popular,VEHÍCULO,vehiculos,1000.0,"1,000€",3,367,ocr,False
+a0644da1b302c0950410822c72a867f8,Roch Cazorla,Dolores,Popular,CUENTA CORRIENTE,cuentas,2354.0,2.354,3,367,ocr,False
+a0644da1b302c0950410822c72a867f8,Roch Cazorla,Dolores,Popular,CUENTA CORRIENTE,cuentas,92656.0,92.656,3,367,ocr,False
+b2f7344348ea21d7636bb315b495b2e7,Roig Oliver,Francesc,Compromís,COTXE PEUGEOT 2008,vehiculos,20000.0,PREU INICIAL DE COMPRA 20000€ (ANY 2020),3,370,texto,False
+b2f7344348ea21d7636bb315b495b2e7,Roig Oliver,Francesc,Compromís,COMPTE BANCARI,cuentas,6502.0,6502€,3,370,texto,False
+55625ff952ba3758f52f577a00b08863,Ruiz Castell,Pedro,Socialista,Compte corrent (CaixaBank),cuentas,1614.78,"1.614,78.-€",37,161,ocr,False
+55625ff952ba3758f52f577a00b08863,Ruiz Castell,Pedro,Socialista,Compte corrent (Ibercaja) o,cuentas,19697.61,"19.697,61 €",37,161,ocr,False
+55625ff952ba3758f52f577a00b08863,Ruiz Castell,Pedro,Socialista,Compte corrent (ING),cuentas,2207.39,"2.207,39.-€ /",37,161,ocr,False
+55625ff952ba3758f52f577a00b08863,Ruiz Castell,Pedro,Socialista,Pla de pensions (CaixaBank) 7,pensiones,5750.38,"5.750,38.-€",37,161,ocr,False
+cee894ff61146f09bb05642a8ac5ad8a,Ruiz Escrig,Verònica,Compromís,Nissan Juke (preu compra),vehiculos,20000,,3,378,manual,False
+ff746dfd0f9c3b1bf53fa631c3729271,Salas Maldonado,José,Popular,MOTOCICLETA SUZUKY BUGMAN 125 AÑO 2002,vehiculos,500.0,500€,19,210,ocr,False
+9107223d2314a3e488c77cac83fd150e,Salvador Rubert,María José,Socialista,COMPTER CAIXABANK,cuentas,,,197,163,texto,False
+9107223d2314a3e488c77cac83fd150e,Salvador Rubert,María José,Socialista,DIPÒSIT,cuentas,,,197,163,texto,False
+9107223d2314a3e488c77cac83fd150e,Salvador Rubert,María José,Socialista,DIPÒSIT,cuentas,,,197,163,texto,False
+9107223d2314a3e488c77cac83fd150e,Salvador Rubert,María José,Socialista,COMPTER COMÚ CAIXABANK,cuentas,,,197,163,texto,False
+9107223d2314a3e488c77cac83fd150e,Salvador Rubert,María José,Socialista,COMPTER COMÚ CAIXABANK,cuentas,,,197,163,texto,False
+9107223d2314a3e488c77cac83fd150e,Salvador Rubert,María José,Socialista,FIAT 500X,vehiculos,,,197,163,texto,False
+f1564c5b4820f07749691b89865aeaab,Simó Sancho,Rafael,Socialista,Toyota RAV4,vehiculos,31500.0,31500,197,166,texto,False
+938cbeb9d9a52027ac059bc7435788ec,Soler Azorín,Laura,Socialista,Parte proporcional zona común,otros,1205.41,,3,403,manual,False
+938cbeb9d9a52027ac059bc7435788ec,Soler Azorín,Laura,Socialista,Ford Focus Break,vehiculos,18400,,3,403,manual,False
+938cbeb9d9a52027ac059bc7435788ec,Soler Azorín,Laura,Socialista,Fondo inversión Sabadell,cuentas,3270.37,,3,403,manual,False
+938cbeb9d9a52027ac059bc7435788ec,Soler Azorín,Laura,Socialista,Cuenta corriente Sabadell,cuentas,310.76,,3,403,manual,False
+938cbeb9d9a52027ac059bc7435788ec,Soler Azorín,Laura,Socialista,Cuenta corriente CaixaBank,cuentas,3071.19,,3,403,manual,False
+938cbeb9d9a52027ac059bc7435788ec,Soler Azorín,Laura,Socialista,Cuenta ahorro Sabadell,cuentas,11424,,3,403,manual,False
+d0e0b98bcfd5dd8644f66e0113d8ff8d,Soler Beneyto,Víctor,Popular,CUENTAS CORRIENTES BANCARIAS,cuentas,6980.79,"6.980,79",3,410,texto,False
+d0e0b98bcfd5dd8644f66e0113d8ff8d,Soler Beneyto,Víctor,Popular,FONDOS DE INVERSIÓN,inversiones,44117.62,"44.117,62",3,410,texto,False
+d0e0b98bcfd5dd8644f66e0113d8ff8d,Soler Beneyto,Víctor,Popular,"SEGUROS DE VIDA, AHORRO E INVERSIÓN",cuentas,20411.0,20.411,3,410,texto,False
+2eaf7fc8c0f5a6209bae8a51201c7489,Turiel Mollá,Miriam,Vox Cortes Valencianas,CUENTA CORRIENTE MEDIOLANUM,cuentas,4800.0,4800,3,422,ocr,False
+ba526901b3070048086de06d8ab3074f,Vega Campos,Ana,Vox Cortes Valencianas,CUENTA NÓMINA,cuentas,709.57,"709,57€",3,427,texto,False
+ba526901b3070048086de06d8ab3074f,Vega Campos,Ana,Vox Cortes Valencianas,CUENTA AHORRO,cuentas,30000.0,30.000€,3,427,texto,False
+ba526901b3070048086de06d8ab3074f,Vega Campos,Ana,Vox Cortes Valencianas,PIAS AXA,otros,10000.0,10.000€,3,427,texto,False
+ba526901b3070048086de06d8ab3074f,Vega Campos,Ana,Vox Cortes Valencianas,PLAN AHORRO AXA,cuentas,1000.0,1.000€,3,427,texto,False
+0213888fead59ad3105761b593ef7335,Villar García,Mario Elías,Socialista,BANKINTER CAPITAL 1 FI,cuentas,25700.0,25.700 EUR,40,262,texto,False
+0213888fead59ad3105761b593ef7335,Villar García,Mario Elías,Socialista,INDEXA CAPITAL,otros,15000.0,15.000 EUR,40,262,texto,False
+0213888fead59ad3105761b593ef7335,Villar García,Mario Elías,Socialista,INVERSIONES,inversiones,7000.0,7.000 EUR,40,262,texto,False
+0213888fead59ad3105761b593ef7335,Villar García,Mario Elías,Socialista,MOTO HONDA SES125,vehiculos,300.0,300 EUR,40,262,texto,False
+0213888fead59ad3105761b593ef7335,Villar García,Mario Elías,Socialista,AUTOMÓVIL VOLSWAGEN PASSAT,vehiculos,3000.0,3.000 EUR,40,263,texto,False
+c42fc3925eea9704d2d5a14467546657,Zaplana López,José Juan,Popular,BMW 318GT (2015),vehiculos,12500.0,12500,3,433,texto,False
+c42fc3925eea9704d2d5a14467546657,Zaplana López,José Juan,Popular,Daelim Roadwin 125 cc,cuentas,900.0,900,3,433,texto,False
+c42fc3925eea9704d2d5a14467546657,Zaplana López,José Juan,Popular,,otros,6000.0,6000,3,433,texto,False
+ex-aguirre-larrauri-jose-luis,Aguirre Larrauri,José Luis,,fondos,inversiones,199400.0,199400,40,269,ocr,False
+ex-aguirre-larrauri-jose-luis,Aguirre Larrauri,José Luis,,acciones,inversiones,35000.0,35000,40,269,ocr,False
+ex-aguirre-larrauri-jose-luis,Aguirre Larrauri,José Luis,,plan pensiones,pensiones,7521.0,7521,40,269,ocr,False
+ex-aguirre-larrauri-jose-luis,Aguirre Larrauri,José Luis,,unit link,otros,24054.0,24054,40,269,ocr,False
+ex-barrachina-mateu-marta,Barrachina Mateu,Marta,,AUDI Q2,vehiculos,15000.0,15000,40,275,ocr,False
+ex-barrachina-mateu-marta,Barrachina Mateu,Marta,,CUENTA CORRIENTE CAJAMAR,cuentas,5200.0,5 200,40,275,ocr,False
+ex-barrachina-mateu-marta,Barrachina Mateu,Marta,,CUENTA CORRIENTE BBVA,cuentas,3900.0,3 900,40,275,ocr,False
+ex-barrachina-mateu-marta,Barrachina Mateu,Marta,,CUENTA CORRIENTE SANTANDER,cuentas,2600.0,2 600,40,275,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,CUENTAS CAIXA,cuentas,5247.0,5.247,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,FONDO INVERSIÓN CAIXA,cuentas,33525.0,33.525,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,ACCIONES,inversiones,29429.0,29.429,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,PLAN PREVISIÓN SOCIAL,otros,88815.0,88.815,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,TRACTOR MASSEY FERGUSON,otros,10000.0,APROX. 10.000,120,251,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,PEUGEOT 508,vehiculos,12000.0,12.000,120,251,ocr,False
+ex-borruey-montolio-sonia,Borruey Montolío,Sonia,,MINI COOPER ELECTRIC,vehiculos,18224.0,18.224,19,130,ocr,False
+ex-borruey-montolio-sonia,Borruey Montolío,Sonia,,CC ING,cuentas,29191.0,29.191,19,130,ocr,False
+ex-borruey-montolio-sonia,Borruey Montolío,Sonia,,CC SANTANDER,cuentas,20496.0,20 496,19,130,ocr,False
+ex-bravo-sanestanislao-maria-gabriela,Bravo Sanestanislao,Maria Gabriela,,SALDO CUENTA CORRIENTE SANTANDER,cuentas,7500.0,7.500,120,255,ocr,False
+ex-bravo-sanestanislao-maria-gabriela,Bravo Sanestanislao,Maria Gabriela,,PLAN DE PENSIONES,pensiones,1500.0,1.500,120,255,ocr,False
+ex-broseta-dupre-pablo-gustavo,Broseta Dupre,Pablo Gustavo,,RADCLIFFE Y ASOCIADOS S.L,inversiones,57006.0,57.006,40,281,ocr,False
+ex-broseta-dupre-pablo-gustavo,Broseta Dupre,Pablo Gustavo,,WLOO INV. H. S.L.,inversiones,187685.1,"187.685,10",40,281,ocr,False
+ex-broseta-dupre-pablo-gustavo,Broseta Dupre,Pablo Gustavo,,GPD OCIO 2010 S.L,inversiones,901.8,"901,80",40,281,ocr,False
+ex-broseta-dupre-pablo-gustavo,Broseta Dupre,Pablo Gustavo,,DERECHOS DE AUTOR,otros,3500.0,3.500,40,281,ocr,False
+ex-broseta-dupre-pablo-gustavo,Broseta Dupre,Pablo Gustavo,,VEHÍCULO Li,vehiculos,3500.0,3.500,40,282,ocr,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,coche,vehiculos,3000.0,3000,40,286,texto,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,cuenta expansión,cuentas,4200.0,4200,40,286,texto,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,cuenta ahorro Sabadell,cuentas,18000.0,18.000,40,286,texto,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,cuenta expansión experiencia,cuentas,20000.0,20.000,40,286,texto,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,Fondos de inversión,inversiones,17261.29,"17.261,29",40,286,texto,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,Panes de ahorro,cuentas,16308.77,"16.308,77",40,286,texto,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,Otros seguros de ahorro,cuentas,46624.68,"46.624,68",40,286,texto,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,VEHÍCULO,vehiculos,15500.0,15.500,40,290,ocr,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,CUENTAS CORRIENTES,cuentas,42000.0,42.000,40,290,ocr,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,FONDOS:DE INVERSIÓN,inversiones,65000.0,65.000,40,290,ocr,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,ACCIONES (BBVA Y TELEFÓNICA).,cuentas,15000.0,15.000,40,290,ocr,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,PRODUCTO AHORRO,cuentas,2500.0,2.500,40,291,ocr,False
+ex-escrig-llinares-maria-del-rosario,Escrig Llinares,Maria del Rosario,,VEHÍCULO.,vehiculos,12000.0,12.000,40,296,ocr,False
+ex-escrig-llinares-maria-del-rosario,Escrig Llinares,Maria del Rosario,,MOTOCICLETA,vehiculos,1000.0,1.000,40,296,ocr,False
+ex-escrig-llinares-maria-del-rosario,Escrig Llinares,Maria del Rosario,,CUENTAS BANCARIAS,cuentas,23000.0,23.000,40,296,ocr,False
+ex-escrig-llinares-maria-del-rosario,Escrig Llinares,Maria del Rosario,,PLAN DE PENSIONES,pensiones,3000.0,3.000,40,296,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,ACCIONES,inversiones,1167.53,"1.167,53",40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,VALOR RESGUARDOS SAT 4885 POU CAMI LA FONT,otros,2770.0,2.770,40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,PLAN DE PENSIONES,pensiones,56410.9,"56.410,90",40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,DEPÓSITOS EN CUENTAS CORRIENTES O DE AHORRO,cuentas,80403.47,"80.403,47",40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,VEHÍCULO,vehiculos,1200.0,1.200,40,303,ocr,False
+ex-fabra-part-alberto,Fabra Part,Alberto,,CITROEN C3 AIRCROSS +,vehiculos,11000.0,11 000€,40,307,ocr,False
+ex-fabra-part-alberto,Fabra Part,Alberto,,OPEL CROSSLAND,vehiculos,45000.0,45000€,40,307,ocr,True
+ex-fabra-part-alberto,Fabra Part,Alberto,,SYM GTS 125,otros,1500.0,1 500€,40,307,ocr,False
+ex-fabra-part-alberto,Fabra Part,Alberto,,CUENTA CORRIENTE,cuentas,29600.0,"29,600€",40,307,ocr,False
+ex-fabra-part-alberto,Fabra Part,Alberto,,FONDOS,inversiones,58000.0,58.000€,40,308,ocr,False
+ex-fabra-part-alberto,Fabra Part,Alberto,,PLAN DE PENSIONES A,pensiones,23400.0,23 400€,40,308,ocr,False
+ex-fabregat-carrasquer-susana,Fabregat Carrasquer,Susana,,Saldo cuentas bancarias,cuentas,30568.17,"30.568,17",40,313,ocr,False
+ex-fabregat-carrasquer-susana,Fabregat Carrasquer,Susana,,Fondos inversión,inversiones,152545.88,"152,545,88",40,313,ocr,False
+ex-fabregat-carrasquer-susana,Fabregat Carrasquer,Susana,,Vehículo Audi Q2,vehiculos,21990.0,21 990,40,313,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,VEHÍCULO,vehiculos,9000.0,9.000,120,261,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,VEHÍCULO,vehiculos,3000.0,3.000,120,261,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,CUENTAS CORRIENTES,cuentas,1469.05,"1.469,05",120,261,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,ALQUILER (MENSUAL),otros,650.0,650,120,261,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,VEHÍCULO MINO COOPER,vehiculos,15000.0,15.000,40,319,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,VEHÍCULO NISSAN XTRAIL,vehiculos,20000.0,20.000,40,319,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,CTA. CORRIENTE,cuentas,2500.0,2 500,40,319,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,PLAN DE PENSIONES,pensiones,13000.0,13.000,40,319,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,PLAN AHORRO,cuentas,12000.0,12.000,40,320,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,3.715 Sacyr SA — 31.901 títulos NYESA,inversiones,11434.77,"11.434,77 euros - 242,45 euros",40,325,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,745 títulos Banco Santander -- 1.475 títulos Calxabank,cuentas,2403.21,"2,403,21 euros — 5.358,68 euros *",40,325,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,39 títulos CAF — 99 títulos Talgo,otros,1278.75,"1.278,75 eurós — 331,15 euros",40,325,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,"346,18 títulos Breds Brand - 1.200 títulos Unicaja Banco",cuentas,2503.92,"2.503,92 euros .— 1.118,40 euros",40,325,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,Cta. Cajamar,cuentas,79558.98,"79.558,98 euros",40,326,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,Cta. Banco Santander,cuentas,1482.08,"1.482,08 euros",40,326,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,Cta. Banco Mediolano,cuentas,685.38,"685,38 euros",40,326,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,Vehículo Peugeot 3008 SUV,vehiculos,14000.0,14.000 euros,40,326,ocr,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,CUENTA CORRIENTE,cuentas,46511.46,"46511,46",120,267,texto,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,CAIXABANK O,cuentas,12000.0,"12.000,00€",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,BANCO SABADELL,cuentas,1200.0,"1.200,00€ ACCIONES",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,FONDO INVERSIÓN,inversiones,5000.0,"5.000,00€",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,BONOS TESORO,inversiones,48000.0,"48.000,00€",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,CAIXA RURAL,cuentas,45000.0,"45.000,00€",40,332,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,PLAN DE PENSIONES,pensiones,27132.0,"27.132,00€",40,332,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,MERCEDES BENZ C180 (2007),vehiculos,10000.0,"10.000,00€",40,332,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,CITROÉN S/4,vehiculos,6000.0,"6.000,00€",40,332,ocr,False
+ex-marza-i-ibanez-vicent,Marzà i Ibáñez,Vicent,,Coche Tiguan e-Hybrid,vehiculos,34000,,120,271,manual,False
+ex-merino-pena-ruth,Merino Peña,Ruth,,VEHÍCULO,vehiculos,3000.0,3000,40,336,texto,False
+ex-merino-pena-ruth,Merino Peña,Ruth,,VEHÍCULO,vehiculos,1100.0,1100,40,336,texto,False
+ex-merino-pena-ruth,Merino Peña,Ruth,,CUENTAS BANCARIAS,cuentas,11250.0,11250,40,336,texto,False
+ex-merino-pena-ruth,Merino Peña,Ruth,,ACCIONES,inversiones,1600.0,1600,40,336,texto,False
+ex-mompo-aledo-vicente-jose,Mompo Aledo,Vicente Jose,,Vehículo,vehiculos,14542.19,"14.542,19",40,346,ocr,False
+ex-mompo-aledo-vicente-jose,Mompo Aledo,Vicente Jose,,Cuenta corriente,cuentas,63599.48,"63.599,48",40,346,ocr,False
+ex-mompo-aledo-vicente-jose,Mompo Aledo,Vicente Jose,,Plan de penstones,otros,8909.86,"8.909,86",40,346,ocr,False
+ex-ortiz-vilella-eva,Ortiz Vilella,Eva,,VEHÍCULO MERCEDES BENZ C-220,vehiculos,39250.0,39.250€,40,352,ocr,False
+ex-ortiz-vilella-eva,Ortiz Vilella,Eva,,CUENTA CORRIENTE,cuentas,30.63,"30.63 8,94€",40,352,ocr,False
+ex-ortiz-vilella-eva,Ortiz Vilella,Eva,,VEHÍCULO MERCEDES B (246)200 D 4MATIC,vehiculos,22200.0,22.200€,40,352,ocr,False
+ex-ortiz-vilella-eva,Ortiz Vilella,Eva,,CUENTA CORRIENTE,cuentas,3850.0,3.850€,40,352,ocr,False
+ex-ortiz-vilella-eva,Ortiz Vilella,Eva,,Valeo,otros,,ón o e,40,353,ocr,True
+ex-parra-aparicio-julia,Parra Aparicio,Julia,,CUENTA CORRIENTE,cuentas,3000.0,3.000,40,358,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,SALDO CUENTAS BANCARIAS,cuentas,122500.0,122.500,40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,FONDO INVERSIÓN NATIONAL NEDERLANDEN,inversiones,3300.0,3.300,40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,PLAN DE AHORRO - Mutualidad Abogacía,cuentas,15060.0,15.060,40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,VEHÍCULO-VOLKSWAGEN GOLF,vehiculos,22000.0,22.000,40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,VEHÍCULO-TOYOTA AVENSIS,vehiculos,1000.0,1.000,40,365,ocr,False
+ex-puig-ferrer-ximo,Puig Ferrer,Ximo,,ACCIONS PECSA,inversiones,167525.4,"167.525,4",40,370,texto,False
+ex-puig-ferrer-ximo,Puig Ferrer,Ximo,,ACCIONS LLIBRERIA BABEL CASTELLÓ,inversiones,6000.0,6.000,40,370,texto,False
+ex-puig-ferrer-ximo,Puig Ferrer,Ximo,,"BBVA PROTECCIÓ 2025, PPI",cuentas,36375.56,"36.375,56",40,370,texto,False
+ex-puig-ferrer-ximo,Puig Ferrer,Ximo,,SALDO C/C,cuentas,18000.0,18.000,40,370,texto,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,"CUENTA BANCO SANTANDER o,",cuentas,10020.95,"10.020,95",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,ACCIONES BANCO SANTANDER,cuentas,73.97,"73,97",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,"PARTICIPACIÓN DEL 2,46% ROJO INVERS.L",inversiones,43000.0,43.000 /,40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,"PARTICIPACIÓN DEL 14,49% ROJO INVER S.L (herencia)",inversiones,253000.0,253.000,40,376,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,VEHÍCULOS,vehiculos,44300.0,44 300,40,382,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,DEPÓSITOS BANCARIOS,cuentas,442144.0,442144,40,382,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,PLAN SEGURO VIDA AHORRO,cuentas,9178.88,"9 178,88",40,382,ocr,True
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,Vale Catas del como,otros,,,40,383,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,Valor Estas el comu,otros,36445.95,"36 445,95",40,384,ocr,True
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,ACCIONES,inversiones,39524.0,39.524,40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,ACCIONES AGS NOVA,inversiones,24548.0,24.548,40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,PLANES DE PENSIONES,pensiones,24000.0,24.000,40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,FONDOS DE INVERSIÓN,inversiones,1700.0,1.700,40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,CUENTAS CORRIENTES,cuentas,10000.0,10.000,40,391,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,DEPÓSITOS,cuentas,2000.0,2.000 ?,40,391,ocr,False
+ex-torro-soler-rebeca,Torró Soler,Rebeca,,OPEL INSIGNIA ADQUIRIT 2017,vehiculos,27000.0,PREU ADQUISICIÓ: 27.000€,40,396,ocr,False
+ex-torro-soler-rebeca,Torró Soler,Rebeca,,DACIA SANDERO ADQUIRIT 2020,vehiculos,-6500.0,PREU ADQUISICIÓ:-6.500€,40,396,ocr,False
+ex-torro-soler-rebeca,Torró Soler,Rebeca,,COMPTES,cuentas,12000.0,12.000€,40,396,ocr,False
+ex-torro-soler-rebeca,Torró Soler,Rebeca,,PLA PENSIONS,pensiones,3301.33,"3.301,33€ a 28/01/2023",40,396,ocr,True
+ex-torro-soler-rebeca,Torró Soler,Rebeca,,PLA ESTALVI,cuentas,6333.3,"6.333,30€ a 31/12/2023",40,397,ocr,False
