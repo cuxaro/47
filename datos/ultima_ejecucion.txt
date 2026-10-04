@@ -1,0 +1,19 @@
+Diputados en activo: 99
+Boletines con declaraciones: 14
+  BOCV   3: 472 págs, 102 declaraciones
+  BOCV  19: 239 págs, 18 declaraciones
+  BOCV  22: 149 págs, 1 declaraciones
+  BOCV  34: 137 págs, 1 declaraciones
+  BOCV  37: 192 págs, 3 declaraciones
+  BOCV  40: 402 págs, 36 declaraciones
+  BOCV  51: 509 págs, 1 declaraciones
+  BOCV  55: 176 págs, 1 declaraciones
+  BOCV  87: 111 págs, 1 declaraciones
+  BOCV 113: 145 págs, 1 declaraciones
+  BOCV 120: 296 págs, 22 declaraciones
+  BOCV 133: 58 págs, 1 declaraciones
+  BOCV 197: 177 págs, 20 declaraciones
+  BOCV 208: 154 págs, 1 declaraciones
+  [404] https://www.cortsvalencianes.es/es/external-data/pdf/XI/cb0af9470474050df2a7168ad9c9e904
+Declaraciones de rentas leídas: 98
+Hecho en 939s: 142 personas, 133 con declaración de bienes, 75 leídas por OCR, 57 con las sumas comprobadas, 78 para revisar, 9 ilegibles, 98 con rentas

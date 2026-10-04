@@ -1,0 +1,309 @@
+id,apellidos,nombre,grupo,clave,tipo,porcentaje,provincia,valor_catastral,clave_txt,tipo_txt,provincia_txt,valor_txt,bocv,pagina,metodo_lectura,dudoso
+7a90000d9960e85f6a30cc5266c78c84,Aguilella Ramos,Salvador,Popular,P,V,50.0,Castellón,35807.98,p.,V,CASTELLÓN,"35 807,98€",3,12,ocr,False
+7a90000d9960e85f6a30cc5266c78c84,Aguilella Ramos,Salvador,Popular,P,O,50.0,Castellón,2344.91,P,O,CASTELLÓN,"2 344,91€",3,12,ocr,False
+7a90000d9960e85f6a30cc5266c78c84,Aguilella Ramos,Salvador,Popular,P,O,25.0,Castellón,29766.74,P,O,CASTELLÓN,"29.766,74€",3,12,ocr,False
+d163bb44951c4276030339689575058b,Amigó Laguarda,María José,Compromís,P,V,100.0,Valencia,65036.96,P,V,VALENCIA,"65.036,96",40,207,ocr,False
+d163bb44951c4276030339689575058b,Amigó Laguarda,María José,Compromís,P,V,16.66,Valencia,191643.27,P,V,VALENCIA,"191.643,27",40,207,ocr,False
+d163bb44951c4276030339689575058b,Amigó Laguarda,María José,Compromís,N,V,8.33,Valencia,191643.27,N,V,VALENCIA,"191.643,27",40,207,ocr,False
+d163bb44951c4276030339689575058b,Amigó Laguarda,María José,Compromís,P,O,16.86,Valencia,113737.92,p,O “,VALENCIA,"113,737,92",40,207,ocr,True
+d163bb44951c4276030339689575058b,Amigó Laguarda,María José,Compromís,N,O,8.33,Valencia,113737.92,N,O,VALÈNCIA,"113.737,92",40,207,ocr,False
+d9786f9873097c344577c4272117be04,Andújar Durá,Alicia,Socialista,P,O,100.0,Valencia,10268.25,Pleno dominio,Otros inmuebles urbanos,VALENCIA,"10268,25",197,93,texto,False
+d9786f9873097c344577c4272117be04,Andújar Durá,Alicia,Socialista,P,V,100.0,Valencia,30057.72,Pleno dominio,Vivienda,VALENCIA,"30057,72",197,93,texto,False
+46bdc180ff02e95c0bdff74910919e8a,Angulo Luna,María Consuelo,Socialista,P,V,50.0,Valencia,70972.93,P,V,VALENCIA,"70,972,93",37,155,ocr,False
+46bdc180ff02e95c0bdff74910919e8a,Angulo Luna,María Consuelo,Socialista,P,O,50.0,Valencia,1788.78,P,0,VALENCIA,"1.788,78",37,155,ocr,False
+46bdc180ff02e95c0bdff74910919e8a,Angulo Luna,María Consuelo,Socialista,P,O,50.0,Valencia,1254.8,P,0,VALENCIA,"1,254,80",37,155,ocr,False
+a915da294d6be24f6278e9a7cd17925a,Bartual Bermell,Francisca,Popular,P,V,100.0,Valencia,61030.1,p,V,VALENCIA,"61.030,10€",3,63,ocr,False
+a915da294d6be24f6278e9a7cd17925a,Bartual Bermell,Francisca,Popular,P,V,16.66,Castellón,9170.52,P.,V,CASTELLÓN,"9170,52€",3,63,ocr,True
+a915da294d6be24f6278e9a7cd17925a,Bartual Bermell,Francisca,Popular,P,V,16.0,Valencia,10969.7,P,V,VALENCIA,"10,969,70€",3,63,ocr,False
+a556a967528c40a208523cf700d1a73f,Bastidas Bono,Elena María,Popular,P,V,100.0,Valencia,180000.0,Pleno dominio,Vivienda,VALENCIA,180.000,197,96,texto,False
+a556a967528c40a208523cf700d1a73f,Bastidas Bono,Elena María,Popular,P,V,100.0,Valencia,180000.0,Pleno dominio,Vivienda,VALENCIA,180.000,197,96,texto,False
+a556a967528c40a208523cf700d1a73f,Bastidas Bono,Elena María,Popular,P,V,50.0,Alicante,80000.0,Pleno dominio,Vivienda,ALICANTE,80.000,197,96,texto,False
+a556a967528c40a208523cf700d1a73f,Bastidas Bono,Elena María,Popular,P,O,100.0,Valencia,20000.0,Pleno dominio,Otros inmuebles urbanos,VALENCIA,20.000,197,96,texto,False
+a556a967528c40a208523cf700d1a73f,Bastidas Bono,Elena María,Popular,P,O,50.0,Alicante,10000.0,Pleno dominio,Otros inmuebles urbanos,ALICANTE,10.000,197,96,texto,False
+a556a967528c40a208523cf700d1a73f,Bastidas Bono,Elena María,Popular,P,O,50.0,Málaga,15000.0,Pleno dominio,Otros inmuebles urbanos,MÁLAGA,15.000,197,96,texto,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,N,V,50,Valencia,98484.02,N,V,Valencia,,19,122,manual,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,N,V,5,Valencia,3609.59,N,V,Valencia,,19,122,manual,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,N,V,16.66,Teruel,7423.59,N,V,Teruel,,19,122,manual,False
+7552b271f3adc4719248887b308b0689,Bellver Alcántara,Ana María,Vox Cortes Valencianas,N,O,5,Valencia,4000.0,N,O,Valencia,,19,122,manual,False
+802349dec6176f815e96ab76ac5c68c5,Betoret Coll,Vicente,Popular,P,V,100.0,Valencia,76358.0,P,V,VALENCIA,76.358€,3,78,ocr,False
+802349dec6176f815e96ab76ac5c68c5,Betoret Coll,Vicente,Popular,P,V,100.0,Valencia,92000.0,P,V,VALENCIA,92.000€,3,78,ocr,False
+802349dec6176f815e96ab76ac5c68c5,Betoret Coll,Vicente,Popular,P,V,50.0,Valencia,32000.0,P,V,VALENCIA,32.000€,3,78,ocr,False
+644e683b12f8f892f11ee5e60ec73b57,Blanch Marín,Ernesto,Socialista,P,V,50.0,Castellón,44302.57,Domini ple,Vivenda,Castelló,"44.302,57€",3,83,texto,False
+acb86fe099f83c904ca8fdd4fde14b9e,Bordera Romá,Juan,Compromís,M,R,,Alicante,5562.47,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Inmuebles rústicos,Alicante,"5.562,47",3,86,texto,False
+0f8051d8f31f74db98792b7b28b9ec43,Caballero Hueso,Mercedes,Socialista,P,V,50.0,Valencia,87435.57,Nua propietat,Vivenda,València,"87.435,57 €",197,105,texto,False
+0f8051d8f31f74db98792b7b28b9ec43,Caballero Hueso,Mercedes,Socialista,P,O,100.0,Valencia,8552.0,Domini ple,Altres immobles urbans,València,8.552 €,197,105,texto,False
+cb0af9470474050df2a7168ad9c9e904,Cámara Landete,Raquel,Socialista,P,V,25.0,Valencia,12330.18,P,V,Valéncia,"12.330,18 o,",208,124,ocr,False
+cb0af9470474050df2a7168ad9c9e904,Cámara Landete,Raquel,Socialista,M,,,,,A,,4,,208,124,ocr,True
+b30f7aacc1ac2a2c82272b0d145ee2c9,Castelló Sáez,Alfredo Cesáreo,Popular,P,O,50.0,Valencia,,P,9),Valencia,,120,165,ocr,False
+b30f7aacc1ac2a2c82272b0d145ee2c9,Castelló Sáez,Alfredo Cesáreo,Popular,N,V,16.6,Valencia,,N,V,Valencia,,120,165,ocr,False
+b30f7aacc1ac2a2c82272b0d145ee2c9,Castelló Sáez,Alfredo Cesáreo,Popular,N,V,16.6,Valencia,,N,V,Valencia,,120,165,ocr,False
+8f5ee5374fa10c8381be83b5f2c164b6,Catalá Verdet,María José,Popular,P,V,100.0,Valencia,156300.0,Pleno Dominio,Vivienda,VALENCIA,156.300,120,171,ocr,False
+8f5ee5374fa10c8381be83b5f2c164b6,Catalá Verdet,María José,Popular,P,O,100.0,Valencia,3882.27,Pleno Dominio,Otros Inmuebles u,VALENCIA,"3.882,27",120,171,ocr,False
+e0a762dabd3a90f9bd301b316e730340,Chuliá Serra,Laura,Popular,P,V,,Valencia,58361.26,P,V,VALENCIA —*,"58.361,26",120,177,ocr,False
+f5a747543aab0bb013aa7fd3ba85a50b,Chulvi Español,José,Socialista,P,V,50.0,Alicante,36872.85,P,VIVENDA,XÀBIA (ALACANT),"36.872,85€",3,126,ocr,False
+f5a747543aab0bb013aa7fd3ba85a50b,Chulvi Español,José,Socialista,P,,50.0,Alicante,3279.79,P:,GARAGE,XÀBIA (ALACANT),"3.279,79€",3,126,ocr,False
+f5a747543aab0bb013aa7fd3ba85a50b,Chulvi Español,José,Socialista,P,,50.0,Alicante,2981.63,P,GARAGE,XÀBIA (ALACANT),"2.981,63€",3,126,ocr,False
+ae8c5f31bd01d2b4fe5cf4d8dc62545c,Císcar Martínez,Noelia,Popular,,V,100.0,,,,VIVIENDA,CALPE,,120,189,ocr,False
+0ac8666d2dcad5c62a1c1a46afff4879,Contelles Llopis,María Carmen,Popular,P,V,50.0,Valencia,99720.34,P,V,VALENCIA,"99.720,34",40,228,ocr,False
+0ac8666d2dcad5c62a1c1a46afff4879,Contelles Llopis,María Carmen,Popular,P,V,50.0,Valencia,36312.0,P,V,VALENCIA,"36.312, 52",40,228,ocr,False
+0ac8666d2dcad5c62a1c1a46afff4879,Contelles Llopis,María Carmen,Popular,P,O,1.34,Valencia,66118.45,P,o,VALENCIA,"66.118,45",40,228,ocr,True
+6a26a976a98fb83de940bcc927c75bc0,Díaz Fernández,José Antonio,Socialista,P,V,50.0,Alicante,18386.09,p,V,ALICANTE,"18386,09",19,142,ocr,False
+6a26a976a98fb83de940bcc927c75bc0,Díaz Fernández,José Antonio,Socialista,P,V,50.0,Alicante,76056.83,P,V,ALICANTE,"76056,83.",19,142,ocr,False
+f3b3871b1265f2813c0455e6c12df7b1,Dolón Sánchez,Eduardo Jorge,Popular,M,O,50.0,Alicante,14118.61,M,o,ALICANTE,"14118,61",3,141,ocr,False
+f3b3871b1265f2813c0455e6c12df7b1,Dolón Sánchez,Eduardo Jorge,Popular,M,O,50.0,Alicante,4706.2,M,O,ALICANTE,"4706,20",3,141,ocr,False
+84f1bdf9e5261705ddb4f0c11ae95d8b,Espinosa Giménez,Paula Virgínia,Compromís,N,V,50.0,Valencia,22553.4,N,V,VALENCIA,"22.553,40€",3,155,ocr,False
+84f1bdf9e5261705ddb4f0c11ae95d8b,Espinosa Giménez,Paula Virgínia,Compromís,N,V,100.0,Valencia,27780.1,N,V,VALENCIA,"27.780,10€",3,155,ocr,False
+84f1bdf9e5261705ddb4f0c11ae95d8b,Espinosa Giménez,Paula Virgínia,Compromís,N,O,50.0,Valencia,5548.31,N,o.,VALENCIA,"5.548,31€",3,155,ocr,False
+84f1bdf9e5261705ddb4f0c11ae95d8b,Espinosa Giménez,Paula Virgínia,Compromís,N,L,50.0,Valencia,6290.0,N,L,VALENCIA,6.290€,3,155,ocr,False
+84f1bdf9e5261705ddb4f0c11ae95d8b,Espinosa Giménez,Paula Virgínia,Compromís,N,R,50.0,Albacete,2146.12,N,R,ALBACETE,"2146,12€",3,155,ocr,False
+84f1bdf9e5261705ddb4f0c11ae95d8b,Espinosa Giménez,Paula Virgínia,Compromís,N,V,50.0,Albacete,11104.58,N,V,ALBACETE,"11.104,58€",3,155,ocr,True
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,P,V,100.0,Castellón,115937.86,P,V,CASTELLO,"115.937,86",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,P,V,50.0,Castellón,44316.45,P.,V,CASTELLO,"44.316,45",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,P,V,50.0,Castellón,148263.22,P,V,CASTELLO,"148.263,22",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,P,V,25.0,Castellón,10992.62,P,V,CASTELLO,"10.992,62",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,P,O,100.0,Castellón,6514.44,P,O,CASTELLO,"6.514,44",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,P,O,100.0,Castellón,4.0,P,O,CASTELLO,"4:622,51",113,119,ocr,False
+d23d8198c129f4f38c9efa014095fe53,Font de Mora Rullán,Alejo,Popular,P,O,50.0,Castellón,3222.12,P,O,CASTELLO.,"3,222,12",113,119,ocr,False
+363cb0d1d018035be2ce0d3dd94dd08f,Forés Sanz,José,Popular,P,V,50.0,Alicante,32707.77,Pleno dominio,Vivienda,ALICANTE,"32707,77",197,117,texto,False
+d31a8c149d0919e093db4e37b21651aa,Fullana Martínez,Gerard,Compromís,P,V,50.0,Alicante,87000.0,Domini ple,Vivenda,Alacant,87.000,40,233,texto,False
+74e7a04464ec60753e08d00c92fd0e43,Galcerán Gadea,María del Mar,Popular,P,V,100.0,Valencia,28246.93,P,V,VALENCIA,"28.246,93",19,154,ocr,False
+d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,P,V,50.0,Alicante,20108.47,P,V,ALACANT,"20.108,47 Valor Torac",3,182,ocr,False
+d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,P,V,50.0,Alicante,5353.0,P,V,ALACANT,"5.353,00 (Mo. Tc",3,182,ocr,False
+d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,P,O,50.0,Alicante,2918.3,P,O,ALACANT,"2.918,30 VH. Tone",3,182,ocr,True
+d5569b6db7f2a0438ab63f77d1ca2357,García Madrid,María Teresa,Socialista,P,R,16.67,Alicante,5000.0,P,R,ALACANT,"5.000,00 Mn Tm",3,182,ocr,False
+23b3c40600cda23fb0e9bac612fb5aa8,Gascó Enríquez,Beatriz,Popular,M,V,50.0,Castellón,66257.15,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Vivienda,CASTELLÓN,"66.257,15",3,187,texto,False
+23b3c40600cda23fb0e9bac612fb5aa8,Gascó Enríquez,Beatriz,Popular,M,O,50.0,Castellón,5368.75,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Otros inmuebles urbanos,CASTELLÓN,"5.368,75",3,187,texto,False
+2c9dd0c2151fbe2f5ba4cab33f82db23,Gigante Melego,Andrea,Popular,P,R,50.0,Ciudad Real,31.77,R,p,CIUDAD REAL,"31,77",22,125,ocr,False
+2c9dd0c2151fbe2f5ba4cab33f82db23,Gigante Melego,Andrea,Popular,P,R,50.0,Ciudad Real,8.25,R,p,CIUDAD REAL,"8,25",22,125,ocr,False
+2c9dd0c2151fbe2f5ba4cab33f82db23,Gigante Melego,Andrea,Popular,P,R,50.0,Ciudad Real,117.33,R,P,CIUDAD REAL,"117,33",22,125,ocr,False
+2c9dd0c2151fbe2f5ba4cab33f82db23,Gigante Melego,Andrea,Popular,P,R,50.0,Ciudad Real,34.73,R,P,CIUDAD REAL,"34,73",22,125,ocr,False
+b2a830265b3f092f4d6218075b0901a1,Giner Beltrán,José Domingo,Popular,M,V,50.0,Castellón,5998.5,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Vivienda,SAN RAFAEL DEL RIO (CASTELLON),5998'50,19,159,texto,False
+b2a830265b3f092f4d6218075b0901a1,Giner Beltrán,José Domingo,Popular,M,R,50.0,Castellón,4600.0,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Inmuebles rústicos,SAN RAFAEL DEL RIO (CASTELLON),4600,19,159,texto,False
+b2a830265b3f092f4d6218075b0901a1,Giner Beltrán,José Domingo,Popular,M,R,50.0,Castellón,18000.0,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Inmuebles rústicos,CANET LO ROIG (CASTELLON),18000,19,159,texto,False
+b2a830265b3f092f4d6218075b0901a1,Giner Beltrán,José Domingo,Popular,M,R,50.0,Tarragona,4200.0,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Inmuebles rústicos,LA SENIA (TARRAGONA),4200,19,159,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,V,100.0,,85211.65,Pleno dominio,Vivienda,"CL PERPETUO SOCORRO,1 1º","85211,65",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,L,33.33,,17195.07,Pleno dominio,Locales,"CL PERPETUO SOCORRO, 1, BJ","17195,07",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,O,33.33,,10135.18,Pleno dominio,Otros inmuebles urbanos,"CL PERPETUO SOCORRO, 1, 4º","10135,18",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,V,33.33,,12897.13,Pleno dominio,Vivienda,"CL PERPETUO SOCORRO, 2, 3º C","12897,13",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,L,25.0,,26284.95,Pleno dominio,Locales,"CL PABLO PICASO, 15, BJ ALMORADÍ","26284,95",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,V,33.33,,76675.67,Nuda propiedad,Vivienda,"AVDA ALEMANIA, 69 LA MATA","76675,67",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,V,33.33,,6068.98,Nuda propiedad,Vivienda,"CL ARGENTINA, 51, 4º M GUARDAMAR DEL SEGURA","6068,98",3,196,texto,False
+6938441d4097bd3f41346c63b2d4495e,Gómez García,María,Popular,P,R,33.33,,21867.31,Pleno dominio,Inmuebles rústicos,"VEREDA DEL POZO, 55 DOLORES","21867,31",3,196,texto,False
+e68c18e259b70c89e2b0197df85ed387,Gómez Rey,Silvia,Socialista,P,V,50.0,Castellón,17561.48,Pleno dominio,Vivienda,Castelló/Castellón,17561.48,3,200,texto,False
+e68c18e259b70c89e2b0197df85ed387,Gómez Rey,Silvia,Socialista,P,V,50.0,Castellón,45927.41,Pleno dominio,Vivienda,Castelló/Castellón,45927.41,3,200,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,P,V,100.0,Valencia,128733.0,Pleno dominio,Vivienda,València/ Valencia,128.733,3,209,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,P,V,100.0,Alicante,96553.0,Pleno dominio,Vivienda,Alicante,96.553,3,209,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,P,R,100.0,Burgos,55386.0,Pleno dominio,Inmuebles rústicos,Burgos,55.386,3,209,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,P,V,25.0,Bizkaia,30486.0,Pleno dominio,Vivienda,Vizcaya,30.486,3,209,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,P,V,75.0,Álava,68895.06,Pleno dominio,Vivienda,Alava,"68.895,06",3,209,texto,False
+59e4eac3f2df40960f3990b9205bdaf5,González La Red,Magdalena María,Popular,P,O,75.0,Álava,8524.65,Pleno dominio,Otros inmuebles urbanos,Alava,"8.524,65",3,209,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,V,58.0,Alicante,140658.9,Pleno dominio,Vivienda,FINESTRAT (ALICANTE),140658.90,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,V,50.0,Alicante,40157.31,Pleno dominio,Vivienda,JIJONA (ALICANTE),40157.31,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,V,100.0,Alicante,136415.1,Pleno dominio,Vivienda,EL CAMPELLO (ALICANTE),136415.10,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,V,50.0,Alicante,56865.15,Pleno dominio,Vivienda,EL CAMPELLO (ALICANTE),56865.15,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,V,50.0,Alicante,51759.55,Pleno dominio,Vivienda,EL CAMPELLO (ALICANTE),51759.55,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,L,50.0,Alicante,25006.78,Pleno dominio,Locales,JIJONA (ALICANTE),25006.78,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,O,100.0,Alicante,6553.89,Pleno dominio,Otros inmuebles urbanos,JIJONA(ALICANTE),6553.89,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,V,50.0,Alicante,5233.99,Pleno dominio,Vivienda,JIJONA (ALICANTE),5233.99,19,162,texto,False
+d412ca3a60da0357e3939b322c79328e,Gutiérrez Martín,Javier,Popular,P,O,50.0,Alicante,2180.0,Pleno dominio,Otros inmuebles urbanos,JIJONA (ALICANTE),2180,19,162,texto,False
+539fa7dcf6011965f1d727a3bfc799aa,Juárez Pastor,Ana Belén,Socialista,P,V,100.0,Alicante,40840.58,P,V,ALICANTE,"40.840,58 €",55,120,ocr,False
+539fa7dcf6011965f1d727a3bfc799aa,Juárez Pastor,Ana Belén,Socialista,P,O,100.0,Alicante,1263.45,p,O,ALICANTE,"1.263,45 €",55,120,ocr,False
+539fa7dcf6011965f1d727a3bfc799aa,Juárez Pastor,Ana Belén,Socialista,P,V,100.0,Alicante,33906.97,p,V,ALICANTE,"33.906,97 €",55,120,ocr,False
+539fa7dcf6011965f1d727a3bfc799aa,Juárez Pastor,Ana Belén,Socialista,P,O,100.0,Alicante,14351.66,P,O,ALICANTE,"14.351,66 €",55,120,ocr,False
+e3b2502645d9dd61db18364abd797f61,Lecha Tena,Jesús Antonio,Popular,P,V,100.0,Valencia,20578.24,Pleno dominio,Vivienda,Valencia,"20.578,24",197,135,texto,False
+e3b2502645d9dd61db18364abd797f61,Lecha Tena,Jesús Antonio,Popular,P,V,100.0,Teruel,28941.06,Pleno dominio,Vivienda,Teruel,"28.941,06€",197,135,texto,False
+e3b2502645d9dd61db18364abd797f61,Lecha Tena,Jesús Antonio,Popular,P,V,100.0,Teruel,29185.45,Pleno dominio,Vivienda,Teruel,"29.185,45€",197,135,texto,False
+88d9b6cffb6e6e0e1d499322b24b9006,Llanos Pitarch,José María,Vox Cortes Valencianas,P,V,100.0,Valencia,31912.07,Pleno dominio,Vivienda,VALENCIA,"31912,07",3,225,texto,False
+88d9b6cffb6e6e0e1d499322b24b9006,Llanos Pitarch,José María,Vox Cortes Valencianas,P,O,100.0,Valencia,4522.09,Pleno dominio,Otros inmuebles urbanos,Valencia,"4522,09",3,225,texto,False
+88d9b6cffb6e6e0e1d499322b24b9006,Llanos Pitarch,José María,Vox Cortes Valencianas,M,V,50.0,Valencia,44892.15,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Vivienda,VALENCIA,"44892,15",3,225,texto,False
+87f5c37757f4d4faec390cccb7215e59,Llop Montón,Adoración,Popular,P,V,50.0,,84500.0,P,V,VILA-REAL,"84,500€",3,229,ocr,False
+87f5c37757f4d4faec390cccb7215e59,Llop Montón,Adoración,Popular,P,O,50.0,,5430.0,P,o,VILA-REAL,5.430€,3,229,ocr,False
+87f5c37757f4d4faec390cccb7215e59,Llop Montón,Adoración,Popular,P,V,100.0,,4313.0,P,V,VALDELINARES,4.313€,3,229,ocr,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,P,V,50.0,Alicante,39160.0,Pleno dominio,Vivienda,ALICANTE,"39160,00",3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,P,V,50.0,Alicante,23164.84,Pleno dominio,Vivienda,ALICANTE,"23164,84",3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,P,O,50.0,Alicante,14328.76,Pleno dominio,Otros inmuebles urbanos,ALICANTE,"14328,76",3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,P,O,50.0,Alicante,3235.87,Pleno dominio,Otros inmuebles urbanos,ALICANTE,3235.87,3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,P,L,100.0,Alicante,42406.26,Nuda propiedad,Locales,ALICANTE,"42406,26",3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,P,V,50.0,Alicante,123608.07,Pleno dominio,Vivienda,ALICANTE,123608.07,3,234,texto,False
+c49430f119f51f9a3281cf5ade3f3d19,Llopis Noheda,Julia María,Vox Cortes Valencianas,P,V,100.0,Alicante,39225.71,Nuda propiedad,Vivienda,ALICANTE,"39225,71",3,234,texto,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,P,V,100.0,Valencia,50062.77,Pleno dominio,Vivienda,València/ Valencia,"50.062,77",3,247,texto,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,M,V,33.33,Valencia,70312.33,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Vivienda,València/ Valencia,"70.312,33",3,247,texto,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,P,O,100.0,Valencia,7471.34,Pleno dominio,Otros inmuebles urbanos,València/ Valencia,"7.471,34",3,247,texto,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,M,O,33.33,Valencia,6026.83,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Otros inmuebles urbanos,València/ Valencia,"6.026,83",3,247,texto,False
+4befcd47989565d8ab3d9ef65d9b7ebc,Marcos Puig,Verónica,Popular,M,O,33.33,Valencia,9551.74,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Otros inmuebles urbanos,València/ Valencia,"9.551,74",3,247,texto,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,P,V,50.0,Alicante,73976.0,Pp,V,ALICANTE,"73,976€",19,172,ocr,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,P,V,50.0,Alicante,66721.68,P,V,ALICANTE,"66.721,68€",19,172,ocr,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,P,O,50.0,Alicante,13371.0,P,O,ALICANTE,13.371€,19,172,ocr,False
+830dbc19265692af0c9ea073394e54c9,Martínez Clemor,María del Carmen,Popular,P,O,50.0,Alicante,5664.6,P,O:,ALICANTE,"5.664,6€",19,172,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,P,V,50.0,Castellón,36800.0,V,P,CASTELLÓN,36.800,19,178,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,P,L,30.0,Castellón,9400.0,L,P,CASTELLÓN,9.400,19,178,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,P,V,25.0,Castellón,42323.0,V,P,CASTELLÓN,42.323,19,178,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,P,L,25.0,Castellón,9604.0,L,p,CASTELLÓN,9.604,19,178,ocr,False
+68895633730c3cdf9cd6d9a6291c66d8,Martínez Fuentes,Luis,Popular,P,V,10.0,Castellón,6340.0,V,P,CASTELLÓN,6.340,19,178,ocr,False
+9f6f0fd8fb7b8ec4b80b1c6951f78ef2,Martínez Tarazona,María Nieves,Popular,P,V,50.0,Castellón,75784.92,p,V,CASTELLÓN,"75.784,92",120,219,ocr,False
+9f6f0fd8fb7b8ec4b80b1c6951f78ef2,Martínez Tarazona,María Nieves,Popular,P,R,50.0,Castellón,595.33,P,R,CASTELLÓN,"595,33",120,219,ocr,False
+95102e2466e7f2d31493a844b53087e4,Mas Mas,Aitana Joana,Compromís,P,V,50.0,Alicante,158000.0,Domini ple,Vivenda,ALACANT,158000,197,138,texto,False
+95102e2466e7f2d31493a844b53087e4,Mas Mas,Aitana Joana,Compromís,P,O,50.0,Alicante,44000.0,Domini ple,Altres immobles urbans,ALACANT,44.000,197,138,texto,False
+50b62395136e98bd1d3b5c191a508355,Massó Linares,María de los Llanos,Vox Cortes Valencianas,P,O,16.66,Albacete,219752.41,Pleno dominio,Otros inmuebles urbanos,ALBACETE,"219.752,41",3,268,texto,False
+50b62395136e98bd1d3b5c191a508355,Massó Linares,María de los Llanos,Vox Cortes Valencianas,P,V,100.0,Albacete,118923.12,Pleno dominio,Vivienda,ALBACETE,"118923,12",3,268,texto,False
+50b62395136e98bd1d3b5c191a508355,Massó Linares,María de los Llanos,Vox Cortes Valencianas,P,V,50.0,Castellón,110827.9,Pleno dominio,Vivienda,CASTELLÓN,"110.827,90",3,268,texto,False
+50b62395136e98bd1d3b5c191a508355,Massó Linares,María de los Llanos,Vox Cortes Valencianas,P,L,100.0,Albacete,101479.65,Pleno dominio,Locales,ALBACETE,"101.479,65",3,268,texto,False
+50b62395136e98bd1d3b5c191a508355,Massó Linares,María de los Llanos,Vox Cortes Valencianas,P,L,100.0,Albacete,89668.73,Pleno dominio,Locales,ALBACETE,"89.668,73",3,268,texto,False
+50b62395136e98bd1d3b5c191a508355,Massó Linares,María de los Llanos,Vox Cortes Valencianas,P,L,100.0,Albacete,31901.36,Pleno dominio,Locales,ALBACETE,"31.901,36",3,268,texto,False
+1c8a8943e5d69c215a32b4e229b75ee7,Mazón Guixot,Carlos Arturo,Popular,P,V,50.0,Alicante,,Pleno dominio,Vivienda,ALICANTE,,197,141,texto,False
+1c8a8943e5d69c215a32b4e229b75ee7,Mazón Guixot,Carlos Arturo,Popular,P,V,20.0,Alicante,,Pleno dominio,Vivienda,ALICANTE,,197,141,texto,False
+1c8a8943e5d69c215a32b4e229b75ee7,Mazón Guixot,Carlos Arturo,Popular,P,L,20.0,Alicante,,Pleno dominio,Locales,ALICANTE,,197,141,texto,False
+2fa9a687cb008794e7d0b1457d349593,Mompó Peruga,Benjamín,Socialista,P,V,8.38,Valencia,2468.7,P,"Vo,",VALÈNCIA,"2468,70",37,167,ocr,False
+2fa9a687cb008794e7d0b1457d349593,Mompó Peruga,Benjamín,Socialista,P,V,,Valencia,413.33,p,V,VALENCIA,"413,33",37,167,ocr,False
+502e5a1fac82e85f3bc1f1150aff0365,Montaner Berbel,Michel,Socialista,P,V,100.0,Valencia,62862.0,Pleno dominio,Vivienda,XIRIVELLA(VALÈNCIA ),62862€,197,144,texto,False
+502e5a1fac82e85f3bc1f1150aff0365,Montaner Berbel,Michel,Socialista,P,O,100.0,Valencia,1182.0,Pleno dominio,Otros inmuebles urbanos,XIRIVELLA(VALÈNCIA ),1182€,197,144,texto,False
+be1eb9a22b69481fafa518d6d9b4ee3d,Navalón García,María Rosario,Socialista,P,V,25.0,Alicante,29719.25,P,V,Alicante,"29.719,25",3,303,ocr,False
+be1eb9a22b69481fafa518d6d9b4ee3d,Navalón García,María Rosario,Socialista,P,O,50.0,Alicante,1205.91,P,9),Alicante,"1.205,91",3,303,ocr,False
+be1eb9a22b69481fafa518d6d9b4ee3d,Navalón García,María Rosario,Socialista,P,O,50.0,Alicante,1901.72,P,O,Alicante,"1.901,72",3,303,ocr,False
+be1eb9a22b69481fafa518d6d9b4ee3d,Navalón García,María Rosario,Socialista,P,V,50.0,Alicante,54593.75,P,h'/,Alicante,"54.593,75",3,303,ocr,True
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,P,V,50.0,Alicante,80184.64,P,V,ALICANTE,"80.184,64",120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,P,V,50.0,Alicante,33702.01,P,V,ALICANTE,"33.702,01",120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,P,V,50.0,Alicante,24813.75,P,V,ALICANTE,"24.813,75",120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,P,O,50.0,Alicante,4088.97,P,O,ALICANTE,"4.088,97",120,231,texto,False
+e6c9b462efcd0b78cc731f96380d433c,Navarro Forcada,María Luisa,Socialista,P,O,50.0,Alicante,2794.37,P,O,ALICANTE,"2.794,37",120,231,texto,False
+624e0654ad6b2f95f0fa639332ae3c78,Pascual Pérez,Miguel,Vox Cortes Valencianas,P,O,100.0,Alicante,9000.0,Pleno dominio,Otros inmuebles urbanos,ALICANTE,9000,3,325,texto,False
+624e0654ad6b2f95f0fa639332ae3c78,Pascual Pérez,Miguel,Vox Cortes Valencianas,P,V,100.0,Alicante,52000.0,Nuda propiedad,Vivienda,ALICANTE,52000,3,325,texto,False
+e1316c8e6c793c2c42844429e308cdd3,Peña Villaescusa,Dolores,Popular,P,V,100.0,Alicante,216402.87,P,V,ALICANTE,"216.402,87",19,196,ocr,False
+e1316c8e6c793c2c42844429e308cdd3,Peña Villaescusa,Dolores,Popular,P,V,100.0,Alicante,146087.6,P,V,ALICANTE,"146.087,60",19,196,ocr,False
+e1316c8e6c793c2c42844429e308cdd3,Peña Villaescusa,Dolores,Popular,P,V,100.0,Alicante,146544.17,P,V,ALICANTE,"146.544,17",19,196,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,P,V,50.0,Alicante,60619.57,P,y,ALICANTE,"60619,57",19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,P,V,50.0,Alicante,393110.02,P,V,ALICANTE,"393110,02",19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,P,O,50.0,Alicante,5568.58,P,O,ALICANTE,"5568,58",19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,P,O,50.0,Alicante,3145.21,P.,O,ALICANTE,"3145,21",19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,P,O,50.0,Alicante,14972.24,P,O,ALICANTE,"14972,24",19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,M,R,25.0,Alicante,25390.65,M,R,ALICANTE,"25390,65",19,202,ocr,False
+6fbdc475600ed1a423f0b369070ed8a9,Pérez Fenoll,Manuel,Popular,P,R,50.0,Alicante,29503.04,P,R,ALICANTE,"29503,04",19,202,ocr,False
+f2d2539d967af445c73fb1c4093d0247,Pina Huertas,Núria,Socialista,P,V,50.0,Alicante,70899.45,Domini ple,Vivenda,ALACANT,70899.45,3,343,texto,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,P,V,100.0,Valencia,51571.68,P,V,VALÈNCIA,51.571'68,3,347,texto,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,P,L,50.0,Valencia,13086.7,P,L,VALÈNCIA,13.086'70,3,347,texto,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,P,L,100.0,Valencia,22704.57,P,L,VALÈNCIA,22.704'57,3,347,texto,False
+2e9c558fbbd13e0e16704f7674e21d0f,Pla Herrero,Jesús,Compromís,P,R,100.0,Valencia,915.4,P,R,VALÈNCIA,915'40,3,347,texto,False
+cf05c4919e5d310ac916026435e30350,Ramírez Jurado,María Teresa,Vox Cortes Valencianas,P,V,100.0,Alicante,85603.25,Pleno dominio,Vivienda,ALICANTE,85603.25,3,364,texto,False
+cf05c4919e5d310ac916026435e30350,Ramírez Jurado,María Teresa,Vox Cortes Valencianas,P,V,100.0,Alicante,76282.13,Pleno dominio,Vivienda,ALICANTE,76282.13,3,364,texto,False
+cf05c4919e5d310ac916026435e30350,Ramírez Jurado,María Teresa,Vox Cortes Valencianas,P,O,100.0,Alicante,9733.59,Pleno dominio,Otros inmuebles urbanos,ALICANTE,9733.59,3,364,texto,False
+848fe2ff0d4f2b465aef9ca7ca0a0061,Rey Tormos,Romina María del,Socialista,P,V,50.0,Valencia,44552.3,P,y,VALENCIA,"44.552,30",133,38,ocr,False
+848fe2ff0d4f2b465aef9ca7ca0a0061,Rey Tormos,Romina María del,Socialista,P,V,50.0,Valencia,33167.91,P,"Y,",VALENCIA,"33.167,91",133,38,ocr,False
+a0644da1b302c0950410822c72a867f8,Roch Cazorla,Dolores,Popular,P,V,100.0,Valencia,73767.79,P,V,VALENCIA,"73.767,79€",3,367,ocr,False
+55625ff952ba3758f52f577a00b08863,Ruiz Castell,Pedro,Socialista,P,V,50.0,Valencia,43881.48,p,V,València,"43.881,48.-€",37,161,ocr,False
+55625ff952ba3758f52f577a00b08863,Ruiz Castell,Pedro,Socialista,P,O,50.0,Valencia,5128.67,P,O,Valéncia,"5.128,67.-€",37,161,ocr,False
+9107223d2314a3e488c77cac83fd150e,Salvador Rubert,María José,Socialista,P,V,100.0,Castellón,55629.12,Domini ple,Vivenda,CASTELLÓ,"55.629,12",197,163,texto,False
+f1564c5b4820f07749691b89865aeaab,Simó Sancho,Rafael,Socialista,P,V,50.0,Castellón,117036.45,Domini ple,Vivenda,Castelló,"117036,45",197,166,texto,False
+d0e0b98bcfd5dd8644f66e0113d8ff8d,Soler Beneyto,Víctor,Popular,P,V,70.0,Valencia,87006.0,Pleno dominio,Vivienda,VALENCIA,87.006,3,410,texto,False
+a7a759060d10cd315995ba2f9fca16de,Torres García,Nathalie,Compromís,P,V,100.0,Valencia,69511.89,P,V,Valencia,"69511,89",120,243,ocr,False
+2eaf7fc8c0f5a6209bae8a51201c7489,Turiel Mollá,Miriam,Vox Cortes Valencianas,P,V,30.0,Valencia,125804.06,PLENO DOMINIO,VIVIENDA,VALENCIA,"125 804,06",3,422,ocr,False
+2eaf7fc8c0f5a6209bae8a51201c7489,Turiel Mollá,Miriam,Vox Cortes Valencianas,P,V,50.0,Valencia,13759.25,PLENO DOMINIO,VIVIENDA,VALENCIA,"13 759,25",3,422,ocr,False
+ba526901b3070048086de06d8ab3074f,Vega Campos,Ana,Vox Cortes Valencianas,M,V,50.0,Alicante,16000.0,"Multipropiedad a tiempo parcial o fórmulas similares, con titularidad parcial del bien",Vivienda,ALICANTE,16.000€,3,427,texto,False
+0213888fead59ad3105761b593ef7335,Villar García,Mario Elías,Socialista,P,V,100.0,Alicante,38869.75,PLENO DOMINIO,VIVIENDA,ALICANTE,"38.869,75€",40,262,texto,False
+0213888fead59ad3105761b593ef7335,Villar García,Mario Elías,Socialista,P,V,50.0,Alicante,33483.04,PLENO DOMINIO,VIVIENDA,ALICANTE,"33.483,04€",40,262,texto,False
+c42fc3925eea9704d2d5a14467546657,Zaplana López,José Juan,Popular,P,V,50.0,Alicante,31903.38,Pleno dominio,Vivienda,Alicante,31903.38,3,433,texto,False
+c42fc3925eea9704d2d5a14467546657,Zaplana López,José Juan,Popular,P,O,50.0,Alicante,1949.39,Pleno dominio,Otros inmuebles urbanos,Alicante,1949.39,3,433,texto,False
+ex-X071325,,(nombre ilegible),,P,V,50.0,Castellón,63113.31,PLENO DOMINIO,V,CASTELLÓ,"63.113,31 euros",3,221,ocr,False
+ex-X071325,,(nombre ilegible),,P,O,50.0,Castellón,3641.9,PLENO DOMINIO,O,CASTELLÓ,"3.641,90 euros",3,221,ocr,False
+ex-X071543,,(nombre ilegible),,P,V,50.0,Alicante,28618.59,Pleno dominio,Vivienda,Alicante,"28.618,59",3,193,texto,False
+ex-aguirre-larrauri-jose-luis,Aguirre Larrauri,José Luis,,P,V,100.0,Valencia,98831.0,P o,V,Valencia o,98831,40,269,ocr,False
+ex-barrachina-mateu-marta,Barrachina Mateu,Marta,,P,V,50.0,Castellón,20353.2,P,V,CASTELLÓN,"20353,20",40,275,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,P,V,100.0,Castellón,33219.0,PLENO DOMINIO,V,CASTELLÓN,33.219,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,P,O,100.0,Madrid,7351.0,PLENO DOMINIO,O,MADRID,7351,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,P,V,100.0,Madrid,118080.0,PLENO DOMINIO,V,MADRID,118.080,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,P,V,16.6,Castellón,34345.0,NUDA PROPIEDAD,V,CASTELLÓN,34.345,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,P,L,16.6,Castellón,234588.0,NUDA PROPIEDAD,L,CASTELLÓN,"234,588",120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,P,O,100.0,Teruel,2500.0,PLENO DOMINIO,O,TERUEL,2.500,120,250,ocr,False
+ex-barrachina-ros-miguel,Barrachina Ros,Miguel,,P,R,100.0,Teruel,40000.0,PLENO DOMINIO,R,TERUEL,40.000,120,250,ocr,False
+ex-borruey-montolio-sonia,Borruey Montolío,Sonia,,P,V,50.0,Valencia,229602.98,P,V,VALENCIA,"229.602,98",19,130,ocr,False
+ex-bravo-sanestanislao-maria-gabriela,Bravo Sanestanislao,Maria Gabriela,,P,V,100.0,Valencia,84600.0,P,V,VALENCIA,84.600,120,255,ocr,False
+ex-bravo-sanestanislao-maria-gabriela,Bravo Sanestanislao,Maria Gabriela,,P,O,,Valencia,15538.74,P,O,VALENCIA,"15.538,74",120,255,ocr,False
+ex-bravo-sanestanislao-maria-gabriela,Bravo Sanestanislao,Maria Gabriela,,P,O,25.0,Valencia,4661.52,P,0),VALENCIA,"4.661,52",120,255,ocr,False
+ex-bravo-sanestanislao-maria-gabriela,Bravo Sanestanislao,Maria Gabriela,,P,O,25.0,Valencia,5221.2,P A,O,VALENCIA,"5.221,20",120,255,ocr,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,P,V,100.0,Alicante,52236.77,Pleno dominio,Vivienda,Alicante,"52.236,77",40,286,texto,False
+ex-bueno-alonso-josefina-antonia,Bueno Alonso,Josefina Antonia,,P,V,100.0,Alicante,81004.03,Pleno dominio,Vivienda,Torrevieja (Alicante),"81.004,03",40,286,texto,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,P,O,100.0,Valencia,1381.21,p,O,VALENCIA,"1381,21",40,290,ocr,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,P,L,100.0,Valencia,23561.7,P ?,L,VALENCIA,"23561,70",40,290,ocr,False
+ex-carrasco-torres-felipe-javier,Carrasco Torres,Felipe Javier,,P,V,50.0,Valencia,23589.12,p,V,VALENCIA,"23589,12 (50%)",40,290,ocr,False
+ex-escrig-llinares-maria-del-rosario,Escrig Llinares,Maria del Rosario,,P,V,100.0,Alicante,118891.11,P,V,ALICANTE,"118.891,11€",40,296,ocr,False
+ex-escrig-llinares-maria-del-rosario,Escrig Llinares,Maria del Rosario,,P,O,100.0,Alicante,4538.98,P.,O,ALICANTE,"4.538,98€",40,296,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,N,V,100.0,Valencia,65287.84,N,V,VALENCIA,"65.287,84 €",40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,N,L,7.0,Valencia,5517.5,N,L,VALENCIA,"5.517,50 €",40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,P,R,100.0,Valencia,28210.49,P,R,VALENCIA,"28.210,49 €",40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,P,R,100.0,Valencia,11284.52,P,R,VALENCIA,"11.284,52 €",40,302,ocr,False
+ex-espana-garcia-arcadi,España García,Arcadi,,P,R,100.0,Valencia,4838.93,p,R,VALENCIA,"4.838,93 €",40,302,ocr,True
+ex-fabra-part-alberto,Fabra Part,Alberto,,P,V,100.0,Teruel,28822.0,P,vo”,TERUEL,28.822,40,307,ocr,False
+ex-fabra-part-alberto,Fabra Part,Alberto,,P,V,50.0,Castellón,400000.0,P,V,CASTELLÓN,400 000€,40,307,ocr,False
+ex-fabra-part-alberto,Fabra Part,Alberto,,M,O,100.0,Castellón,5000.0,M,O 7,CASTELLÓN,5 000€,40,307,ocr,False
+ex-fabregat-carrasquer-susana,Fabregat Carrasquer,Susana,,P,V,100.0,Castellón,134284.6,P,V,Castellón,"134 284,60",40,313,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,P,V,100.0,Valencia,9444.86,P,V,VALENCIA,"9.444,86",120,261,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,P,V,50.0,Valencia,103460.8,P.,V,VALENCIA,"103.460,80",120,261,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,P,O,50.0,Valencia,20000.0,P,O,VALENCIA,20.000,120,261,ocr,False
+ex-fernandez-pardo-ernesto,Fernández Pardo,Ernesto,,P,O,50.0,Valencia,5000.0,P,O,VALENCIA,5.000,120,261,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,N,V,50.0,Castellón,73716.0,N,V,CASTELLÓN,73716,40,319,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,N,O,100.0,Castellón,4900.0,N,O,CASTELLÓN,4 900,40,319,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,N,O,100.0,Castellón,800.0,N,O,CASTELLÓN,800,40,319,ocr,False
+ex-ibanez-bordonau-ruben,Ibañez Bordonau,Ruben,,N,V,100.0,Castellón,39839.0,N,V,CASTELLÓN,39.839,40,319,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,P,V,50.0,Castellón,63113.31,PLENO DOMINIO,V “,CASTELLÓ,"63.113,31 euros",40,325,ocr,False
+ex-laguna-asensi-carlos,Laguna Asensi,Carlos,,P,V,50.0,Castellón,3641.9,PLENO DOMINIO,V Ll,CASTELLÓ,"3.641,90 euros",40,325,ocr,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,P,V,100.0,Alicante,53951.4,P,V,ALICANTE,"53.951,4",120,267,texto,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,P,O,100.0,Alicante,5108.36,p,O,ALICANTE,"5108,36",120,267,texto,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,P,R,100.0,Valencia,4.6,P,R,VALENCIA,"4,6",120,267,texto,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,P,R,100.0,Valencia,685.99,P,R,VALENCIA,"685,99",120,267,texto,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,P,R,100.0,Valencia,1587.44,P,R,VALENCIA,"1587,44",120,267,texto,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,P,R,100.0,Valencia,2205.52,P,R,VALENCIA,"2205,52",120,267,texto,False
+ex-lopez-lluch-david-bernardo,Lopez Lluch,David Bernardo,,P,R,100.0,Valencia,27.55,P,R,VALENCIA,"27,55",120,267,texto,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,P,V,100.0,Valencia,50571.48,DOMINI PLE,VIVIENDA,VALENCIA,"50571,48",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,P,V,50.0,Valencia,56531.72,DOMINI PLE,VIVIENDA,VALENCIA,"56531,72",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,P,V,50.0,Valencia,11568.51,DOMINI PLE,VIVIENDA,VALENCIA,"11568,51",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,P,V,,Alicante,105443.31,DOMINI PLE,VIVIENDA.,ALACANT,"105443,31",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,P,O,100.0,Valencia,13443.17,DOMINI PLE,ALTRES INMOBL,VALENCIA.,"13443,17",40,331,ocr,False
+ex-martinez-ramirez-carmen,Martínez Ramírez,Carmen,,P,O,50.0,Valencia,10000.0,DOMINI PLE,ALTRES INMOBL,VALENCIA,10000,40,331,ocr,False
+ex-marza-i-ibanez-vicent,Marzà i Ibáñez,Vicent,,N,V,25,Castellón,112941.57,N,V,Castellón,,120,271,manual,False
+ex-marza-i-ibanez-vicent,Marzà i Ibáñez,Vicent,,N,V,25,Castellón,118164.64,N,V,Castellón,,120,271,manual,False
+ex-marza-i-ibanez-vicent,Marzà i Ibáñez,Vicent,,N,V,25,Castellón,98054.82,N,V,Castellón,,120,271,manual,False
+ex-marza-i-ibanez-vicent,Marzà i Ibáñez,Vicent,,N,V,50,Castellón,36608.86,N,V,Castellón,,120,271,manual,False
+ex-merino-pena-ruth,Merino Peña,Ruth,,P,V,50.0,Valencia,77000.0,Pleno dominio,Vivienda,VALENCIA,77000,40,336,texto,False
+ex-merino-pena-ruth,Merino Peña,Ruth,,P,V,50.0,Valencia,87701.0,Pleno dominio,Vivienda,VALENCIA,87701,40,336,texto,False
+ex-merino-pena-ruth,Merino Peña,Ruth,,P,V,50.0,Castellón,52694.0,Pleno dominio,Vivienda,CASTELLÓN,52694,40,336,texto,False
+ex-minguez-perez-miguel,Minguez Perez,Miguel,,P,V,50.0,Valencia,144439917.0,Pleno Dominio,Vivienda,Valencia,"144439,917",40,340,texto,False
+ex-minguez-perez-miguel,Minguez Perez,Miguel,,P,V,33.0,Teruel,25437.11,Nuda Propiedad,Vivienda,Teruel,"25437,11",40,340,texto,False
+ex-minguez-perez-miguel,Minguez Perez,Miguel,,P,V,33.0,Teruel,24985.0,Nuda Propiedad,Vivienda,Teruel,24985,40,340,texto,False
+ex-minguez-perez-miguel,Minguez Perez,Miguel,,P,V,33.0,Teruel,22623.85,Nuda Propiedad,Vivienda,Teruel,"22623,85",40,340,texto,False
+ex-minguez-perez-miguel,Minguez Perez,Miguel,,P,V,50.0,Alicante,17053.67,Nuda Propiedad,Vivienda,Alicante,"17053,67",40,340,texto,False
+ex-minguez-perez-miguel,Minguez Perez,Miguel,,P,O,5.0,Valencia,5553.0,Nuda Propiedad,Otros inmuebles,Valencia,5553,40,340,texto,False
+ex-mompo-aledo-vicente-jose,Mompo Aledo,Vicente Jose,,M,V,50.0,Valencia,40414.06,Multipropietat a temp,Vivenda,València,"40.414,06",40,346,ocr,False
+ex-mompo-aledo-vicente-jose,Mompo Aledo,Vicente Jose,,M,V,50.0,Valencia,22986.23,Multipropietat a temp,Vivenda,Valencia,"22,986,23",40,346,ocr,False
+ex-ortiz-vilella-eva,Ortiz Vilella,Eva,,,L,,,,,Ll,y,P),40,352,ocr,True
+ex-parra-aparicio-julia,Parra Aparicio,Julia,,P,,,,,a,,,,40,358,ocr,False
+ex-parra-aparicio-julia,Parra Aparicio,Julia,,P,,,,,po,,,),40,358,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,P,,50.0,Castellón,45973.25,P,V+garage+trasterc,Castellón,"45.973,25",40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,P,,50.0,Castellón,67752.4,P,V+garage+trasterc,Castellón,"67.752,40",40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,P,,16.66,Castellón,18586.53,P,V+garage+trasterc,Castellón,"18.586,53",40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,P,,16.66,Castellón,9794.49,P,Vigarage,Castellón,"9.794,49",40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,,R,100.0,Castellón,90.71,P (6 fincas rústicas),R,Castellón,"90,71",40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,,R,50.0,Castellón,88.44,P (2 fincas rústicas),R,Castellón,"88,44",40,364,ocr,False
+ex-pradasten-salome,Pradasten,Salomé,,,R,33.0,Castellón,21.42,P (1 finca rústica),R,Castellón,"21,42",40,364,ocr,False
+ex-puig-ferrer-ximo,Puig Ferrer,Ximo,,P,O,16.67,Castellón,148178.54,P,O,CASTELLÓ,"148.178,54",40,370,texto,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,P,V,100.0,Alicante,16850.01,P,V,ALICANTE,"16.850,01",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,P,O,100.0,Alicante,2569.47,D,O,ALICANTE,"2,569,47",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,P,V,50.0,Alicante,26475.04,P,V,ALICANTE,"26.475,04",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,P,O,50.0,Alicante,2746.92,P x,Ó,ALICANTE,"2.746,92",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,,V,100.0,Alicante,16022.67,P (HERENCIA),V,ALICANTE,"16.022,67",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,,V,100.0,Alicante,36841.62,P (HERENCIA),V,ALICANTE,"36.841,62",40,376,ocr,False
+ex-rovira-jover-jose-antonio,Rovira Jover,José Antonio,,,V,100.0,Alicante,64751.33,P (HERENCIA),V,ALICANTE,"64.751,33",40,376,ocr,False
+ex-sal-credo-cent,Sal Credo,Cent,,,L,,,,I),lo,7,IO,87,106,ocr,True
+ex-sal-credo-cent,Sal Credo,Cent,,N,,,,,NS,,IO,o),87,106,ocr,True
+ex-sal-credo-cent,Sal Credo,Cent,,P,,,,,P),,,E”),87,106,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,P,O,,Alicante,3487.0,P,O,ALICANTE,3487,40,382,ocr,True
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,P,V,100.0,Alicante,25728.62,P,V,ALICANTE,"25728,62",40,382,ocr,True
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,P,R,100.0,Alicante,87.61,P,R,ALICANTE,"87,61",40,382,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,P,R,50.0,Alicante,5281.67,D,R,ALICANTE,"5281,67",40,382,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,P,R,100.0,Alicante,37.7,D,R,ALICANTE,"37,70",40,382,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,P,R,25.0,Alicante,4139.56,P,R,ALICANTE,"4139,56",40,382,ocr,False
+ex-sendra-mengual-francisco-javier,Sendra Mengual,Francisco Javier,,P,R,50.0,Alicante,147.11,P,R,ALICANTE,"147,11",40,382,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,P,V,50.0,Alicante,59553.0,P,V,ALICANTE,59553 (50%),40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,P,V,50.0,Valencia,32749.0,P,V,VALENCIA,32749 (50%),40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,P,V,50.0,Valencia,27921.0,P,V,VALENCIA,27921 (50%),40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,P,V,50.0,Valencia,79709.0,P,yo,VALENCIA,79709 (50%),40,390,ocr,False
+ex-todoli-masquefa-jose,Todolí Masquefa,José,,P,O,50.0,Valencia,5855.0,p,O,VALENCIA,5855 (50%),40,390,ocr,False
+ex-torro-soler-rebeca,Torró Soler,Rebeca,,P,V,50.0,Valencia,34482.53,P,V,VALENCIA,"34482,53",40,396,ocr,False
