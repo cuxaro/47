@@ -34,12 +34,26 @@ RE_FECHA = re.compile(r"\b(\d{2})/(\d{2})/(\d{4})\s+(\d{2}):(\d{2})\b")
 # 1. Trocear el boletín en declaraciones
 # --------------------------------------------------------------------------- #
 def _sello(pag: dict) -> tuple[str | None, str | None]:
-    """Número y fecha del sello del registro de entrada de la página."""
-    txt = " ".join(w["t"] for w in pag.get("sello") or pag.get("palabras") or [])
-    num = RE_SELLO.search(txt)
-    f = RE_FECHA.search(txt)
-    fecha = f"{f.group(3)}-{f.group(2)}-{f.group(1)}" if f else None
-    return (num.group(0) if num else None), fecha
+    """Número y fecha del sello del registro de entrada de la página.
+
+    Casi siempre el sello es texto del PDF. Cuando la página entera es una
+    imagen, se lee del OCR (zona de arriba de la página).
+    """
+    fuentes = [" ".join(w["t"] for w in pag.get("sello") or [])]
+    if pag.get("metodo") == "ocr":
+        fuentes.append(" ".join(c["t"] for c in pag.get("casillas", []) if c["y1"] < 190))
+        fuentes.append(" ".join(w["t"] for w in pag.get("palabras", []) if w["y1"] < 190))
+    else:
+        fuentes.append(" ".join(w["t"] for w in pag.get("palabras", [])))
+    num = fecha = None
+    for txt in fuentes:
+        m = RE_SELLO.search(txt)
+        if m and not num:
+            num = re.sub(r"^X[1l](?=\d{6}$)", "XI", m.group(0))   # «X1000157» es «XI000157»
+        f = RE_FECHA.search(txt)
+        if f and not fecha:
+            fecha = f"{f.group(3)}-{f.group(2)}-{f.group(1)}"
+    return num, fecha
 
 
 def _texto(pag: dict) -> str:
@@ -47,15 +61,19 @@ def _texto(pag: dict) -> str:
 
 
 def _es_portada_md3(pag: dict) -> bool:
+    """¿Es la primera página de un formulario MD3? Lleva el título completo.
+
+    (No basta con que aparezcan las palabras sueltas: el aviso de protección de
+    datos de las demás páginas también habla de un «registro de actividades».)
+    """
     t = _texto(pag)
-    if "REGISTRO DE ACTIVIDADES" in t and "BIENES E INTERESES" in t:
+    if "REGISTRO DE ACTIVIDADES BIENES E INTERESES" in t or "REGISTRE D ACTIVITATS BENS I INTERESSOS" in t:
         return True
-    if "REGISTRE D ACTIVITATS" in t and "INTERESSOS" in t:
-        return True
-    # OCR con erratas: basta con que el título se parezca mucho
+    # OCR con erratas: basta con que una línea se parezca mucho al título
     for l in lineas(pag.get("palabras", []))[:40]:
         s = " ".join(w["t"] for w in l)
-        if parecido(s, "REGISTRO DE ACTIVIDADES, BIENES E INTERESES") > 0.8:
+        if max(parecido(s, "REGISTRO DE ACTIVIDADES, BIENES E INTERESES"),
+               parecido(s, "REGISTRE D'ACTIVITATS, BÉNS I INTERESSOS")) > 0.8:
             return True
     return False
 
@@ -69,14 +87,13 @@ def trocear(paginas: list[dict]) -> list[list[dict]]:
     grupos, actual, sello_actual = [], None, None
     for pag in paginas:
         num, _ = _sello(pag)
-        if num is None:
-            actual = None
-            continue
-        if _es_portada_md3(pag):
+        if _es_portada_md3(pag) and (num or pag["metodo"] == "ocr"):
             actual, sello_actual = [pag], num
             grupos.append(actual)
-        elif actual is not None and num == sello_actual:
+        elif actual is not None and num is not None and num == sello_actual:
             actual.append(pag)
+        elif actual is not None and num is None and pag["metodo"] == "ocr" and actual[0]["metodo"] == "ocr":
+            actual.append(pag)   # página escaneada a la que no se le lee el sello
         else:
             actual = None
     return grupos
@@ -242,7 +259,7 @@ def _tipo_pasivo(desc: str) -> str:
     n = norm(desc)
     if re.search(r"HIPOTEC", n):
         return "hipoteca"
-    if re.search(r"PRESTAMO|PRESTEC|PTMO|CREDITO|CREDIT|LEASING|RENTING|FINANCIA", n):
+    if re.search(r"PRES\w?TAMO|PRESTEC|PTMO|CREDITO|CREDIT|CRECITO|LEASING|RENTING|FINANC|POLIZA", n):
         return "prestamo"
     if re.search(r"TARJETA|TARGETA", n):
         return "tarjeta"
@@ -313,6 +330,7 @@ def aplicar_correccion(d: dict, c: dict) -> dict:
     """Sustituye lo leído por una transcripción hecha a mano (ver correcciones/)."""
     d["persona"] = {**d["persona"], **c.get("persona", {})}
     if "inmuebles" not in c:      # corrección solo del nombre
+        d.setdefault("notas", []).append(c.get("motivo", "Nombre corregido a mano"))
         return d
     d["inmuebles"] = [{"clave": i.get("clave"), "clave_txt": i.get("clave") or "", "tipo": i.get("tipo"),
                        "tipo_txt": i.get("tipo") or "", "porcentaje": i.get("porcentaje"),
@@ -331,7 +349,7 @@ def aplicar_correccion(d: dict, c: dict) -> dict:
     d["suma_otros_cuadra"] = _cuadrar(d["otros_bienes"], "valor", d["total_otros_bienes"])
     d["suma_pasivo_cuadra"] = _cuadrar(d["pasivo"], "valor", d["total_pasivo"])
     d["metodo"], d["ilegible"], d["totales_repetidos"] = "manual", False, []
-    d["avisos"] = [c.get("motivo", "Transcrita a mano del original")]
+    d["avisos"], d["notas"] = [], [c.get("motivo", "Transcrita a mano del original")]
     return d
 
 
@@ -419,6 +437,7 @@ def _persona(lins, cas, y_fin, ocr: bool) -> dict:
 def leer_declaracion(pags: list[dict]) -> dict:
     lins, cas = _fluir(pags)
     sello, fecha = _sello(pags[0])
+    sello = sello or f"sin-sello-p{pags[0]['num']}"
     fin = (len(pags) + 1) * SALTO
 
     a_act = _ancla(lins, r"DECLARACI\w* D ?E? ?ACTIVI")
@@ -442,7 +461,8 @@ def leer_declaracion(pags: list[dict]) -> dict:
         "persona": _persona(lins, cas, a_act["y0"] if a_act else (y_inm or fin), ocr=ocr),
         "inmuebles": [], "otros_bienes": [], "pasivo": [],
         "total_catastral": None, "total_otros_bienes": None, "total_pasivo": None,
-        "avisos": [],
+        "avisos": [],   # problemas al leer: conviene revisar a mano
+        "notas": [],    # peculiaridades de lo que la persona escribió (no son errores de lectura)
     }
     if y_inm is None:
         d["avisos"].append("No se ha encontrado el apartado de bienes inmuebles")
@@ -470,7 +490,9 @@ def leer_declaracion(pags: list[dict]) -> dict:
             alt_t = _codigo(clave, _TIPOS, "VLOR", {})
             if alt_c and alt_t:
                 cod_c, cod_t = alt_c, alt_t
-        if not (cod_c or cod_t or a_numero(valor["t"]) is not None or _hay_palabra(prov["t"])):
+        validos = sum(x is not None for x in (cod_c, cod_t, a_porcentaje(pct["t"]), a_provincia(prov["t"]),
+                                              a_numero(valor["t"])))
+        if validos < (2 if clave.get("ocr") else 1):
             continue  # fila vacía con ruido del escáner
         d["inmuebles"].append({
             "clave": cod_c, "clave_txt": clave["t"], "tipo": cod_t, "tipo_txt": tipo["t"],
@@ -512,6 +534,8 @@ def leer_declaracion(pags: list[dict]) -> dict:
             v = a_numero(val["t"])
             if not _hay_palabra(desc["t"]) and (v is None or val.get("dudoso")):
                 continue  # fila vacía con ruido del escáner
+            if v is None and desc.get("ocr") and not re.search(r"[A-Za-zÀ-ÿ]{4,}", desc["t"]):
+                continue  # ídem: sin importe y sin una palabra larga
             if v is None and len(desc["t"].split()) <= 1 and (
                     _hay_palabra(val["t"]) or parecido(desc["t"], "Descripcion") > 0.5):
                 continue  # la cabecera «Descripción | Valor (euros)» mal leída
@@ -544,7 +568,8 @@ def leer_declaracion(pags: list[dict]) -> dict:
     # Formularios escritos a mano: el OCR no los lee. Se nota porque casi ninguna
     # casilla se lee igual las dos veces.
     todos = [i for k in ("inmuebles", "otros_bienes", "pasivo") for i in d[k]]
-    d["ilegible"] = bool(d["metodo"] == "ocr" and len(todos) >= 3
+    comprobada = any(d[k] for k in ("suma_inmuebles_cuadra", "suma_otros_cuadra", "suma_pasivo_cuadra"))
+    d["ilegible"] = bool(d["metodo"] == "ocr" and len(todos) >= 3 and not comprobada
                          and sum(1 for i in todos if i.get("dudoso")) / len(todos) >= 0.5)
     if d["ilegible"]:
         d["avisos"].append("Formulario escrito a mano o muy borroso: el OCR no es fiable")
@@ -553,15 +578,15 @@ def leer_declaracion(pags: list[dict]) -> dict:
     d["totales_repetidos"] = []
     if to is not None and not d["otros_bienes"] and to == tc:
         d["totales_repetidos"].append("total_otros_bienes")
-        d["avisos"].append("El total de otros bienes repite el valor catastral y no tiene detalle: no se cuenta")
+        d["notas"].append("El total de otros bienes repite el valor catastral y no tiene detalle: no se cuenta")
     if tp is not None and not d["pasivo"] and tp in (to, tc):
         d["totales_repetidos"].append("total_pasivo")
-        d["avisos"].append("El total de deudas repite el de otro apartado y no tiene detalle: no se cuenta")
+        d["notas"].append("El total de deudas repite el de otro apartado y no tiene detalle: no se cuenta")
     for i in d["pasivo"]:
         if i["categoria"] in ("cuenta", "otros") and _categoria(i["descripcion"]) in ("cuentas", "pensiones", "vehiculos"):
             i["categoria"] = "posible_bien"
     if any(i["categoria"] == "posible_bien" for i in d["pasivo"]):
-        d["avisos"].append("Hay cuentas u otros bienes anotados en el apartado de deudas")
+        d["notas"].append("Hay cuentas u otros bienes anotados en el apartado de deudas (se mantienen como están declarados)")
     return d
 
 

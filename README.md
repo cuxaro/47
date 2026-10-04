@@ -61,7 +61,7 @@ Dentro del boletín hay tres tipos de formulario, y el programa distingue cada u
 | --- | --- | --- |
 | Rellenado en digital | se lee el texto del PDF | alta |
 | Impreso y escaneado | se detectan las casillas y se pasa OCR a cada una | buena, con erratas posibles |
-| Escrito a mano | el OCR no sirve | hay que transcribirlo a mano |
+| Escrito a mano | el OCR no sirve | se transcribe a mano en [`correcciones/`](correcciones/) |
 
 Controles de calidad:
 
@@ -70,6 +70,17 @@ Controles de calidad:
   cuadra, se usa esa.
 - Todo dato enlaza con **la página exacta del boletín** de donde sale.
 - En `personas.csv`, la columna `revisar` indica qué declaraciones conviene mirar a mano, y por qué.
+  Solo salta por problemas de *lectura*. Las rarezas de lo que la persona escribió
+  (sumas que no dan, cuentas anotadas como deudas…) se anotan, pero no cuentan como error.
+
+Qué declaración se muestra de cada persona: la **última** publicada. Si la última es una modificación
+que no repite los inmuebles (hay quien solo anota lo que cambia), se muestra la anterior completa y se avisa.
+
+### Correcciones a mano
+
+`correcciones/corts.json` guarda las declaraciones transcritas a la vista del original, con el número
+del sello de registro como clave. Cada una se ha comprobado con las sumas que declara la propia persona.
+Para corregir un dato mal leído, añade ahí la declaración y vuelve a ejecutar.
 
 ## Ejecutarlo
 
@@ -99,6 +110,7 @@ extractor/
   md3.py        formulario de actividades y bienes
   md4.py        formulario de rentas
   construir.py  une todo y escribe las tablas
+correcciones/   transcripciones a mano de lo que el OCR no puede leer
 docs/           la web
 datos/          los CSV
 tests/          pruebas

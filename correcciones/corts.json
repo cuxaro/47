@@ -1,135 +1,727 @@
 {
-  "_ayuda": "Declaraciones que el OCR no puede leer (escritas a mano) y se han transcrito mirando el original. La clave es el número del sello de registro de entrada. Cada transcripción se ha comprobado con las sumas que declara la propia persona.",
-  "XI000958": {
-    "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 19, págs. 122-127)",
-    "persona": {
-      "nombre": "Ana María",
-      "apellidos": "Bellver Alcántara",
-      "circunscripcion": "Valencia",
-      "partido": "VOX"
-    },
-    "inmuebles": [
-      {
-        "clave": "N",
-        "tipo": "V",
-        "porcentaje": 50,
-        "provincia": "Valencia",
-        "valor_catastral": 98484.02
-      },
-      {
-        "clave": "N",
-        "tipo": "V",
-        "porcentaje": 5,
-        "provincia": "Valencia",
-        "valor_catastral": 3609.59
-      },
-      {
-        "clave": "N",
-        "tipo": "V",
-        "porcentaje": 16.66,
-        "provincia": "Teruel",
-        "valor_catastral": 7423.59
-      },
-      {
-        "clave": "N",
-        "tipo": "O",
-        "porcentaje": 5,
-        "provincia": "Valencia",
-        "valor_catastral": 4000.0
-      }
-    ],
-    "total_catastral": 113517.2,
-    "otros_bienes": [
-      {
-        "descripcion": "Fondo inversión CaixaBank",
-        "valor": 31014.5
-      },
-      {
-        "descripcion": "Cta. vista CaixaBank",
-        "valor": 19860.0
-      },
-      {
-        "descripcion": "Plan pensiones VidaCaixa",
-        "valor": 825.65
-      },
-      {
-        "descripcion": "Cta. vista Bankinter",
-        "valor": 247.12
-      }
-    ],
-    "total_otros_bienes": 51947.27,
-    "pasivo": [
-      {
-        "descripcion": "Préstamos hipotecarios CaixaBank",
-        "valor": 113336
-      },
-      {
-        "descripcion": "Préstamo personal CaixaBank",
-        "valor": 1349
-      },
-      {
-        "descripcion": "Préstamo hipotecario Bankinter",
-        "valor": 11409
-      }
-    ],
-    "total_pasivo": 126094
+ "_ayuda": "Declaraciones que el OCR no puede leer (escritas a mano) y se han transcrito mirando el original. La clave es el número del sello de registro de entrada. Cada transcripción se ha comprobado con las sumas que declara la propia persona.",
+ "XI000958": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 19, págs. 122-127)",
+  "persona": {
+   "nombre": "Ana María",
+   "apellidos": "Bellver Alcántara",
+   "circunscripcion": "Valencia",
+   "partido": "VOX"
   },
-  "XI023618": {
-    "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 120, págs. 271-276)",
-    "persona": {
-      "nombre": "Vicent",
-      "apellidos": "Marzà i Ibáñez",
-      "circunscripcion": "Castellón",
-      "partido": "Compromís"
-    },
-    "inmuebles": [
-      {
-        "clave": "N",
-        "tipo": "V",
-        "porcentaje": 25,
-        "provincia": "Castellón",
-        "valor_catastral": 112941.57
-      },
-      {
-        "clave": "N",
-        "tipo": "V",
-        "porcentaje": 25,
-        "provincia": "Castellón",
-        "valor_catastral": 118164.64
-      },
-      {
-        "clave": "N",
-        "tipo": "V",
-        "porcentaje": 25,
-        "provincia": "Castellón",
-        "valor_catastral": 98054.82
-      },
-      {
-        "clave": "N",
-        "tipo": "V",
-        "porcentaje": 50,
-        "provincia": "Castellón",
-        "valor_catastral": 36608.86
-      }
-    ],
-    "total_catastral": 100594.69,
-    "otros_bienes": [
-      {
-        "descripcion": "Coche Tiguan e-Hybrid",
-        "valor": 34000
-      }
-    ],
-    "total_otros_bienes": 34000,
-    "pasivo": [],
-    "total_pasivo": null
+  "inmuebles": [
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 50,
+    "provincia": "Valencia",
+    "valor_catastral": 98484.02
+   },
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 5,
+    "provincia": "Valencia",
+    "valor_catastral": 3609.59
+   },
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 16.66,
+    "provincia": "Teruel",
+    "valor_catastral": 7423.59
+   },
+   {
+    "clave": "N",
+    "tipo": "O",
+    "porcentaje": 5,
+    "provincia": "Valencia",
+    "valor_catastral": 4000.0
+   }
+  ],
+  "total_catastral": 113517.2,
+  "otros_bienes": [
+   {
+    "descripcion": "Fondo inversión CaixaBank",
+    "valor": 31014.5
+   },
+   {
+    "descripcion": "Cta. vista CaixaBank",
+    "valor": 19860.0
+   },
+   {
+    "descripcion": "Plan pensiones VidaCaixa",
+    "valor": 825.65
+   },
+   {
+    "descripcion": "Cta. vista Bankinter",
+    "valor": 247.12
+   }
+  ],
+  "total_otros_bienes": 51947.27,
+  "pasivo": [
+   {
+    "descripcion": "Préstamos hipotecarios CaixaBank",
+    "valor": 113336
+   },
+   {
+    "descripcion": "Préstamo personal CaixaBank",
+    "valor": 1349
+   },
+   {
+    "descripcion": "Préstamo hipotecario Bankinter",
+    "valor": 11409
+   }
+  ],
+  "total_pasivo": 126094
+ },
+ "XI023618": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 120, págs. 271-276)",
+  "persona": {
+   "nombre": "Vicent",
+   "apellidos": "Marzà i Ibáñez",
+   "circunscripcion": "Castellón",
+   "partido": "Compromís"
   },
-  "XI020569": {
-    "motivo": "Formulario escrito a mano: no se ha transcrito porque hay una declaración posterior de la misma persona",
-    "persona": {
-      "nombre": "Vicent",
-      "apellidos": "Marzà i Ibáñez",
-      "circunscripcion": "Castellón",
-      "partido": "Compromís"
-    }
+  "inmuebles": [
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 25,
+    "provincia": "Castellón",
+    "valor_catastral": 112941.57
+   },
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 25,
+    "provincia": "Castellón",
+    "valor_catastral": 118164.64
+   },
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 25,
+    "provincia": "Castellón",
+    "valor_catastral": 98054.82
+   },
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 50,
+    "provincia": "Castellón",
+    "valor_catastral": 36608.86
+   }
+  ],
+  "total_catastral": 100594.69,
+  "otros_bienes": [
+   {
+    "descripcion": "Coche Tiguan e-Hybrid",
+    "valor": 34000
+   }
+  ],
+  "total_otros_bienes": 34000,
+  "pasivo": [],
+  "total_pasivo": null
+ },
+ "XI020569": {
+  "motivo": "Formulario escrito a mano: no se ha transcrito porque hay una declaración posterior de la misma persona",
+  "persona": {
+   "nombre": "Vicent",
+   "apellidos": "Marzà i Ibáñez",
+   "circunscripcion": "Castellón",
+   "partido": "Compromís"
   }
+ },
+ "X071573": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 70-75)",
+  "persona": {
+   "nombre": "Ana",
+   "apellidos": "Besalduch Besalduch",
+   "circunscripcion": "Castellón",
+   "partido": "PSOE"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 36157.5
+   }
+  ],
+  "total_catastral": null,
+  "otros_bienes": [
+   {
+    "descripcion": "Volkswagen Tiguan",
+    "valor": 13000
+   },
+   {
+    "descripcion": "Compte bancari Cajamar",
+    "valor": 80000
+   }
+  ],
+  "total_otros_bienes": 93000,
+  "pasivo": [],
+  "total_pasivo": null
+ },
+ "X071659": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 46-51)",
+  "persona": {
+   "nombre": "Joan",
+   "apellidos": "Baldoví Roda",
+   "circunscripcion": "Valencia",
+   "partido": "Compromís"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 50,
+    "provincia": "Valencia",
+    "valor_catastral": 87135
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 50,
+    "provincia": "Valencia",
+    "valor_catastral": 84569
+   },
+   {
+    "clave": "P",
+    "tipo": "R",
+    "porcentaje": 41.66,
+    "provincia": "Valencia",
+    "valor_catastral": 6749
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 50,
+    "provincia": "Valencia",
+    "valor_catastral": 62020
+   },
+   {
+    "clave": "P",
+    "tipo": "L",
+    "porcentaje": 50,
+    "provincia": "Valencia",
+    "valor_catastral": 5243
+   }
+  ],
+  "total_catastral": 245716,
+  "otros_bienes": [
+   {
+    "descripcion": "Camps rústics",
+    "valor": 40000
+   },
+   {
+    "descripcion": "Comptes bancaris",
+    "valor": 265000
+   },
+   {
+    "descripcion": "Lletres tresor",
+    "valor": 80000
+   },
+   {
+    "descripcion": "Cotxe Dacia Dokker",
+    "valor": 8000
+   }
+  ],
+  "total_otros_bienes": 393000,
+  "pasivo": [],
+  "total_pasivo": null
+ },
+ "X071411": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 168-173)",
+  "persona": {
+   "nombre": "Susana",
+   "apellidos": "Fabregat Carrasquer",
+   "circunscripcion": "Castellón",
+   "partido": "Partido Popular"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 134284.6
+   }
+  ],
+  "total_catastral": 134284.6,
+  "otros_bienes": [
+   {
+    "descripcion": "Saldo cuentas bancarias",
+    "valor": 30568.17
+   },
+   {
+    "descripcion": "Fondos inversión",
+    "valor": 152545.88
+   },
+   {
+    "descripcion": "Vehículo - Audi Q2",
+    "valor": 21990
+   }
+  ],
+  "total_otros_bienes": 205104.05,
+  "pasivo": [],
+  "total_pasivo": null
+ },
+ "X071373": {
+  "motivo": "Formulario escaneado con mucho ruido: transcrito a la vista del original (BOCV 3, págs. 202-207)",
+  "persona": {
+   "nombre": "José Ramón",
+   "apellidos": "González de Zárate Unamuno",
+   "circunscripcion": "Alicante",
+   "partido": "Partido Popular"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Alicante",
+    "valor_catastral": 82478.3
+   }
+  ],
+  "total_catastral": 82478.3,
+  "otros_bienes": [],
+  "total_otros_bienes": null,
+  "pasivo": [],
+  "total_pasivo": null
+ },
+ "X071325": {
+  "motivo": "Nombre corregido a la vista del original",
+  "persona": {
+   "nombre": "Carlos",
+   "apellidos": "Laguna Asensi",
+   "circunscripcion": "Castellón",
+   "partido": "PSPV-PSOE"
+  }
+ },
+ "X071407": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 241-245)",
+  "persona": {
+   "nombre": "José Luis",
+   "apellidos": "Lorenz Andrés",
+   "circunscripcion": "Castellón",
+   "partido": ""
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 65331.23
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 50,
+    "provincia": "Castellón",
+    "valor_catastral": 21807.46
+   }
+  ],
+  "total_catastral": 87138.69,
+  "otros_bienes": [
+   {
+    "descripcion": "Compte bancari Ibercaja",
+    "valor": 26983.76
+   },
+   {
+    "descripcion": "Inversió",
+    "valor": 10000
+   }
+  ],
+  "total_otros_bienes": 36983.76,
+  "pasivo": [
+   {
+    "descripcion": "Préstec hipotecari Ibercaja",
+    "valor": 24662.76
+   }
+  ],
+  "total_pasivo": 24662.76
+ },
+ "X071455": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 286-291). En la casilla del total de deudas anota el saldo neto (-26.206,18 €), que cuadra con los importes transcritos",
+  "persona": {
+   "nombre": "José Enrique",
+   "apellidos": "Muñoz Lladró",
+   "circunscripcion": "Valencia",
+   "partido": "PSPV-PSOE"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Valencia",
+    "valor_catastral": 48423.53
+   }
+  ],
+  "total_catastral": null,
+  "otros_bienes": [
+   {
+    "descripcion": "Cuenta corriente",
+    "valor": 21200
+   },
+   {
+    "descripcion": "Crédito PSOE",
+    "valor": 10000
+   }
+  ],
+  "total_otros_bienes": null,
+  "pasivo": [
+   {
+    "descripcion": "Préstamo hipotecario",
+    "valor": 105829.71
+   }
+  ],
+  "total_pasivo": null
+ },
+ "X071668": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 336-341)",
+  "persona": {
+   "nombre": "Rosa",
+   "apellidos": "Peris Cervera",
+   "circunscripcion": "Valencia",
+   "partido": "Partido Socialista"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Madrid",
+    "valor_catastral": 25941
+   }
+  ],
+  "total_catastral": 25941,
+  "otros_bienes": [
+   {
+    "descripcion": "Vehículo Seat Exeo",
+    "valor": 5000
+   },
+   {
+    "descripcion": "Cta. cte. B. Santander",
+    "valor": 2853
+   },
+   {
+    "descripcion": "Cta. cte. CaixaBank",
+    "valor": 887
+   }
+  ],
+  "total_otros_bienes": null,
+  "pasivo": [
+   {
+    "descripcion": "Préstamo hipotecario",
+    "valor": 73851
+   }
+  ],
+  "total_pasivo": null
+ },
+ "X071572": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 378-383)",
+  "persona": {
+   "nombre": "Verònica",
+   "apellidos": "Ruiz Escrig",
+   "circunscripcion": "Castellón",
+   "partido": "Compromís"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 65938.5
+   },
+   {
+    "clave": "P",
+    "tipo": "O",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 1145.33
+   },
+   {
+    "clave": "P",
+    "tipo": "O",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 5722.05
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 50,
+    "provincia": "Castellón",
+    "valor_catastral": 6610
+   }
+  ],
+  "total_catastral": 79415.88,
+  "otros_bienes": [
+   {
+    "descripcion": "Nissan Juke (preu compra)",
+    "valor": 20000
+   }
+  ],
+  "total_otros_bienes": 20000,
+  "pasivo": [
+   {
+    "descripcion": "Hipoteca vivenda",
+    "valor": 2908.64
+   }
+  ],
+  "total_pasivo": 2908.64
+ },
+ "X071790": {
+  "motivo": "Formulario escrito a mano: transcrito a la vista del original (BOCV 3, págs. 403-408)",
+  "persona": {
+   "nombre": "Laura",
+   "apellidos": "Soler Azorín",
+   "circunscripcion": "Alicante",
+   "partido": "PSPV-PSOE"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Alicante",
+    "valor_catastral": 93688.35
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Alicante",
+    "valor_catastral": 60282.83
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Alicante",
+    "valor_catastral": 42866.82
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Alicante",
+    "valor_catastral": 23938.46
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Alicante",
+    "valor_catastral": 19491.84
+   }
+  ],
+  "total_catastral": 240268.3,
+  "otros_bienes": [
+   {
+    "descripcion": "Parte proporcional zona común",
+    "valor": 1205.41
+   },
+   {
+    "descripcion": "Ford Focus Break",
+    "valor": 18400
+   },
+   {
+    "descripcion": "Fondo inversión Sabadell",
+    "valor": 3270.37
+   },
+   {
+    "descripcion": "Cuenta corriente Sabadell",
+    "valor": 310.76
+   },
+   {
+    "descripcion": "Cuenta corriente CaixaBank",
+    "valor": 3071.19
+   },
+   {
+    "descripcion": "Cuenta ahorro Sabadell",
+    "valor": 11424
+   }
+  ],
+  "total_otros_bienes": 46988.14,
+  "pasivo": [
+   {
+    "descripcion": "Hipoteca CaixaBank",
+    "valor": 27884.2
+   },
+   {
+    "descripcion": "Préstamo personal CaixaBank",
+    "valor": 37416.16
+   }
+  ],
+  "total_pasivo": 65300.36
+ },
+ "XI000157": {
+  "motivo": "Formulario digital publicado como imagen y sin recuadros: transcrito a la vista del original (BOCV 3, págs. 28-30)",
+  "persona": {
+   "nombre": "Wenceslao",
+   "apellidos": "Alós Valls",
+   "circunscripcion": "Castellón",
+   "partido": "Partido Popular"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 195253.68
+   },
+   {
+    "clave": "P",
+    "tipo": "O",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 155977.13
+   },
+   {
+    "clave": "P",
+    "tipo": "O",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 137808.02
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 20,
+    "provincia": "Castellón",
+    "valor_catastral": 19029.61
+   },
+   {
+    "clave": "P",
+    "tipo": "L",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 68264.82
+   },
+   {
+    "clave": "P",
+    "tipo": "O",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 67154.28
+   },
+   {
+    "clave": "P",
+    "tipo": "V",
+    "porcentaje": 20,
+    "provincia": "Castellón",
+    "valor_catastral": 9353.23
+   },
+   {
+    "clave": "P",
+    "tipo": "O",
+    "porcentaje": 20,
+    "provincia": "Castellón",
+    "valor_catastral": 5159.58
+   },
+   {
+    "clave": "P",
+    "tipo": "L",
+    "porcentaje": 50,
+    "provincia": "Castellón",
+    "valor_catastral": 10354.36
+   },
+   {
+    "clave": "P",
+    "tipo": "R",
+    "porcentaje": 100,
+    "provincia": "Castellón",
+    "valor_catastral": 75000
+   }
+  ],
+  "total_catastral": 743354.71,
+  "otros_bienes": [
+   {
+    "descripcion": "Saldos cuentas bancarias",
+    "valor": 12000
+   },
+   {
+    "descripcion": "Acciones",
+    "valor": 3000
+   },
+   {
+    "descripcion": "Kia Sportage",
+    "valor": 6000
+   }
+  ],
+  "total_otros_bienes": 21000,
+  "pasivo": [
+   {
+    "descripcion": "Préstamo hipotecario",
+    "valor": 153000
+   }
+  ],
+  "total_pasivo": null
+ },
+ "X071674": {
+  "motivo": "Nombre corregido a la vista del original",
+  "persona": {
+   "nombre": "Arcadi",
+   "apellidos": "España García",
+   "circunscripcion": "Valencia",
+   "partido": "Partido Socialista Obrero Español"
+  }
+ },
+ "XI056336": {
+  "motivo": "Formulario escaneado a baja resolución: transcrito a la vista del original (BOCV 197, págs. 107-112)",
+  "persona": {
+   "nombre": "Alfredo",
+   "apellidos": "Castelló Sáez",
+   "circunscripcion": "Valencia",
+   "partido": "Partido Popular"
+  },
+  "inmuebles": [
+   {
+    "clave": "P",
+    "tipo": "O",
+    "porcentaje": 50,
+    "provincia": "Valencia",
+    "valor_catastral": 3000
+   },
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 16.6,
+    "provincia": "Valencia",
+    "valor_catastral": 8954
+   },
+   {
+    "clave": "N",
+    "tipo": "V",
+    "porcentaje": 16.6,
+    "provincia": "Valencia",
+    "valor_catastral": 23583
+   }
+  ],
+  "total_catastral": 35537,
+  "otros_bienes": [
+   {
+    "descripcion": "Cuentas corrientes",
+    "valor": 54936
+   },
+   {
+    "descripcion": "Planes de pensiones y otros",
+    "valor": 270000
+   },
+   {
+    "descripcion": "Automóvil",
+    "valor": 20000
+   }
+  ],
+  "total_otros_bienes": 344936,
+  "pasivo": [],
+  "total_pasivo": null
+ }
 }

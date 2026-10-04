@@ -59,8 +59,8 @@ th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--raya);white
 th{position:sticky;top:0;background:var(--papel);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--suave);cursor:pointer;user-select:none}
 th[aria-sort=ascending]::after{content:" ▲"} th[aria-sort=descending]::after{content:" ▼"}
 td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
-tbody tr{cursor:pointer}
-tbody tr:hover{background:var(--acento-suave)}
+#t tbody tr{cursor:pointer}
+#t tbody tr:hover{background:var(--acento-suave)}
 td.quien{white-space:normal;min-width:180px}
 td.quien small{display:block;color:var(--suave)}
 .cero{color:var(--suave)}
@@ -174,6 +174,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const llano = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
 const TIPOS = {V:"Vivienda",L:"Local",O:"Otro urbano",R:"Rústico"};
 const CLAVES = {P:"Pleno dominio",N:"Nuda propiedad",M:"Multipropiedad",U:"Usufructo"};
+const fecha = f => f ? f.split('-').reverse().join('/') : '—';
 const TIPO_DECL = {inicial:"Declaración inicial",modificacion:"Modificación",final:"Declaración final"};
 
 let DATOS = [], META = {}, orden = {k:"apellidos", dir:1}, vista = [];
@@ -284,12 +285,12 @@ function ficha(p){
       tabla([["Descripción"],["Clase"],["Valor",1]], d.pasivo.map(i => `<tr><td>${esc(i.descripcion || "—")}</td><td>${esc(i.categoria)}</td><td class="n">${dud(i, i.valor == null ? esc(i.valor_txt || "—") : eur2(i.valor))}</td></tr>`));
   }
   if (r){
-    h += `<h3>Rentas declaradas (registrada el ${esc(r.fecha_registro || "—")})</h3>` +
+    h += `<h3>Rentas declaradas (registrada el ${fecha(r.fecha_registro)})</h3>` +
       tabla([["Concepto"],["Origen"],["Importe",1]], r.partidas.map(x => `<tr><td>${esc(x.concepto || x.apartado)}</td><td>${esc(x.origen)}</td><td class="n">${eur2(x.importe)}</td></tr>`)
         .concat(r.cuota_irpf != null ? [`<tr><td>Cuota IRPF del año anterior</td><td></td><td class="n">${eur2(r.cuota_irpf)}</td></tr>`] : []));
   }
   h += `<h3>Documentos originales</h3><ul>` +
-    p.historico.map(x => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${TIPO_DECL[x.tipo] || x.tipo}</a> · BOCV nº ${x.bocv}, pág. ${x.paginas[0]}–${x.paginas[1]} · registrada el ${esc(x.fecha_registro || "—")}${x.metodo === "ocr" ? " · escaneada" : ""}</li>`).join("") +
+    p.historico.map(x => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${TIPO_DECL[x.tipo] || x.tipo}</a> · BOCV nº ${x.bocv}, pág. ${x.paginas[0]}–${x.paginas[1]} · registrada el ${fecha(x.fecha_registro)}${x.metodo === "ocr" ? " · escaneada" : ""}</li>`).join("") +
     (r ? `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">Declaración anual de rentas</a> (PDF)</li>` : "") +
     (p.url_ficha ? `<li><a href="${esc(p.url_ficha)}" target="_blank" rel="noopener">Ficha en Les Corts</a></li>` : "") + `</ul>`;
   $("#ficha").innerHTML = h;

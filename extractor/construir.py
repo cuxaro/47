@@ -122,32 +122,64 @@ def resumen(decl: dict | None, renta: dict | None) -> dict:
 
 
 def _calidad(decl: dict | None) -> dict:
-    """Cómo de fiable es lo leído, y por qué conviene (o no) revisarlo a mano."""
+    """Cómo de fiable es lo leído, y si conviene revisarlo a mano.
+
+    `revisar` solo se activa por problemas de LECTURA (OCR dudoso, tablas que no
+    se localizan, datos que no se reconocen). Las rarezas de lo que la persona
+    escribió (sumas que no dan, cuentas anotadas como deudas…) van en `motivos`
+    como nota, pero no cuentan como error nuestro.
+    """
     if not decl:
         return {"metodo": None, "revisar": True, "comprobado": False, "ilegible": False,
                 "motivos": ["No se ha localizado su declaración de bienes en los boletines"]}
-    motivos = list(decl.get("avisos", []))
+    lectura = list(decl.get("avisos", []))
+    notas = list(decl.get("notas", []))
     items = [i for k in ("inmuebles", "otros_bienes", "pasivo") for i in decl[k]]
+    es_ocr = decl["metodo"] == "ocr"
     if not decl.get("ilegible"):
         dudosos = sum(1 for i in items if i.get("dudoso"))
         if dudosos:
-            motivos.append(f"{dudosos} dato(s) con lectura dudosa del OCR")
+            lectura.append(f"{dudosos} dato(s) con lectura dudosa del OCR")
         for clave, nombre in (("suma_inmuebles_cuadra", "los inmuebles"), ("suma_otros_cuadra", "los otros bienes"),
                               ("suma_pasivo_cuadra", "las deudas")):
             if decl.get(clave) is False:
-                motivos.append(f"La suma de {nombre} no coincide con el total declarado")
+                texto = f"La suma de {nombre} no coincide con el total declarado"
+                # en un formulario digital la lectura es exacta: el descuadre es de quien declara
+                (lectura if es_ocr else notas).append(texto if es_ocr else texto + " (así consta en el original)")
         sin_tipo = sum(1 for i in decl["inmuebles"] if i.get("tipo") is None)
         if sin_tipo:
-            motivos.append(f"{sin_tipo} inmueble(s) sin tipo reconocible")
+            lectura.append(f"{sin_tipo} inmueble(s) sin tipo reconocible")
         sin_prov = sum(1 for i in decl["inmuebles"] if i.get("provincia") is None)
         if sin_prov:
-            motivos.append(f"{sin_prov} inmueble(s) sin provincia reconocible")
+            lectura.append(f"{sin_prov} inmueble(s) sin provincia reconocible")
     comprobaciones = [decl.get(k) for k in ("suma_inmuebles_cuadra", "suma_otros_cuadra", "suma_pasivo_cuadra")]
     hechas = [c for c in comprobaciones if c is not None]
-    # una transcripción a mano que cuadra con las sumas no necesita revisión
-    revisar = bool(motivos) and not (decl["metodo"] == "manual" and hechas and all(hechas))
-    return {"metodo": decl["metodo"], "revisar": revisar, "ilegible": bool(decl.get("ilegible")),
-            "comprobado": bool(hechas) and all(hechas), "motivos": motivos}
+    return {"metodo": decl["metodo"], "revisar": bool(lectura), "ilegible": bool(decl.get("ilegible")),
+            "comprobado": bool(hechas) and all(hechas), "motivos": lectura + notas}
+
+
+def _vigente(decls: list[dict]) -> tuple[dict | None, str | None]:
+    """Qué declaración refleja la situación actual de una persona.
+
+    Normalmente, la última. Pero una «modificación» a veces solo trae lo que ha
+    cambiado: si la última no tiene inmuebles y una anterior sí, se muestra la
+    anterior y se avisa.
+    """
+    if not decls:
+        return None, None
+    ultima = decls[-1]
+    if _tiene_bienes(ultima) and (ultima["inmuebles"] or ultima.get("total_catastral")
+                                  or ultima["tipo"] != "modificacion"):
+        return ultima, None
+    for d in reversed(decls[:-1]):
+        if d["inmuebles"] or d.get("total_catastral"):
+            b = ultima["boletin"]["numero"]
+            if _tiene_bienes(ultima):
+                return d, (f"Hay una modificación posterior (BOCV {b}) que parece parcial: no repite los inmuebles. "
+                           "Se muestra la declaración completa anterior")
+            return d, f"La última declaración publicada (BOCV {b}) no trae bienes; se muestran los de la anterior"
+    con_bienes = [d for d in decls if _tiene_bienes(d)]
+    return (con_bienes or decls)[-1], None
 
 
 def _tiene_bienes(d: dict) -> bool:
@@ -179,15 +211,12 @@ def construir(diputados: list[dict], declaraciones: list[dict], rentas: dict[str
     salida = []
     for per in personas:
         decls = per.pop("declaraciones")
-        con_bienes = [d for d in decls if _tiene_bienes(d)]
-        vigente = (con_bienes or decls or [None])[-1]
-        aviso = None
-        if vigente is not None and decls and decls[-1] is not vigente:
-            aviso = "La última declaración publicada no trae bienes; se muestran los de la anterior"
+        vigente, aviso = _vigente(decls)
         renta = rentas.get(per["id"])
         cal = _calidad(vigente)
         if aviso:
-            cal["motivos"].append(aviso)
+            cal["motivos"].insert(0, aviso)
+            cal["revisar"] = True
         fila = {
             "id": per["id"], "nombre": per["nombre"], "apellidos": per["apellidos"],
             "ambito": AMBITO, "cargo": "Diputado/a" if per["en_activo"] else "Exdiputado/a",
