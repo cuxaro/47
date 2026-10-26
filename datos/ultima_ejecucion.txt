@@ -15,4 +15,4 @@ Boletines con declaraciones: 14
   BOCV 197: 177 págs, 27 declaraciones
   BOCV 208: 154 págs, 1 declaraciones
 Declaraciones de rentas leídas: 99
-Hecho en 67s: 128 personas, 128 con declaración de bienes, 64 leídas por OCR, 65 con las sumas comprobadas, 38 para revisar, 0 ilegibles, 99 con rentas
+Hecho en 1415s: 128 personas, 128 con declaración de bienes, 64 leídas por OCR, 65 con las sumas comprobadas, 38 para revisar, 0 ilegibles, 99 con rentas
